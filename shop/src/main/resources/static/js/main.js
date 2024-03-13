@@ -2,6 +2,19 @@ let giro = document.querySelectorAll(".pasa .giro img"); // selecciona las imág
 let botonGiro = document.querySelectorAll(".girador");
 let i = 1;
 
+let alertPrimary = document.querySelector('.alert-primary');
+let aceptarCookies = document.querySelector('#aceptar-cookies');
+let rechazarCookies = document.querySelector('#rechazar-cookies');
+
+aceptarCookies.addEventListener('click', () => {
+    alertPrimary.classList.add('hidden');
+});
+
+rechazarCookies.addEventListener('click', () => {
+    alertPrimary.classList.add('hidden');
+});
+
+
 botonGiro.forEach((boton) => {
     boton.addEventListener('click', () => {
         giro.forEach((element) => {

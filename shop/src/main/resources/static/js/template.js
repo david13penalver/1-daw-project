@@ -95,8 +95,10 @@ head.innerHTML = `
 <title>${filename}</title>
 </head>`
 
+
+
 let scriptMain = document.createElement('script');
-scriptMain.src = "./js/main.js";
+scriptMain.src = "../static/js/main.js";
 document.body.appendChild(scriptMain);
 
 let scriptFontAwesome = document.createElement('script');

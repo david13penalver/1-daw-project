@@ -38,7 +38,12 @@ header {
     z-index: 1000;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-align: center;
 }
 
@@ -52,22 +57,26 @@ nav {
     width: 60vw;
 }
 
-nav ul, footer ul {
+nav ul,
+footer ul {
     text-decoration: none;
     text-align: center;
 }
 
-nav ul li, footer ul li {
+nav ul li,
+footer ul li {
     padding: 5px;
     display: inline-block;
 }
 
-nav ul li a, footer ul li a {
+nav ul li a,
+footer ul li a {
     text-decoration: none;
     color: var(--primary-color);
 }
 
-nav ul li a:hover, footer ul li a:hover {
+nav ul li a:hover,
+footer ul li a:hover {
     text-decoration: none;
     color: var(--secondary-color);
 }
@@ -96,6 +105,19 @@ footer {
 footer img {
     height: 10vh;
 
+}
+
+
+
+.alert {
+    position: fixed;
+    top: 70vh;
+    height: 30vh;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 /*.redes{
