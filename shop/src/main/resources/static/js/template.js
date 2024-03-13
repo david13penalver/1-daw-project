@@ -16,7 +16,7 @@ let filename = path.split("/").pop().split(".")[0];
 
 
 // Verifica si el elemento existe
-if (!container){
+if (!container) {
     container = document.createElement('div');
 
     container.classList.add('container');
@@ -61,7 +61,7 @@ if (!tempFooter) {
 // Establece el innerHTML del elemento al código HTML proporcionado
 tempFooter.innerHTML = `
 
-        <img src="img/logo.png">
+        <img src="../static/images/logo.png">
         <h4>The Dimentials Company</h4>
         <ul class="redes">
             <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
@@ -85,12 +85,13 @@ head.innerHTML = `
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./css/bootstrap.css">
-<link rel="stylesheet" href="./css/styles.css">
-<link rel="stylesheet" href="./css/mobile.css">
-<link rel="stylesheet" href="./css/tablet.css">
-<link rel="stylesheet" href="./css/desktop.css">
-<link rel="stylesheet" href="./css/aminations.css">
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/styles.css">
+<link rel="stylesheet" href="../static/css/mobile.css">
+<link rel="stylesheet" href="../static/css/tablet.css">
+<link rel="stylesheet" href="../static/css/desktop.css">
+<link rel="stylesheet" href="../static/css/aminations.css">
+<link rel="icon" type="image/png" href="../static/images/favicon.png">
 <title>${filename}</title>
 </head>`
 
@@ -104,7 +105,6 @@ scriptFontAwesome.crossOrigin = "anonymous";
 document.body.appendChild(scriptFontAwesome);
 
 let scriptBootStrap = document.createElement('script');
-scriptBootStrap.src = "./js/bootstrap.js";
+scriptBootStrap.src = "../static/js/bootstrap.js";
 scriptBootStrap.crossOrigin = "anonymous";
 document.body.appendChild(scriptBootStrap);
-
