@@ -35,7 +35,8 @@ if (!tempHeader) {
 
 // Establece el innerHTML del elemento al código HTML proporcionado
 tempHeader.innerHTML = `
-    <h1>Dimentials</h1>
+<img src="../static/images/logo.png" alt="Logo de Dimentials">    
+<h1>Dimentials</h1>
     <nav>
         <ul>
             <li><a href="#">Inicio</a></li>

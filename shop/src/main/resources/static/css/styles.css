@@ -12,6 +12,16 @@
     --footer-color: #333;
 }
 
+header img {
+    position: absolute;
+    height: 8vh;
+    margin-left: 15vw;
+}
+
+header h1 {
+    visibility: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
