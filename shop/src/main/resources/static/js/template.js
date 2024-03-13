@@ -2,13 +2,13 @@
 --------TUTORIAL--------
 pones abajo del body script 
     <script src="./js/template.js"></script>
-creas un div con la clase .container
-    <div class="container"> </div>
+creas un div con la clase .contenedor
+    <div class="contenedor"> </div>
 */
 
 // Selecciona los elementos
 let tempHeader = document.querySelector('.temp-header');
-let container = document.querySelector('.container');
+let contenedor = document.querySelector('.contenedor');
 let tempFooter = document.querySelector('.temp-footer');
 let head = document.querySelector('head');
 let path = document.location.pathname;
@@ -16,12 +16,12 @@ let filename = path.split("/").pop().split(".")[0];
 
 
 // Verifica si el elemento existe
-if (!container) {
-    container = document.createElement('div');
+if (!contenedor) {
+    contenedor = document.createElement('div');
 
-    container.classList.add('container');
+    contenedor.classList.add('contenedor');
 
-    document.body.prepend(container);
+    document.body.prepend(contenedor);
 }
 // Verifica si el elemento existe
 if (!tempHeader) {
@@ -30,7 +30,7 @@ if (!tempHeader) {
     // Agrega la clase 'temp-header' al nuevo elemento
     tempHeader.classList.add('temp-header');
     // Agrega el nuevo elemento al documento
-    container.prepend(tempHeader);
+    contenedor.prepend(tempHeader);
 }
 
 // Establece el innerHTML del elemento al código HTML proporcionado
@@ -56,7 +56,7 @@ if (!tempFooter) {
     // Agrega la clase 'temp-footer' al nuevo elemento
     tempFooter.classList.add('temp-footer');
     // Agrega el nuevo elemento al documento
-    container.append(tempFooter);
+    contenedor.append(tempFooter);
 }
 
 // Establece el innerHTML del elemento al código HTML proporcionado
