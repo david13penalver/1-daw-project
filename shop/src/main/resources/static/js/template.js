@@ -39,11 +39,11 @@ tempHeader.innerHTML = `
 <h1>Dimentials</h1>
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Card Dex</a></li>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
             <li><a href="#">Tienda</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="./about.html">Sobre nosotros</a></li>
         </ul>
     </nav>
 `;
@@ -73,10 +73,9 @@ tempFooter.innerHTML = `
             <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
         </ul>
         <ul class="legal">
-            <li><a href="#">Política de cookies</a></li>
-            <li><a href="#">Aviso de privacidad</a></li>
-            <li><a href="#">Condiciones de uso</a></li>
-            <li><a href="#">Información legal</a></li>
+            <li><a href="./cookies.html">Política de cookies</a></li>
+            <li><a href="./privacy.html">Aviso de privacidad</a></li>
+            <li><a href="./terms.html">Condiciones de uso</a></li>
         </ul>
         <p>Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
 
