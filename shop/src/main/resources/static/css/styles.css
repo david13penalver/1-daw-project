@@ -87,7 +87,7 @@ button:hover {
 
 footer {
     width: 100vw;
-    height: 25vh;
+    height: 30vh;
     background-color: var(--footer-color);
     color: var(--primary-color);
     text-align: center;
