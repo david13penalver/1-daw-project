@@ -17,19 +17,28 @@ The Dimentials website serves as a window to the universe of these extraordinary
 # 2.Design
 
 ## Technologies used
-- Photoshop, Illustrator:
+- Photoshop, Illustrator and "IA tools" 
+The cards have been designed using artificial intelligence tools, such as Krea.ia or Bing Images Generator, and image and illustration design tools like Photoshop and Illustrator. 
 
-- Miro:
+Within our capabilities, we have tried to maintain the visual style of each of our creatures and their evolutions, so that the narrative of each monster does not clash with the universe we have created.
 
-- Bootstrap:
+- Miro: 
+Miro became a blank canvas on which to paint, on which to start planning our mockups, our databases, and our classes.
+
+- Bootstrap: 
+We have used these tools to create dropdown menus, implement buttons, and, in general, save ourselves tedious work in CSS.
 
 ## Color Palette 
 Img de la paleta con los diferentes colores
+![alt text](<img_readme/Paleta colores.png>)
 
 ## Pages and design decisions
-
+We have two clear inspirations for this project. On one hand, we have tried to adopt the minimalist and professional style of Apple, making the alternation between black and white recurrent. On the other hand, we have taken the structure from the successful Pokemon card sales website to understand how we should approach this project.
 
 ## Typography
+The Dimentials logo features a unique and custom typeface, still unnamed. The idea is that seeing it strikes you and gives you a sense of energy.
+
+The rest of the website uses the "Ubuntu" font, as we found it simple, friendly, and professional. Additionally, the "Ubuntu" operating system aligns with many of our values as programmers, such as integrity and transparency, so we decided it was the ideal choice.
 
 #  3.Frontend
 
