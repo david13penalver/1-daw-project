@@ -7,10 +7,12 @@ let aceptarCookies = document.querySelector('#aceptar-cookies');
 let rechazarCookies = document.querySelector('#rechazar-cookies');
 
 aceptarCookies.addEventListener('click', () => {
+    alertPrimary.classList.remove('show');
     alertPrimary.classList.add('hidden');
 });
 
 rechazarCookies.addEventListener('click', () => {
+    alertPrimary.classList.remove('show');
     alertPrimary.classList.add('hidden');
 });
 

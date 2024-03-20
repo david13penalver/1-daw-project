@@ -128,3 +128,14 @@ footer img {
     padding: 15em; 
     width: 100vw;
 }*/
+.logo-delante {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 29%;
+    z-index: 9999;
+}
