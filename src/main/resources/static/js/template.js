@@ -62,22 +62,23 @@ if (!tempFooter) {
 // Establece el innerHTML del elemento al código HTML proporcionado
 tempFooter.innerHTML = `
 
-        <img src="../static/images/logo.png">
-        <h4>The Dimentials Company</h4>
-        <ul class="redes">
-            <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
-            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitch"></i> </a></li>
-            <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
-        </ul>
-        <ul class="legal">
-            <li><a href="./cookies.html">Política de cookies</a></li>
-            <li><a href="./privacy.html">Aviso de privacidad</a></li>
-            <li><a href="./terms.html">Condiciones de uso</a></li>
-        </ul>
-        <p>Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
+<img class="grid-logo" src="../static/images/Logo_Version3.png">
+<h4 class="grid-title">The Dimentials Company</h4>
+<ul class="grid-redes">
+    <h4>Redes sociales</h4>
+    <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
+    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-twitch"></i> </a></li>
+    <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
+</ul>
+<ul class="grid-legal">
+    <h4>Aspecto legal</h4>
+    <li><a href="./cookies.html">Política de cookies</a></li>
+    <li><a href="./privacy.html">Aviso de privacidad</a></li>
+    <li><a href="./terms.html">Condiciones de uso</a></li>
+</ul>
+<p class="grid-copyright">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
 
 `;
 
