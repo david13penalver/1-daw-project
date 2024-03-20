@@ -7,9 +7,7 @@
     --primary-color: #ffffff;
     --secondary-color: #e54fad;
     --tertiary-color: #47d8ee;
-    --quartary-color: #000000;
-    --bg-color: #fff;
-    --footer-color: #333;
+    --quartary-color: #333333;
 }
 
 header img {
@@ -96,15 +94,18 @@ button:hover {
 
 footer {
     width: 100vw;
-    height: 30vh;
-    background-color: var(--footer-color);
+    background-color: var(--quartary-color);
     color: var(--primary-color);
     text-align: center;
 }
 
 footer img {
     height: 10vh;
+    margin-top: 5vh;
+}
 
+.grid-legal {
+    display: block;
 }
 
 
