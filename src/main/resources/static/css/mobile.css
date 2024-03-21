@@ -1,5 +1,8 @@
 @media screen AND (min-width: 400px) AND (max-width: 768px) {
-    
+
+    header {
+        position: relative;
+    }    
 
     h1, h2, h3, h4, h5, h6 {
         margin: 5%;

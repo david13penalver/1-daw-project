@@ -9,16 +9,6 @@
     --quartary-color: #333333;
 }
 
-header img {
-    position: absolute;
-    height: 8vh;
-    margin-left: 15vw;
-}
-
-header h1 {
-    visibility: hidden;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -27,12 +17,34 @@ header h1 {
 }
 
 header {
-    background-color: var(--footer-color);
+    background-color: var(--quartary-color);
     color: var(--primary-color);
     position: sticky;
-    top: 0;
+    top: 0vh;
     height: 8vh;
     z-index: 1000;
+}
+
+.logo-img {
+    position: absolute;
+    height: 8vh;
+    margin-left: 15vw;
+    z-index: 1;
+}
+
+header h1 {
+    color: var(--quartary-color);
+}
+
+body {
+    background-color: var(--quartary-color);
+    color: var(--primary-color);
+    width: 99vw;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 h1,
@@ -49,24 +61,74 @@ h1 {
     width: 30vw;
 }
 
-nav {
-    display: inline-block;
-    width: 60vw;
+.main-menu {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--quartary-color);
+    align-items: center;
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+    width: 100vw;
 }
 
-nav ul,
+.main-menu__item {
+    padding: 1em;
+
+}
+
+.main-menu__link {
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-menu--show {
+    transform: translateY(25vh);
+}
+
+img {
+    max-width: 100%;
+}
+
+.toggle-menu {
+    width: 40px;
+    position: absolute;
+    top: 12.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    filter: invert(1);
+    z-index: 10;
+}
+
+main {
+    margin: 3.1vh 5vw;
+}
+
+footer {
+    background-color: var(--quartary-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+footer img {
+    height: 10vh;
+    margin-top: 5vh;
+}
+
 footer ul {
     text-decoration: none;
     text-align: center;
 }
 
-nav ul li,
 footer ul li {
     padding: 5px;
     display: inline-block;
 }
 
-nav ul li a,
 footer ul li a {
     text-decoration: none;
     color: var(--primary-color);
@@ -76,31 +138,6 @@ nav ul li a:hover,
 footer ul li a:hover {
     text-decoration: none;
     color: var(--secondary-color);
-}
-
-button {
-    background-color: var(--tertiary-color);
-    border: 1px solid var(--tertiary-color);
-    border-radius: 25px;
-    height: 5vh;
-    width: 13vw;
-    margin-top: 2vh;
-}
-
-button:hover {
-    background-color: var(--secondary-color);
-}
-
-footer {
-    width: 100vw;
-    background-color: var(--quartary-color);
-    color: var(--primary-color);
-    text-align: center;
-}
-
-footer img {
-    height: 10vh;
-    margin-top: 5vh;
 }
 
 .grid-legal {

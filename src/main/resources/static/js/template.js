@@ -35,17 +35,20 @@ if (!tempHeader) {
 
 // Establece el innerHTML del elemento al código HTML proporcionado
 tempHeader.innerHTML = `
-<img src="../static/images/logo.png" alt="Logo de Dimentials">    
-<h1>Dimentials</h1>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="./about.html">Sobre nosotros</a></li>
-        </ul>
-    </nav>
+<img class="logo-img" src="../static/images/Logo_Version2.png" alt="Logo de Dimentials">
+        <h1>Dimentials</h1>
+        <nav class="main-menu">
+            <div id="toggle-menu" class="toggle-menu">
+                <img src="../static/images/menu-icon.png" alt="Botón de menu">
+            </div>
+            <ul class="main-menu" id="main-menu">
+                <li class="main-menu__item"><a class="main-menu__link" href="./index.html">Inicio</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="./faq.html">FAQ</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Tienda</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Contacto</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="./about.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
 `;
 
 

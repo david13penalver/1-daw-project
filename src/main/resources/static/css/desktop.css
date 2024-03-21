@@ -1,4 +1,22 @@
 @media screen AND (min-width: 768.5px) {
+
+    .main-menu {
+        position: absolute;
+        flex-direction: row;
+        justify-content: flex-end;        
+        transform: translateY(10);
+        top: 3vh;
+        right: 1vw;
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+
+    main {
+        margin: 0.1vh 3vw;
+    }
+
     section {
         height: 92vh;
     }
