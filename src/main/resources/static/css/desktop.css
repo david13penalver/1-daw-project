@@ -89,3 +89,23 @@
     }
     
 }
+
+.section6 {
+    background-image: url(../images/imagenAmpliada.png);
+}
+
+.section6 .divide {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section6 .image-even {
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    height: 50vh;
+    transform: translateX(-50%);
+
+}

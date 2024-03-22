@@ -19,3 +19,9 @@
         width: 100vw;
     }  
 }
+
+.section6 {
+    background-image: url(../images/1_imagen_carrousel.jpg);
+    position: relative;
+}
+
