@@ -90,22 +90,65 @@
     
 }
 
-.section6 {
+.section6, .section5 {
     background-image: url(../images/imagenAmpliada.png);
 }
 
-.section6 .divide {
+.section-even .divide {
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20vw;
+    width: 50%;
 }
 
-.section6 .image-even {
+.section4 .divide {
     position: absolute;
-    top: 20vh;
-    right: 0;
-    height: 50vh;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 13vw;
+    width: 50%;
+}
 
+.section-even .image-even {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 50%;
+
+}
+
+.section-even .image-even img {
+    max-height: 50vh;
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+}
+
+.section-odd .divide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 50%;
+}
+
+.section-odd .image-odd {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 50%;
+}
+
+.image-odd img {
+    max-height: 50vh;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.section4 {
+    background-color: black;
 }

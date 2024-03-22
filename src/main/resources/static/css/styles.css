@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #e54fad;
@@ -194,19 +195,20 @@ footer ul li a:hover {
 }
 
 .contenedor {
-    background-color: var(--primary-color);
-    background-color: red;
+    background-color: var(--quartary-color);
+    color: var(--primary-color);
     width: 99.2vw;
 }
 
-.section6 {
+.section6, .section5, .section4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
     
 }
 
-.section6::before {
+.section6::before, .section5::before {
     content: "";
     position: absolute;
     top: 0;
@@ -214,7 +216,7 @@ footer ul li a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Negro con una opacidad del 50% */
-  }
+}
 
 .divide h3, .divide p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
