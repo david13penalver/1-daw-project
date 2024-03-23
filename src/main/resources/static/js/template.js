@@ -42,11 +42,11 @@ tempHeader.innerHTML = `
                 <img src="../static/images/menu-icon.png" alt="Botón de menu">
             </div>
             <ul class="main-menu" id="main-menu">
-                <li class="main-menu__item"><a class="main-menu__link" href="./index.html">Inicio</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="./faq.html">FAQ</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Tienda</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Contacto</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="./about.html">Sobre nosotros</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" th:href="@{/}">Inicio</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" th:href="@{/faq}">FAQ</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" th:href="@{/tienda}">Tienda</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" th:href="@{/contacto}">Contacto</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" th:href="@{/about}">Sobre nosotros</a></li>
             </ul>
         </nav>
 `;

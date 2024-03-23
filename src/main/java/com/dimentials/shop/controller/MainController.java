@@ -12,4 +12,24 @@ public class MainController {
     public String about() {
         return "about";
     }
+
+    @GetMapping("/cookies")
+    public String cookies() {
+        return "cookies";
+    }
+
+    @GetMapping("/faq")
+    public String faq() {
+        return "faq";
+    }
+
+    @GetMapping("/privacy")
+    public String privacy() {
+        return "privacy";
+    }
+
+    @GetMapping("/terms")
+    public String terms() {
+        return "terms";
+    }
 }
