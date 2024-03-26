@@ -25,8 +25,6 @@ Within our capabilities, we have tried to maintain the visual style of each of o
 - Miro: 
 Miro became a blank canvas on which to paint, on which to start planning our mockups, our databases, and our classes.
 
-- Bootstrap: 
-We have used these tools to create dropdown menus, implement buttons, and, in general, save ourselves tedious work in CSS.
 
 ## Color Palette 
 Img de la paleta con los diferentes colores
@@ -43,13 +41,25 @@ The rest of the website uses the "Ubuntu" font, as we found it simple, friendly,
 #  3.Frontend
 
 ## Technologies used
+Visual Studio: Visual Studio is a Microsoft IDE for developing applications on various platforms, supporting multiple programming languages and featuring tools for code editing, debugging, and version control.
+
+- Bootstrap: 
+We have used these tools to create dropdown menus, implement buttons, and, in general, save ourselves tedious work in CSS.
 
 ## Programming languages
+
+Javascript:
+
 
 # 4. Backend
 ## Technologies used
+Visual studio
 
 ## Programming languages
+Java:
+
+
+
 
 # 5. Database
 ## DBMS
