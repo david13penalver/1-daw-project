@@ -1,17 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/css/tablet.css}">
+    <link rel="stylesheet" th:href="@{/css/desktop.css}">
+    <link rel="stylesheet" th:href="@{/css/aminations.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
+    <title>Nuestras cartas</title>
 </head>
+
 <body>
-<ul>
-    <a th:each="card : ${cardList}" th:href="@{${'/cards/' + movie.id}}">
-        <li th:text="|${card.id} - ${card.title}|">Texto por defecto</li>
-    </a>
-</ul>
+    <header th:replace="~{layouts/base :: headerplusnav}"></header>
+
+    <ul>
+        <a th:each="card : ${cardList}" th:href="@{${'/cards/' + movie.id}}">
+            <li th:text="|${card.id} - ${card.title}|">Texto por defecto</li>
+        </a>
+    </ul>
+    <footer th:replace="~{layouts/base :: footer}"></footer>
+
+    <script src="../static/js/template.js"></script>
 </body>
+
 </html>

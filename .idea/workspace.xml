@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.ShopApplication.executor": "Run",
-    "git-widget-placeholder": "feature/solvingSection1AndSection2OfIndex",
+    "git-widget-placeholder": "feature/indexAndFooterEmbeddedWithThymeleaf",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/david13penalver/proyecto/Grup3-Dimentials",
@@ -84,6 +84,9 @@
       <workItem from="1710419948891" duration="617000" />
       <workItem from="1711213000412" duration="2131000" />
       <workItem from="1711353407526" duration="888000" />
+      <workItem from="1711444223703" duration="1225000" />
+      <workItem from="1711536997180" duration="870000" />
+      <workItem from="1712832445080" duration="1726000" />
     </task>
     <servers />
   </component>

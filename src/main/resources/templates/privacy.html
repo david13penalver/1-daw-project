@@ -4,10 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre_nosotros</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+  <link rel="stylesheet" th:href="@{/css/mobile.css}">
+  <link rel="stylesheet" th:href="@{/css/tablet.css}">
+  <link rel="stylesheet" th:href="@{/css/desktop.css}">
+  <link rel="stylesheet" th:href="@{/css/aminations.css}">
+  <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+  <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
+  <title>Política de privacidad</title>
 </head>
 
 <body>
+  <header th:replace="~{layouts/base :: headerplusnav}"></header>
+
   <div class="contenedor">
     <main class="container">
       <h1>Política de Privacidad</h1>
@@ -75,6 +85,8 @@
       </p>
     </main>
   </div>
+  <footer th:replace="~{layouts/base :: footer}"></footer>
+
   <script src="../static/js/template.js"></script>
 </body>
 

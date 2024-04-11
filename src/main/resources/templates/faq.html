@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/css/tablet.css}">
+    <link rel="stylesheet" th:href="@{/css/desktop.css}">
+    <link rel="stylesheet" th:href="@{/css/aminations.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
     <title>Términos de Uso</title>
-  </head>
-  <body>
+</head>
+
+<body>
+    <header th:replace="~{layouts/base :: headerplusnav}"></header>
+
     <div class="contenedor">
-      <main class="container">
+        <main class="container">
             <div class="accordion" id="accordion_FAQS">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -17,10 +30,11 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>Hay un total de 18 elementos</strong> Concretamente son: 
+                            <strong>Hay un total de 18 elementos</strong> Concretamente son:
                             Metal-Roca-Viento-Sonido-Tierra-Electricidad-Agua-Fuego-Hielo-Nuclear-Veneno-Arcano
-                            -Luz-Oscuridad-Tiempo-Vida-Pesadilla-Fantasia-Metal-Roca. Puedes aprender mas sobre como funcionan estos elementos a través del siguiente PDF
-                            <code>elementos.pdf</code> 
+                            -Luz-Oscuridad-Tiempo-Vida-Pesadilla-Fantasia-Metal-Roca. Puedes aprender mas sobre como
+                            funcionan estos elementos a través del siguiente PDF
+                            <code>elementos.pdf</code>
                         </div>
                     </div>
                 </div>
@@ -33,7 +47,9 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong> Hay un total de 22 especies </strong> Concretamente: Bestia, Reptil, Marino, Volador, Insecto, Dragon, Objetimados, Elemental, Luchador, Guerrero, HechiceroNo-Muerto,Planta,Hongo,Máquina,Demonio, Angel, Slime, Fantasma, Marioneta, Payaso
+                            <strong> Hay un total de 22 especies </strong> Concretamente: Bestia, Reptil, Marino,
+                            Volador, Insecto, Dragon, Objetimados, Elemental, Luchador, Guerrero,
+                            HechiceroNo-Muerto,Planta,Hongo,Máquina,Demonio, Angel, Slime, Fantasma, Marioneta, Payaso
                             Gastronómico. Puedes encontrar más información desde el siguiente pdf
                             <code>Especies.pdf</code>
                         </div>
@@ -48,8 +64,11 @@
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>En dimentials hay muchas evoluciones</strong> Mientras que en otros juegos las criaturas no evolucionan o se ven limitadas a unas pocas y concretas evoluciones, en dimentials calamity conquest se permite que tus criaturas puedan evolucionar a nuevas y multiples formas. 
-                            Tan solo se deben cumplir algunas condiciones, condiciones que podreis encontrar en 
+                            <strong>En dimentials hay muchas evoluciones</strong> Mientras que en otros juegos las
+                            criaturas no evolucionan o se ven limitadas a unas pocas y concretas evoluciones, en
+                            dimentials calamity conquest se permite que tus criaturas puedan evolucionar a nuevas y
+                            multiples formas.
+                            Tan solo se deben cumplir algunas condiciones, condiciones que podreis encontrar en
                             <code>Guía.pdf</code>, though the transition does limit overflow.
                         </div>
                     </div>
@@ -59,6 +78,10 @@
 
         </main>
     </div>
+
+    <footer th:replace="~{layouts/base :: footer}"></footer>
+
     <script src="../static/js/template.js"></script>
-  </body>
+</body>
+
 </html>

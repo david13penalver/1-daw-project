@@ -1,14 +1,29 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/css/tablet.css}">
+    <link rel="stylesheet" th:href="@{/css/desktop.css}">
+    <link rel="stylesheet" th:href="@{/css/aminations.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
     <title>Detalles de tu carta Dimential favorita</title>
 </head>
+
 <body>
-<h3 th:text="|${cardDetail.name} - ${cardDetail.description}|">Texto por defecto</h3>
+    <header th:replace="~{layouts/base :: headerplusnav}"></header>
+
+    <h3 th:text="|${cardDetail.name} - ${cardDetail.description}|">Texto por defecto</h3>
+
+    <footer th:replace="~{layouts/base :: footer}"></footer>
+
+    <script src="../static/js/template.js"></script>
 
 </body>
+
 </html>
