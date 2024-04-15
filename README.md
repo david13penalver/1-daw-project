@@ -13,18 +13,18 @@
 - [Organization](#org)
 
 
-# 0. What is Dimentials? {#introduction}
+# 0. What is Dimentials? <a name="introduction"></a>
 Dimentials is a multidisciplinary project that revolutionizes the world of merchandising and games through a unique collection of creatures originating from multidimensional portals. These creatures, grouped by their dimension of origin, share physical characteristics that make them unique and recognizable, ranging from Jurassic environments to realms made entirely of sweets. Inspired by the visual style and creative richness of iconic franchises like Pokémon, Digimon, and Yu-Gi-Oh, Dimentials offers both a fresh and familiar experience.
 
 The Dimentials website serves as a window to the universe of these extraordinary creatures, promoting not only their discovery but also the acquisition of the innovative collectible card game "Dimentials Calamity Conquest". This first trading game invites players to dive into strategic battles and collecting, marking the beginning of an unprecedented adventure in the realm of card games.
 
 
-# 1. Made by (alphabetically) {#members}
+# 1. Made by (alphabetically) <a name="members"></a>
 - [David Peñalver Navarro](https://github.com/david13penalver/)
 - [Borja Rubio González](https://github.com/BorjaRubio)
 - [Antonio Suárez González](https://github.com/lueyo31/)
 
-# 2. Design {#design}
+# 2. Design <a name="design"></a>
 ## Technologies used
 
 - Photoshop, Illustrator and "IA tools" 
@@ -49,7 +49,7 @@ The Dimentials logo features a unique and custom typeface, still unnamed. The id
 
 The rest of the website uses the "Ubuntu" font, as we found it simple, friendly, and professional. Additionally, the "Ubuntu" operating system aligns with many of our values as programmers, such as integrity and transparency, so we decided it was the ideal choice.
 
-#  3. Frontend {#front}
+#  3. Frontend <a name="front"></a>
 ## Technologies used
 
 - Visual Studio
@@ -66,7 +66,7 @@ We have used these tools to create dropdown menus, implement buttons, and, in ge
 We have used mark up languages too: HTML and CSS.
 
 
-# 4. Backend {#back}
+# 4. Backend <a name="back"></a>
 ## Technologies used
 
 - Visual Studio Code
@@ -84,19 +84,19 @@ We have also used this software in order to create our database.
 - SQL
 
 
-# 5. Database {#db}
+# 5. Database <a name="db"></a>
 
 ## DBMS
 
 ## Design
 
 
-# 6. Deployment {#deployment}
+# 6. Deployment <a name="deployment"></a>
 
 ## Web server
 
 
-# 7. Organisation {#org}
+# 7. Organisation <a name="org"></a>
 
 ## Task management
 
