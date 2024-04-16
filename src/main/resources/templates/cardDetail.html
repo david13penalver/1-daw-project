@@ -20,6 +20,8 @@
 
     <h3 th:text="|${cardDetail.id} - ${cardDetail.name} - ${cardDetail.description}|">Texto por defecto</h3>
 
+    <img alt="Card Image" th:src="@{${'/images/cardDetail/card' + cardDetail.id + '.png'}}" />
+
     <footer th:replace="~{layouts/base :: footer}"></footer>
 
     <script src="../static/js/template.js"></script>
