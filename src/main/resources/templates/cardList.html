@@ -19,10 +19,11 @@
     <header th:replace="~{layouts/base :: headerplusnav}"></header>
 
     <ul>
-        <a th:each="card : ${cardList}" th:href="@{${'/cards/' + movie.id}}">
-            <li th:text="|${card.id} - ${card.title}|">Texto por defecto</li>
+        <a th:each="card : ${cardList}" th:href="@{${'/cards/' + card.id}}">
+            <li th:text="|${card.id} - ${card.name}|">Texto por defecto</li>
         </a>
     </ul>
+
     <footer th:replace="~{layouts/base :: footer}"></footer>
 
     <script src="../static/js/template.js"></script>

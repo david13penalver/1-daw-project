@@ -26,7 +26,7 @@ public class CardController {
     }
 
     @GetMapping("/{id}")
-    public String findById(@PathVariable int id, Model model) {
+    public String findById(@PathVariable Integer id, Model model) {
         model.addAttribute("cardDetail", cardService.findById(id));
         return "cardDetail";
     }
