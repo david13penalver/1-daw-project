@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Galeria de cartas</title>
+        <link rel="stylesheet" href="css/modulo_cartas_gallery.css" />
+    </head>
+    <body>
+        <main>
+            <section id="gallery_cards">
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/1_card_Lavacus.png" alt="card_Lavacus" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/2_card_Pyromagmus.png" alt="card_Pyromagmus" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/3_card_Aurelius_Ignis.png" alt="card_Aurelius_Ignis" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/4_card_Nebulca.png" alt="card_Nebulca" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/5_card_Nebulcoal.png" alt="card_Nebulcoal" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/6_card_Nebulsmokar.png" alt="card_Nebulsmokar" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/7_card_Lizzar.png" alt="card_Lizzar" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/8_card_Iguanitxeco.png" alt="card_Iguanitxeco" />
+                </div>
+                <div class="tiltcard" data-tilt data-tilt-glare>
+                    <img src="img/9_card_Citalflama.png" alt="card_Citalflama" />
+                </div>
+            </section>
+
+            <section id="main-card-container">
+                <div id="zoom-card-container">
+                    <div class="tiltcard" data-tilt data-tilt-glare>
+                        <img id="img-active" src="#" alt="card_zoom" />
+                    </div>
+                </div>
+                <button id="button__close" type="button">X</button>
+                <button id="button__go-back" type="button">&lt;</button>
+                <button id="button__keep-it-up" type="button">&gt;</button>
+                <button id="button__view-more" type="button">Ver más</button>
+            </section>
+        </main>
+        <script src="js/cards_gallery_mode_app.js"></script>
+        <script src="js/vanilla_tilt.js"></script>
+    </body>
+</html>
