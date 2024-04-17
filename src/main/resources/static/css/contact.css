@@ -1,0 +1,78 @@
+h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+
+}
+body {
+    margin:0;
+    font-family: sans-serif;
+    color:#eee;
+    background: linear-gradient(to bottom,#333, #000);
+}
+
+form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.361);
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.form_input {
+    padding: 6px 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 6px 8px; /* 6 arriba y abajo, 12 a la izq y derecha */
+    box-sizing: border-box;
+    border: 1px solid #666; 
+    background-color: transparent;
+    border-left: 2px solid #107d8e;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
+    color: #ddd;
+    border-radius: 4px;
+    margin: 6px 0;
+}
+
+option{
+    background-color: #222;
+    /* no se puede añadir margin ni padding, se necesitaria usar una libreria aposta de Javascript para eso*/
+}
+textarea {
+    min-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    font-family: sans-serif;;
+}
+
+label {
+    font-size:0,88em;
+}
+
+.checkbox {
+    width: auto;
+    height: 15px;
+}
+
+fieldset {
+    margin:20px 0;
+    border:1px solid #666;
+    border-radius: 5px;
+    padding: 8px 8px 10px 10px;
+    margin: 20px
+
+}
+
+legend {
+    padding: 0 6px;
+    color: #777;
+}
+
