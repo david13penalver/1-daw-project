@@ -17,7 +17,8 @@ CREATE TABLE client (
 CREATE TABLE card (
     id_card INT PRIMARY KEY,
     name VARCHAR(255) not null,
-    description VARCHAR(500) not null,
+    description_es VARCHAR(500) not null,
+    description_en VARCHAR(500) not null,
     price DECIMAL(10, 2) not null
 );
 
@@ -26,8 +27,10 @@ CREATE TABLE monster (
     id_card INT PRIMARY KEY,
     atack INT not null,
     life INT not null,
-    main_type  VARCHAR(20) not null,
-    socondary_type VARCHAR(20),
+    main_type_es  VARCHAR(20) not null,
+    main_type_en  VARCHAR(20) not null,
+    socondary_type_es VARCHAR(20),
+    socondary_type_en VARCHAR(20),
     FOREIGN KEY (id_card) REFERENCES card(id_card) ON DELETE CASCADE
 );
 
