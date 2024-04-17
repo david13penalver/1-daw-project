@@ -6,12 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,23 +26,23 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2dcyI0JbsRAveiHoBKY1GRdcikY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CardRepositoryImplTest.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor": "Run",
+    "JUnit.CardServiceImplTest.findAllReturnsAllCards.executor": "Run",
     "JUnit.CardTest.executor": "Run",
     "JUnit.MonsterTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -45,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.ShopApplication.executor": "Run",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/UnitTestCardService",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/toni/Documentos/GitHub/Grup3-Dimentials",
@@ -58,7 +65,54 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CardServiceImplTest.findByIdReturnsTheCardDemandedAtTheParam">
+    <configuration name="CardServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardServiceImplTest.findAllReturnsAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="METHOD_NAME" value="findAllReturnsAllCards" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardServiceImplTest.findByIdReturnsTheCardDemandedAtTheParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="METHOD_NAME" value="findByIdReturnsTheCardDemandedAtTheParam" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dimentials.shop.ShopApplication" />
@@ -66,11 +120,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CardServiceImplTest.findByIdReturnsTheCardDemandedAtTheParam" />
+        <item itemvalue="JUnit.CardServiceImplTest.findAllReturnsAllCards" />
+        <item itemvalue="JUnit.CardServiceImplTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-249ae16d76d6-7c0527ad" />
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
       </set>
     </attachedChunks>
   </component>
@@ -93,6 +154,7 @@
       <workItem from="1713199078306" duration="304000" />
       <workItem from="1713250223061" duration="2386000" />
       <workItem from="1713261703048" duration="911000" />
+      <workItem from="1713346837573" duration="3612000" />
     </task>
     <servers />
   </component>
