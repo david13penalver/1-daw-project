@@ -1,5 +1,7 @@
 package com.dimentials.shop.domain.entity;
 
+import java.math.BigDecimal;
+
 public class Monster extends Card {
 
     private Integer attack;
@@ -9,6 +11,13 @@ public class Monster extends Card {
 
     public Monster(Integer id, String name, String description, Integer attack, Integer life, String mainType, String secondaryType) {
         super(id, name, description);
+        this.attack = attack;
+        this.life = life;
+        this.mainType = mainType;
+        this.secondaryType = secondaryType;
+    }
+    public Monster(Integer id, String name, String description,BigDecimal price, Integer attack, Integer life, String mainType, String secondaryType ) {
+        super(id, name, description,price);
         this.attack = attack;
         this.life = life;
         this.mainType = mainType;
