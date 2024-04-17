@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="../static/css/tablet.css">
         <link rel="stylesheet" href="../static/css/desktop.css">
         <link rel="stylesheet" href="../static/css/aminations.css">
+        <link rel="stylesheet" href="../static/css/menu.css">
+
         <link rel="icon" type="image/png" href="../static/images/favicon.png">
         <title>Index</title>
     </head>`
@@ -20,6 +22,7 @@
 <body>
 
     <header th:fragment="headerplusnav">
+        <div class="header">
         <img class="logo-img" th:src="@{${'/images/Dimentials_Logo_Texto.png'}}" alt="Logo de Dimentials">
         <h1>Dimentials</h1>
         <nav class="main-menu">
@@ -32,6 +35,37 @@
                 <li class="main-menu__item"><a class="main-menu__link" href="#">Tienda</a></li>
                 <li class="main-menu__item"><a class="main-menu__link" href="#">Contacto</a></li>
                 <li class="main-menu__item"><a class="main-menu__link" href="./about.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <header th:fragment="headerplusnav2" class="header">
+        <div class="logo">DIMENTIALS</div>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"> <img class="menu" th:src="@{${'/images/menu-icon.png'}}" alt="menu" /> </label>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Dimensiones</a></li>
+                <li><a href="#">Cartas</a></li>
+                <li>
+                    <a href="#">FAQ</a>
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Sobre Dimentials</a></li>
+                        <li><a href="#">Sobre Dimentials TCG</a></li>
+                        <li><a href="#">Sobre la tienda</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Como Jugar</a>
+                    <ul>
+                        <li><a href="#">Básico: Identifica los elementos de las cartas</a></li>
+                        <li><a href="#">Básico: Tablero de juego y turnos</a></li>
+                        <li><a href="#">Intermedio: Estrategias básicas </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tienda</a></li>
             </ul>
         </nav>
     </header>
