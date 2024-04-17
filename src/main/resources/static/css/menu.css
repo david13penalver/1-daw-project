@@ -21,11 +21,11 @@ body {
 }
 
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #333333;
     padding: 0 10%;
     display: flex;
     align-items: center;
@@ -40,6 +40,9 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
+}
+.header label img {
+    padding: 6px;
 }
 
 .navigation ul {

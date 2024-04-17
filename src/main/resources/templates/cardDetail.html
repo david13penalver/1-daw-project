@@ -10,18 +10,40 @@
     <link rel="stylesheet" th:href="@{/css/tablet.css}">
     <link rel="stylesheet" th:href="@{/css/desktop.css}">
     <link rel="stylesheet" th:href="@{/css/aminations.css}">
+    <link rel="stylesheet" th:href="@{/css/cardDetail.css}">
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
     <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
     <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
     <title>Detalles de tu carta Dimential favorita</title>
 </head>
 
 <body>
-    <header th:replace="~{layouts/base :: headerplusnav}"></header>
+    <header th:replace="~{layouts/base :: headerplusnav2}"></header>
 
-    <h3 th:text="|${cardDetail.id} - ${cardDetail.name} - ${cardDetail.description}|">Texto por defecto</h3>
-
-    <img alt="Card Image" th:src="@{${'/images/cardDetail/card' + cardDetail.id + '.png'}}" />
-
+    <main class="profile">
+        <div class="profile__wrapper">
+            <!--Controla los limites de la seccion-->
+            <div class="profile__img-container">
+                <img alt="Card Image" th:src="@{${'/images/cardDetail/card' + cardDetail.id + '.png'}}" class="profile__img-expanded" />
+                <img alt="Card Image" th:src="@{${'/images/cardDetail/card' + cardDetail.id + '.png'}}" class="profile__img-normal" />
+            </div>
+            <div class="profile__data-container">
+                <div class="profile__description">
+                    <h1>Dimentials, welcome to Protosauria</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi ullam
+                        ratione magnam. Quam, in sequi consequuntur atque quaerat vitae modi
+                        pariatur optio inventore corporis iste veritatis n esse minima
+                        provident.
+                    </p>
+                </div> 
+                    <div class="profile__skills-container">
+                        <h2>Skills</h2>
+                        <h3 th:text="|${cardDetail.id} - ${cardDetail.name} - ${cardDetail.description}|">Texto por defecto</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
     <footer th:replace="~{layouts/base :: footer}"></footer>
 
     <script src="../static/js/template.js"></script>

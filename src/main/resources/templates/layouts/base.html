@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+    <!--
     <header th:fragment="headerplusnav">
         <div class="header">
         <img class="logo-img" th:src="@{${'/images/Dimentials_Logo_Texto.png'}}" alt="Logo de Dimentials">
@@ -39,6 +39,8 @@
         </nav>
         </div>
     </header>
+    -->
+
     <header th:fragment="headerplusnav2" class="header">
         <div class="logo">DIMENTIALS</div>
         <input type="checkbox" id="toggle" />
@@ -46,7 +48,12 @@
         <nav class="navigation">
             <ul>
                 <li><a href="#">Dimensiones</a></li>
-                <li><a href="#">Cartas</a></li>
+                <li><a href="#">Cartas</a>
+                    <ul>
+                        <li><a href="#">Galería de cartas</a></li>
+                        <li><a href="#">Detalles de cartas</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#">FAQ</a>
                     <ul>

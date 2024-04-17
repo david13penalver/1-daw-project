@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/modulo_cartas_gallery.css" />
     </head>
     <body>
+        <header th:replace="~{layouts/base :: headerplusnav2}"></header>
         <main>
             <section id="gallery_cards">
                 <div class="tiltcard" data-tilt data-tilt-glare>
@@ -50,6 +51,7 @@
                 <button id="button__view-more" type="button">Ver más</button>
             </section>
         </main>
+        <footer th:replace="~{layouts/base :: footer}"></footer>
         <script src="js/cards_gallery_mode_app.js"></script>
         <script src="js/vanilla_tilt.js"></script>
     </body>
