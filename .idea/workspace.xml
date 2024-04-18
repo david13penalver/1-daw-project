@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/basic_concepts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/basic_concepts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/basic_strategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/basic_strategy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cookies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cookies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.ShopApplication.executor": "Run",
-    "git-widget-placeholder": "feature/fixCardDetail",
+    "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/toni/Documentos/GitHub/Grup3-Dimentials",
@@ -147,7 +154,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-249ae16d76d6-7c0527ad" />
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24582b8d" />
       </set>
     </attachedChunks>
   </component>
@@ -171,6 +178,7 @@
       <workItem from="1713250223061" duration="2386000" />
       <workItem from="1713261703048" duration="911000" />
       <workItem from="1713346837573" duration="3612000" />
+      <workItem from="1713456786097" duration="1570000" />
     </task>
     <servers />
   </component>

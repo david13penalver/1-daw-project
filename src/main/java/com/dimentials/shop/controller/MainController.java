@@ -32,4 +32,19 @@ public class MainController {
     public String terms() {
         return "terms";
     }
+
+    @GetMapping("/basic_concepts")
+    public String basicConcepts() {
+        return "basic_concepts";
+    }
+
+    @GetMapping("/basic_strategy")
+    public String basicStrategy() {
+        return "basic_strategy";
+    }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
 }

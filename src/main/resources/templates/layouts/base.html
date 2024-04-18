@@ -42,7 +42,7 @@
     -->
 
     <header th:fragment="headerplusnav2" class="header">
-        <div class="logo">DIMENTIALS</div>
+        <div class="logo"><a th:href="@{/}">DIMENTIALS</a></div>
         <input type="checkbox" id="toggle" />
         <label for="toggle"> <img class="menu" th:src="@{${'/images/menu-icon.png'}}" alt="menu" /> </label>
         <nav class="navigation">
@@ -50,26 +50,26 @@
                 <li><a href="#">Dimensiones</a></li>
                 <li><a href="#">Cartas</a>
                     <ul>
-                        <li><a href="#">Galería de cartas</a></li>
+                        <li><a th:href="@{/cards}">Galería de cartas</a></li>
                         <li><a href="#">Detalles de cartas</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">FAQ</a>
                     <ul>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Sobre nosotros</a></li>
-                        <li><a href="#">Sobre Dimentials</a></li>
-                        <li><a href="#">Sobre Dimentials TCG</a></li>
-                        <li><a href="#">Sobre la tienda</a></li>
+                        <li><a th:href="@{/contact}">Contacto</a></li>
+                        <li><a th:href="@{/about}">Sobre nosotros</a></li>
+                        <li><a th:href="@{/faq}">Sobre Dimentials</a></li>
+                        <li><a th:href="@{/faq}">Sobre Dimentials TCG</a></li>
+                        <li><a th:href="@{/faq}">Sobre la tienda</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Como Jugar</a>
                     <ul>
-                        <li><a href="#">Básico: Identifica los elementos de las cartas</a></li>
+                        <li><a th:href="@{/basic_concepts}">Básico: Identifica los elementos de las cartas</a></li>
                         <li><a href="#">Básico: Tablero de juego y turnos</a></li>
-                        <li><a href="#">Intermedio: Estrategias básicas </a></li>
+                        <li><a th:href="@{/basic_strategy}">Intermedio: Estrategias básicas </a></li>
                     </ul>
                 </li>
                 <li><a href="#">Tienda</a></li>
@@ -90,9 +90,9 @@
         </ul>
         <ul class="grid-legal">
             <h4>Aspecto legal</h4>
-            <li><a href="./cookies.html">Política de cookies</a></li>
-            <li><a href="./privacy.html">Aviso de privacidad</a></li>
-            <li><a href="./terms.html">Condiciones de uso</a></li>
+            <li><a th:href="@{/cookies}">Política de cookies</a></li>
+            <li><a th:href="@{/privacy}">Aviso de privacidad</a></li>
+            <li><a th:href="@{/terms}">Condiciones de uso</a></li>
         </ul>
         <p class="grid-copyright">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
     </footer>
