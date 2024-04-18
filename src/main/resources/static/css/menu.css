@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Beleren";
-    src: url("fonts/BelerenSmallCaps-Bold.ttf") format("truetype");
+    src: url("../fonts/BelerenSmallCaps-Bold.ttf") format("truetype");
     font-weight: 500;
 }
 
@@ -41,6 +41,12 @@ body {
     color: #ffffff;
     font-weight: 700;
 }
+
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .header label img {
     padding: 6px;
 }
@@ -144,7 +150,7 @@ header .navigation ul li ul {
     }
 
     .header .navigation ul li ul li {
-        background-color: rgba (1, 1, 1, 0.7);
+        background-color: rgba(1, 1, 1, 0.7);
     }
 
     .header .navigation ul li ul li a {

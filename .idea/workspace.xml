@@ -7,14 +7,11 @@
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/basic_concepts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/basic_concepts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/basic_strategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/basic_strategy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cookies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cookies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/terms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/terms.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,35 +42,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ShopApplication.executor": "Run",
-    "JUnit.CardRepositoryImplTest.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor": "Run",
-    "JUnit.CardServiceImplTest.findAllReturnsAllCards.executor": "Run",
-    "JUnit.CardTest.executor": "Run",
-    "JUnit.MonsterTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ShopApplication.executor": "Run",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/toni/Documentos/GitHub/Grup3-Dimentials",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ShopApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceImplTest.findAllReturnsAllCards.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MonsterTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ShopApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/toni/Documentos/GitHub/Grup3-Dimentials&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.ShopApplication">
     <configuration name="ShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.ShopApplication" />
@@ -178,7 +175,8 @@
       <workItem from="1713250223061" duration="2386000" />
       <workItem from="1713261703048" duration="911000" />
       <workItem from="1713346837573" duration="3612000" />
-      <workItem from="1713456786097" duration="1570000" />
+      <workItem from="1713456786097" duration="3056000" />
+      <workItem from="1713469207196" duration="1007000" />
     </task>
     <servers />
   </component>

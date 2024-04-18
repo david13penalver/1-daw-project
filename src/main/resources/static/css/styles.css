@@ -38,7 +38,7 @@ header h1 {
 }
 
 body {
-    background-color: var(--quartary-color);
+    background-color: var(--primary-color);
     color: var(--primary-color);
     width: 99vw;
 }
