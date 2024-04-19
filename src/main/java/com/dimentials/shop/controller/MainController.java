@@ -49,4 +49,9 @@ public class MainController {
     public String contact() {
         return "contact";
     }
+
+    @GetMapping("/gallery_cards")
+    public String gallery() {
+        return "galleryCards";
+    }
 }

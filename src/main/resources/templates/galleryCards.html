@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+        <link rel="stylesheet" th:href="@{/css/styles.css}">
+        <link rel="stylesheet" th:href="@{/css/mobile.css}">
+        <link rel="stylesheet" th:href="@{/css/tablet.css}">
+        <link rel="stylesheet" th:href="@{/css/desktop.css}">
+        <link rel="stylesheet" th:href="@{/css/aminations.css}">
+        <link rel="stylesheet" th:href="@{/css/menu.css}">
+        <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+        <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
         <title>Galeria de cartas</title>
-        <link rel="stylesheet" href="css/modulo_cartas_gallery.css" />
+        <link rel="stylesheet" th:href="@{css/modulo_cartas_gallery.css}" />
     </head>
     <body>
         <header th:replace="~{layouts/base :: headerplusnav2}"></header>
         <main>
             <section id="gallery_cards">
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/1_card_Lavacus.png" alt="card_Lavacus" />
+                    <img th:src="@{${'/images/1_card_Lavacus.png'}}" alt="card_Lavacus" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/2_card_Pyromagmus.png" alt="card_Pyromagmus" />
+                    <img th:src="@{${'/images/2_card_Pyromagmus.png'}}" alt="card_Pyromagmus" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/3_card_Aurelius_Ignis.png" alt="card_Aurelius_Ignis" />
+                    <img th:src="@{${'/images/3_card_Aurelius_Ignis.png'}}" alt="card_Aurelius_Ignis" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/4_card_Nebulca.png" alt="card_Nebulca" />
+                    <img th:src="@{${'/images/4_card_Nebulca.png'}}" alt="card_Nebulca" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/5_card_Nebulcoal.png" alt="card_Nebulcoal" />
+                    <img th:src="@{${'/images/5_card_Nebulcoal.png'}}" alt="card_Nebulcoal" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/6_card_Nebulsmokar.png" alt="card_Nebulsmokar" />
+                    <img th:src="@{${'/images/6_card_Nebulsmokar.png'}}" alt="card_Nebulsmokar" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/7_card_Lizzar.png" alt="card_Lizzar" />
+                    <img th:src="@{${'/images/7_card_Lizzar.png'}}" alt="card_Lizzar" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/8_card_Iguanitxeco.png" alt="card_Iguanitxeco" />
+                    <img th:src="@{${'/images/8_card_Iguanitxeco.png'}}" alt="card_Iguanitxeco" />
                 </div>
                 <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img src="img/9_card_Citalflama.png" alt="card_Citalflama" />
+                    <img th:src="@{${'/images/9_card_Citalflama.png'}}" alt="card_Citalflama" />
                 </div>
             </section>
 
@@ -52,7 +61,9 @@
             </section>
         </main>
         <footer th:replace="~{layouts/base :: footer}"></footer>
-        <script src="js/cards_gallery_mode_app.js"></script>
-        <script src="js/vanilla_tilt.js"></script>
+        <!--<script src="js/cards_gallery_mode_app.js"></script>
+        <script src="js/vanilla_tilt.js"></script>-->
+        <script th:src="@{${'../js/cards_gallery_mode_app.js'}}"></script>
+        <script th:src="@{${'../js/vanilla_tilt.js'}}"></script>
     </body>
 </html>
