@@ -54,4 +54,10 @@ public class MainController {
     public String gallery() {
         return "galleryCards";
     }
+
+    @GetMapping("/detail_cards")
+    public String detailCards() {
+        return "cardList";
+    }
+
 }
