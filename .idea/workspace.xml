@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/dao/CardDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/service/CardServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +45,14 @@
     "Application.ShopApplication.executor": "Run",
     "JUnit.CardRepositoryImplTest.executor": "Run",
     "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findByIdNotFoundReturnsNull.executor": "Run",
     "JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor": "Run",
     "JUnit.CardServiceImplTest.findAllReturnsAllCards.executor": "Run",
     "JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
     "JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
+    "JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull.executor": "Run",
     "JUnit.CardTest.executor": "Run",
     "JUnit.MonsterTest.executor": "Run",
     "JUnit.SpellTest.constructorWithAllParameters.executor": "Run",
@@ -70,82 +77,82 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull">
-    <configuration name="CardServiceImplTest.findAllReturnsAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId">
+    <configuration name="CardRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardRepositoryImplTest.findAllReturnsAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
       <option name="METHOD_NAME" value="findAllReturnsAllCards" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
       <option name="METHOD_NAME" value="findById1ReturnsTheBookWithTheFirstId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
       <option name="METHOD_NAME" value="findById2ReturnsTheBookWithTheSecondId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardServiceImplTest.findByIdNotFoundReturnsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardRepositoryImplTest.findByIdNotFoundReturnsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
       <option name="METHOD_NAME" value="findByIdNotFoundReturnsNull" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.SpellTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull" />
-        <item itemvalue="JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId" />
-        <item itemvalue="JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId" />
-        <item itemvalue="JUnit.CardServiceImplTest.findAllReturnsAllCards" />
-        <item itemvalue="JUnit.SpellTest" />
+        <item itemvalue="JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId" />
+        <item itemvalue="JUnit.CardRepositoryImplTest.findByIdNotFoundReturnsNull" />
+        <item itemvalue="JUnit.CardRepositoryImplTest" />
+        <item itemvalue="JUnit.CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId" />
+        <item itemvalue="JUnit.CardRepositoryImplTest.findAllReturnsAllCards" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +197,7 @@
       <workItem from="1713456786097" duration="3056000" />
       <workItem from="1713469207196" duration="1007000" />
       <workItem from="1713778461744" duration="1366000" />
-      <workItem from="1713939870670" duration="1182000" />
+      <workItem from="1713939870670" duration="4725000" />
     </task>
     <servers />
   </component>

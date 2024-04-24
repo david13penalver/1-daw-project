@@ -1,10 +1,7 @@
 package com.dimentials.shop.mock.repository;
 
-import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.persistence.dao.CardDao;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
-import com.dimentials.shop.persistence.repository.CardRepository;
-
 
 import java.util.List;
 
