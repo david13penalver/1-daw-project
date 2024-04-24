@@ -37,7 +37,7 @@ Miro became a blank canvas on which to paint, on which to start planning our moc
 
 ## Color Palette 
 
-![alt text](/documentacion/english_readme/img_readme/color_palette.png)
+![Color Palette](/documentacion/english_readme/img_readme/color_palette.png)
 
 ## Pages and design decisions
 
@@ -85,6 +85,8 @@ We have also used this software in order to create our database.
 
 
 # 5. Database <a name="db"></a>
+
+![Entity-Relationship Diagram](/documentacion/diagrama_entidad_relacion_erd/bdproyecto.png)
 
 ## DBMS
 
