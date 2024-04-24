@@ -8,6 +8,8 @@ import com.dimentials.shop.persistence.repository.CardRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,10 +22,12 @@ public class CardServiceImplTest {
     private List<Card> expectedList;
     @BeforeEach
     void setUp() {
-        expectedList = List.of(
-                new Card(1, "Nebulsmokar", "Monstruo"),
-                new Card(2, "Lizzar", "Monstruito"),
-                new Card(3, "Frogan", "Monstruitillo")
+        expectedList = new ArrayList<>(
+                List.of(
+                        new Card(1, "Nebulsmokar", "Monstruo"),
+                        new Card(2, "Lizzar", "Monstruito"),
+                        new Card(3, "Frogan", "Monstruitillo")
+                )
         );
     }
 
