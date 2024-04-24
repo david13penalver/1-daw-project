@@ -5,6 +5,7 @@ import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.domain.service.impl.CardServiceImpl;
 import com.dimentials.shop.mock.repository.CardRepositoryMock;
 import com.dimentials.shop.persistence.repository.CardRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.List;
@@ -16,41 +17,53 @@ public class CardServiceImplTest {
     private final CardRepository cardRepositoryMock = new CardRepositoryMock();
     private final CardService cardService = new CardServiceImpl(cardRepositoryMock);
 
-    @Test
-    @DisplayName("The methods findAll() returns all the cards")
-    void findAllReturnsAllCards() {
-        List<Card> expectedList = List.of(
+    private List<Card> expectedList;
+    @BeforeEach
+    void setUp() {
+        expectedList = List.of(
                 new Card(1, "Nebulsmokar", "Monstruo"),
                 new Card(2, "Lizzar", "Monstruito"),
                 new Card(3, "Frogan", "Monstruitillo")
         );
+    }
 
-        List<Card> cardList = cardRepositoryMock.findAll();
+    @Test
+    @DisplayName("The methods findAll() returns all the cards")
+    void findAllReturnsAllCards() {
+        List<Card> cardList = cardService.findAll();
 
         assertEquals(expectedList, cardList);
     }
 
     @Test
-    @DisplayName("The methods findById(id) returns the card inserted at the parameter")
-    void findByIdReturnsTheCardDemandedAtTheParam() {
-        List<Card> expectedList = List.of(
-                new Card(1, "Nebulsmokar", "Monstruo"),
-                new Card(2, "Lizzar", "Monstruito"),
-                new Card(3, "Frogan", "Monstruitillo")
-        );
+    @DisplayName("The methods findById(1) returns the card inserted at the parameter")
+    void findById1ReturnsTheBookWithTheFirstId() {
+
 
         Card cardExpected1 = expectedList.get(0);
-        Card cardExpected2 = expectedList.get(1);
-        Card cardExpected3 = expectedList.get(2);
 
-        Card card1 = cardRepositoryMock.findById(1);
-        Card card2 = cardRepositoryMock.findById(2);
-        Card card3 = cardRepositoryMock.findById(3);
+        Card card1 = cardService.findById(1);
 
-        assertAll(
-                () -> assertEquals(cardExpected1, card1),
-                () -> assertEquals(cardExpected2, card2),
-                () -> assertEquals(cardExpected3, card3)
-        );
+        assertEquals(cardExpected1, card1);
     }
+
+    @Test
+    @DisplayName("The methods findById(2) returns the card inserted at the parameter")
+    void findById2ReturnsTheBookWithTheSecondId() {
+        Card cardExpected2 = expectedList.get(1);
+
+        Card card2 = cardService.findById(2);
+
+        assertEquals(cardExpected2, card2);
+    }
+
+    @Test
+    @DisplayName("The methods findById(id) not found returns null")
+    void findByIdNotFoundReturnsNull() {
+        Card card3 = cardService.findById(5);
+
+        assertNull(card3);
+    }
+
+
 }

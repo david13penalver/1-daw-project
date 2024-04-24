@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,49 +37,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ShopApplication.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardRepositoryImplTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardServiceImplTest.findAllReturnsAllCards.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CardTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MonsterTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ShopApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/toni/Documentos/GitHub/Grup3-Dimentials&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ShopApplication.executor": "Run",
+    "JUnit.CardRepositoryImplTest.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor": "Run",
+    "JUnit.CardServiceImplTest.findAllReturnsAllCards.executor": "Run",
+    "JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
+    "JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
+    "JUnit.CardTest.executor": "Run",
+    "JUnit.MonsterTest.executor": "Run",
+    "JUnit.SpellTest.constructorWithAllParameters.executor": "Run",
+    "JUnit.SpellTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ShopApplication.executor": "Run",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/toni/Documentos/GitHub/Grup3-Dimentials",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.SpellTest">
-    <configuration name="ShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.ShopApplication" />
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull">
     <configuration name="CardServiceImplTest.findAllReturnsAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
@@ -99,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardServiceImplTest.findByIdReturnsTheCardDemandedAtTheParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
@@ -109,7 +97,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
       <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
-      <option name="METHOD_NAME" value="findByIdReturnsTheCardDemandedAtTheParam" />
+      <option name="METHOD_NAME" value="findById1ReturnsTheBookWithTheFirstId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="METHOD_NAME" value="findById2ReturnsTheBookWithTheSecondId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardServiceImplTest.findByIdNotFoundReturnsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
+      <option name="METHOD_NAME" value="findByIdNotFoundReturnsNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,22 +150,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpellTest.constructorWithAllParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.SpellTest" />
-      <option name="METHOD_NAME" value="constructorWithAllParameters" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dimentials.shop.ShopApplication" />
@@ -155,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpellTest" />
-        <item itemvalue="JUnit.SpellTest.constructorWithAllParameters" />
-        <item itemvalue="Application.ShopApplication" />
-        <item itemvalue="JUnit.CardServiceImplTest.findByIdReturnsTheCardDemandedAtTheParam" />
+        <item itemvalue="JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull" />
+        <item itemvalue="JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId" />
+        <item itemvalue="JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId" />
         <item itemvalue="JUnit.CardServiceImplTest.findAllReturnsAllCards" />
+        <item itemvalue="JUnit.SpellTest" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +190,7 @@
       <workItem from="1713456786097" duration="3056000" />
       <workItem from="1713469207196" duration="1007000" />
       <workItem from="1713778461744" duration="1366000" />
-      <workItem from="1713939870670" duration="449000" />
+      <workItem from="1713939870670" duration="1182000" />
     </task>
     <servers />
   </component>
