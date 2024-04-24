@@ -1,5 +1,7 @@
 package com.dimentials.shop.domain.entity;
 
+import java.util.Objects;
+
 public class Client {
     private Integer clientId;
     private String firstName;
@@ -78,11 +80,11 @@ public class Client {
         this.email = email;
     }
 
-    public Boolean getAdmin() {
+    public Boolean getIsAdmin() {
         return isAdmin;
     }
 
-    public void setAdmin(Boolean admin) {
+    public void setIsAdmin(Boolean admin) {
         isAdmin = admin;
     }
 
@@ -150,5 +152,18 @@ public class Client {
                 ", floor='" + floor + '\'' +
                 ", door='" + door + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return Objects.equals(clientId, client.clientId) && Objects.equals(firstName, client.firstName) && Objects.equals(lastName1, client.lastName1) && Objects.equals(lastName2, client.lastName2) && Objects.equals(email, client.email) && Objects.equals(isAdmin, client.isAdmin) && Objects.equals(country, client.country) && Objects.equals(city, client.city) && Objects.equals(street, client.street) && Objects.equals(buildingNumber, client.buildingNumber) && Objects.equals(floor, client.floor) && Objects.equals(door, client.door);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(clientId, firstName, lastName1, lastName2, email, isAdmin, country, city, street, buildingNumber, floor, door);
     }
 }

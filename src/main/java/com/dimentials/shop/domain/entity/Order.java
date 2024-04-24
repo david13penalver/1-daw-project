@@ -3,6 +3,7 @@ package com.dimentials.shop.domain.entity;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Order {
 
@@ -23,4 +24,65 @@ public class Order {
         this.total = this.total.add(orderDetail.getTotal());
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public List<OrderDetail> getOrderDetailList() {
+        return orderDetailList;
+    }
+
+    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
+        this.orderDetailList = orderDetailList;
+    }
+
+    public BigDecimal getTotal() {
+        return total;
+    }
+
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
+
+    public Order(Integer id, Client client, List<OrderDetail> orderDetailList, BigDecimal total) {
+        this.id = id;
+        this.client = client;
+        this.orderDetailList = orderDetailList;
+        this.total = total;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", client=" + client +
+                ", orderDetailList=" + orderDetailList +
+                ", total=" + total +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return Objects.equals(id, order.id) && Objects.equals(client, order.client) && Objects.equals(orderDetailList, order.orderDetailList) && Objects.equals(total, order.total);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, client, orderDetailList, total);
+    }
 }

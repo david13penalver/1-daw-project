@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/dao/CardDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/service/CardServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,13 @@
     "JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
     "JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull.executor": "Run",
     "JUnit.CardTest.executor": "Run",
+    "JUnit.CartDetailTest.testCartConstructor.executor": "Run",
+    "JUnit.CartDetailTest.testCartConstructorAllParameters.executor": "Run",
+    "JUnit.CartTest.testCartConstructor.executor": "Run",
+    "JUnit.ClientTest.executor": "Run",
     "JUnit.MonsterTest.executor": "Run",
+    "JUnit.OrderDetailTest.testOrderConstructor.executor": "Run",
+    "JUnit.OrderTest.testOrderConstructor.executor": "Run",
     "JUnit.SpellTest.constructorWithAllParameters.executor": "Run",
     "JUnit.SpellTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -77,81 +85,81 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId">
-    <configuration name="CardRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OrderDetailTest.testOrderConstructor">
+    <configuration name="CartDetailTest.testCartConstructorAllParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.CartDetailTest" />
+      <option name="METHOD_NAME" value="testCartConstructorAllParameters" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartTest.testCartConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.CartTest" />
+      <option name="METHOD_NAME" value="testCartConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.ClientTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardRepositoryImplTest.findAllReturnsAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderDetailTest.testOrderConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findAllReturnsAllCards" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.OrderDetailTest" />
+      <option name="METHOD_NAME" value="testOrderConstructor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderTest.testOrderConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findById1ReturnsTheBookWithTheFirstId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findById2ReturnsTheBookWithTheSecondId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardRepositoryImplTest.findByIdNotFoundReturnsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findByIdNotFoundReturnsNull" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.OrderTest" />
+      <option name="METHOD_NAME" value="testOrderConstructor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId" />
-        <item itemvalue="JUnit.CardRepositoryImplTest.findByIdNotFoundReturnsNull" />
-        <item itemvalue="JUnit.CardRepositoryImplTest" />
-        <item itemvalue="JUnit.CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId" />
-        <item itemvalue="JUnit.CardRepositoryImplTest.findAllReturnsAllCards" />
+        <item itemvalue="JUnit.OrderDetailTest.testOrderConstructor" />
+        <item itemvalue="JUnit.OrderTest.testOrderConstructor" />
+        <item itemvalue="JUnit.ClientTest" />
+        <item itemvalue="JUnit.CartTest.testCartConstructor" />
+        <item itemvalue="JUnit.CartDetailTest.testCartConstructorAllParameters" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +205,7 @@
       <workItem from="1713456786097" duration="3056000" />
       <workItem from="1713469207196" duration="1007000" />
       <workItem from="1713778461744" duration="1366000" />
-      <workItem from="1713939870670" duration="4725000" />
+      <workItem from="1713939870670" duration="7645000" />
     </task>
     <servers />
   </component>

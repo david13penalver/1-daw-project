@@ -1,6 +1,7 @@
 package com.dimentials.shop.domain.entity;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class CartDetail {
     private Integer id;
@@ -54,5 +55,18 @@ public class CartDetail {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CartDetail that = (CartDetail) o;
+        return Objects.equals(id, that.id) && Objects.equals(card, that.card) && Objects.equals(quantity, that.quantity) && Objects.equals(price, that.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, card, quantity, price);
     }
 }
