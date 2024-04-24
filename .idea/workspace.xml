@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/galleryCards.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/galleryCards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ShopApplication">
+  <component name="RunManager" selected="JUnit.SpellTest">
     <configuration name="ShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.ShopApplication" />
       <module name="shop" />
@@ -78,21 +79,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.service.CardServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,6 +115,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.SpellTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpellTest.constructorWithAllParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.SpellTest" />
+      <option name="METHOD_NAME" value="constructorWithAllParameters" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dimentials.shop.ShopApplication" />
@@ -138,19 +155,13 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpellTest" />
+        <item itemvalue="JUnit.SpellTest.constructorWithAllParameters" />
         <item itemvalue="Application.ShopApplication" />
         <item itemvalue="JUnit.CardServiceImplTest.findByIdReturnsTheCardDemandedAtTheParam" />
         <item itemvalue="JUnit.CardServiceImplTest.findAllReturnsAllCards" />
-        <item itemvalue="JUnit.CardServiceImplTest" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24582b8d" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -174,6 +185,8 @@
       <workItem from="1713346837573" duration="3612000" />
       <workItem from="1713456786097" duration="3056000" />
       <workItem from="1713469207196" duration="1007000" />
+      <workItem from="1713778461744" duration="1366000" />
+      <workItem from="1713939870670" duration="449000" />
     </task>
     <servers />
   </component>

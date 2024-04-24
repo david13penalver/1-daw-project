@@ -11,8 +11,8 @@ import com.dimentials.shop.domain.entity.Monster;
 public class MonsterTest {
 
     @Test
-    @DisplayName("Monster constructor with all parameters")
-    public void testMonsterConstructorWithAllParameters() {
+    @DisplayName("Monster constructor withour price")
+    public void testMonsterConstructorWithoutPrice() {
         Monster monster = new Monster(1, "Monster Name", "Monster Description", 10, 10, "Monster Type",
                 "Monster Type2");
         assertAll(
@@ -29,8 +29,8 @@ public class MonsterTest {
     }
 
     @Test
-    @DisplayName("Monster constructor with all and id, name, description and price")
-  public void testConstructor2() {
+    @DisplayName("Monster constructor with all parameters")
+  public void testConstructorWithIdNameDescriptionPriceAttackLifeTypes() {
         Monster monster = new Monster(1, "Monster Name", "Monster Description", new BigDecimal("10.00"), 10, 10, "Monster Type",
                 "Monster Type2");
 
