@@ -3,15 +3,16 @@ package com.dimentials.shop.persistence.dao.impl;
 import com.dimentials.shop.persistence.dao.CardDao;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CardDaoImpl implements CardDao {
 
     List<CardEntity> cardEntityList = List.of(
-            new CardEntity(1, "Nebulsmokar", "Monstruo"),
-            new CardEntity(2, "Lizzar", "Monstruito"),
-            new CardEntity(3, "Frogan", "Monstruitillo")
+            new CardEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg"),
+            new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(1), "Lizzar.jpg"),
+            new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")
     );
 
     @Override

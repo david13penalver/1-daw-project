@@ -13,7 +13,7 @@ public class MonsterTest {
     @Test
     @DisplayName("Monster constructor withour price")
     public void testMonsterConstructorWithoutPrice() {
-        Monster monster = new Monster(1, "Monster Name", "Monster Description", 10, 10, "Monster Type",
+        Monster monster = new Monster(1, "Monster Name", "Monster Description", "test.png", 10, 10, "Monster Type",
                 "Monster Type2");
         assertAll(
                 () -> assertEquals(1, monster.getId()),
@@ -22,7 +22,8 @@ public class MonsterTest {
                 () -> assertEquals(10, monster.getAttack()),
                 () -> assertEquals(10, monster.getLife()),
                 () -> assertEquals("Monster Type", monster.getMainType()),
-                () -> assertEquals("Monster Type2", monster.getSecondaryType())
+                () -> assertEquals("Monster Type2", monster.getSecondaryType()),
+                () -> assertEquals("test.png", monster.getImgPath())
 
         );
 
@@ -31,7 +32,7 @@ public class MonsterTest {
     @Test
     @DisplayName("Monster constructor with all parameters")
   public void testConstructorWithIdNameDescriptionPriceAttackLifeTypes() {
-        Monster monster = new Monster(1, "Monster Name", "Monster Description", new BigDecimal("10.00"), 10, 10, "Monster Type",
+        Monster monster = new Monster(1, "Monster Name", "Monster Description", new BigDecimal("10.00"), "test.png", 10, 10, "Monster Type",
                 "Monster Type2");
 
         assertAll(
@@ -39,6 +40,7 @@ public class MonsterTest {
                 () -> assertEquals("Monster Name", monster.getName()),
                 () -> assertEquals("Monster Description", monster.getDescription()),
                 () -> assertEquals(new BigDecimal("10.00"), monster.getPrice()),
+                () -> assertEquals("test.png", monster.getImgPath()),
                 () -> assertEquals(10, monster.getAttack()),
                 () -> assertEquals(10, monster.getLife()),
                 () -> assertEquals("Monster Type", monster.getMainType()),

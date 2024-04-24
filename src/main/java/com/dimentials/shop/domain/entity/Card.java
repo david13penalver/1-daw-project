@@ -9,21 +9,32 @@ public class Card {
     private String name;
     private String description;
     private BigDecimal price;
+    private String imgPath;
 
-    public Card(Integer id, String name, String description, BigDecimal price) {
+    public Card(Integer id, String name, String description, BigDecimal price, String imgPath) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.imgPath = imgPath;
     }
 
     public Card() {
     }
 
-    public Card(Integer id, String name, String description) {
+    public Card(Integer id, String name, String description, String imgPath) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.imgPath = imgPath;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 
     public Integer getId() {

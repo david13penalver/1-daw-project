@@ -1,5 +1,6 @@
 package com.dimentials.shop.persistence.dao.entity;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class CardEntity {
@@ -7,11 +8,31 @@ public class CardEntity {
     private Integer id;
     private String name;
     private String description;
+    private String imgPath;
+    private BigDecimal price;
 
-    public CardEntity(Integer id, String name, String description) {
+    public CardEntity(Integer id, String name, String description, BigDecimal price, String imgPath) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.price = price;
+        this.imgPath = imgPath;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     public Integer getId() {

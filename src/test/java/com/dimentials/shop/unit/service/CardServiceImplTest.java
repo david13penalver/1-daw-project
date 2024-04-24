@@ -24,9 +24,9 @@ public class CardServiceImplTest {
     void setUp() {
         expectedList = new ArrayList<>(
                 List.of(
-                        new Card(1, "Nebulsmokar", "Monstruo"),
-                        new Card(2, "Lizzar", "Monstruito"),
-                        new Card(3, "Frogan", "Monstruitillo")
+                        new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
+                        new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
+                        new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg")
                 )
         );
     }

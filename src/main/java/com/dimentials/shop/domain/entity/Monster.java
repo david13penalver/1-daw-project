@@ -9,15 +9,16 @@ public class Monster extends Card {
     private String mainType;
     private String secondaryType;
 
-    public Monster(Integer id, String name, String description, Integer attack, Integer life, String mainType, String secondaryType) {
-        super(id, name, description);
+    public Monster(Integer id, String name, String description, BigDecimal price, String imgPath, Integer attack, Integer life, String mainType, String secondaryType) {
+        super(id, name, description, price, imgPath);
         this.attack = attack;
         this.life = life;
         this.mainType = mainType;
         this.secondaryType = secondaryType;
     }
-    public Monster(Integer id, String name, String description,BigDecimal price, Integer attack, Integer life, String mainType, String secondaryType ) {
-        super(id, name, description,price);
+
+    public Monster(Integer id, String name, String description, String imgPath, Integer attack, Integer life, String mainType, String secondaryType) {
+        super(id, name, description, imgPath);
         this.attack = attack;
         this.life = life;
         this.mainType = mainType;

@@ -6,13 +6,13 @@ public class Spell extends Card {
 
     private String mana;
 
-    public Spell(Integer id, String name, String description, String mana) {
-        super(id, name, description);
+    public Spell(Integer id, String name, String description, BigDecimal price, String imgPath, String mana) {
+        super(id, name, description, price, imgPath);
         this.mana = mana;
     }
 
-    public Spell(Integer id, String name, String description, BigDecimal price, String mana) {
-        super(id, name, description, price);
+    public Spell(Integer id, String name, String description, String imgPath, String mana) {
+        super(id, name, description, imgPath);
         this.mana = mana;
     }
 

@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacion/dimentials.sql" beforeDir="false" afterPath="$PROJECT_DIR$/documentacion/dimentials.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/service/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/service/CardServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/mapper/CardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/mapper/CardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +62,7 @@
     "JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
     "JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
     "JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull.executor": "Run",
-    "JUnit.CardTest.executor": "Run",
+    "JUnit.CardTest.executor": "Debug",
     "JUnit.CartDetailTest.testCartConstructor.executor": "Run",
     "JUnit.CartDetailTest.testCartConstructorAllParameters.executor": "Run",
     "JUnit.CartTest.testCartConstructor.executor": "Run",
@@ -82,7 +92,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CardServiceImplTest">
+  <component name="RunManager" selected="JUnit.CardTest">
     <configuration name="CardServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
@@ -98,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.testCartConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
@@ -107,9 +117,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.CartTest" />
-      <option name="METHOD_NAME" value="testCartConstructor" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.CardTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardTest" />
         <item itemvalue="JUnit.CardServiceImplTest" />
         <item itemvalue="JUnit.OrderDetailTest.testOrderConstructor" />
         <item itemvalue="JUnit.OrderTest.testOrderConstructor" />
         <item itemvalue="JUnit.ClientTest" />
-        <item itemvalue="JUnit.CartTest.testCartConstructor" />
       </list>
     </recent_temporary>
   </component>
