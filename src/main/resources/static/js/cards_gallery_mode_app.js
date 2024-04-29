@@ -20,9 +20,13 @@ cardImage.forEach((cardImage) => {
 });
 
 /*Cierra el Lightbox*/
+function closeLightbox() {
+    lightbox.style.display = "none";
+}
+
 
 buttonClose.addEventListener("click", () => {
-    lightbox.style.display = "none";
+    closeLightbox();
 })
 
 /*Adelanta la imagen*/
@@ -37,6 +41,7 @@ const nextImage = () => {
 
 buttonKeepItUp.addEventListener("click", nextImage);
 
+
 /*Retrocede la imagen*/
 
 const previousImage = () => {
@@ -48,3 +53,16 @@ const previousImage = () => {
 };
 
 buttonGoBack.addEventListener("click", previousImage);
+
+// Eventos de teclado
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight") {
+        nextImage();
+    } else if (event.key === "ArrowLeft") {
+        previousImage();
+    }
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
+});
