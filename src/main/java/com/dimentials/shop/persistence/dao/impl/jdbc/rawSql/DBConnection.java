@@ -1,4 +1,4 @@
-package main.java.com.dimentials.shop.persistence.dao.impl.jdbc.rawSql;
+package com.dimentials.shop.persistence.dao.impl.jdbc.rawSql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

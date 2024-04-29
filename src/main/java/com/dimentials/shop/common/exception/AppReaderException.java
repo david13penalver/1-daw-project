@@ -1,4 +1,4 @@
-package main.java.com.dimentials.shop.common.exception;
+package com.dimentials.shop.common.exception;
 
 public class AppReaderException extends RuntimeException{
 

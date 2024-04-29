@@ -1,4 +1,4 @@
-package main.java.com.dimentials.shop.common;
+package com.dimentials.shop.common;
 
 import java.io.IOException;
 import java.io.InputStream;
