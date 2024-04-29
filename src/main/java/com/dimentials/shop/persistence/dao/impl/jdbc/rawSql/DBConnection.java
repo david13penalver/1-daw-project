@@ -1,5 +1,6 @@
 package com.dimentials.shop.persistence.dao.impl.jdbc.rawSql;
 
+import com.dimentials.shop.common.AppPropertiesReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
