@@ -2,6 +2,7 @@ package com.dimentials.shop.persistence.dao.impl.jdbc.rawSql;
 
 import java.sql.*;
 import java.util.List;
+import com.dimentials.shop.common.exception.RawSqlException;
 
 public class RawSql {
 
