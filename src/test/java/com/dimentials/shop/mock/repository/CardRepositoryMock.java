@@ -1,6 +1,8 @@
 package com.dimentials.shop.mock.repository;
 
 import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.persistence.repository.CardRepository;
 
 import java.util.List;
@@ -28,6 +30,16 @@ public class CardRepositoryMock implements CardRepository {
         if (id == 3) {
             return cardList.get(2);
         }
+        return null;
+    }
+
+    @Override
+    public Monster addMonster(Monster monster) {
+        return null;
+    }
+
+    @Override
+    public Spell addSpell(Spell spell) {
         return null;
     }
 }

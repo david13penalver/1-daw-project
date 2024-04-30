@@ -1,7 +1,10 @@
 package com.dimentials.shop.persistence.dao.impl;
 
+import com.dimentials.shop.domain.entity.Monster;
 import com.dimentials.shop.persistence.dao.CardDao;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
+import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
+import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -33,13 +36,13 @@ public class CardDaoImpl implements CardDao {
     }
 
     @Override
-    cardEntity<List> addMonster(MonsterEntity monsterEntity) {
+    public MonsterEntity addMonster(MonsterEntity monsterEntity) {
         cardEntityList.add(monsterEntity);
         return monsterEntity;
     }
 
     @Override
-    cardEntity<List> addSpell(SpellEntity spellEntity) {
+    public SpellEntity addSpell(SpellEntity spellEntity) {
         cardEntityList.add(spellEntity);
         return spellEntity;
     }

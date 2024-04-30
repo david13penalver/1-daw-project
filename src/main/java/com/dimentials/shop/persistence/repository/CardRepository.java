@@ -1,6 +1,10 @@
 package com.dimentials.shop.persistence.repository;
 
 import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
+import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
+import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 
 import java.util.List;
 

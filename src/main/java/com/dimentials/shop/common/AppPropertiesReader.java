@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.LogManager;
+
+import com.dimentials.shop.common.exception.AppReaderException;
 import com.sun.tools.javac.Main;
 
 

@@ -1,7 +1,11 @@
 package com.dimentials.shop.persistence.repository.impl;
 
 import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.persistence.dao.CardDao;
+import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
+import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 import com.dimentials.shop.persistence.repository.CardRepository;
 import com.dimentials.shop.persistence.repository.mapper.CardMapper;
 
@@ -27,12 +31,12 @@ public class CardRepositoryImpl implements CardRepository {
 
     @Override
     public Monster addMonster(Monster monster) {
-        return CardMapper.toMonster(cardDao.addMonster(monster));
+
+        return CardMapper.toMonster(cardDao.addMonster(CardMapper.toMonsterEntity(monster)));
     }
     @Override
     public Spell addSpell(Spell spell) {
-        return CardMapper.toSpell(cardDao.addSpell(spell));
+        return CardMapper.toSpell(cardDao.addSpell(CardMapper.toSpellEntity(spell)));
     }
-
 
 }

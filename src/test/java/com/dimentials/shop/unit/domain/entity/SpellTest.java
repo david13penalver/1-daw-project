@@ -15,25 +15,25 @@ public class SpellTest {
     @Test
     @DisplayName("constructor with all parameters")
     public void constructorWithAllParameters(){
-        Spell spell = new Spell(1,"Fireball","Spell Description",new BigDecimal(9.50), "test.png", "Mana");
+        Spell spell = new Spell(1,"Fireball","Spell Description",new BigDecimal(9.50), "test.png", 1);
         assertAll(
                 () -> assertEquals(1, spell.getId()),
                 () -> assertEquals("Fireball", spell.getName()),
                 () -> assertEquals("Spell Description", spell.getDescription()),
                 () -> assertEquals(new BigDecimal(9.50), spell.getPrice()),
-                () -> assertEquals("Mana", spell.getMana())
+                () -> assertEquals(1, spell.getMana())
                 );
     }
     @Test
     @DisplayName("constructor with all parameters without price")
     public void constructorWithoutPrice(){
-        Spell spell = new Spell(1,"Fireball","Spell Description", "test.png","Mana");
+        Spell spell = new Spell(1,"Fireball","Spell Description", "test.png",1);
         assertAll(
                 () -> assertEquals(1, spell.getId())
                 ,() -> assertEquals("Fireball", spell.getName())
                 ,() -> assertEquals("Spell Description", spell.getDescription())
                 ,() -> assertEquals("test.png", spell.getImgPath())
-                ,() -> assertEquals("Mana", spell.getMana())
+                ,() -> assertEquals(1, spell.getMana())
 
         );
     }

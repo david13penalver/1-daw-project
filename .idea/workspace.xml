@@ -6,20 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/common/AppPropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/common/AppPropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/CardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/service/impl/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/service/impl/CardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/CardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/CardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/impl/CardRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/impl/CardRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/mapper/CardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/repository/mapper/CardMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardRepositoryMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/SpellTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacion/diagrama_entidad_relacion_erd/bdproyecto.png" beforeDir="false" afterPath="$PROJECT_DIR$/documentacion/diagrama_entidad_relacion_erd/bdproyecto.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacion/dimentials.sql" beforeDir="false" afterPath="$PROJECT_DIR$/documentacion/dimentials.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,51 +48,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ShopApplication.executor": "Run",
-    "JUnit.CardRepositoryImplTest.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findByIdNotFoundReturnsNull.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor": "Run",
-    "JUnit.CardServiceImplTest.executor": "Run",
-    "JUnit.CardServiceImplTest.findAllReturnsAllCards.executor": "Run",
-    "JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
-    "JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
-    "JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull.executor": "Run",
-    "JUnit.CardTest.executor": "Debug",
-    "JUnit.CartDetailTest.testCartConstructor.executor": "Run",
-    "JUnit.CartDetailTest.testCartConstructorAllParameters.executor": "Run",
-    "JUnit.CartTest.testCartConstructor.executor": "Run",
-    "JUnit.ClientTest.executor": "Run",
-    "JUnit.MonsterTest.executor": "Run",
-    "JUnit.OrderDetailTest.testOrderConstructor.executor": "Run",
-    "JUnit.OrderTest.testOrderConstructor.executor": "Run",
-    "JUnit.SpellTest.constructorWithAllParameters.executor": "Run",
-    "JUnit.SpellTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ShopApplication.executor": "Run",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/toni/Documentos/GitHub/Grup3-Dimentials",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="RunManager" selected="JUnit.CardTest">
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.ShopApplication.executor&quot;: &quot;Run&quot;,
@@ -139,7 +92,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CardServiceImplTest">
+  <component name="RunManager">
     <configuration name="CardServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
@@ -226,8 +179,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardTest" />
         <item itemvalue="JUnit.CardServiceImplTest" />
+        <item itemvalue="JUnit.CardTest" />
         <item itemvalue="JUnit.OrderDetailTest.testOrderConstructor" />
         <item itemvalue="JUnit.OrderTest.testOrderConstructor" />
         <item itemvalue="JUnit.ClientTest" />

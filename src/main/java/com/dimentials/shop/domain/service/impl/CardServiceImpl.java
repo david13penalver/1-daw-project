@@ -1,6 +1,8 @@
 package com.dimentials.shop.domain.service.impl;
 
 import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.persistence.repository.CardRepository;
 
@@ -24,11 +26,11 @@ public class CardServiceImpl implements CardService {
     }
 
     @Override
-    public Card addMonster(Card card) {
-        return cardRepository.addMonster(card);
+    public Monster addMonster(Monster monster) {
+        return cardRepository.addMonster(monster);
     }
     @Override
-    public Card addSpell(Card card) {
-        return cardRepository.addSpell(card);
+    public Spell addSpell(Spell spell) {
+        return cardRepository.addSpell(spell);
     }
 }

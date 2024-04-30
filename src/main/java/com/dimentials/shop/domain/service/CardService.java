@@ -1,6 +1,8 @@
 package com.dimentials.shop.domain.service;
 
 import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 
 import java.util.List;
 
@@ -9,7 +11,7 @@ public interface CardService {
 
     Card findById(int id);
 
-    Card addMonster(Card card);
+    Monster addMonster(Monster monster);
 
-    Card addSpell(Card card);
+    Spell addSpell(Spell spell);
 }

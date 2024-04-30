@@ -1,12 +1,15 @@
 package com.dimentials.shop.controller;
 
 import com.dimentials.shop.common.container.CardIoC;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.domain.service.CardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.thymeleaf.model.IModel;
+
+import java.math.BigDecimal;
 
 @Controller
 @RequestMapping("/cards")
@@ -35,16 +38,15 @@ public class CardController {
         return "newCardForm";
     }
     @PostMapping("/new-card/add/monster")
-    public String addMonster(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer atack,@RequestParam Integer life,@RequestParam String mainType,@RequestParam String secondaryType, model Model) {
+    public String addMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description, @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer atack, @RequestParam Integer life, @RequestParam String mainType, @RequestParam String secondaryType, Model model) {
         Monster monster = new Monster(id,name,description,price,imgPath,atack,life,mainType,secondaryType);
         model.addAttribute("monster", cardService.addMonster(monster));
         return "redirect:/cards";
     }
     @PostMapping("/new-card/add/spell")
-    public String addSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam String mana, model Model) {
-        Spell spell = new Spell(id,name,description,price,imgPath,effect,mainType,secondaryType);
-        model.addAttribute("card", card);
-        cardService.addSpell(card);
+    public String addSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer mana, Model model) {
+        Spell spell = new Spell(id,name,description,price,imgPath,mana);
+        model.addAttribute("card", cardService.addSpell(spell));
         return "redirect:/cards";
     }
 }
