@@ -10,11 +10,11 @@ import java.util.List;
 public interface CardDao {
     List<CardEntity> findAll();
 
-    CardEntity findById(int id);
+    CardEntity findById(Integer id);
 
     MonsterEntity addMonster(MonsterEntity monsterEntity);
 
     SpellEntity addSpell(SpellEntity spellEntity);
 
-    CardEntity deleteCard(CardEntity cardEntity);
+    CardEntity deleteCard(Integer id);
 }

@@ -15,5 +15,5 @@ public interface CardService {
 
     Spell addSpell(Spell spell);
 
-    Card deleteCard(Card card);
+    Card deleteCard(Integer id);
 }

@@ -34,7 +34,7 @@ public class CardServiceImpl implements CardService {
         return cardRepository.addSpell(spell);
     }
     @Override
-    public Card deleteCard(Card card) {
-        return cardRepository.deleteCard(card);
+    public Card deleteCard(Integer id) {
+        return cardRepository.deleteCard(id);
     }
 }

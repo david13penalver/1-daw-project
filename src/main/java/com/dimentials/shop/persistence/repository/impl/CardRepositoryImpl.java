@@ -40,8 +40,8 @@ public class CardRepositoryImpl implements CardRepository {
     }
 
     @Override
-    public Card deleteCard(Card card) {
-        return CardMapper.toCard(cardDao.deleteCard(CardMapper.toCardEntity(card)));
+    public Card deleteCard(Integer id) {
+        return CardMapper.toCard(cardDao.deleteCard(id));
     }
 
 }
