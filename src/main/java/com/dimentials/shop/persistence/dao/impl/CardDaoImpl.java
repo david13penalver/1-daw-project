@@ -26,7 +26,7 @@ public class CardDaoImpl implements CardDao {
     }
 
     @Override
-    public CardEntity findById(int id) {
+    public CardEntity findById(Integer id) {
         for (CardEntity cardEntity : cardEntityList) {
             if (cardEntity.getId() == id) {
                 return cardEntity;
