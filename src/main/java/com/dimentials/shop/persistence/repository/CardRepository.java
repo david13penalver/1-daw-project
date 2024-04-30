@@ -10,4 +10,6 @@ public interface CardRepository {
     Card findById(int id);
 
     Monster addMonster(Monster monster);
+
+    Spell addSpell(Spell spell);
 }

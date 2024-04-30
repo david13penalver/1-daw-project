@@ -33,9 +33,15 @@ public class CardDaoImpl implements CardDao {
     }
 
     @Override
-    cardEntity<List> addMonster(CardEntity cardEntity) {
-        cardEntityList.add(cardEntity);
-        return cardEntity;
+    cardEntity<List> addMonster(MonsterEntity monsterEntity) {
+        cardEntityList.add(monsterEntity);
+        return monsterEntity;
+    }
+
+    @Override
+    cardEntity<List> addSpell(SpellEntity spellEntity) {
+        cardEntityList.add(spellEntity);
+        return spellEntity;
     }
 
 }

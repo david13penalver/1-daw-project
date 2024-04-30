@@ -48,4 +48,17 @@ public class CardMapper {
 
         }
     }
+    public static spell toSpell(SpellEntity spellEntity) {
+        if (spellEntity == null)
+            return null;
+        else {
+            Integer id = spellEntity.getId();
+            String name = spellEntity.getName();
+            String description = spellEntity.getDescription();
+            String imgPath = spellEntity.getImgPath();
+            BigDecimal price = spellEntity.getPrice();
+            Integer mana = spellEntity.getMana();
+            return new Spell(id, name, description, price, imgPath, mana);
+        }
+    }
 }

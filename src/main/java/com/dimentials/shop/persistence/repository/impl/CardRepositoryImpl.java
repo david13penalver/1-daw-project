@@ -29,6 +29,10 @@ public class CardRepositoryImpl implements CardRepository {
     public Monster addMonster(Monster monster) {
         return CardMapper.toMonster(cardDao.addMonster(monster));
     }
+    @Override
+    public Spell addSpell(Spell spell) {
+        return CardMapper.toSpell(cardDao.addSpell(spell));
+    }
 
 
 }

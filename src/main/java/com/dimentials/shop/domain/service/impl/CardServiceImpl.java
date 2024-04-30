@@ -27,4 +27,8 @@ public class CardServiceImpl implements CardService {
     public Card addMonster(Card card) {
         return cardRepository.addMonster(card);
     }
+    @Override
+    public Card addSpell(Card card) {
+        return cardRepository.addSpell(card);
+    }
 }

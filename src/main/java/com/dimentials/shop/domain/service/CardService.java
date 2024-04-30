@@ -10,4 +10,6 @@ public interface CardService {
     Card findById(int id);
 
     Card addMonster(Card card);
+
+    Card addSpell(Card card);
 }

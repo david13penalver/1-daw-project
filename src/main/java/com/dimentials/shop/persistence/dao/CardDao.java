@@ -11,4 +11,6 @@ public interface CardDao {
     CardEntity findById(int id);
 
     MonsterEntity addMonster(MonsterEntity monsterEntity);
+
+    SpellEntity addSpell(SpellEntity spellEntity);
 }
