@@ -14,4 +14,6 @@ public interface CardService {
     Monster addMonster(Monster monster);
 
     Spell addSpell(Spell spell);
+
+    Card deleteCard(Card card);
 }

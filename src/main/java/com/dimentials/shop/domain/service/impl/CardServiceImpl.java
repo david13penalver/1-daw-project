@@ -33,4 +33,8 @@ public class CardServiceImpl implements CardService {
     public Spell addSpell(Spell spell) {
         return cardRepository.addSpell(spell);
     }
+    @Override
+    public Card deleteCard(Card card) {
+        return cardRepository.deleteCard(card);
+    }
 }

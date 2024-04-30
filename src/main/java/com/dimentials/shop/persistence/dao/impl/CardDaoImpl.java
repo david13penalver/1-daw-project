@@ -47,4 +47,10 @@ public class CardDaoImpl implements CardDao {
         return spellEntity;
     }
 
+    @Override
+    public CardEntity deleteCard(CardEntity cardEntity) {
+        cardEntityList.remove(cardEntity);
+        return cardEntity;
+    }
+
 }

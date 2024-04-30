@@ -16,4 +16,6 @@ public interface CardRepository {
     Monster addMonster(Monster monster);
 
     Spell addSpell(Spell spell);
+
+    Card deleteCard(Card card);
 }

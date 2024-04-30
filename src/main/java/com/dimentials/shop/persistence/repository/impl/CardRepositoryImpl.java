@@ -39,4 +39,9 @@ public class CardRepositoryImpl implements CardRepository {
         return CardMapper.toSpell(cardDao.addSpell(CardMapper.toSpellEntity(spell)));
     }
 
+    @Override
+    public Card deleteCard(Card card) {
+        return CardMapper.toCard(cardDao.deleteCard(CardMapper.toCardEntity(card)));
+    }
+
 }
