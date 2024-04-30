@@ -30,4 +30,22 @@ public class CardMapper {
         }
         return cardList;
     }
+
+    public static monster toMonster(MonsterEntity monsterEntity) {
+        if (monsterEntity == null)
+            return null;
+        else {
+            Integer id = monsterEntity.getId();
+            String name = monsterEntity.getName();
+            String description = monsterEntity.getDescription();
+            String imgPath = monsterEntity.getImgPath();
+            BigDecimal price = monsterEntity.getPrice();
+            Integer attack = monsterEntity.getAttack();
+            Integer life = monsterEntity.getLife();
+            String mainType = monsterEntity.getMainType();
+            String secondaryType = monsterEntity.getSecondaryType();
+            return new Monster(id, name, description, price, imgPath, attack, life, mainType, secondaryType);
+
+        }
+    }
 }

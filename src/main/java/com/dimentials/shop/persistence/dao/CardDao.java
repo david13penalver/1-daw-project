@@ -9,4 +9,6 @@ public interface CardDao {
     List<CardEntity> findAll();
 
     CardEntity findById(int id);
+
+    MonsterEntity addMonster(MonsterEntity monsterEntity);
 }

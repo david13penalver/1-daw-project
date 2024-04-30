@@ -9,10 +9,12 @@ import java.util.List;
 
 public class CardDaoImpl implements CardDao {
 
-    List<CardEntity> cardEntityList = List.of(
-            new CardEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg"),
-            new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(1), "Lizzar.jpg"),
-            new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")
+    List<CardEntity> cardEntityList = new ArrayList<>(
+            List.of(
+                    new CardEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg"),
+                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(1), "Lizzar.jpg"),
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")
+            )
     );
 
     @Override
@@ -29,4 +31,11 @@ public class CardDaoImpl implements CardDao {
         }
         return null;
     }
+
+    @Override
+    cardEntity<List> addMonster(CardEntity cardEntity) {
+        cardEntityList.add(cardEntity);
+        return cardEntity;
+    }
+
 }

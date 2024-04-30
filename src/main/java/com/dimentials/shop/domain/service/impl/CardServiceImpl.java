@@ -22,4 +22,9 @@ public class CardServiceImpl implements CardService {
     public Card findById(int id) {
         return cardRepository.findById(id);
     }
+
+    @Override
+    public Card addMonster(Card card) {
+        return cardRepository.addMonster(card);
+    }
 }

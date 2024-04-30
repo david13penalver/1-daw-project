@@ -24,4 +24,11 @@ public class CardRepositoryImpl implements CardRepository {
     public Card findById(int id) {
         return CardMapper.toCard(cardDao.findById(id));
     }
+
+    @Override
+    public Monster addMonster(Monster monster) {
+        return CardMapper.toMonster(cardDao.addMonster(monster));
+    }
+
+
 }

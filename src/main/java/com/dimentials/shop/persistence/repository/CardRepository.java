@@ -8,4 +8,6 @@ public interface CardRepository {
     List<Card> findAll();
 
     Card findById(int id);
+
+    Monster addMonster(Monster monster);
 }
