@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +206,7 @@
       <workItem from="1713469207196" duration="1007000" />
       <workItem from="1713778461744" duration="1366000" />
       <workItem from="1713939870670" duration="9000000" />
-      <workItem from="1714551700917" duration="690000" />
+      <workItem from="1714551700917" duration="2322000" />
     </task>
     <servers />
   </component>
