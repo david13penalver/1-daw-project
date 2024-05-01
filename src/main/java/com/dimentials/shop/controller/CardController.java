@@ -54,4 +54,18 @@ public class CardController {
         model.addAttribute("cardDetail",cardService.deleteCard(id));    
         return "redirect:/cards";
     }
+
+    @PutMapping("/{id}")
+    public String updateSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer mana, Model model) {
+        Spell spell = new Spell(id,name,description,price,imgPath,mana);
+        model.addAttribute("card", cardService.updateSpell(spell));
+        return "redirect:/cards";
+    }
+
+    @PutMapping("/{id}")
+    public String updateMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description, @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer atack, @RequestParam Integer life, @RequestParam String mainType, @RequestParam String secondaryType, Model model) {
+        Monster monster = new Monster(id,name,description,price,imgPath,atack,life,mainType,secondaryType);
+        model.addAttribute("monster", cardService.updateMonster(monster));
+        return "redirect:/cards";
+    }
 }

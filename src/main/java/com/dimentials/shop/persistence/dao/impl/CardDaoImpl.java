@@ -58,4 +58,14 @@ public class CardDaoImpl implements CardDao {
         return null;
     }
 
+    @Override
+    public SpellEntity updateSpell(SpellEntity spellEntity) {
+        return null;
+    }
+
+    @Override
+    public MonsterEntity updateMonster(MonsterEntity monsterEntity) {
+        return null;
+    }
+
 }

@@ -37,4 +37,14 @@ public class CardServiceImpl implements CardService {
     public Card deleteCard(Integer id) {
         return cardRepository.deleteCard(id);
     }
+
+    @Override
+    public Spell updateSpell(Spell spell) {
+        return cardRepository.updateSpell(spell);
+    }
+
+    @Override
+    public Monster updateMonster(Monster monster) {
+        return cardRepository.updateMonster(monster);
+    }
 }

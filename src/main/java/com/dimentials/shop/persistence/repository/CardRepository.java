@@ -18,4 +18,8 @@ public interface CardRepository {
     Spell addSpell(Spell spell);
 
     Card deleteCard(Integer id);
+
+    Spell updateSpell(Spell spell);
+
+    Monster updateMonster(Monster monster);
 }

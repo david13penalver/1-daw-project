@@ -44,4 +44,14 @@ public class CardRepositoryImpl implements CardRepository {
         return CardMapper.toCard(cardDao.deleteCard(id));
     }
 
+    @Override
+    public Spell updateSpell(Spell spell) {
+        return CardMapper.toSpell(cardDao.updateSpell(CardMapper.toSpellEntity(spell)));
+    }
+
+    @Override
+    public Monster updateMonster(Monster monster) {
+        return CardMapper.toMonster(cardDao.updateMonster(CardMapper.toMonsterEntity(monster)));
+    }
+
 }

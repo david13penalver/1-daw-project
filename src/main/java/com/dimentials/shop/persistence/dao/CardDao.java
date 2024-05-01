@@ -17,4 +17,8 @@ public interface CardDao {
     SpellEntity addSpell(SpellEntity spellEntity);
 
     CardEntity deleteCard(Integer id);
+
+    SpellEntity updateSpell(SpellEntity spellEntity);
+
+    MonsterEntity updateMonster(MonsterEntity monsterEntity);
 }
