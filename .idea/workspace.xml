@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" afterDir="false" />
@@ -14,6 +15,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/OrderDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" afterDir="false" />
+>>>>>>> 8482d6d (Created form for each type of card, divided the method according to the type of card, fixed some problems at the CardController with the adding monster and spell methods)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +49,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.ShopApplication.executor&quot;: &quot;Run&quot;,
@@ -86,6 +92,50 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ShopApplication.executor": "Run",
+    "JUnit.CardRepositoryImplTest.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findByIdNotFoundReturnsNull.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor": "Run",
+    "JUnit.CardServiceImplTest.executor": "Run",
+    "JUnit.CardServiceImplTest.findAllReturnsAllCards.executor": "Run",
+    "JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
+    "JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
+    "JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull.executor": "Run",
+    "JUnit.CardTest.executor": "Run",
+    "JUnit.CartDetailTest.testCartConstructor.executor": "Run",
+    "JUnit.CartDetailTest.testCartConstructorAllParameters.executor": "Run",
+    "JUnit.CartTest.testCartConstructor.executor": "Run",
+    "JUnit.ClientTest.executor": "Run",
+    "JUnit.MonsterTest.executor": "Run",
+    "JUnit.OrderDetailTest.testOrderConstructor.executor": "Run",
+    "JUnit.OrderTest.testOrderConstructor.executor": "Run",
+    "JUnit.SpellTest.constructorWithAllParameters.executor": "Run",
+    "JUnit.SpellTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ShopApplication.executor": "Run",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/toni/Documentos/GitHub/Grup3-Dimentials",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> 8482d6d (Created form for each type of card, divided the method according to the type of card, fixed some problems at the CardController with the adding monster and spell methods)
   }
 }</component>
   <component name="RunManager">
@@ -207,8 +257,12 @@
       <workItem from="1713469207196" duration="1007000" />
       <workItem from="1713778461744" duration="1366000" />
       <workItem from="1713939870670" duration="9000000" />
+<<<<<<< HEAD
       <workItem from="1714551700917" duration="2322000" />
       <workItem from="1714645750634" duration="302000" />
+=======
+      <workItem from="1714551700917" duration="4747000" />
+>>>>>>> 8482d6d (Created form for each type of card, divided the method according to the type of card, fixed some problems at the CardController with the adding monster and spell methods)
     </task>
     <servers />
   </component>
