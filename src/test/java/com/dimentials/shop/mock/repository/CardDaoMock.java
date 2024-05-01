@@ -24,6 +24,11 @@ public class CardDaoMock implements CardDao {
     }
 
     @Override
+    public CardEntity findById(Integer id) {
+        return null;
+    }
+
+
     public CardEntity findById(int id) {
         if (id == 1) {
             return cardEntityList.get(0);
@@ -45,6 +50,21 @@ public class CardDaoMock implements CardDao {
 
     @Override
     public SpellEntity addSpell(SpellEntity spellEntity) {
+        return null;
+    }
+
+    @Override
+    public CardEntity deleteCard(Integer id) {
+        return null;
+    }
+
+    @Override
+    public SpellEntity updateSpell(SpellEntity spellEntity) {
+        return null;
+    }
+
+    @Override
+    public MonsterEntity updateMonster(MonsterEntity monsterEntity) {
         return null;
     }
 }

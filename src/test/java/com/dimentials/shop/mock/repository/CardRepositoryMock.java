@@ -42,4 +42,19 @@ public class CardRepositoryMock implements CardRepository {
     public Spell addSpell(Spell spell) {
         return null;
     }
+
+    @Override
+    public Card deleteCard(Integer id) {
+        return null;
+    }
+
+    @Override
+    public Spell updateSpell(Spell spell) {
+        return null;
+    }
+
+    @Override
+    public Monster updateMonster(Monster monster) {
+        return null;
+    }
 }
