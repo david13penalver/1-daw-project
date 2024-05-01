@@ -20,6 +20,9 @@ public class Spell extends Card {
         this.mana = mana;
     }
 
+    public Spell() {
+    }
+
     public Integer getMana() {
         return mana;
     }
