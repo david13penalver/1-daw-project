@@ -40,6 +40,9 @@
                     <div class="profile__skills-container">
                         <h2>Skills</h2>
                         <h3 th:text="|${cardDetail.id} - ${cardDetail.name} - ${cardDetail.description}|">Texto por defecto</h3>
+                        <form th:action="@{'/cards/' + ${cardDetail.id}}" th:method="delete">
+                            <button type="submit">Borrar</button>
+                        </form>
                     </div>
                 </div>
             </div>

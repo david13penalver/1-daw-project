@@ -55,9 +55,15 @@ public class CardController {
         model.addAttribute("spell", cardService.addSpell(spell));
         return "redirect:/cards";
     }
-    @DeleteMapping("/{id}")
-    public String deleteCard(@PathVariable Integer id, Model model) {
-        model.addAttribute("cardDetail",cardService.deleteCard(id));    
+
+    @GetMapping("/card-deletion")
+    public String deleteCardForm(Model model) {
+        model.addAttribute("card", new Monster());
+        return "deleteCardForm";
+    }
+    @DeleteMapping("/card-deletion")
+    public String deleteCard(@RequestParam int id, Model model) {
+        model.addAttribute("card",cardService.deleteCard(id));
         return "redirect:/cards";
     }
 

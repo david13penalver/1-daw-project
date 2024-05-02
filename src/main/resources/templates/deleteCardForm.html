@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/css/tablet.css}">
+    <link rel="stylesheet" th:href="@{/css/desktop.css}">
+    <link rel="stylesheet" th:href="@{/css/aminations.css}">
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
+    <title>Nuestras cartas</title>
+</head>
+
+<body>
+    <header th:replace="~{layouts/base :: headerplusnav2}"></header>
+
+    <form th:action="@{/cards/card-deletion}" th:method="post">
+        <input type="hidden" name="_method" value="DELETE" />
+        <!-- Campo para el ID (usualmente no se usa para insertar, puede ser auto-generado)-->
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" th:field="*{card.id}" /><br>
+
+        <input type="submit" value="Insertar" />
+    </form>
+
+    <footer th:replace="~{layouts/base :: footer}"></footer>
+
+    <script src="../static/js/menu.js"></script>
+</body>
+
+</html>
