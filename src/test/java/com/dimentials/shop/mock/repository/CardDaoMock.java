@@ -15,9 +15,8 @@ public class CardDaoMock implements CardDao {
             List.of(
                     new CardEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg"),
                     new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(1), "Lizzar.jpg"),
-                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")
-            )
-    );
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")));
+
     @Override
     public List<CardEntity> findAll() {
         return cardEntityList;
@@ -28,8 +27,7 @@ public class CardDaoMock implements CardDao {
         return null;
     }
 
-
-    public CardEntity findById(int id) {
+    public CardEntity findById(Integer id) {
         if (id == 1) {
             return cardEntityList.get(0);
         }

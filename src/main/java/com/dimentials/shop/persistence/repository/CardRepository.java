@@ -11,7 +11,7 @@ import java.util.List;
 public interface CardRepository {
     List<Card> findAll();
 
-    Card findById(int id);
+    Card findById(Integer id);
 
     Monster addMonster(Monster monster);
 

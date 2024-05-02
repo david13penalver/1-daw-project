@@ -9,7 +9,7 @@ import java.util.List;
 public interface CardService {
     List<Card> findAll();
 
-    Card findById(int id);
+    Card findById(Integer id);
 
     Monster addMonster(Monster monster);
 

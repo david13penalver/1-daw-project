@@ -22,7 +22,7 @@ public class RawSql {
             PreparedStatement preparedStatement = setParameters(sql, params);
             preparedStatement.executeUpdate();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
-            if(resultSet.next()){
+            if (resultSet.next()) {
                 return resultSet.getObject(1);
             } else {
                 throw new RawSqlException("Unable to retrieve the last generated ID");
@@ -32,16 +32,15 @@ public class RawSql {
         }
     }
 
-    public static int update(String sql, List<Object> params) {
+    public static Integer update(String sql, List<Object> params) {
         return RawSql.statement(sql, params);
     }
 
-    public static int delete(String sql, List<Object> params) {
+    public static Integer delete(String sql, List<Object> params) {
         return RawSql.statement(sql, params);
     }
 
-
-    private static int statement(String sql, List<Object> params) {
+    private static Integer statement(String sql, List<Object> params) {
         try {
             PreparedStatement preparedStatement = setParameters(sql, params);
             return preparedStatement.executeUpdate();
@@ -50,14 +49,14 @@ public class RawSql {
         }
     }
 
-    private static PreparedStatement setParameters(String sql, List<Object> values){
+    private static PreparedStatement setParameters(String sql, List<Object> values) {
         try {
             Connection connection = dbConnection.getConnection();
-            PreparedStatement preparedStatement =  connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            if(values != null) {
-                for(int i=0;i<values.size();i++) {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            if (values != null) {
+                for (Integer i = 0; i < values.size(); i++) {
                     Object value = values.get(i);
-                    preparedStatement.setObject(i+1,value);
+                    preparedStatement.setObject(i + 1, value);
                 }
             }
             return preparedStatement;
@@ -74,7 +73,7 @@ public class RawSql {
         }
     }
 
-    public static void rollback(){
+    public static void rollback() {
         try {
             dbConnection.getConnection().rollback();
         } catch (SQLException e) {

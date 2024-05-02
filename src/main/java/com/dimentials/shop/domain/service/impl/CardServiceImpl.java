@@ -11,6 +11,7 @@ import java.util.List;
 public class CardServiceImpl implements CardService {
 
     private CardRepository cardRepository;
+
     public CardServiceImpl(CardRepository cardRepository) {
         this.cardRepository = cardRepository;
     }
@@ -21,7 +22,7 @@ public class CardServiceImpl implements CardService {
     }
 
     @Override
-    public Card findById(int id) {
+    public Card findById(Integer id) {
         return cardRepository.findById(id);
     }
 
@@ -29,10 +30,12 @@ public class CardServiceImpl implements CardService {
     public Monster addMonster(Monster monster) {
         return cardRepository.addMonster(monster);
     }
+
     @Override
     public Spell addSpell(Spell spell) {
         return cardRepository.addSpell(spell);
     }
+
     @Override
     public Card deleteCard(Integer id) {
         return cardRepository.deleteCard(id);

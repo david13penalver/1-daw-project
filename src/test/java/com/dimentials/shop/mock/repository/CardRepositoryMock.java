@@ -12,15 +12,15 @@ public class CardRepositoryMock implements CardRepository {
     List<Card> cardList = List.of(
             new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
             new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-            new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg")
-    );
+            new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"));
+
     @Override
     public List<Card> findAll() {
         return cardList;
     }
 
     @Override
-    public Card findById(int id) {
+    public Card findById(Integer id) {
         if (id == 1) {
             return cardList.get(0);
         }

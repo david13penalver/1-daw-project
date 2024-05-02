@@ -65,14 +65,17 @@ public class OrderDetail {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         OrderDetail that = (OrderDetail) o;
-        return Objects.equals(id, that.id) && Objects.equals(card, that.card) && Objects.equals(quantity, that.quantity) && Objects.equals(price, that.price);
+        return Objects.equals(id, that.id) && Objects.equals(card, that.card) && Objects.equals(quantity, that.quantity)
+                && Objects.equals(price, that.price);
     }
 
     @Override
-    public int hashCode() {
+    public Integer hashCode() {
         return Objects.hash(id, card, quantity, price);
     }
 }

@@ -61,14 +61,17 @@ public class CardEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         CardEntity that = (CardEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(description, that.description);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name)
+                && Objects.equals(description, that.description);
     }
 
     @Override
-    public int hashCode() {
+    public Integer hashCode() {
         return Objects.hash(id, name, description);
     }
 }

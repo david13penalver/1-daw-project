@@ -25,7 +25,7 @@ public class CardRepositoryImpl implements CardRepository {
     }
 
     @Override
-    public Card findById(int id) {
+    public Card findById(Integer id) {
         return CardMapper.toCard(cardDao.findById(id));
     }
 
@@ -34,6 +34,7 @@ public class CardRepositoryImpl implements CardRepository {
 
         return CardMapper.toMonster(cardDao.addMonster(CardMapper.toMonsterEntity(monster)));
     }
+
     @Override
     public Spell addSpell(Spell spell) {
         return CardMapper.toSpell(cardDao.addSpell(CardMapper.toSpellEntity(spell)));

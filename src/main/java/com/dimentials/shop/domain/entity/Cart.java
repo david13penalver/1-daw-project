@@ -67,14 +67,17 @@ public class Cart {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Cart cart = (Cart) o;
-        return Objects.equals(id, cart.id) && Objects.equals(client, cart.client) && Objects.equals(cartDetailList, cart.cartDetailList) && Objects.equals(total, cart.total);
+        return Objects.equals(id, cart.id) && Objects.equals(client, cart.client)
+                && Objects.equals(cartDetailList, cart.cartDetailList) && Objects.equals(total, cart.total);
     }
 
     @Override
-    public int hashCode() {
+    public Integer hashCode() {
         return Objects.hash(id, client, cartDetailList, total);
     }
 }

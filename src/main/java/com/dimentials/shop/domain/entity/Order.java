@@ -17,7 +17,7 @@ public class Order {
     }
 
     public void addOrderDetail(OrderDetail orderDetail) {
-        if(this.orderDetailList == null) {
+        if (this.orderDetailList == null) {
             this.orderDetailList = new ArrayList<>();
         }
         this.orderDetailList.add(orderDetail);
@@ -75,14 +75,17 @@ public class Order {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Order order = (Order) o;
-        return Objects.equals(id, order.id) && Objects.equals(client, order.client) && Objects.equals(orderDetailList, order.orderDetailList) && Objects.equals(total, order.total);
+        return Objects.equals(id, order.id) && Objects.equals(client, order.client)
+                && Objects.equals(orderDetailList, order.orderDetailList) && Objects.equals(total, order.total);
     }
 
     @Override
-    public int hashCode() {
+    public Integer hashCode() {
         return Objects.hash(id, client, orderDetailList, total);
     }
 }
