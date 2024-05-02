@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.dimentials.shop.persistance.dao.entity.CardEntity;
+//import com.dimentials.shop.persistance.dao.entity.CardEntity;
 
 public class CardEntityTest {
 
