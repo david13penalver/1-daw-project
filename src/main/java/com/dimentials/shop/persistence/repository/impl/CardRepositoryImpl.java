@@ -38,6 +38,7 @@ public class CardRepositoryImpl implements CardRepository {
     @Override
     public Spell addSpell(Spell spell) {
         return CardMapper.toSpell(cardDao.addSpell(CardMapper.toSpellEntity(spell)));
+
     }
 
     @Override

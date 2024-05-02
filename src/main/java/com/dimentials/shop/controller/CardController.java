@@ -38,8 +38,8 @@ public class CardController {
         return "newMonsterForm";
     }
     @PostMapping("/new-monster")
-    public String addMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description, @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer atack, @RequestParam Integer life, @RequestParam String mainType, @RequestParam(required = false) String secondaryType , Model model) {
-        Monster monster = new Monster(null,name,description,price,imgPath,atack,life,mainType,secondaryType);
+    public String addMonster(@RequestParam String name, @RequestParam String description, @RequestParam String price, @RequestParam String imgPath, @RequestParam String attack, @RequestParam String life, @RequestParam String mainType, @RequestParam(required = false) String secondaryType, Model model) {
+        Monster monster = new Monster(null,name,description,new BigDecimal(price), imgPath, Integer.parseInt(attack),Integer.parseInt(life), mainType, secondaryType);
         model.addAttribute("monster", cardService.addMonster(monster));
         return "redirect:/cards";
     }
@@ -50,8 +50,8 @@ public class CardController {
         return "newSpellForm";
     }
     @PostMapping("/new-spell")
-    public String addSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer mana, Model model) {
-        Spell spell = new Spell(null,name,description,price,imgPath,mana);
+    public String addSpell(@RequestParam String name,@RequestParam String description,@RequestParam String price,@RequestParam String imgPath,@RequestParam String mana, Model model) {
+        Spell spell = new Spell(null, name, description, new BigDecimal(price),imgPath,Integer.parseInt(mana));
         model.addAttribute("spell", cardService.addSpell(spell));
         return "redirect:/cards";
     }

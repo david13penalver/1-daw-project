@@ -19,7 +19,7 @@
 <body>
     <header th:replace="~{layouts/base :: headerplusnav2}"></header>
 
-    <form th:action="@{/cards}" th:method="post">
+    <form th:action="@{/cards/new-monster}" th:method="post">
         <!-- Campo para el ID (usualmente no se usa para insertar, puede ser auto-generado)
         <label for="id">ID:</label>
         <input type="number" id="id" name="id" th:field="*{id}" /><br> -->
