@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/jdbc/rawSql/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/jdbc/rawSql/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties.example" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties.example" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.example" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,51 +40,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ShopApplication.executor": "Run",
-    "JUnit.CardRepositoryImplTest.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findByIdNotFoundReturnsNull.executor": "Run",
-    "JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor": "Run",
-    "JUnit.CardServiceImplTest.executor": "Run",
-    "JUnit.CardServiceImplTest.findAllReturnsAllCards.executor": "Run",
-    "JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
-    "JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
-    "JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull.executor": "Run",
-    "JUnit.CardTest.executor": "Run",
-    "JUnit.CartDetailTest.testCartConstructor.executor": "Run",
-    "JUnit.CartDetailTest.testCartConstructorAllParameters.executor": "Run",
-    "JUnit.CartTest.testCartConstructor.executor": "Run",
-    "JUnit.ClientTest.executor": "Run",
-    "JUnit.MonsterTest.executor": "Run",
-    "JUnit.OrderDetailTest.testOrderConstructor.executor": "Run",
-    "JUnit.OrderTest.testOrderConstructor.executor": "Run",
-    "JUnit.SpellTest.constructorWithAllParameters.executor": "Run",
-    "JUnit.SpellTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ShopApplication.executor": "Run",
-    "git-widget-placeholder": "feature/updateCardMethod",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/toni/Documentos/GitHub/Grup3-Dimentials",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ShopApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.findById1ReturnsTheBookWithTheFirstId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.findById2ReturnsTheBookWithTheSecondId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.findByIdNotFoundReturnsNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardRepositoryImplTest.findByIdReturnsTheCardDemandedAtTheParam.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceImplTest.findAllReturnsAllCards.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceImplTest.findById1ReturnsTheBookWithTheFirstId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceImplTest.findById2ReturnsTheBookWithTheSecondId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardServiceImplTest.findByIdNotFoundReturnsNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CartDetailTest.testCartConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CartDetailTest.testCartConstructorAllParameters.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CartTest.testCartConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClientTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MonsterTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderDetailTest.testOrderConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderTest.testOrderConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpellTest.constructorWithAllParameters.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpellTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ShopApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/updateCardMethod&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/toni/Documentos/GitHub/Grup3-Dimentials&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.ShopApplication">
+}</component>
+  <component name="RunManager">
     <configuration name="CardServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
@@ -174,13 +178,6 @@
         <item itemvalue="JUnit.ClientTest" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24582b8d" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -15,11 +15,11 @@ public class DBConnection {
         LogManager.getLogManager().getLogger("").info("Establishing connection with the database...");
         try {
             connection = DriverManager.getConnection(
-                    AppPropertiesReader.getProperty("daw1bookstore.datasource.url"),
-                    AppPropertiesReader.getProperty("daw1bookstore.datasource.username"),
-                    AppPropertiesReader.getProperty("daw1bookstore.datasource.password")
+                    AppPropertiesReader.getProperty("dimentials.datasource.url"),
+                    AppPropertiesReader.getProperty("dimentials.datasource.username"),
+                    AppPropertiesReader.getProperty("dimentials.datasource.password")
             );
-            String autocommitPropertyValue = AppPropertiesReader.getProperty("daw1bookstore.autocommit");
+            String autocommitPropertyValue = AppPropertiesReader.getProperty("dimentials.autocommit");
             if(autocommitPropertyValue != null) {
                 boolean autocommitValue = Boolean.parseBoolean(autocommitPropertyValue);
                 connection.setAutoCommit(autocommitValue);
@@ -34,9 +34,9 @@ public class DBConnection {
 
     private String getParameters (){
         return String.format("url: %s\nUser: %s\nPassword: %s\n",
-                AppPropertiesReader.getProperty("daw1bookstore.datasource.url"),
-                AppPropertiesReader.getProperty("daw1bookstore.datasource.username"),
-                AppPropertiesReader.getProperty("daw1bookstore.datasource.password")
+                AppPropertiesReader.getProperty("dimentials.datasource.url"),
+                AppPropertiesReader.getProperty("dimentials.datasource.username"),
+                AppPropertiesReader.getProperty("dimentials.datasource.password")
         );
     }
 
