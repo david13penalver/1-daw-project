@@ -1,0 +1,27 @@
+@media screen AND (min-width: 400px) AND (max-width: 768px) {
+
+    header {
+        position: relative;
+    }    
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 5%;
+    }
+
+    section {
+        width: 100vw;
+        padding: 2vh 1vw;
+    }
+
+    section.img {
+        position: absolute;
+        z-index: -100;
+        width: 100vw;
+    }  
+}
+
+.section6 {
+    background-image: url(../images/1_imagen_carrousel.jpg);
+    position: relative;
+}
+

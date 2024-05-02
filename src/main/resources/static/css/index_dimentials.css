@@ -185,6 +185,7 @@ span {
     height: 100%;
     border-left: 3px solid var(--bg-color);
     right: -8px;
+    background-color: black;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
