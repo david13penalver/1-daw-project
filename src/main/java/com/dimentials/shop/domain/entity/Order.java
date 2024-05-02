@@ -85,7 +85,7 @@ public class Order {
     }
 
     @Override
-    public Integer hashCode() {
+    public int hashCode() {
         return Objects.hash(id, client, orderDetailList, total);
     }
 }

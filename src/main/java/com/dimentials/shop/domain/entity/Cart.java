@@ -77,7 +77,7 @@ public class Cart {
     }
 
     @Override
-    public Integer hashCode() {
+    public int hashCode() {
         return Objects.hash(id, client, cartDetailList, total);
     }
 }

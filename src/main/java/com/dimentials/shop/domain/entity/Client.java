@@ -172,7 +172,7 @@ public class Client {
     }
 
     @Override
-    public Integer hashCode() {
+    public int hashCode() {
         return Objects.hash(clientId, firstName, lastName1, lastName2, email, isAdmin, country, city, street,
                 buildingNumber, floor, door);
     }

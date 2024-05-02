@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0cb894-0c4e-405b-bac9-585848f01471" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/jdbc/rawSql/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/jdbc/rawSql/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties.example" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties.example" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +75,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.ShopApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/updateCardMethod&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/toni/Documentos/GitHub/Grup3-Dimentials&quot;,
@@ -204,6 +208,7 @@
       <workItem from="1713778461744" duration="1366000" />
       <workItem from="1713939870670" duration="9000000" />
       <workItem from="1714551700917" duration="2322000" />
+      <workItem from="1714645750634" duration="302000" />
     </task>
     <servers />
   </component>

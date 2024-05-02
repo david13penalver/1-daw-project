@@ -75,7 +75,7 @@ public class OrderDetail {
     }
 
     @Override
-    public Integer hashCode() {
+    public int hashCode() {
         return Objects.hash(id, card, quantity, price);
     }
 }

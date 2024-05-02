@@ -71,7 +71,7 @@ public class CardEntity {
     }
 
     @Override
-    public Integer hashCode() {
+    public int hashCode() {
         return Objects.hash(id, name, description);
     }
 }

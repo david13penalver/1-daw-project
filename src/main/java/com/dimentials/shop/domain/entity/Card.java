@@ -81,7 +81,7 @@ public class Card {
     }
 
     @Override
-    public Integer hashCode() {
+    public int hashCode() {
         return Objects.hash(id, name, description, price);
     }
 }
