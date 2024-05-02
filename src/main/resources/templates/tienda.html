@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tienda.css">
+</head>
+<body>
+    <header class="header"> 
+        <div class="menu container">
+            <a href="#" class="logo">LOGO</a>
+            <input type="checkbox" id="menu"/>
+            <label for = "menu">
+                <img src="img/menu.png" class="menu-icono" alt="menu"/>
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Productos</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="img/car.svg" id="img-carrito" alt="carrito"/>
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>   
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header-content container">
+        <div class="header-img">
+            <img src="img/z3_Aurelius_Ignis.png" alt="#">
+        </div>
+        <div class="header-txt">
+            <h1>Ofertas especiales</h1>
+            <p> Consigue por tiempo limitado las cartas faltantes en tu colección</p>
+            <a href="#" class="btn-1">informacion</a>
+        </div>
+    </div>
+
+    <!--  --------------------------------  Sección ofertas -------------------------->
+
+    <section class="ofert container">
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="img/cardDetail/1_card_Lavacus.png" alt ="#">
+            </div>
+            <div class="ofert-txt">
+                <h3> Producto 1</h3>
+                <a href="#" class="btn-2"> Informacion 1</a>
+            </div>
+        </div>
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="img/cardDetail/2_card_Pyromagmus.png" alt ="#">
+            </div>
+            <div class="ofert-txt">
+                <h3> Producto 2</h3>
+                <a href="#" class="btn-2"> Informacion 2</a>
+            </div>
+        </div>
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="img/cardDetail/3_card_Aurelius_Ignis.png" alt ="#">
+            </div>
+            <div class="ofert-txt">
+                <h3> Producto 3</h3>
+                <a href="#" class="btn-2"> Informacion 3</a>
+            </div>
+        </div>
+    </section>
+
+    <!--  --------------------------------  Sección ofertas -------------------------->
+
+    <main class="products container" id="lista-1">
+
+        <h2> Productos </h2>
+
+        <div class="product-content">
+            
+            <div class="product">
+                <img src="img/cardDetail/14_card_Frogan.png" alt="#">
+                <div class="product-txt">
+                    <h3> Producto 1</h3>
+                    <p> calidad premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/cardDetail/15_card_Bullraga.png" alt="#">
+                <div class="product-txt">
+                    <h3> Producto 2</h3>
+                    <p> calidad premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/cardDetail/16_card_Tarvoronaus.png" alt="#">
+                <div class="product-txt">
+                    <h3> Producto 3</h3>
+                    <p> calidad premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/cardDetail/7_card_Lizzar.png" alt="#">
+                <div class="product-txt">
+                    <h3> Producto 4</h3>
+                    <p> calidad premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/cardDetail/8_card_Iguanitxeco.png" alt="#">
+                <div class="product-txt">
+                    <h3> Producto 5</h3>
+                    <p> calidad premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/cardDetail/9_card_Citalflama.png" alt="#">
+                <div class="product-txt">
+                    <h3> Producto 6</h3>
+                    <p> calidad premium</p>
+                    <p class="precio">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar carrito</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!---------------------------------- Icons Part -------------------------->
+
+    <section class="icons container">
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="img/i1.svg" alt="#">
+            </div>
+            <div class="icon-txt">
+                <h3> Lorem ipsum, dolor sit amet consectetur adipis</h3>
+                <p>
+                Lorem ipsum, dolor sit amet consectetur adipis
+                </p>
+            </div>
+        </div>
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="img/i2.svg" alt="#">
+            </div>
+            <div class="icon-txt">
+                <h3> Lorem ipsum, dolor sit amet consectetur adipis</h3>
+                <p>
+                Lorem ipsum, dolor sit amet consectetur adipis
+                </p>
+            </div>
+        </div>
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="img/i3.svg" alt="#">
+            </div>
+            <div class="icon-txt">
+                <h3> Lorem ipsum, dolor sit amet consectetur adipis</h3>
+                <p>
+                Lorem ipsum, dolor sit amet consectetur adipis
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------- Blog parte -------------------------->
+
+    <section class="blog container">
+        
+        <div class="blog-1">
+            <img src="img/b1.jpg" alt="#">
+            <h3> Blog 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi facere quasi consequatur quaerat libero, distinctio aliquid tempore! 
+                Exercitationem est aperiam saepe a. Maiores tempora dignissimos molestiae, libero numquam voluptatem.
+            </p>
+        </div>
+
+        <div class="blog-1">
+            <img src="img/b2.jpg" alt="#">
+            <h3> Blog 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi facere quasi consequatur quaerat libero, distinctio aliquid tempore! 
+                Exercitationem est aperiam saepe a. Maiores tempora dignissimos molestiae, libero numquam voluptatem.
+            </p>
+        </div>
+
+        <div class="blog-1">
+            <img src="img/b3.jpg" alt="#">
+            <h3> Blog 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi facere quasi consequatur quaerat libero, distinctio aliquid tempore! 
+                Exercitationem est aperiam saepe a. Maiores tempora dignissimos molestiae, libero numquam voluptatem.
+            </p>
+        </div>
+    </section>
+
+
+    <!---------------------------------- Footer -------------------------->
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3> lorem </h3>
+                <ul>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3> lorem </h3>
+                <ul>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3> lorem </h3>
+                <ul>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                    <li><a href="#"> lorem </a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="tienda.js"></script>
+</body>
+</html>
