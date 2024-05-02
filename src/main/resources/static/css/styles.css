@@ -17,14 +17,6 @@
     font-family: "Ubuntu", sans-serif;
 }
 
-header {
-    background-color: var(--quartary-color);
-    color: var(--primary-color);
-    position: sticky;
-    top: 0vh;
-    height: 8vh;
-    z-index: 1000;
-}
 
 .logo-img {
     position: absolute;
@@ -37,11 +29,6 @@ header h1 {
     color: var(--quartary-color);
 }
 
-body {
-    background-color: var(--primary-color);
-    color: var(--primary-color);
-    width: 99vw;
-}
 
 .container-fluid {
     padding-left: 0;

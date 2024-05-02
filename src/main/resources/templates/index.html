@@ -4,45 +4,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
-  <link rel="stylesheet" th:href="@{/css/styles.css}">
-  <link rel="stylesheet" th:href="@{/css/mobile.css}">
-  <link rel="stylesheet" th:href="@{/css/tablet.css}">
-  <link rel="stylesheet" th:href="@{/css/desktop.css}">
   <link rel="stylesheet" th:href="@{/css/aminations.css}">
-  <link rel="stylesheet" th:href="@{/css/menu.css}">
-  <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
   <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet" />
+  <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet" />
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+  <link rel="stylesheet" th:href="@{/css/desktop.css}">
+  <link rel="stylesheet" th:href="@{/css/index_dimentials.css}">
+  <link rel="stylesheet" th:href="@{/css/menu_nav_dimential.css}">
   <title>Inicio - Dimentials&#169;</title>
 </head>
-
-
-
 <body>
-  <header th:replace="~{layouts/base :: headerplusnav2}"></header>
 
-  <div class="contenedor">
+  <header th:replace="~{layouts/base :: headerplusnav3}"></header>
+  
+  <!--------------------------- HERO RESPONSIVE  ----------------------------->
 
-    <main class="container-fluid">
-
-      <section class="section1 section-odd">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 d-flex justify-content-center align-items-center">
-              <img th:src="@{${'/images/2_carta_lizzar.png'}}" class="img-fluid" alt="Imagen 1">
-            </div>
-            <div class="col-lg-6 d-flex justify-content-center align-items-center">
-              <img th:src="@{${'/images/1_carta_nebulsmokar.png'}}" class="img-fluid" style="height: 102%; width:102%" alt="Imagen 2">
-            </div>
-            <div class="col-lg-3 d-flex justify-content-center align-items-center">
-              <img th:src="@{${'/images/3_carta_frogan.png'}}" class="img-fluid" alt="Imagen 3">
-            </div>
-          </div>
+  <section class="home" id="home">
+    <div class="home-content">
+        <h1>Bienvenidos a <span>Dimentials</span></h1>
+        <h3 class="text-animation">Vive una aventura <span></span></h3>
+        <p>
+            Números portales han comenzado a aparecer a lo largo y ancho de la Tierra.
+            Equípate y descubre nuevas dimensiones llenas de posibilidades... y CRIATURAS.
+        </p>
+        <div class="social-icons">
+            <a href="#"><i class="bx bxl-steam"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
         </div>
-      </section>
+
+        <div class="btn-group">
+            <a href="#" class="btn">Galeria</a>
+            <a href="#contact" class="btn">Contacto</a>
+        </div>
+    </div>
+
+    <div class="home-img">
+        <img src="img/1_Bicho_de_agua_normal.png" alt="" />
+    </div>
+</section>
 
 
+<!--------------------------- Tienda Promo  ----------------------------->
+<section id="featured_cards">
+    <div id="featured_title">
+        <h3>Visita nuestra</h3>
+        <h2>Tienda de Cartas DIMENTIALS</h2>
+    </div>
+    <div class="card-section">
+        <div class="card-container">
+            <div class="card" id="card-1">
+                <div class="card-front">
+                    <img src="img/cards/1_card_Lavacus.png" alt="" />
+                </div>
+                <div class="card-back">
+                    <img src="img/cards/0_dorso_carta.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="card-info">
+            <h3>Más de</h3>
+            <h4><span>25 cartas </span> te están esperando</h4>
+            <button>Learn More</button>
+        </div>
+    </div>
+</section>
 
+<!--------------------------- Tienda Promo  ----------------------------->
 
       <section class="section2 section-even">
         <section class="bg-light py-4 my-5">
@@ -106,155 +141,18 @@
         </section>
       </section>
 
-      <!--
-        <section class="section3 section-odd">
-          <img class="fondo" alt="Fondo" src="img/xxx.jpg" />
-          <div class="divide">
-            <article>
-              <h3>Título S3-A1</h3>
-              <button type="button" href="#">Botón S3-A1.1</button>
-              <img src="img/pkmn.png" />
-              <h4>Título S3-A1</h4>
-              <button type="button" href="#">Botón S3-A1.2</button>
-            </article>
-            <article>
-              <h3>Título S3-A2</h3>
-              <button type="button" href="#">Botón S3-A2.1</button>
-              <img src="img/pkmn.png" />
-              <h4>Título S3-A2</h4>
-              <button type="button" href="#">Botón S3-A2.2</button>
-            </article>
-          </div>
-        </section>
-        -->
-
-      <section class="section4 section-even">
-        <div class="divide">
-          <article>
-            <h3>¡Aprende en directo!</h3>
-            <p>
-              ¡Únete a la comunidad de Dimentials en Twitch para descubrir batallas épicas, estrategias avanzadas y
-              emocionantes torneos en vivo! ¡Visita nuestro canal en Twitch hoy mismo y sé parte de la diversión! 🃏🎮
-            </p>
-
-            <button type="button" class="btn btn-primary boton" href="#">¡Voy de cabeza a la plataforma morada!</button>
-          </article>
-        </div>
-        <div class="image-even">
-          <img alt="Imagen S4" th:src="@{${'/images/section4-twitchSscreenshot.png'}}" />
-        </div>
-      </section>
-
-      <section class="section5 section-odd">
-        <div class="image-odd">
-          <img alt="Imagen S5" th:src="@{${'/images/1_carta_nebulsmokar.png'}}" />
-        </div>
-
-        <div class="divide">
-          <article>
-            <h3>Adéntrate en los portales dimensionales</h3>
-            <h4>Desearás haberlo hecho antes</h4>
-            <p>
-              Aprende lo básico para iniciarte en el mundo de Dimentials y poder hacer frente
-              a todo lo que te acecha en ambas dimensiones a través de sus portales. Con esta guía
-              aprenderás todo lo necesario para adentrarte en este gran universo: cómo se juega,
-              qué estrategias debes seguir, qué criaturas usar... ¡e incluso cómo sorprender a tus amigos!
-            </p>
-            <button type="button" class="btn btn-primary boton" href="#">¡Visita la guía de iniciación!</button>
-          </article>
-        </div>
-      </section>
-
-      <section class="section6 section-even">
-        <div class="divide">
-          <article>
-            <h3>Profundiza en el maravilloso mundo Dimential</h3>
-            <p>
-              Bienvenido a la guía avanzada de Dimentials, un emocionante juego de cartas estratégico donde los
-              jugadores se enfrentan utilizando poderosas criaturas y habilidades dimensionales.
-              En Dimentials, cada jugador construye un mazo de cartas que representa a sus criaturas y hechizos únicos.
-              Durante el juego, los jugadores despliegan sus cartas en el campo de batalla, desencadenando ataques,
-              defensas y efectos especiales para dominar a sus oponentes.
-              La clave para la victoria en Dimentials radica en la estrategia y la planificación. Los jugadores deben
-              tomar decisiones tácticas sobre qué cartas jugar, cuándo hacerlo y cómo aprovechar al máximo las
-              habilidades de sus criaturas.
-              Explora el emocionante mundo de Dimentials, donde las dimensiones se entrelazan y las batallas son épicas.
-              ¡Prepárate para desafiar a tus amigos y convertirte en el maestro dimensional definitivo!
-            </p>
-
-            <button type="button" class="btn btn-primary boton" href="#">¡Visita la guía avanzada!</button>
-          </article>
-        </div>
-        <div class="image-even">
-          <img alt="Imagen S6" th:src="@{${'/images/2_carta_lizzar.png'}}" />
-        </div>
-      </section>
-      <!--
-        <section class="section7 section-odd">
-          <img class="fondo" alt="Fondo" src="img/xxx.jpg" />
-
-          <div class="divide">
-            <img alt="Imagen S7" src="img/pkmn.png" />
-
-            <article>
-              <h3>Título S7</h3>
-              <p>Párrafo S7</p>
-              <button type="button" href="#">Botón S7</button>
-            </article>
-          </div>
-        </section>
-
-        <section class="section8 section-even">
-          <img class="fondo" alt="Fondo" src="img/xxx.jpg" />
-          <div class="divide">
-            <article>
-              <h3>Título S8</h3>
-              <p>Párrafo S8</p>
-              <button type="button" href="#">Botón S8</button>
-            </article>
-            <img alt="Imagen S6" src="img/pkmn.png" />
-          </div>
-        </section>
-        
-        <div
-          class="alert alert-primary  alert-dismissible fade show fixed-bottom d-block"
-          role="alert"
-        >
-          <h4 class="alert-heading">¡Aviso de cookies!</h4>
-          <p>
-            Este sitio web utiliza cookies para mejorar su experiencia de
-            usuario. Al utilizar nuestro sitio web, usted acepta el uso de
-            cookies.
-          </p>
-          <p>
-            <a href="cookies.html" class="btn btn-outline-primary">
-              Más información
-            </a>
-            <button
-              type="button"
-              class="btn btn-outline-primary"
-              id="rechazar-cookies"
-            >
-              Rechazar cookies
-            </button>
-            <button type="button" class="btn btn-primary" id="aceptar-cookies">
-              Aceptar cookies
-            </button>
-          </p>
-        </div>
-        -->
-    </main>
-  </div>
-
   <footer th:replace="~{layouts/base :: footer}"></footer>
 
   <!--
     <script src="../static/js/template.js"></script>
 
 -->
-  <script src="../static/js/menu.js"></script>
-
-
+<script src="js/index_page.js"></script>
+<script src="js/vanilla_tilt.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/menu_nav_dimential.js"></script>
 </body>
 
 
