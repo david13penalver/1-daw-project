@@ -109,8 +109,11 @@
                             <strong>Cartas</strong>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
-                            <a class="dropdown-item" href="#"
+                            <a class="dropdown-item" th:href="@{/gallery_cards}" 
                                 >D.I Gula Insaciable de Embergante</a
+                            >
+                            <a class="dropdown-item" th:href="@{/cards}"
+                            >Detalles cartas</a
                             >
                             <a class="dropdown-item" href="#"
                                 >D.I Justicia Divina de Lofair 2</a
@@ -129,9 +132,9 @@
                             FAQ
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
-                            <a class="dropdown-item" href="#">Sobre nosotros</a>
-                            <a class="dropdown-item" href="#">Sobre el juego DIMENTIALS TCG</a>
-                            <a class="dropdown-item" href="#">Contacto</a>
+                            <a class="dropdown-item" th:href="@{/about}">Sobre nosotros</a>
+                            <a class="dropdown-item" th:href="@{/faq}">Sobre el juego DIMENTIALS TCG</a>
+                            <a class="dropdown-item" th:href="@{/contact}">Contacto</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown justify-content-center">
@@ -147,7 +150,8 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
                             <a class="dropdown-item" href="#">Creador de cartas</a>
-                            <a class="dropdown-item" href="#">Guias de usuario</a>
+                            <a class="dropdown-item" th:href="@{/basic_concepts}">Conceptos básicos</a>
+                            <a class="dropdown-item" th:href="@{/basic_strategy}">Estrategias básicas</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown justify-content-center">
