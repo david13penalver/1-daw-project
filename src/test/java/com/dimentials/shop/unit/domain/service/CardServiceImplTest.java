@@ -1,4 +1,4 @@
-package com.dimentials.shop.unit.service;
+package com.dimentials.shop.unit.domain.service;
 
 import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.service.CardService;

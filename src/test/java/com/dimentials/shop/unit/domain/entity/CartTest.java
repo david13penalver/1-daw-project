@@ -1,11 +1,11 @@
 package com.dimentials.shop.unit.domain.entity;
 
+import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Cart;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CartTest {
     @Test
@@ -20,4 +20,10 @@ public class CartTest {
         );
 
         }
+
+    @Test
+    void testEmptyConstructor() {
+        Cart cart = new Cart();
+        assertNotNull(cart);
+    }
 }

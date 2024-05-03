@@ -1,14 +1,13 @@
 package com.dimentials.shop.unit.domain.entity;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.math.BigDecimal;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.dimentials.shop.domain.entity.Card;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CardTest {
 
@@ -36,5 +35,11 @@ public class CardTest {
                 () -> assertEquals("test.png", card.getImgPath())
         );
 
+    }
+
+    @Test
+    void testEmptyConstructor() {
+        Card card = new Card();
+        assertNotNull(card);
     }
 }

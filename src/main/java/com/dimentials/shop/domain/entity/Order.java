@@ -16,6 +16,10 @@ public class Order {
         this.id = id;
     }
 
+    public Order() {
+
+    }
+
     public void addOrderDetail(OrderDetail orderDetail) {
         if (this.orderDetailList == null) {
             this.orderDetailList = new ArrayList<>();

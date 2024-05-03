@@ -10,6 +10,10 @@ public class OrderDetail {
     private Integer quantity;
     private BigDecimal price;
 
+    public OrderDetail() {
+
+    }
+
     public BigDecimal getTotal() {
         return price.multiply(BigDecimal.valueOf(quantity));
     }

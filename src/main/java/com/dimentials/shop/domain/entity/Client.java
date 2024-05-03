@@ -42,6 +42,10 @@ public class Client {
         this.door = door;
     }
 
+    public Client() {
+
+    }
+
     public Integer getClientId() {
         return clientId;
     }

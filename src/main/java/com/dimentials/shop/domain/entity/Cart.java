@@ -15,6 +15,10 @@ public class Cart {
         this.id = id;
     }
 
+    public Cart() {
+
+    }
+
     public void addCartDetail(CartDetail cartDetail) {
         if (cartDetailList == null) {
             cartDetailList = new ArrayList<>();

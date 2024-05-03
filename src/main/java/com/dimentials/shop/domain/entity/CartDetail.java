@@ -9,6 +9,10 @@ public class CartDetail {
     private Integer quantity;
     private BigDecimal price;
 
+    public CartDetail() {
+
+    }
+
     public BigDecimal getTotal() {
         return price.multiply(BigDecimal.valueOf(quantity));
     }

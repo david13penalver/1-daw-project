@@ -1,12 +1,12 @@
-package test.java.com.dimentials.shop.unit.domain.entity;
+package com.dimentials.shop.unit.domain.entity;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import com.dimentials.shop.domain.entity.Card;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import com.dimentials.shop.domain.entity.Monster;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MonsterTest {
 
@@ -47,6 +47,12 @@ public class MonsterTest {
                 () -> assertEquals("Monster Type2", monster.getSecondaryType()
                 )
         );
+    }
+
+    @Test
+    void testEmptyConstructor() {
+        Monster monster = new Monster();
+        assertNotNull(monster);
     }
 
 }

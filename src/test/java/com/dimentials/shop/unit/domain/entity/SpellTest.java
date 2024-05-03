@@ -1,14 +1,14 @@
 package com.dimentials.shop.unit.domain.entity;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import com.dimentials.shop.domain.entity.Card;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.dimentials.shop.domain.entity.Spell;
 
 import java.math.BigDecimal;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SpellTest {
 
@@ -36,5 +36,11 @@ public class SpellTest {
                 ,() -> assertEquals(1, spell.getMana())
 
         );
+    }
+
+    @Test
+    void testEmptyConstructor() {
+        Spell spell = new Spell();
+        assertNotNull(spell);
     }
 }

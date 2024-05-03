@@ -1,5 +1,6 @@
 package com.dimentials.shop.unit.domain.entity;
 
+import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Client;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -43,5 +44,11 @@ public class ClientTest {
                 () -> assertEquals("A", client.getDoor())
         );
 
+    }
+
+    @Test
+    void testEmptyConstructor() {
+        Client client = new Client();
+        assertNotNull(client);
     }
 }

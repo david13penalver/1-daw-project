@@ -1,5 +1,6 @@
 package com.dimentials.shop.unit.domain.entity;
 
+import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Order;
 import com.dimentials.shop.domain.entity.OrderDetail;
 import org.junit.jupiter.api.DisplayName;
@@ -21,5 +22,11 @@ public class OrderDetailTest {
                 () -> assertEquals(null, orderDetail.getQuantity()),
                 () -> assertEquals(new BigDecimal(0), orderDetail.getPrice())
         );
+    }
+
+    @Test
+    void testEmptyConstructor() {
+        OrderDetail orderDetail = new OrderDetail();
+        assertNotNull(orderDetail);
     }
 }

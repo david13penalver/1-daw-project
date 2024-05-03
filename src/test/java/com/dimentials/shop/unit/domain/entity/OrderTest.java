@@ -1,13 +1,13 @@
 package com.dimentials.shop.unit.domain.entity;
 
+import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Order;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class OrderTest {
     @Test
@@ -21,5 +21,11 @@ public class OrderTest {
                 () -> assertEquals(null, order.getOrderDetailList()),
                 () -> assertEquals(new BigDecimal(0), order.getTotal())
         );
+    }
+
+    @Test
+    void testEmptyConstructor() {
+        Order order = new Order();
+        assertNotNull(order);
     }
 }
