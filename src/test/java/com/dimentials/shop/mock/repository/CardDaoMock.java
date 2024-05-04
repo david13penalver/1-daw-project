@@ -25,6 +25,11 @@ public class CardDaoMock implements CardDao {
 
     @Override
     public CardEntity findById(Integer id) {
+        for (CardEntity cardEntity : cardEntityList) {
+            if (cardEntity.getId().equals(id)) {
+                return cardEntity;
+            }
+        }
         return null;
     }
 

@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12c9ef79-f46a-419b-a3df-1d0f8ba3f655" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/deleteCardForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/deleteCardForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newSpellForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newSpellForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/mock/repository/CardDaoMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +28,11 @@
     "JUnit.CardEntityTest.executor": "Run",
     "JUnit.CardRepositoryImplTest$findById.executor": "Run",
     "JUnit.CardRepositoryImplTest$findById.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
+    "JUnit.CardRepositoryImplTest$findById.findById2ReturnsTheBookWithTheSecondId.executor": "Run",
+    "JUnit.CardRepositoryImplTest$findById.findByIdNotFoundReturnsNull.executor": "Run",
     "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Debug",
     "JUnit.CardRepositoryImplTest.findAllReturnsAllCards2.executor": "Run",
+    "JUnit.CardServiceImplTest.executor": "Run",
     "JUnit.MonsterEntityTest.testCardConstructorWithAllParameters.executor": "Run",
     "JUnit.SpellEntityTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -47,17 +43,17 @@
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SpellEntityTest">
-    <configuration name="CardEntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CardRepositoryImplTest">
+    <configuration name="CardRepositoryImplTest$findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.dao.entity.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.dao.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.dao.entity.CardEntityTest" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest$findById" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,7 +75,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardRepositoryImplTest.findAllReturnsAllCards2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardRepositoryImplTest$findById.findById2ReturnsTheBookWithTheSecondId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest$findById" />
+      <option name="METHOD_NAME" value="findById2ReturnsTheBookWithTheSecondId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
@@ -89,50 +101,34 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
       <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findAllReturnsAllCards2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MonsterEntityTest.testCardConstructorWithAllParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.dao.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.dao.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.dao.entity.MonsterEntityTest" />
-      <option name="METHOD_NAME" value="testCardConstructorWithAllParameters" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpellEntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.dao.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.dao.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.dao.entity.SpellEntityTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardRepositoryImplTest.findAllReturnsAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
+      <option name="METHOD_NAME" value="findAllReturnsAllCards" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpellEntityTest" />
-        <item itemvalue="JUnit.MonsterEntityTest.testCardConstructorWithAllParameters" />
-        <item itemvalue="JUnit.CardEntityTest" />
+        <item itemvalue="JUnit.CardRepositoryImplTest" />
+        <item itemvalue="JUnit.CardRepositoryImplTest$findById" />
         <item itemvalue="JUnit.CardRepositoryImplTest$findById.findById1ReturnsTheBookWithTheFirstId" />
-        <item itemvalue="JUnit.CardRepositoryImplTest.findAllReturnsAllCards2" />
+        <item itemvalue="JUnit.CardRepositoryImplTest.findAllReturnsAllCards" />
+        <item itemvalue="JUnit.CardRepositoryImplTest$findById.findById2ReturnsTheBookWithTheSecondId" />
       </list>
     </recent_temporary>
   </component>

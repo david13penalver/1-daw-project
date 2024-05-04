@@ -11,6 +11,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,9 +25,9 @@ public class CardRepositoryImplTest {
     @BeforeEach
     void setUp() {
         expectedList = List.of(
-                new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
-                new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-                new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg")
+                new Card(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg"),
+                new Card(2, "Lizzar", "Monstruito", new BigDecimal(1), "Lizzar.jpg"),
+                new Card(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")
         );
     }
 
