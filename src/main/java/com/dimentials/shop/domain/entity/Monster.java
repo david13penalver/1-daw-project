@@ -1,6 +1,7 @@
 package com.dimentials.shop.domain.entity;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Monster extends Card {
 
@@ -68,5 +69,19 @@ public class Monster extends Card {
                 ", mainType='" + mainType + '\'' +
                 ", secondaryType='" + secondaryType + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Monster monster = (Monster) o;
+        return Objects.equals(attack, monster.attack) && Objects.equals(life, monster.life) && Objects.equals(mainType, monster.mainType) && Objects.equals(secondaryType, monster.secondaryType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), attack, life, mainType, secondaryType);
     }
 }

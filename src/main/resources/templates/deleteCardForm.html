@@ -23,7 +23,6 @@
 
     <form th:action="@{/cards/card-deletion}" th:method="post">
         <input type="hidden" name="_method" value="DELETE" />
-        <!-- Campo para el ID (usualmente no se usa para insertar, puede ser auto-generado)-->
         <label for="id">ID:</label>
         <input type="number" id="id" name="id" th:field="*{card.id}" /><br>
 

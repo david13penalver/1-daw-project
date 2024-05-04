@@ -4,154 +4,139 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9411fd14-db42-4c60-b30a-bbb3aba0e1c5" name="Changes" comment="">
+    <list default="true" id="12c9ef79-f46a-419b-a3df-1d0f8ba3f655" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/CartDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CartDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/CartDetailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/entity/MonsterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/service/CardServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/domain/service/CardServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/domain/entity/Spell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/impl/CardDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/deleteCardForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/deleteCardForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newSpellForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newSpellForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dimentials/shop/unit/persistence/repository/CardRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2fwlnZy0IFB45Oc0ok2l3K6tKSG" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.ShopApplication.executor": "Run",
-    "JUnit.CardTest.testEmptyConstructor.executor": "Run",
-    "JUnit.CartDetailTest.testEmptyConstructor.executor": "Run",
-    "JUnit.java in shop.executor": "Run",
+    "JUnit.CardEntityTest.executor": "Run",
+    "JUnit.CardRepositoryImplTest$findById.executor": "Run",
+    "JUnit.CardRepositoryImplTest$findById.findById1ReturnsTheBookWithTheFirstId.executor": "Run",
+    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards.executor": "Debug",
+    "JUnit.CardRepositoryImplTest.findAllReturnsAllCards2.executor": "Run",
+    "JUnit.MonsterEntityTest.testCardConstructorWithAllParameters.executor": "Run",
+    "JUnit.SpellEntityTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ShopApplication.executor": "Debug",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/10271788/Desktop/Grup3-Dimentials",
+    "git-widget-placeholder": "feature/unitaryTests",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SpellTest.testEmptyConstructor">
-    <configuration name="CardTest.testEmptyConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SpellEntityTest">
+    <configuration name="CardEntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.dao.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.CardTest" />
-      <option name="METHOD_NAME" value="testEmptyConstructor" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.dao.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.dao.entity.CardEntityTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardRepositoryImplTest$findById.findById1ReturnsTheBookWithTheFirstId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest$findById" />
+      <option name="METHOD_NAME" value="findById1ReturnsTheBookWithTheFirstId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartDetailTest.testEmptyConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardRepositoryImplTest.findAllReturnsAllCards2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.persistence.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.CartDetailTest" />
-      <option name="METHOD_NAME" value="testEmptyConstructor" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.persistence.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.persistence.repository.CardRepositoryImplTest" />
+      <option name="METHOD_NAME" value="findAllReturnsAllCards2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.testEmptyConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MonsterEntityTest.testCardConstructorWithAllParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.dao.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.CartTest" />
-      <option name="METHOD_NAME" value="testEmptyConstructor" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.dao.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.dao.entity.MonsterEntityTest" />
+      <option name="METHOD_NAME" value="testCardConstructorWithAllParameters" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpellTest.testEmptyConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpellEntityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dimentials.shop.unit.domain.entity.*" />
+          <option name="PATTERN" value="com.dimentials.shop.unit.dao.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.domain.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.domain.entity.SpellTest" />
-      <option name="METHOD_NAME" value="testEmptyConstructor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="java in shop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <option name="PACKAGE_NAME" value="com.dimentials.shop.unit.dao.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.dimentials.shop.unit.dao.entity.SpellEntityTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpellTest.testEmptyConstructor" />
-        <item itemvalue="JUnit.CartTest.testEmptyConstructor" />
-        <item itemvalue="JUnit.CartDetailTest.testEmptyConstructor" />
-        <item itemvalue="JUnit.CardTest.testEmptyConstructor" />
-        <item itemvalue="JUnit.java in shop" />
+        <item itemvalue="JUnit.SpellEntityTest" />
+        <item itemvalue="JUnit.MonsterEntityTest.testCardConstructorWithAllParameters" />
+        <item itemvalue="JUnit.CardEntityTest" />
+        <item itemvalue="JUnit.CardRepositoryImplTest$findById.findById1ReturnsTheBookWithTheFirstId" />
+        <item itemvalue="JUnit.CardRepositoryImplTest.findAllReturnsAllCards2" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="9411fd14-db42-4c60-b30a-bbb3aba0e1c5" name="Changes" comment="" />
-      <created>1714720189493</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1714720189493</updated>
-    </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dimentials/shop/controller/CardController.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

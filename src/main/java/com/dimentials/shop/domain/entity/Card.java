@@ -71,17 +71,14 @@ public class Card {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Card card = (Card) o;
-        return Objects.equals(id, card.id) && Objects.equals(name, card.name)
-                && Objects.equals(description, card.description) && Objects.equals(price, card.price);
+        return Objects.equals(id, card.id) && Objects.equals(name, card.name) && Objects.equals(description, card.description) && Objects.equals(price, card.price) && Objects.equals(imgPath, card.imgPath);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, price);
+        return Objects.hash(id, name, description, price, imgPath);
     }
 }

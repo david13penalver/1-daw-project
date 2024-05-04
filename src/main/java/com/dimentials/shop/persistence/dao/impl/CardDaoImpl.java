@@ -49,13 +49,17 @@ public class CardDaoImpl implements CardDao {
 
     @Override
     public CardEntity deleteCard(Integer id) {
+        CardEntity cardToRemove = null;
         for (CardEntity cardEntity : cardEntityList) {
             if (cardEntity.getId() == id) {
-                cardEntityList.remove(cardEntity);
-                return cardEntity;
+                cardToRemove = cardEntity;
+                break;
             }
         }
-        return null;
+        if (cardToRemove != null) {
+            cardEntityList.remove(cardToRemove);
+        }
+        return cardToRemove;
     }
 
     @Override
