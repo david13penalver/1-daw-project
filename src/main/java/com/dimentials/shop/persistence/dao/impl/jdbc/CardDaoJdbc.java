@@ -30,6 +30,7 @@ public class CardDaoJdbc implements CardDao {
 
     @Override
     public CardEntity findById(Integer id) {
+
         return null;
     }
 
