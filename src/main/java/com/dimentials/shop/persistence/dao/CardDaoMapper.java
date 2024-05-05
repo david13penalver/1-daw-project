@@ -14,6 +14,7 @@ public class CardDaoMapper {
         for (ResultSet resultSet : resultSetList) {
             cardEntityList.add(toCardEntity(resultSet));
         }
+        return cardEntityList;
     }
 
     public static CardEntity toCardEntity(ResultSet resultSet) {
