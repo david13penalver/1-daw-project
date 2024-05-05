@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12c9ef79-f46a-419b-a3df-1d0f8ba3f655" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimentials/shop/persistence/dao/entity/CardEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +26,17 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2g5KzdYFvUqlVsSabAr4ijH84W4" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2g3eaaUgGC30qQY2G3xZ1MnRehc" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -164,6 +171,11 @@
       <updated>1714982265909</updated>
       <workItem from="1714982268199" duration="316000" />
       <workItem from="1715064112644" duration="743000" />
+      <created>1714930755467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714930755467</updated>
+      <workItem from="1714930757204" duration="1116000" />
     </task>
     <servers />
   </component>
