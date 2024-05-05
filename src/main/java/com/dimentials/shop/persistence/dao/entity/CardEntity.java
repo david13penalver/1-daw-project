@@ -19,6 +19,10 @@ public class CardEntity {
         this.imgPath = imgPath;
     }
 
+    public CardEntity() {
+
+    }
+
     public String getImgPath() {
         return imgPath;
     }
