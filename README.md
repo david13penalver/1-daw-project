@@ -100,7 +100,6 @@ SQL is a domain-specific language used in programming and designed for managing 
 MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language. We have used it to create our database.
 
 ## Design
--- Complete it with the design of the database
 The design of the database contains the six entites we can see at the picture before. 
 The entity User contains the information related to the different users of the database: admins and buyers. Order_global is where we store the information related to the orders made by the users. Oder_detail is where we store the information related to the cards that are in the orders.
 The entity Card contains the information related to the cards that are in the database. Here we have an inheritance with Monster and Spell. It is a partial inheritance, as in the future it is possible that they appear more types of cards. It is also a disjoint inheritance, as a card can only be a monster or a spell.
