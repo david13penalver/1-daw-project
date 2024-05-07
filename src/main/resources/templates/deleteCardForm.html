@@ -20,16 +20,21 @@
 
 <body>
     <header th:replace="~{layouts/base :: headerplusnav2}"></header>
+    <div class="container-fluid">
+    <form th:action="@{/cards/card-deletion}" th:method="delete" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="number" id="id" name="id" th:field="*{card.id}" class="form-control" required />
+            <div class="invalid-feedback">
+                Please provide a valid ID.
+            </div>
+        </div>
 
-    <form th:action="@{/cards/card-deletion}" th:method="delete">
-        <label for="id">ID:</label>
-        <input type="number" id="id" name="id" th:field="*{card.id}" /><br>
-
-        <input type="submit" value="Insertar" />
+        <button type="submit" class="btn btn-primary">Insertar</button>
     </form>
 
     <footer th:replace="~{layouts/base :: footer}"></footer>
-
+</div>
     <script src="../static/js/menu.js"></script>
 </body>
 
