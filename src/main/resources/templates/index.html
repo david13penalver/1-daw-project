@@ -4,29 +4,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" th:href="@{/css/aminations.css}">
   <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet" />
-  <link
+  <!-- <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet" />
-  <link rel="stylesheet" th:href="@{/css/styles_index.css}">
-  <link rel="stylesheet" th:href="@{/css/desktop.css}">
+      rel="stylesheet" /> -->
   <link rel="stylesheet" th:href="@{/css/index_dimentials.css}">
-  <link rel="stylesheet" th:href="@{/css/menu_nav_dimential.css}">
   <title>Inicio - Dimentials&#169;</title>
 </head>
 <body>
 
-  <header th:replace="~{layouts/base :: headerplusnav3}"></header>
+  <!--------------------------- Navbar  ----------------------------->
+
+  <header class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light row">
+        <a class="navbar-brand" href="#">Dimentials</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown justify-content-center">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownHome"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        <strong>Cartas</strong>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
+                        <a class="dropdown-item" th:href="@{/gallery_cards}" 
+                            >D.I Gula Insaciable de Embergante</a
+                        >
+                        <a class="dropdown-item" th:href="@{/cards}"
+                        >Detalles cartas</a
+                        >
+                        <a class="dropdown-item" href="#"
+                            >D.I Justicia Divina de Lofair 2</a
+                        >
+                    </div>
+                </li>
+                <li class="nav-item dropdown justify-content-center">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownProducts"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        FAQ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                        <a class="dropdown-item" th:href="@{/about}">Sobre nosotros</a>
+                        <a class="dropdown-item" th:href="@{/faq}">Sobre el juego DIMENTIALS TCG</a>
+                        <a class="dropdown-item" th:href="@{/contact}">Contacto</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown justify-content-center">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownGallery"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        Recursos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <a class="dropdown-item" href="#">Creador de cartas</a>
+                        <a class="dropdown-item" th:href="@{/basic_concepts}">Conceptos básicos</a>
+                        <a class="dropdown-item" th:href="@{/basic_strategy}">Estrategias básicas</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown justify-content-center">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownCareers"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        Juego Digital
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCareers">
+                        <a class="dropdown-item" href="#">Demo en Itch.io</a>
+                        <a class="dropdown-item" href="#">Wishlist en Steam</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto2">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <strong>Tienda</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
   
   <!--------------------------- HERO RESPONSIVE  ----------------------------->
-
-  <section class="home" id="home">
-    <div class="home-content">
+  <section class="home container" id="home">
+    <div class="row">
+      <div class="home-content col-xxl-6"> <!-- xs <576px sm > 576px md >768px lg> 992px xl>1200px xxl>1400px -->
         <h1>Bienvenidos a <span>Dimentials</span></h1>
         <h3 class="text-animation">Vive una aventura <span></span></h3>
         <p>
@@ -44,9 +141,10 @@
             <a href="#" class="btn">Galeria</a>
             <a href="#contact" class="btn">Contacto</a>
         </div>
+      </div>
     </div>
 
-    <div class="home-img">
+    <div class="home-img col-xxl-4">
         <img th:src="@{${'/images/1_Bicho_de_agua_normal.png'}}" alt="" />
     </div>
 </section>
@@ -77,71 +175,27 @@
     </div>
 </section>
 
-<!--------------------------- Tienda Promo  ----------------------------->
+<!-- footer -->
 
-      <section class="section2 section-even">
-        <section class="bg-light py-4 my-5">
-          <div class="padding">
-            <div class="row">
-              <div class="col-12">
-                <h2 class="mb-3">Novedades</h2>
-              </div>
-
-              <div class="col-md-6 col-lg-4">
-                <div class="card my-3">
-
-                  <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg" class="card-image-top"
-                    alt="thumbnail">
-
-                  <div class="card-body">
-                    <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-                    <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development
-                      and designing. </p>
-                    <div>
-                      <a href="#" class="btn btn-primary">¡Quiero saber más!</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-4">
-                <div class="card my-3">
-
-                  <img src="https://images.pexels.com/photos/3848158/pexels-photo-3848158.jpeg" class="card-image-top"
-                    alt="thumbnail">
-
-                  <div class="card-body">
-                    <h3 class="card-title"><a href="#" class="text-secondary">Why We Use HTML</a></h3>
-                    <p class="card-text">We use HTML to make website and that website helps to gain very much
-                      knowledge.Pellentesque dictum consequat tincidunt. Sed tincidunt tortor nec vulputate gravida.</p>
-                    <div>
-                      <a href="#" class="btn btn-primary">¡Quiero saber más!</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-4">
-                <div class="card my-3">
-
-                  <img src="https://images.pexels.com/photos/2343170/pexels-photo-2343170.jpeg" class="card-image-top"
-                    alt="thumbnail">
-                  <div class="card-body">
-                    <h3 class="card-title"><a href="#" class="text-secondary">Where do people came from?</a></h3>
-                    <p class="card-text">Pellentesque dictum consequat tincidunt. Sed tincidunt tortor nec vulputate
-                      gravida. Nam sapien nisi, malesuada at sapien suscipit,</p>
-                    <div>
-                      <a href="#" class="btn btn-primary">¡Quiero saber más!</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-
-  <footer th:replace="~{layouts/base :: footer}"></footer>
+<footer th:fragment="footer">
+  <img class="grid-logo" th:src="@{${'/images/Dimentials_Logo_Texto.png'}}">
+  <h4 class="grid-title">The Dimentials Company</h4>
+  <ul class="grid-redes">
+      <h4>Redes sociales</h4>
+      <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
+      <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-twitch"></i> </a></li>
+      <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
+  </ul>
+  <ul class="grid-legal">
+      <h4>Aspecto legal</h4>
+      <li><a th:href="@{/cookies}">Política de cookies</a></li>
+      <li><a th:href="@{/privacy}">Aviso de privacidad</a></li>
+      <li><a th:href="@{/terms}">Condiciones de uso</a></li>
+  </ul>
+  <p class="grid-copyright">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
+</footer>
 
   <!--
     <script src="../static/js/template.js"></script>
@@ -151,7 +205,7 @@
 <script src="js/vanilla_tilt.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 <script src="js/menu_nav_dimential.js"></script>
 </body>
 
