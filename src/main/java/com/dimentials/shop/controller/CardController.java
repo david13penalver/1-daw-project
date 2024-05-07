@@ -20,7 +20,6 @@ public class CardController {
         this.cardService = CardIoC.getCardService();
     }
 
-
     @GetMapping
     public String findAll(Model model) {
         model.addAttribute("cardList", cardService.findAll());
@@ -32,14 +31,19 @@ public class CardController {
         model.addAttribute("cardDetail", cardService.findById(id));
         return "cardDetail";
     }
+
     @GetMapping("/new-monster")
     public String newMonster(Model model) {
         model.addAttribute("monster", new Monster());
         return "newMonsterForm";
     }
+
     @PostMapping("/new-monster")
-    public String addMonster(@RequestParam String name, @RequestParam String description, @RequestParam String price, @RequestParam String imgPath, @RequestParam String attack, @RequestParam String life, @RequestParam String mainType, @RequestParam(required = false) String secondaryType, Model model) {
-        Monster monster = new Monster(null,name,description,new BigDecimal(price), imgPath, Integer.parseInt(attack),Integer.parseInt(life), mainType, secondaryType);
+    public String addMonster(@RequestParam String name, @RequestParam String description, @RequestParam String price,
+            @RequestParam String imgPath, @RequestParam String attack, @RequestParam String life,
+            @RequestParam String mainType, @RequestParam(required = false) String secondaryType, Model model) {
+        Monster monster = new Monster(null, name, description, new BigDecimal(price), imgPath, Integer.parseInt(attack),
+                Integer.parseInt(life), mainType, secondaryType);
         model.addAttribute("monster", cardService.addMonster(monster));
         return "redirect:/cards";
     }
@@ -49,9 +53,11 @@ public class CardController {
         model.addAttribute("spell", new Spell());
         return "newSpellForm";
     }
+
     @PostMapping("/new-spell")
-    public String addSpell(@RequestParam String name,@RequestParam String description,@RequestParam String price,@RequestParam String imgPath,@RequestParam String mana, Model model) {
-        Spell spell = new Spell(null, name, description, new BigDecimal(price),imgPath,Integer.parseInt(mana));
+    public String addSpell(@RequestParam String name, @RequestParam String description, @RequestParam String price,
+            @RequestParam String imgPath, @RequestParam String mana, Model model) {
+        Spell spell = new Spell(null, name, description, new BigDecimal(price), imgPath, Integer.parseInt(mana));
         model.addAttribute("spell", cardService.addSpell(spell));
         return "redirect:/cards";
     }
@@ -61,23 +67,41 @@ public class CardController {
         model.addAttribute("card", new Monster());
         return "deleteCardForm";
     }
+
     @DeleteMapping("/card-deletion")
     public String deleteCard(@RequestParam int id, Model model) {
-        model.addAttribute("card",cardService.deleteCard(id));
+        model.addAttribute("card", cardService.deleteCard(id));
         return "redirect:/cards";
     }
 
-    @PutMapping("/spell/{id}")
-    public String updateSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer mana, Model model) {
-        Spell spell = new Spell(id,name,description,price,imgPath,mana);
+    @GetMapping("/newer-monster")
+    public String updateMonster(Model model) {
+        model.addAttribute("monster", new Monster());
+        return "updateMonsterForm";
+    }
+
+    @GetMapping("/newer-spell")
+    public String updateSpell(Model model) {
+model.addAttribute("spell", new Monster());
+        return "updateSpellForm";
+}
+
+    @PutMapping("/newer-spell")
+    public String updateSpell(@RequestParam Integer id, @RequestParam String name, @RequestParam String description,
+            @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer mana, Model model) {
+        Spell spell = new Spell(id, name, description, price, imgPath, mana);
         model.addAttribute("card", cardService.updateSpell(spell));
         return "redirect:/cards";
     }
 
-    @PutMapping("/monster/{id}")
-    public String updateMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description, @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer atack, @RequestParam Integer life, @RequestParam String mainType, @RequestParam String secondaryType, Model model) {
-        Monster monster = new Monster(id,name,description,price,imgPath,atack,life,mainType,secondaryType);
+    @PutMapping("/newer-monster")
+    public String updateMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description,
+            @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer atack,
+            @RequestParam Integer life, @RequestParam String mainType, @RequestParam String secondaryType,
+            Model model) {
+        Monster monster = new Monster(id, name, description, price, imgPath, atack, life, mainType, secondaryType);
         model.addAttribute("monster", cardService.updateMonster(monster));
         return "redirect:/cards";
     }
+
 }
