@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/css/tablet.css}">
+    <link rel="stylesheet" th:href="@{/css/desktop.css}">
+    <link rel="stylesheet" th:href="@{/css/aminations.css}">
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
+    <title>Nuestras cartas</title>
+    <style> body {color: red;}</style>
+</head>
+
+<body>
+    
+        
+    <header th:replace="~{layouts/base :: headerplusnav2}"></header>
+    <div class="container-fluid">
+
+    <form th:action="@{/cards/new-monster}" th:method="post" class="needs-validation" novalidate>
+        <!-- Campos para el nombre y descripción -->
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="number" class="form-control" id="id" name="id" th:field="*{monster.id}" required /><br>
+            <div class="invalid-feedback">
+                Please provide an ID.
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" class="form-control" id="name" name="name" th:field="*{monster.name}" required /><br>
+            <div class="invalid-feedback">
+                Please provide a name.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Descripción:</label>
+            <textarea class="form-control" id="description" name="description" th:field="*{monster.description}" required></textarea><br>
+            <div class="invalid-feedback">
+                Please provide a description.
+            </div>
+        </div>
+
+        <!-- Campos para el precio y ruta de la imagen -->
+        <div class="form-group">
+            <label for="price">Precio:</label>
+            <input type="number" step="0.01" class="form-control" id="price" name="price" th:field="*{monster.price}" required /><br>
+            <div class="invalid-feedback">
+                Please provide a price.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="imgPath">Ruta de la imagen:</label>
+            <input type="text" class="form-control" id="imgPath" name="imgPath" th:field="*{monster.imgPath}" required /><br>
+            <div class="invalid-feedback">
+                Please provide an image path.
+            </div>
+        </div>
+
+        <!-- Campos para ataque y vida -->
+        <div class="form-group">
+            <label for="attack">Ataque:</label>
+            <input type="number" class="form-control" id="attack" name="attack" th:field="*{monster.attack}" required /><br>
+            <div class="invalid-feedback">
+                Please provide an attack value.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="life">Vida:</label>
+            <input type="number" class="form-control" id="life" name="life" th:field="*{monster.life}" required /><br>
+            <div class="invalid-feedback">
+                Please provide a life value.
+            </div>
+        </div>
+
+        <!-- Campos para tipo principal y secundario -->
+        <div class="form-group">
+            <label for="mainType">Tipo Principal:</label>
+            <input type="text" class="form-control" id="mainType" name="mainType" th:field="*{monster.mainType}" required /><br>
+            <div class="invalid-feedback">
+                Please provide a main type.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="secondaryType">Tipo Secundario:</label>
+            <input type="text" class="form-control" id="secondaryType" name="secondaryType" th:field="*{monster.secondaryType}" required /><br>
+            <div class="invalid-feedback">
+                Please provide a secondary type.
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Insertar</button>
+    </form>
+</div>
+    <footer th:replace="~{layouts/base :: footer}"></footer>
+    
+
+    <script src="../static/js/menu.js"></script>
+</body>
+
+</html>
