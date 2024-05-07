@@ -1,0 +1,14 @@
+{
+  "name": "web-dimentials",
+  "version": "1.0.0",
+  "description": "Proyecto Dimentials",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass src/main/resources/scss:src/main/resources/static/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

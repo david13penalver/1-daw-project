@@ -30,17 +30,16 @@ body {
 /* Estilos de navbar */
 
 .navbar {
-    padding: 0.5rem 1rem;
+    /*padding: 0.5rem 1rem;*/
 }
 .navbar-brand {
-    font-weight: 700;
+    /*font-weight: 700;*/
 }
 .navbar a {
     font-size: 2rem;
     color: black;
-    margin-left: 3.5rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    /*transition: 0.3s ease; */
     border-bottom: 3px solid transparent;
 }
 .nav-link {
@@ -49,7 +48,7 @@ body {
 
 .navbar-toggler {
     border: none;
-    margin-right: 10px;
+    /*margin-right: 10px; */
 }
 
 .nav-link:hover,
@@ -452,6 +451,7 @@ footer ul li a:hover {
 /* Estilos para pantallas mayores a lg */ 
 
 @media (min-width: lg) { /* xs <576px sm > 576px md >768px lg> 992px xl>1200px xxl>1400px */
+    /**
     .navbar-nav {
         align-items: center;
     }
@@ -470,7 +470,7 @@ footer ul li a:hover {
         display: block;
     }
     .dropdown-menu {
-        min-width: 10rem; /* Ancho mínimo del dropdown */
+        min-width: 10rem; // Ancho mínimo del dropdown 
     }
     .navbar-nav .nav-item:nth-child(n + 5) {
         margin-left: auto;
