@@ -4,6 +4,7 @@ import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.domain.service.impl.CardServiceImpl;
 import com.dimentials.shop.persistence.dao.CardDao;
 import com.dimentials.shop.persistence.dao.impl.CardDaoImpl;
+import com.dimentials.shop.persistence.dao.impl.jdbc.CardDaoJdbc;
 import com.dimentials.shop.persistence.repository.CardRepository;
 import com.dimentials.shop.persistence.repository.impl.CardRepositoryImpl;
 
@@ -15,7 +16,7 @@ public class CardIoC {
 
     public static CardDao getCardDao() {
         if (cardDao == null) {
-            cardDao = new CardDaoImpl();
+            cardDao = new CardDaoJdbc();
         }
         return cardDao;
     }
