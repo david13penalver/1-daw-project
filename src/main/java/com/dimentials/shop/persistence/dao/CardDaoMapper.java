@@ -3,16 +3,17 @@ package com.dimentials.shop.persistence.dao;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CardDaoMapper {
-    public static List<CardEntity> toCardList(List<ResultSet> resultSetList) {
+    public static List<CardEntity> toCardList(ResultSet resultSetList) throws SQLException {
         if (resultSetList == null)
             return null;
         List<CardEntity> cardEntityList = new ArrayList<>();
-        for (ResultSet resultSet : resultSetList) {
-            cardEntityList.add(toCardEntity(resultSet));
+        while (!resultSetList.next()) {
+            cardEntityList.add(toCardEntity(resultSetList));
         }
         return cardEntityList;
     }
