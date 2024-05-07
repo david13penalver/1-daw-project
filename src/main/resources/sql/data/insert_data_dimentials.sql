@@ -2,63 +2,17 @@ CREATE DATABASE IF NOT EXISTS dimentials;
 
 USE dimentials;
 
--- User table
-CREATE TABLE user (
-    id_user INT PRIMARY KEY,
-    name_user VARCHAR(50) not null,
-    surname1 VARCHAR(25) not null,
-    surname2 VARCHAR(25),
-    is_admin BOOLEAN not null,
-    email VARCHAR(55) not null
-);
+insert INTO card VALUES (1, 'Lavacus', 'Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.' ,'Shield (1): Generates 1 armor at the end of each of your turns. The armor is added to life and is consumed when your dimensional legion is attacked. The armor of this ability is cumulative and that which is not consumed remains even when the legion evolves.', 10.00, '/mages/CardDetail/card1.png');
+insert INTO monster VALUES (1,1, 1, 'Roca',  'Rock', 'Fuego', 'Fire');
 
--- Card table
-CREATE TABLE card (
-    id_card INT PRIMARY KEY,
-    name_card VARCHAR(50) not null,
-    description_es VARCHAR(500) not null,
-    description_en VARCHAR(500) not null,
-    price DECIMAL(10, 2) not null,
-    image VARCHAR(200) not null
-);
+insert INTO card VALUES (2, 'Pyromagmus', 'Armadura (6): Al entrar en combate, se suma 6 de armadura hasta el principio de su siguiente turno. La armadura se suma a la vida y se consume primero cuando la legión dimential es atacada.' ,'Armor (6): When entering combat, you add 6 armor until the beginning of your next turn. Armor is added to life and is consumed first when the dimential legion is attacked.', 14.00, '/mages/CardDetail/card2.png');
 
--- Monsters table
-CREATE TABLE monster (
-    id_card INT PRIMARY KEY, 
-    atack INT not null,
-    life INT not null,
-    main_type_es  VARCHAR(20) not null,
-    main_type_en  VARCHAR(20) not null,
-    socondary_type_es VARCHAR(20),
-    socondary_type_en VARCHAR(20),
-    FOREIGN KEY (id_card) REFERENCES card(id_card) ON DELETE CASCADE
-);
+insert INTO monster VALUES (2, 3, 3, 'Roca',  'Rock', 'Fuego', 'Fire');
 
--- Spell table
-CREATE TABLE spell (
-    id_card INT PRIMARY KEY, 
-    mana INT not null,
-    FOREIGN KEY (id_card) REFERENCES card(id_card) ON DELETE CASCADE
-);
+insert INTO card VALUES (3, 'Aurelius Ignis', 'Invocación: Al entrar en el campo de batalla, invoca de forma especial a su izq. y der. "Los Brazos de Aurelius Ignis", una legión lv1 de misma especie y elementos que Aurelius, con estadísticas 3/1 y con la habilidad Contraataque.
 
--- Order table
-CREATE TABLE order_global (
-    id_order_global INT PRIMARY KEY,
-    id_user INT,
-    status boolean not null,
-    date_creation DATETIME not null,
-    date_close DATETIME not null,
-    total DECIMAL(10, 2) not null, -- TIENE QUE HACER LA SUMA DE LOS PRICE DE ORDER_DETAIL
-    FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE CASCADE
-); 
+Contraataque: Cuando recibe un golpe de otra legión cercana, lo devuelve con su poder de ataque.', 'Summon: When he enters the battlefield, he special summons to his left and right “The Arms of Aurelius Ignis”, a lv1 legion of the same species and elements as Aurelius, with 3/1 stats and with the ability Counterattack.
 
--- Order_details table
-CREATE TABLE order_detail (
-    id_order_detail INT PRIMARY KEY,
-    id_order_global INT,
-    id_card INT,
-    price DECIMAL(10, 2) not null, -- TIENE QUE SER UN CAMPO QUE MULTIPLICA PRICE * QUANTITY
-    quantity INT not null,
-    FOREIGN KEY (id_order_global) REFERENCES order_global(id_order_global) ON DELETE CASCADE,
-    FOREIGN KEY (id_card) REFERENCES card(id_card) ON DELETE CASCADE
-);
+Counterattack: When he receives a hit from another nearby legion, he strikes back with his attack power.', 17.00, '/mages/CardDetail/card3.png');
+
+insert INTO monster VALUES (3, 8, 3, 'Roca',  'Rock', 'Fuego', 'Fire');
