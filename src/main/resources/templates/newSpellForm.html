@@ -20,29 +20,53 @@
 <body>
     <header th:replace="~{layouts/base :: headerplusnav2}"></header>
 
-    <form th:action="@{/cards/new-spell}" th:method="post">
+    <form th:action="@{/cards/new-spell}" th:method="post" class="needs-validation" novalidate>
 
         <!-- Campos para el nombre y descripción -->
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" th:field="*{spell.name}" /><br>
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" class="form-control" id="name" name="name" th:field="*{spell.name}" required />
+            <div class="invalid-feedback">
+                Please provide a name.
+            </div>
+        </div>
 
-        <label for="description">Descripción:</label>
-        <textarea id="description" name="description" th:field="*{spell.description}"></textarea><br>
+        <div class="form-group">
+            <label for="description">Descripción:</label>
+            <textarea class="form-control" id="description" name="description" th:field="*{spell.description}" required></textarea>
+            <div class="invalid-feedback">
+                Please provide a description.
+            </div>
+        </div>
 
         <!-- Campos para el precio y ruta de la imagen -->
-        <label for="price">Precio:</label>
-        <input type="number" step="0.01" id="price" name="price" th:field="*{spell.price}" /><br>
+        <div class="form-group">
+            <label for="price">Precio:</label>
+            <input type="number" step="0.01" class="form-control" id="price" name="price" th:field="*{spell.price}" required />
+            <div class="invalid-feedback">
+                Please provide a price.
+            </div>
+        </div>
 
-        <label for="imgPath">Ruta de la imagen:</label>
-        <input type="text" id="imgPath" name="imgPath" th:field="*{spell.imgPath}" /><br>
+        <div class="form-group">
+            <label for="imgPath">Ruta de la imagen:</label>
+            <input type="text" class="form-control" id="imgPath" name="imgPath" th:field="*{spell.imgPath}" required />
+            <div class="invalid-feedback">
+                Please provide an image path.
+            </div>
+        </div>
 
         <!-- Campos para ataque y vida -->
-        <label for="attack">Mana:</label>
-        <input type="number" id="attack" name="attack" th:field="*{spell.mana}" /><br>
+        <div class="form-group">
+            <label for="attack">Mana:</label>
+            <input type="number" class="form-control" id="attack" name="attack" th:field="*{spell.mana}" required />
+            <div class="invalid-feedback">
+                Please provide a mana value.
+            </div>
+        </div>
 
-        <input type="submit" value="Insertar" />
+        <button type="submit" class="btn btn-primary">Insertar</button>
     </form>
-
     <footer th:replace="~{layouts/base :: footer}"></footer>
 
     <script src="../static/js/menu.js"></script>
