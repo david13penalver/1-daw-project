@@ -25,7 +25,7 @@ CREATE TABLE card (
 -- Monsters table
 CREATE TABLE monster (
     id_card INT PRIMARY KEY, 
-    atack INT not null,
+    attack INT not null,
     life INT not null,
     main_type_es  VARCHAR(20) not null,
     main_type_en  VARCHAR(20) not null,
