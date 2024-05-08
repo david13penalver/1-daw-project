@@ -6,10 +6,13 @@ import com.dimentials.shop.persistence.dao.impl.jdbc.mapper.CardDaoMapper;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
+import com.dimentials.shop.persistence.dao.impl.jdbc.queryBuilder.DB;
 import com.dimentials.shop.persistence.dao.impl.jdbc.rawSql.RawSql;
+import org.springframework.context.i18n.LocaleContextHolder;
 
 import java.sql.ResultSet;
 import java.util.List;
+import java.util.Locale;
 
 public class CardDaoJdbc implements CardDao {
     @Override
@@ -26,7 +29,24 @@ public class CardDaoJdbc implements CardDao {
 
     @Override
     public CardEntity findById(Integer id) {
-        return null;
+        Locale currentLocale = LocaleContextHolder.getLocale();
+        String language = currentLocale.getLanguage();
+//        try {
+//            System.out.println("hola");
+//            ResultSet resultSet = RawSql.select("SELECT * FROM card WHERE id = ?", List.of(id));
+//            return CardDaoMapper.toCardEntity(resultSet);
+//        } catch (Exception e) {
+//            throw new QueryBuilderSQLException(e.getMessage());
+//        }
+        try {
+            ResultSet resultSet = DB
+                    .table("card")
+                    .select("id_card", "name_card", "description_" + language, "price", "image")
+                    .find(id);
+            return CardDaoMapper.toCardEntity(resultSet);
+        } catch (Exception e) {
+            throw new QueryBuilderSQLException(e.getMessage());
+        }
     }
 
     @Override
