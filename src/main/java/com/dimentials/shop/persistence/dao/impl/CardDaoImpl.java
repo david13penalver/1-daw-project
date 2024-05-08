@@ -16,7 +16,8 @@ public class CardDaoImpl implements CardDao {
             List.of(
                     new CardEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg"),
                     new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(1), "Lizzar.jpg"),
-                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg"),
+                    new SpellEntity(4, "Fireball", "Hechizo", new BigDecimal(1), "Fireball.jpg", 5)
             )
     );
 
