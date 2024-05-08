@@ -2,6 +2,7 @@ package com.dimentials.shop.unit.domain.service;
 
 import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.domain.service.impl.CardServiceImpl;
 import com.dimentials.shop.mock.repository.CardRepositoryMock;
@@ -90,14 +91,17 @@ public class CardServiceImplTest {
 
         @Test
         @DisplayName("The methods addSpell() returns the spell inserted")
-        @Disabled
+        
         void addSpellReturnsTheSpellInserted() {
-            Card card = new Card(4, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg");
+            Spell spell = new Spell(4,"borj", "locura", new BigDecimal(10), "Borja.jpg", 10);
 
-            //Card cardAdded = cardService.addSpell(card);
+            Spell spellAdded = cardRepository.addSpell(spell);
 
-            //assertEquals(card, cardAdded);
+            assertEquals(spell, spellAdded);
         }
+
+        
+        
     }
 
 
