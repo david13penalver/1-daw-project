@@ -1,12 +1,12 @@
 package com.dimentials.shop.mock.repository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Monster;
 import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.persistence.repository.CardRepository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CardRepositoryMock implements CardRepository {
 
@@ -44,7 +44,8 @@ public class CardRepositoryMock implements CardRepository {
 
     @Override
     public Spell addSpell(Spell spell) {
-        return null;
+        cardList.add(spell);
+        return spell;
     }
 
     @Override
