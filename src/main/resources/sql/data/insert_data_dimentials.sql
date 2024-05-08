@@ -2,6 +2,9 @@ CREATE DATABASE IF NOT EXISTS dimentials;
 
 USE dimentials;
 
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON dimentials.* TO 'root'@'localhost';
+
 insert INTO card VALUES (1, 'Lavacus', 'Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.' ,'Shield (1): Generates 1 armor at the end of each of your turns. The armor is added to life and is consumed when your dimensional legion is attacked. The armor of this ability is cumulative and that which is not consumed remains even when the legion evolves.', 10.00, '/mages/CardDetail/card1.png');
 insert INTO monster VALUES (1,1, 1, 'Roca',  'Rock', 'Fuego', 'Fire');
 
