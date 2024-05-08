@@ -2,27 +2,23 @@ package com.dimentials.shop.persistence.dao.impl.jdbc;
 
 import com.dimentials.shop.common.exception.QueryBuilderSQLException;
 import com.dimentials.shop.persistence.dao.CardDao;
-import com.dimentials.shop.persistence.dao.CardDaoMapper;
+import com.dimentials.shop.persistence.dao.impl.jdbc.mapper.CardDaoMapper;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
-import com.dimentials.shop.persistence.dao.impl.jdbc.rawSql.DBConnection;
 import com.dimentials.shop.persistence.dao.impl.jdbc.rawSql.RawSql;
-import org.springframework.context.i18n.LocaleContextHolder;
-import com.dimentials.shop.persistence.repository.mapper.CardMapper;
 
 import java.sql.ResultSet;
 import java.util.List;
-import java.util.Locale;
 
 public class CardDaoJdbc implements CardDao {
     @Override
     public List<CardEntity> findAll() {
-        Locale currentLocale = LocaleContextHolder.getLocale();
-        String language = currentLocale.getLanguage();
+        //Locale currentLocale = LocaleContextHolder.getLocale();
+        //String language = currentLocale.getLanguage();
         try {
+            System.out.printf("hola");
             ResultSet resultSet = RawSql.select("SELECT * FROM card", null);
-
             return CardDaoMapper.toCardList(resultSet);
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
@@ -31,7 +27,6 @@ public class CardDaoJdbc implements CardDao {
 
     @Override
     public CardEntity findById(Integer id) {
-
         return null;
     }
 

@@ -4,25 +4,36 @@ import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 
-import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CardEntityMapper {
-
-    public static CardEntity toCardEntity(ResultSet resultSet) throws SQLException {
-        if (resultSet == null) {
+public class CardDaoMapper {
+    public static List<CardEntity> toCardList(ResultSet resultSetList) throws SQLException {
+        if (resultSetList == null)
             return null;
+        List<CardEntity> cardEntityList = new ArrayList<>();
+        while (!resultSetList.next()) {
+            cardEntityList.add(toCardEntity(resultSetList));
         }
-        return new CardEntity(
-                Integer.valueOf(resultSet.getInt("id")),
-                resultSet.getString("name"),
-                resultSet.getString("description"),
-                resultSet.getBigDecimal("price"),
-                resultSet.getString("imgPath"));
+        return cardEntityList;
+    }
 
+    public static CardEntity toCardEntity(ResultSet resultSet) {
+        if (resultSet == null)
+            return null;
+        CardEntity cardEntity = new CardEntity();
+        try {
+            cardEntity.setId(resultSet.getInt("id_card"));
+            cardEntity.setName(resultSet.getString("name_card"));
+            cardEntity.setDescription(resultSet.getString("description_es"));
+            cardEntity.setPrice(resultSet.getBigDecimal("price"));
+            cardEntity.setImgPath(resultSet.getString("image"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static MonsterEntity toMonsterEntity(ResultSet resultSet) throws SQLException {
@@ -55,5 +66,3 @@ public class CardEntityMapper {
 
     }
 }
-
-
