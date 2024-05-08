@@ -5,14 +5,17 @@ import com.dimentials.shop.domain.entity.Monster;
 import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.persistence.repository.CardRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CardRepositoryMock implements CardRepository {
 
-    List<Card> cardList = List.of(
-            new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
-            new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-            new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"));
+    List<Card> cardList = new ArrayList<>(
+            List.of(
+                    new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
+                    new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
+                    new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"))
+    );
 
     @Override
     public List<Card> findAll() {
@@ -35,7 +38,8 @@ public class CardRepositoryMock implements CardRepository {
 
     @Override
     public Monster addMonster(Monster monster) {
-        return null;
+        cardList.add(monster);
+        return monster;
     }
 
     @Override

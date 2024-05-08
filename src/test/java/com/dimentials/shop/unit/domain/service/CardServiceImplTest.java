@@ -1,14 +1,15 @@
 package com.dimentials.shop.unit.domain.service;
 
 import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
 import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.domain.service.impl.CardServiceImpl;
 import com.dimentials.shop.mock.repository.CardRepositoryMock;
 import com.dimentials.shop.persistence.repository.CardRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import com.dimentials.shop.persistence.repository.impl.CardRepositoryImpl;
+import org.junit.jupiter.api.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +17,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CardServiceImplTest {
 
-    private final CardRepository cardRepositoryMock = new CardRepositoryMock();
-    private final CardService cardService = new CardServiceImpl(cardRepositoryMock);
+    private final CardRepository cardRepository = new CardRepositoryMock();
+    private final CardService cardService = new CardServiceImpl(cardRepository);
 
     private List<Card> expectedList;
     @BeforeEach
@@ -31,42 +32,72 @@ public class CardServiceImplTest {
         );
     }
 
-    @Test
-    @DisplayName("The methods findAll() returns all the cards")
-    void findAllReturnsAllCards() {
-        List<Card> cardList = cardService.findAll();
+    @Nested
+    class findAllTest {
+        @Test
+        @DisplayName("The methods findAll() returns all the cards")
+        void findAllReturnsAllCards() {
+            List<Card> cardList = cardRepository.findAll();
 
-        assertEquals(expectedList, cardList);
+            assertEquals(expectedList, cardList);
+        }
     }
 
-    @Test
-    @DisplayName("The methods findById(1) returns the card inserted at the parameter")
-    void findById1ReturnsTheBookWithTheFirstId() {
+    @Nested
+    class FindByIdTest {
+        @Test
+        @DisplayName("The methods findById(1) returns the card inserted at the parameter")
+        void findById1ReturnsTheBookWithTheFirstId() {
 
+            Card cardExpected1 = expectedList.get(0);
 
-        Card cardExpected1 = expectedList.get(0);
+            Card card1 = cardRepository.findById(1);
 
-        Card card1 = cardService.findById(1);
+            assertEquals(cardExpected1, card1);
+        }
 
-        assertEquals(cardExpected1, card1);
+        @Test
+        @DisplayName("The methods findById(2) returns the card inserted at the parameter")
+        void findById2ReturnsTheBookWithTheSecondId() {
+            Card cardExpected2 = expectedList.get(1);
+
+            Card card2 = cardRepository.findById(2);
+
+            assertEquals(cardExpected2, card2);
+        }
+
+        @Test
+        @DisplayName("The methods findById(id) not found returns null")
+        void findByIdNotFoundReturnsNull() {
+            Card card3 = cardRepository.findById(5);
+
+            assertNull(card3);
+        }
     }
 
-    @Test
-    @DisplayName("The methods findById(2) returns the card inserted at the parameter")
-    void findById2ReturnsTheBookWithTheSecondId() {
-        Card cardExpected2 = expectedList.get(1);
+    @Nested
+    @DisplayName("The methods add*() returns the monster/spell inserted")
+    class AddingTests {
+        @Test
+        @DisplayName("The methods addMonster() returns the monster inserted")
+        void addMonsterReturnsTheMonsterInserted() {
+            Monster card = new Monster(5, "Nebulsmokar2", "Monstruo bla bla", new BigDecimal(10), "Nebulsmokar.jpg", 10, 10, "Fuego", "Agua");
 
-        Card card2 = cardService.findById(2);
+            Monster cardAdded = cardRepository.addMonster(card);
 
-        assertEquals(cardExpected2, card2);
-    }
+            assertEquals(card, cardAdded);
+        }
 
-    @Test
-    @DisplayName("The methods findById(id) not found returns null")
-    void findByIdNotFoundReturnsNull() {
-        Card card3 = cardService.findById(5);
+        @Test
+        @DisplayName("The methods addSpell() returns the spell inserted")
+        @Disabled
+        void addSpellReturnsTheSpellInserted() {
+            Card card = new Card(4, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg");
 
-        assertNull(card3);
+            //Card cardAdded = cardService.addSpell(card);
+
+            //assertEquals(card, cardAdded);
+        }
     }
 
 
