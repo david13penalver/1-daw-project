@@ -13,15 +13,15 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet" /> -->
   <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}">
-  <link rel="stylesheet" th:href="@{/css/index_dimentials.css}">
+  <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}">
   <title>Inicio - Dimentials&#169;</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body id="dimentials_index">
 
   <!--------------------------- Navbar  ----------------------------->
   
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">DIMENTIALS</a>
       <button
@@ -35,7 +35,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse dimentials-navbar-justify" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a
@@ -97,12 +97,13 @@
           </ul>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="#">Tienda</a>
+          <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> Tienda</a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Sign In</a>
-      </li>
         </ul>
+        <div>
+          <button class="btn btn-warning">Sign In</button>
+          <button class="btn btn-primary">Log In</button> 
+        </div>
       </div>
     </div>
   </nav>
@@ -110,7 +111,7 @@
   <!--------------------------- HERO RESPONSIVE  ----------------------------->
   <section class="home container" id="home">
     <div class="row">
-      <div class="home-content col-xxl-6"> <!-- xs <576px sm > 576px md >768px lg> 992px xl>1200px xxl>1400px -->
+      <div class="home-content col-md-6 col-sm-12"> <!-- xs <576px sm > 576px md >768px lg> 992px xl>1200px xxl>1400px -->
         <h1>Bienvenidos a <span>Dimentials</span></h1>
         <h3 class="text-animation">Vive una aventura <span></span></h3>
         <p>
@@ -124,15 +125,14 @@
             <a href="#"><i class="bx bxl-twitter"></i></a>
         </div>
 
-        <div class="btn-group">
+        <div class="btn-group dim-btn-index-home">
             <a href="#" class="btn">Galeria</a>
             <a href="#contact" class="btn">Contacto</a>
         </div>
       </div>
-    </div>
-
-    <div class="home-img col-xxl-4">
+      <div class="home-img col-md-6 col-sm-12">
         <img th:src="@{${'/images/1_Bicho_de_agua_normal.png'}}" alt="" />
+      </div>
     </div>
 </section>
 
@@ -164,30 +164,32 @@
 
 <!-- footer -->
 
-<footer th:fragment="footer">
-  <img class="grid-logo" th:src="@{${'/images/Dimentials_Logo_Texto.png'}}">
-  <h4 class="grid-title">The Dimentials Company</h4>
-  <ul class="grid-redes">
-      <h4>Redes sociales</h4>
-      <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
-      <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-twitch"></i> </a></li>
-      <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
-  </ul>
-  <ul class="grid-legal">
-      <h4>Aspecto legal</h4>
-      <li><a th:href="@{/cookies}">Política de cookies</a></li>
-      <li><a th:href="@{/privacy}">Aviso de privacidad</a></li>
-      <li><a th:href="@{/terms}">Condiciones de uso</a></li>
-  </ul>
-  <p class="grid-copyright">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
+<footer class="bg-dark" data-bs-theme="dark">
+  <div class="container">
+    <div class="row">
+      <img class="grid-logo col-lg-5 col-md-6 col-12" th:src="@{${'/images/Dimentials_Logo_Texto.png'}}">
+      <h4 class="grid-title col-lg-3 col-md-6 col-12 text-center">The Dimentials Company</h4>
+      <ul class="grid-redes col-lg-2 col-md-6 col-12">
+        <h4>Redes sociales</h4>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitch"></i> </a></li>
+        <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
+      </ul>
+      <ul class="grid-legal col-lg-2 col-md-6 col-12">
+        <h4>Aspecto legal</h4>
+        <li><a th:href="@{/cookies}">Política de cookies</a></li>
+        <li><a th:href="@{/privacy}">Aviso de privacidad</a></li>
+        <li><a th:href="@{/terms}">Condiciones de uso</a></li>
+      </ul>
+    </div>
+    <div class="row">
+      <p class="grid-copyright col-md-12">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
+    </div>
+  </div>
 </footer>
 
-  <!--
-    <script src="../static/js/template.js"></script>
-
--->
 <script src="js/index_page.js"></script>
 <script src="js/vanilla_tilt.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
