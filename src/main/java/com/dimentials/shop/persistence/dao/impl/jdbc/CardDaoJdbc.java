@@ -17,7 +17,6 @@ public class CardDaoJdbc implements CardDao {
         //Locale currentLocale = LocaleContextHolder.getLocale();
         //String language = currentLocale.getLanguage();
         try {
-            System.out.printf("hola");
             ResultSet resultSet = RawSql.select("SELECT * FROM card", null);
             return CardDaoMapper.toCardList(resultSet);
         } catch (Exception e) {

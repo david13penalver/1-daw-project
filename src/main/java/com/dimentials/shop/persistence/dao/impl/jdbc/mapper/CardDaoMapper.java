@@ -11,10 +11,8 @@ import java.util.List;
 
 public class CardDaoMapper {
     public static List<CardEntity> toCardList(ResultSet resultSetList) throws SQLException {
-        if (resultSetList == null)
-            return null;
         List<CardEntity> cardEntityList = new ArrayList<>();
-        while (!resultSetList.next()) {
+        while (resultSetList.next()) {
             cardEntityList.add(toCardEntity(resultSetList));
         }
         return cardEntityList;
@@ -28,12 +26,13 @@ public class CardDaoMapper {
             cardEntity.setId(resultSet.getInt("id_card"));
             cardEntity.setName(resultSet.getString("name_card"));
             cardEntity.setDescription(resultSet.getString("description_es"));
+            cardEntity.setDescription(resultSet.getString("description_en"));
             cardEntity.setPrice(resultSet.getBigDecimal("price"));
             cardEntity.setImgPath(resultSet.getString("image"));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return cardEntity;
     }
 
     public static MonsterEntity toMonsterEntity(ResultSet resultSet) throws SQLException {
