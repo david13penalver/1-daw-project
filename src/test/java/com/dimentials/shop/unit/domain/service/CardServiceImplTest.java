@@ -28,7 +28,8 @@ public class CardServiceImplTest {
                 List.of(
                         new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
                         new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-                        new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg")
+                        new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
+                        new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
                 )
         );
     }
@@ -98,6 +99,16 @@ public class CardServiceImplTest {
             Spell spellAdded = cardRepository.addSpell(spell);
 
             assertEquals(spell, spellAdded);
+        }
+
+        @Test
+        @DisplayName("The methods addSpell() returns the spell inserted")
+        void addSpellReturnsTheSpellUpdated() {
+            Spell spell = new Spell(4,"dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
+
+            Spell spellUpdated = cardRepository.updateSpell(spell);
+
+            assertEquals(spell, spellUpdated);
         }
 
         

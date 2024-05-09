@@ -6,6 +6,7 @@ import java.util.List;
 import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Monster;
 import com.dimentials.shop.domain.entity.Spell;
+import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.repository.CardRepository;
 
 public class CardRepositoryMock implements CardRepository {
@@ -55,7 +56,15 @@ public class CardRepositoryMock implements CardRepository {
 
     @Override
     public Spell updateSpell(Spell spell) {
-        return null;
+        for (Card card : cardList) {
+            if (card.getId() == spell.getId()) {
+                card.setName(spell.getName());
+                card.setDescription(spell.getDescription());
+                card.setPrice(spell.getPrice());
+                card.setImgPath(spell.getImgPath());
+            }
+        }
+        return spell;
     }
 
     @Override
