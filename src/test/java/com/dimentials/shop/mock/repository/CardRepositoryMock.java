@@ -62,6 +62,7 @@ public class CardRepositoryMock implements CardRepository {
                 card.setDescription(spell.getDescription());
                 card.setPrice(spell.getPrice());
                 card.setImgPath(spell.getImgPath());
+                spell.setMana(spell.getMana());
             }
         }
         return spell;

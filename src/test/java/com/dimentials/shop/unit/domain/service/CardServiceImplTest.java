@@ -100,19 +100,19 @@ public class CardServiceImplTest {
 
             assertEquals(spell, spellAdded);
         }
+    }
 
+    @Nested
+    class udpateTests {
         @Test
         @DisplayName("The methods addSpell() returns the spell inserted")
-        void addSpellReturnsTheSpellUpdated() {
+        void updateSpellReturnsTheSpellUpdated() {
             Spell spell = new Spell(4,"dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
 
             Spell spellUpdated = cardRepository.updateSpell(spell);
 
             assertEquals(spell, spellUpdated);
         }
-
-        
-        
     }
 
 
