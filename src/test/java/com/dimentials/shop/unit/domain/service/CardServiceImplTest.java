@@ -10,6 +10,7 @@ import com.dimentials.shop.persistence.repository.CardRepository;
 import com.dimentials.shop.persistence.repository.impl.CardRepositoryImpl;
 import org.junit.jupiter.api.*;
 
+import java.beans.Transient;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -122,6 +123,21 @@ public class CardServiceImplTest {
             Monster monsterUpdated = cardRepository.updateMonster(monster);
 
             assertEquals(monster, monsterUpdated);
+        }
+
+        @Test
+        @DisplayName("The methods updateMonster() but with ID not found")
+        void updateMonsterReturnsTheMonsterUpdatedWithIdNotFound() {
+            Monster monster = new Monster(110, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7, "Fuego", "Agua");
+
+            assertThrows(IllegalArgumentException.class, () -> cardRepository.updateMonster(monster));
+        }
+        @Test
+        @DisplayName("The methods updateSpell() but with ID not found")
+        void updateSpellReturnsTheSpellUpdatedWithIdNotFound() {
+            Spell spell = new Spell(111,"dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
+
+            assertThrows(IllegalArgumentException.class, () -> cardRepository.updateSpell(spell));
         }
     }
 

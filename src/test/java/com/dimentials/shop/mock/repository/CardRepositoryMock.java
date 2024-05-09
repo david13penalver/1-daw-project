@@ -64,25 +64,31 @@ public class CardRepositoryMock implements CardRepository {
                 card.setImgPath(spell.getImgPath());
                 spell.setMana(spell.getMana());
             }
+            else {
+                throw new IllegalArgumentException("The spell does not exist");
+            }
         }
         return spell;
     }
 
-    @Override
-    public Monster updateMonster(Monster monster) {
-        for (Card card : cardList) {
-            if (card.getId() == monster.getId()) {
-                card.setName(monster.getName());
-                card.setDescription(monster.getDescription());
-                card.setPrice(monster.getPrice());
-                card.setImgPath(monster.getImgPath());
-                monster.setAttack(monster.getAttack());
-                monster.setLife(monster.getLife());
-                monster.setMainType(monster.getMainType());
-                monster.setSecondaryType(monster.getSecondaryType());
-                
+        @Override
+        public Monster updateMonster(Monster monster) {
+            for (Card card : cardList) {
+                if (card.getId() == monster.getId()) {
+                    card.setName(monster.getName());
+                    card.setDescription(monster.getDescription());
+                    card.setPrice(monster.getPrice());
+                    card.setImgPath(monster.getImgPath());
+                    monster.setAttack(monster.getAttack());
+                    monster.setLife(monster.getLife());
+                    monster.setMainType(monster.getMainType());
+                    monster.setSecondaryType(monster.getSecondaryType());
+                    
+                }
+                else {
+                    throw new IllegalArgumentException("The spell does not exist");
+                }
             }
+            return monster;
         }
-        return monster;
     }
-}
