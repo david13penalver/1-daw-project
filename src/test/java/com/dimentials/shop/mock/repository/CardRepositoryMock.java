@@ -76,8 +76,13 @@ public class CardRepositoryMock implements CardRepository {
                 card.setDescription(monster.getDescription());
                 card.setPrice(monster.getPrice());
                 card.setImgPath(monster.getImgPath());
-                monster.setMana(monster.getMana());
+                monster.setAttack(monster.getAttack());
+                monster.setLife(monster.getLife());
+                monster.setMainType(monster.getMainType());
+                monster.setSecondaryType(monster.getSecondaryType());
+                
             }
         }
+        return monster;
     }
 }

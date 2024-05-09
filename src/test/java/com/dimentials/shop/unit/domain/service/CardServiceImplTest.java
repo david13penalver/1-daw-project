@@ -117,7 +117,7 @@ public class CardServiceImplTest {
         @Test
         @DisplayName("The methods updateMonster() returns the monster updated")
         void updateMonsterReturnsTheMonsterUpdated() {
-            Monster monster = new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg", 10, 10, "Fuego", "Agua");
+            Monster monster = new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7, "Fuego", "Agua");
 
             Monster monsterUpdated = cardRepository.updateMonster(monster);
 
