@@ -105,13 +105,23 @@ public class CardServiceImplTest {
     @Nested
     class udpateTests {
         @Test
-        @DisplayName("The methods addSpell() returns the spell inserted")
+        @DisplayName("The methods updateSpell() returns the spell updated")
         void updateSpellReturnsTheSpellUpdated() {
             Spell spell = new Spell(4,"dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
 
             Spell spellUpdated = cardRepository.updateSpell(spell);
 
             assertEquals(spell, spellUpdated);
+        }
+
+        @Test
+        @DisplayName("The methods updateMonster() returns the monster updated")
+        void updateMonsterReturnsTheMonsterUpdated() {
+            Monster monster = new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg", 10, 10, "Fuego", "Agua");
+
+            Monster monsterUpdated = cardRepository.updateMonster(monster);
+
+            assertEquals(monster, monsterUpdated);
         }
     }
 

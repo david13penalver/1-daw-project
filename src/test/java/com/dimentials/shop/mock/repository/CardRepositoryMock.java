@@ -70,6 +70,14 @@ public class CardRepositoryMock implements CardRepository {
 
     @Override
     public Monster updateMonster(Monster monster) {
-        return null;
+        for (Card card : cardList) {
+            if (card.getId() == monster.getId()) {
+                card.setName(monster.getName());
+                card.setDescription(monster.getDescription());
+                card.setPrice(monster.getPrice());
+                card.setImgPath(monster.getImgPath());
+                monster.setMana(monster.getMana());
+            }
+        }
     }
 }
