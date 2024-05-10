@@ -51,7 +51,17 @@ public class CardRepositoryMock implements CardRepository {
 
     @Override
     public Card deleteCard(Integer id) {
-        return null;
+        Card card1 = null;
+        for (Card card : cardList) {
+            if (card.getId() == id) {
+                card1 = card;
+            }
+        }
+        if (card1 != null) {
+            cardList.remove(card1);
+            return card1;
+        }
+        throw new IllegalArgumentException("The card does not exist");
     }
 
     @Override

@@ -15,8 +15,7 @@ import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.domain.service.impl.CardServiceImpl;
 import com.dimentials.shop.persistence.repository.CardRepository;
 
-import test.java.com.dimentials.shop.mock.repository.CardRepositoryMock;
-
+import com.dimentials.shop.mock.repository.CardRepositoryMock;
 public class CardServiceImplTest {
 
     private final CardRepository cardRepository = new CardRepositoryMock();
@@ -152,19 +151,22 @@ public class CardServiceImplTest {
         
         void deleteCardReturnsTheMonsterDeleted() {
             List<Card> cardList = new ArrayList<>(
-            List.of(
-                    
+                List.of(
                     new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
                     new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"))
-    );
+            );
 
             Card card = new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg");
-
-            Card cardDeleted = cardRepository.deleteCard(card.getId());
+            cardRepository.deleteCard(card.getId());
             List<Card> cardGot = cardRepository.findAll();
 
             assertEquals(cardList, cardGot);
+        }
 
+        @Test
+        @DisplayName("The methods deleteCard() throws an exception when the card does not exist")
+        void deleteCardThatDoesntExist() {
+            assertThrows(IllegalArgumentException.class, () -> cardRepository.deleteCard(5));
         }
         
     }
