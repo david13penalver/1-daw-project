@@ -27,7 +27,8 @@ public class CardServiceImplTest {
     void setUp() {
         expectedList = new ArrayList<>(
                 List.of(
-                        new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
+                        new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                "Fuego", "Agua"),
                         new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
                         new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
                         new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)));
@@ -107,22 +108,42 @@ public class CardServiceImplTest {
         @Test
         @DisplayName("The methods updateSpell() returns the spell updated")
         void updateSpellReturnsTheSpellUpdated() {
-            Spell spell = new Spell(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
 
-            Spell spellUpdated = cardRepository.updateSpell(spell);
+            List<Card> expectedList2 = new ArrayList<>(
+                    List.of(
+                            new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                    "Fuego", "Agua"),
+                            new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
+                            new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
+                            new Spell(4, "dario", "muchalocura", new BigDecimal(20), "dario.jpg", 20)
+                    )
+            );
+            Spell spell = new Spell(4, "dario", "muchalocura", new BigDecimal(20), "dario.jpg", 20);
 
-            assertEquals(spell, spellUpdated);
+            cardRepository.updateSpell(spell);
+
+            assertEquals(expectedList2, cardRepository.findAll());
         }
 
         @Test
         @DisplayName("The methods updateMonster() returns the monster updated")
         void updateMonsterReturnsTheMonsterUpdated() {
+            List<Card> expectedList2 = new ArrayList<>(
+                    List.of(
+                            new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                    "Fuego", "Agua"),
+                            new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
+                            new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
+                            new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+                    )
+            );
+
             Monster monster = new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
                     "Fuego", "Agua");
 
-            Monster monsterUpdated = cardRepository.updateMonster(monster);
+            cardRepository.updateMonster(monster);
 
-            assertEquals(monster, monsterUpdated);
+            assertEquals(expectedList2, cardRepository.findAll());
         }
 
         @Test
@@ -153,8 +174,8 @@ public class CardServiceImplTest {
             List<Card> cardList = new ArrayList<>(
                 List.of(
                     new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-                    new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"))
-            );
+                        new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
+                        new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)));
 
             Card card = new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg");
             cardRepository.deleteCard(card.getId());

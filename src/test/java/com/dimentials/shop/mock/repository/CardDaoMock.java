@@ -1,5 +1,8 @@
 package com.dimentials.shop.mock.repository;
 
+import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.persistence.dao.CardDao;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
@@ -8,14 +11,19 @@ import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class CardDaoMock implements CardDao {
 
     List<CardEntity> cardEntityList = new ArrayList<>(
             List.of(
-                    new CardEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg"),
-                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(1), "Lizzar.jpg"),
-                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(1), "Frogan.jpg")));
+                    new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
     private Integer id;
 
     @Override
@@ -56,6 +64,8 @@ public class CardDaoMock implements CardDao {
         }
         if (card1 != null) {
             cardEntityList.remove(card1);
+        } else {
+            throw new IllegalArgumentException("The card does not exist");
         }
         return card1;
     }
@@ -63,40 +73,38 @@ public class CardDaoMock implements CardDao {
     @Override
     public SpellEntity updateSpell(SpellEntity spellEntity) {
 
-        for (CardEntity cardEntity : cardEntityList) {
-            if (cardEntity.getId().equals(spellEntity.getId())) {
-
-                cardEntity.setId(spellEntity.getId());
-                cardEntity.setName(spellEntity.getName());
-                cardEntity.setDescription(spellEntity.getDescription());
-                cardEntity.setPrice(spellEntity.getPrice());
-                cardEntity.setImgPath(spellEntity.getImgPath());
-                spellEntity.setMana(spellEntity.getMana());
-
-            } else {
-                throw new IllegalArgumentException("The spell does not exist");
+        for (CardEntity card : cardEntityList) {
+            if (Objects.equals(card.getId(), spellEntity.getId())) {
+                card.setName(spellEntity.getName());
+                card.setDescription(spellEntity.getDescription());
+                card.setPrice(spellEntity.getPrice());
+                card.setImgPath(spellEntity.getImgPath());
+                if (card instanceof SpellEntity) {
+                    ((SpellEntity) card).setMana(spellEntity.getMana());
+                }
+                return spellEntity;
             }
-            return spellEntity;
         }
+        throw new IllegalArgumentException("The spell does not exist");
     }
 
     @Override
     public MonsterEntity updateMonster(MonsterEntity monsterEntity) {
-        for (CardEntity cardEntity : cardEntityList) {
-            if (cardEntity.getId().equals(monsterEntity.getId())) {
-                cardEntity.setId(monsterEntity.getId());
-                cardEntity.setName(monsterEntity.getName());
-                cardEntity.setDescription(monsterEntity.getDescription());
-                cardEntity.setPrice(monsterEntity.getPrice());
-                cardEntity.setImgPath(monsterEntity.getImgPath());
-                monsterEntity.setAttack(monsterEntity.getAttack());
-                monsterEntity.setLife(monsterEntity.getLife());
-                monsterEntity.setMainType(monsterEntity.getMainType());
-                monsterEntity.setSecondaryType(monsterEntity.getSecondaryType());
-            } else {
-                throw new IllegalArgumentException("The monster does not exist");
+        for (CardEntity card : cardEntityList) {
+            if (Objects.equals(card.getId(), monsterEntity.getId())) {
+                card.setName(monsterEntity.getName());
+                card.setDescription(monsterEntity.getDescription());
+                card.setPrice(monsterEntity.getPrice());
+                card.setImgPath(monsterEntity.getImgPath());
+                if (card instanceof MonsterEntity) {
+                    ((MonsterEntity) card).setAttack(monsterEntity.getAttack());
+                    ((MonsterEntity) card).setLife(monsterEntity.getLife());
+                    ((MonsterEntity) card).setMainType(monsterEntity.getMainType());
+                    ((MonsterEntity) card).setSecondaryType(monsterEntity.getSecondaryType());
+                }
+                return monsterEntity;
             }
-            return monsterEntity;
         }
+        throw new IllegalArgumentException("The spell does not exist");
     }
 }

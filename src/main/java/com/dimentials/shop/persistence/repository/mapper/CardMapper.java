@@ -15,6 +15,10 @@ public class CardMapper {
     public static Card toCard(CardEntity cardEntity) {
         if (cardEntity == null)
             return null;
+        if (cardEntity instanceof MonsterEntity)
+            return toMonster((MonsterEntity) cardEntity);
+        if (cardEntity instanceof SpellEntity)
+            return toSpell((SpellEntity) cardEntity);
         Integer id = cardEntity.getId();
         String name = cardEntity.getName();
         String description = cardEntity.getDescription();
@@ -30,7 +34,12 @@ public class CardMapper {
         List<Card> cardList = new ArrayList<>();
 
         for (CardEntity cardEntity : cardEntityList) {
-            cardList.add(toCard(cardEntity));
+            if (cardEntity instanceof MonsterEntity)
+                cardList.add(toMonster((MonsterEntity) cardEntity));
+            else if (cardEntity instanceof SpellEntity)
+                cardList.add(toSpell((SpellEntity) cardEntity));
+            else
+                cardList.add(toCard(cardEntity));
         }
         return cardList;
     }
