@@ -1,21 +1,21 @@
 package com.dimentials.shop.unit.domain.service;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.*;
+
 import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Monster;
 import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.domain.service.impl.CardServiceImpl;
-import com.dimentials.shop.mock.repository.CardRepositoryMock;
 import com.dimentials.shop.persistence.repository.CardRepository;
-import com.dimentials.shop.persistence.repository.impl.CardRepositoryImpl;
-import org.junit.jupiter.api.*;
 
-import java.beans.Transient;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import test.java.com.dimentials.shop.mock.repository.CardRepositoryMock;
 
 public class CardServiceImplTest {
 
@@ -23,6 +23,7 @@ public class CardServiceImplTest {
     private final CardService cardService = new CardServiceImpl(cardRepository);
 
     private List<Card> expectedList;
+
     @BeforeEach
     void setUp() {
         expectedList = new ArrayList<>(
@@ -30,9 +31,7 @@ public class CardServiceImplTest {
                         new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg"),
                         new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
                         new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
-                        new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
-                )
-        );
+                        new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)));
     }
 
     @Nested
@@ -84,7 +83,8 @@ public class CardServiceImplTest {
         @Test
         @DisplayName("The methods addMonster() returns the monster inserted")
         void addMonsterReturnsTheMonsterInserted() {
-            Monster card = new Monster(5, "Nebulsmokar2", "Monstruo bla bla", new BigDecimal(10), "Nebulsmokar.jpg", 10, 10, "Fuego", "Agua");
+            Monster card = new Monster(5, "Nebulsmokar2", "Monstruo bla bla", new BigDecimal(10), "Nebulsmokar.jpg", 10,
+                    10, "Fuego", "Agua");
 
             Monster cardAdded = cardRepository.addMonster(card);
 
@@ -93,9 +93,9 @@ public class CardServiceImplTest {
 
         @Test
         @DisplayName("The methods addSpell() returns the spell inserted")
-        
+
         void addSpellReturnsTheSpellInserted() {
-            Spell spell = new Spell(4,"borj", "locura", new BigDecimal(10), "Borja.jpg", 10);
+            Spell spell = new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10);
 
             Spell spellAdded = cardRepository.addSpell(spell);
 
@@ -108,7 +108,7 @@ public class CardServiceImplTest {
         @Test
         @DisplayName("The methods updateSpell() returns the spell updated")
         void updateSpellReturnsTheSpellUpdated() {
-            Spell spell = new Spell(4,"dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
+            Spell spell = new Spell(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
 
             Spell spellUpdated = cardRepository.updateSpell(spell);
 
@@ -118,7 +118,8 @@ public class CardServiceImplTest {
         @Test
         @DisplayName("The methods updateMonster() returns the monster updated")
         void updateMonsterReturnsTheMonsterUpdated() {
-            Monster monster = new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7, "Fuego", "Agua");
+            Monster monster = new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                    "Fuego", "Agua");
 
             Monster monsterUpdated = cardRepository.updateMonster(monster);
 
@@ -128,18 +129,44 @@ public class CardServiceImplTest {
         @Test
         @DisplayName("The methods updateMonster() but with ID not found")
         void updateMonsterReturnsTheMonsterUpdatedWithIdNotFound() {
-            Monster monster = new Monster(110, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7, "Fuego", "Agua");
+            Monster monster = new Monster(110, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6,
+                    7, "Fuego", "Agua");
 
             assertThrows(IllegalArgumentException.class, () -> cardRepository.updateMonster(monster));
         }
+
         @Test
         @DisplayName("The methods updateSpell() but with ID not found")
         void updateSpellReturnsTheSpellUpdatedWithIdNotFound() {
-            Spell spell = new Spell(111,"dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
+            Spell spell = new Spell(111, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
 
             assertThrows(IllegalArgumentException.class, () -> cardRepository.updateSpell(spell));
         }
+
     }
 
+    @Nested
+    class deleteTests {
+        @Test
+        @DisplayName("The methods deleteCard() returns the monster deleted")
+        
+        void deleteCardReturnsTheMonsterDeleted() {
+            List<Card> cardList = new ArrayList<>(
+            List.of(
+                    
+                    new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
+                    new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"))
+    );
+
+            Card card = new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg");
+
+            Card cardDeleted = cardRepository.deleteCard(card.getId());
+            List<Card> cardGot = cardRepository.findAll();
+
+            assertEquals(cardList, cardGot);
+
+        }
+        
+    }
 
 }
