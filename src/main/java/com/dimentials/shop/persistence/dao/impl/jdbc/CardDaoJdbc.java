@@ -16,8 +16,8 @@ import java.util.Locale;
 public class CardDaoJdbc implements CardDao {
     @Override
     public List<CardEntity> findAll() {
-        //Locale currentLocale = LocaleContextHolder.getLocale();
-        //String language = currentLocale.getLanguage();
+        // Locale currentLocale = LocaleContextHolder.getLocale();
+        // String language = currentLocale.getLanguage();
         try {
             ResultSet resultSet = RawSql.select("SELECT * FROM card", List.of());
             assert resultSet != null;
@@ -40,26 +40,46 @@ public class CardDaoJdbc implements CardDao {
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-//        try {
-//            ResultSet resultSet = DB
-//                    .table("card")
-//                    .select("id_card", "name_card", "description_" + language, "price", "image")
-//                    .find(id);
-//            return CardDaoMapper.toCardEntity(resultSet);
-//        } catch (Exception e) {
-//            throw new QueryBuilderSQLException(e.getMessage());
-//        }
+        // try {
+        // ResultSet resultSet = DB
+        // .table("card")
+        // .select("id_card", "name_card", "description_" + language, "price", "image")
+        // .find(id);
+        // return CardDaoMapper.toCardEntity(resultSet);
+        // } catch (Exception e) {
+        // throw new QueryBuilderSQLException(e.getMessage());
+        // }
     }
 
     @Override
     public MonsterEntity addMonster(MonsterEntity monsterEntity) {
+        try {
+            RawSql.insert(
+                    "INSERT into card (name_card, description, price, image) VALUES (?, ?, ?, ?); INSERT into monster (attack, life, primary_type, secondary_type) VALUES (SELECT LAST_INSERT_ID(), ?, ?, ?, ?)",
+                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getPrice(),
+                            monsterEntity.getImgPath(), monsterEntity.getAttack(), monsterEntity.getLife(),
+                            monsterEntity.getMainType(), monsterEntity.getSecondaryType()));
+        } catch (Exception e) {
+            throw new QueryBuilderSQLException(e.getMessage());
+        }
         return null;
     }
 
     @Override
     public SpellEntity addSpell(SpellEntity spellEntity) {
+        try {
+            RawSql.insert(
+                    "INSERT into card (name_card, description, price, image) VALUES (?, ?, ?, ?); INSERT into spell (mana) VALUES (SELECT LAST_INSERT_ID(), ?)",
+                    List.of(spellEntity.getName(), spellEntity.getDescription(), spellEntity.getPrice(),
+                            spellEntity.getImgPath(), spellEntity.getId(), spellEntity.getMana()));
+        } catch (Exception e) {
+            throw new QueryBuilderSQLException(e.getMessage());
+        }
         return null;
+
     }
+
+    
 
     @Override
     public CardEntity deleteCard(Integer id) {
@@ -73,13 +93,14 @@ public class CardDaoJdbc implements CardDao {
 
     }
 
-
-
     @Override
     public SpellEntity updateSpell(SpellEntity spellEntity) {
         // update card
         try {
-            RawSql.update("UPDATE card SET name_card = ?, description = ?, price = ?, image = ? WHERE id_card = ?; UPDATE spell SET mana = ? WHERE id_card = ?", List.of(spellEntity.getName(), spellEntity.getDescription(), spellEntity.getPrice(), spellEntity.getImgPath(), spellEntity.getId(), spellEntity.getMana(), spellEntity.getId()));
+            RawSql.update(
+                    "UPDATE card SET name_card = ?, description = ?, price = ?, image = ? WHERE id_card = ?; UPDATE spell SET mana = ? WHERE id_card = ?",
+                    List.of(spellEntity.getName(), spellEntity.getDescription(), spellEntity.getPrice(),
+                            spellEntity.getImgPath(), spellEntity.getId(), spellEntity.getMana(), spellEntity.getId()));
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
@@ -90,7 +111,12 @@ public class CardDaoJdbc implements CardDao {
     public MonsterEntity updateMonster(MonsterEntity monsterEntity) {
         // saca los datos de la base de datos y usa rawsql
         try {
-            RawSql.update("UPDATE card SET name_card = ?, description = ?, price = ?, image = ? WHERE id_card = ?; UPDATE monster SET attack = ?, life = ?, primary_type = ?, secondary_type = ? WHERE id_card = ?",List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getPrice(), monsterEntity.getImgPath(), monsterEntity.getId(), monsterEntity.getAttack(), monsterEntity.getLife(), monsterEntity.getMainType(), monsterEntity.getSecondaryType(), monsterEntity.getId()));
+            RawSql.update(
+                    "UPDATE card SET name_card = ?, description = ?, price = ?, image = ? WHERE id_card = ?; UPDATE monster SET attack = ?, life = ?, primary_type = ?, secondary_type = ? WHERE id_card = ?",
+                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getPrice(),
+                            monsterEntity.getImgPath(), monsterEntity.getId(), monsterEntity.getAttack(),
+                            monsterEntity.getLife(), monsterEntity.getMainType(), monsterEntity.getSecondaryType(),
+                            monsterEntity.getId()));
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
