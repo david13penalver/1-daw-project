@@ -23,12 +23,14 @@ public class CardDaoMapper {
             return null;
         CardEntity cardEntity = new CardEntity();
         try {
-            cardEntity.setId(resultSet.getInt("id_card"));
-            cardEntity.setName(resultSet.getString("name_card"));
-            cardEntity.setDescription(resultSet.getString("description_es"));
-            cardEntity.setDescription(resultSet.getString("description_en"));
-            cardEntity.setPrice(resultSet.getBigDecimal("price"));
-            cardEntity.setImgPath(resultSet.getString("image"));
+            while (!resultSet.next()) {
+                cardEntity.setId(resultSet.getInt("id_card"));
+                cardEntity.setName(resultSet.getString("name_card"));
+                cardEntity.setDescription(resultSet.getString("description_es"));
+                //cardEntity.setDescription(resultSet.getString("description_en"));
+                cardEntity.setPrice(resultSet.getBigDecimal("price"));
+                cardEntity.setImgPath(resultSet.getString("image"));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
