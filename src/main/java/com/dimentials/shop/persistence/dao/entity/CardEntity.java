@@ -75,4 +75,15 @@ public class CardEntity {
     public int hashCode() {
         return Objects.hash(id, name, description, price, imgPath);
     }
+
+    @Override
+    public String toString() {
+        return "CardEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", imgPath='" + imgPath + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

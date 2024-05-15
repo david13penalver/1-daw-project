@@ -19,19 +19,20 @@ public class CardDaoMapper {
     }
 
     public static CardEntity toCardEntity(ResultSet resultSet) {
-        if (resultSet == null)
+
+        if (resultSet == null) {
             return null;
+        }
         CardEntity cardEntity = new CardEntity();
         try {
-            while (!resultSet.next()) {
+            if (resultSet.next()) {
                 cardEntity.setId(resultSet.getInt("id_card"));
                 cardEntity.setName(resultSet.getString("name_card"));
                 cardEntity.setDescription(resultSet.getString("description_es"));
-                //cardEntity.setDescription(resultSet.getString("description_en"));
                 cardEntity.setPrice(resultSet.getBigDecimal("price"));
                 cardEntity.setImgPath(resultSet.getString("image"));
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return cardEntity;

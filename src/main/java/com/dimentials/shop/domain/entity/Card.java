@@ -81,4 +81,15 @@ public class Card {
     public int hashCode() {
         return Objects.hash(id, name, description, price, imgPath);
     }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", imgPath='" + imgPath + '\'' +
+                '}';
+    }
 }

@@ -13,7 +13,7 @@ public class RawSql {
             PreparedStatement preparedStatement = setParameters(sql, params);
             return preparedStatement.executeQuery();
         } catch (Exception e) {
-            throw new RawSqlException("Error executing SQL query: " + sql);
+            throw new RawSqlException("Error executing SQL query: " + sql + e.getMessage());
         }
     }
 
