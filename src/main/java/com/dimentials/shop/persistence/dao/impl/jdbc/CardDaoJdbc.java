@@ -6,7 +6,6 @@ import com.dimentials.shop.persistence.dao.impl.jdbc.mapper.CardDaoMapper;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
-import com.dimentials.shop.persistence.dao.impl.jdbc.queryBuilder.DB;
 import com.dimentials.shop.persistence.dao.impl.jdbc.rawSql.RawSql;
 import org.springframework.context.i18n.LocaleContextHolder;
 
@@ -20,7 +19,8 @@ public class CardDaoJdbc implements CardDao {
         //Locale currentLocale = LocaleContextHolder.getLocale();
         //String language = currentLocale.getLanguage();
         try {
-            ResultSet resultSet = RawSql.select("SELECT * FROM card", null);
+            ResultSet resultSet = RawSql.select("SELECT * FROM card", List.of());
+            assert resultSet != null;
             return CardDaoMapper.toCardList(resultSet);
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
@@ -33,6 +33,9 @@ public class CardDaoJdbc implements CardDao {
         String language = currentLocale.getLanguage();
         try {
             ResultSet resultSet = RawSql.select("SELECT * FROM card WHERE id_card = ?", List.of(id));
+            if (!resultSet.next()) {
+                return null;
+            }
             return CardDaoMapper.toCardEntity(resultSet);
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());

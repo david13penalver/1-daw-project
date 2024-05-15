@@ -4,6 +4,7 @@ import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 
+import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -18,24 +19,31 @@ public class CardDaoMapper {
         return cardEntityList;
     }
 
-    public static CardEntity toCardEntity(ResultSet resultSet) {
+    public static CardEntity toCardEntity(ResultSet resultSet) throws SQLException {
 
-        if (resultSet == null) {
-            return null;
-        }
-        CardEntity cardEntity = new CardEntity();
-        try {
-            if (resultSet.next()) {
-                cardEntity.setId(resultSet.getInt("id_card"));
-                cardEntity.setName(resultSet.getString("name_card"));
-                cardEntity.setDescription(resultSet.getString("description_es"));
-                cardEntity.setPrice(resultSet.getBigDecimal("price"));
-                cardEntity.setImgPath(resultSet.getString("image"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return cardEntity;
+
+//        CardEntity cardEntity = new CardEntity();
+//        try {
+//            if (resultSet.next()) {
+//                cardEntity.setId(resultSet.getInt("id_card"));
+//                cardEntity.setName(resultSet.getString("name_card"));
+//                cardEntity.setDescription(resultSet.getString("description_es"));
+//                cardEntity.setPrice(resultSet.getBigDecimal("price"));
+//                cardEntity.setImgPath(resultSet.getString("image"));
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return cardEntity;
+        Integer id = resultSet.getInt("id_card");
+        String name = resultSet.getString("name_card");
+        String description = resultSet.getString("description_es");
+        BigDecimal price = resultSet.getBigDecimal("price");
+        String imgPath = resultSet.getString("image");
+        return new CardEntity(id, name, description, price, imgPath);
+
+
     }
 
     public static MonsterEntity toMonsterEntity(ResultSet resultSet) throws SQLException {
