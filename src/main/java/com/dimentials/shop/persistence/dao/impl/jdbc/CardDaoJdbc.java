@@ -63,7 +63,14 @@ public class CardDaoJdbc implements CardDao {
 
     @Override
     public CardEntity deleteCard(Integer id) {
+        // saca los datos de la base de datos y usa rawsql
+        try {
+            RawSql.delete("DELETE FROM card WHERE id_card = ?", List.of(id));
+        } catch (Exception e) {
+            throw new QueryBuilderSQLException(e.getMessage());
+        }
         return null;
+
     }
 
     @Override
