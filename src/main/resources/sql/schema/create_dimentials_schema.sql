@@ -14,7 +14,7 @@ CREATE TABLE user (
 
 -- Card table
 CREATE TABLE card (
-    id_card INT PRIMARY KEY,
+    id_card INT PRIMARY KEY AUTO_INCREMENT,
     name_card VARCHAR(50) not null,
     description_es VARCHAR(500) not null,
     description_en VARCHAR(500) not null,

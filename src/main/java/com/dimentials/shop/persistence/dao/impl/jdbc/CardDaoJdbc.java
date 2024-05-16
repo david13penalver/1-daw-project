@@ -51,14 +51,31 @@ public class CardDaoJdbc implements CardDao {
         // }
     }
 
-    @Override
+//    @Override
+//    public MonsterEntity addMonster(MonsterEntity monsterEntity) {
+//        try {
+//            RawSql.insert(
+//                    "INSERT into card (name_card, description, price, image) VALUES (?, ?, ?, ?); INSERT into monster (attack, life, primary_type, secondary_type) VALUES (SELECT LAST_INSERT_ID(), ?, ?, ?, ?)",
+//                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getPrice(),
+//                            monsterEntity.getImgPath(), monsterEntity.getAttack(), monsterEntity.getLife(),
+//                            monsterEntity.getMainType(), monsterEntity.getSecondaryType()));
+//        } catch (Exception e) {
+//            throw new QueryBuilderSQLException(e.getMessage());
+//        }
+//        return null;
+//    }
+
     public MonsterEntity addMonster(MonsterEntity monsterEntity) {
         try {
             RawSql.insert(
-                    "INSERT into card (name_card, description, price, image) VALUES (?, ?, ?, ?); INSERT into monster (attack, life, primary_type, secondary_type) VALUES (SELECT LAST_INSERT_ID(), ?, ?, ?, ?)",
-                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getPrice(),
-                            monsterEntity.getImgPath(), monsterEntity.getAttack(), monsterEntity.getLife(),
-                            monsterEntity.getMainType(), monsterEntity.getSecondaryType()));
+                    "INSERT into card (name_card, description_es, description_en, price, image) VALUES (?, ?, ?, ?, ?)",
+                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getDescription(), monsterEntity.getPrice(),
+                            monsterEntity.getImgPath()));
+            int lastId = RawSql.select("SELECT LAST_INSERT_ID()", List.of()).getInt(1);
+            RawSql.insert(
+                    "INSERT into monster (id_card, attack, life, main_type_es, main_type_en, secondary_type_es, secondary_type_en) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                    List.of(lastId, monsterEntity.getAttack(), monsterEntity.getLife(),
+                            monsterEntity.getMainType(), monsterEntity.getMainType(), monsterEntity.getSecondaryType(), monsterEntity.getSecondaryType()));
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
