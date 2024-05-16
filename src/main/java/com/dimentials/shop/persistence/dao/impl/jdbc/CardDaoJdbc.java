@@ -98,9 +98,13 @@ public class CardDaoJdbc implements CardDao {
         // update card
         try {
             RawSql.update(
-                    "UPDATE card SET name_card = ?, description = ?, price = ?, image = ? WHERE id_card = ?; UPDATE spell SET mana = ? WHERE id_card = ?",
+                    "UPDATE card SET name_card = ?, description_es = ?, price = ?, image = ? WHERE id_card = ?",
                     List.of(spellEntity.getName(), spellEntity.getDescription(), spellEntity.getPrice(),
-                            spellEntity.getImgPath(), spellEntity.getId(), spellEntity.getMana(), spellEntity.getId()));
+                            spellEntity.getImgPath(), spellEntity.getId()));
+            RawSql.update(
+                    "UPDATE spell SET mana = ? WHERE id_card = ?",
+                    List.of(spellEntity.getMana(), spellEntity.getId())
+            );
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
