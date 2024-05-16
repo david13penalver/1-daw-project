@@ -109,7 +109,7 @@ public class CardController {
 
     @GetMapping("/update-monster")
     public String updateMonster(Model model) {
-        model.addAttribute("spell", new Spell());
+        model.addAttribute("monster", new Monster());
         return "updateMonsterForm";
     }
 

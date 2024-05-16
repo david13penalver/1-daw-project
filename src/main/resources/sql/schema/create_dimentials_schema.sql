@@ -29,8 +29,8 @@ CREATE TABLE monster (
     life INT not null,
     main_type_es  VARCHAR(20) not null,
     main_type_en  VARCHAR(20) not null,
-    socondary_type_es VARCHAR(20),
-    socondary_type_en VARCHAR(20),
+    secondary_type_es VARCHAR(20),
+    secondary_type_en VARCHAR(20),
     FOREIGN KEY (id_card) REFERENCES card(id_card) ON DELETE CASCADE
 );
 
