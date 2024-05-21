@@ -11,4 +11,9 @@ public class OrderDaoJdbc implements OrderDao {
     public List<Order> findOrderByUserId(Integer userId) {
         return null;
     }
+
+    @Override
+    public Order findById(int id) {
+        return null;
+    }
 }

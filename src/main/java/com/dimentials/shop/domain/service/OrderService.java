@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface OrderService {
     List<Order> findByUserId(Integer userId);
+
+    Order findById(int id);
 }
