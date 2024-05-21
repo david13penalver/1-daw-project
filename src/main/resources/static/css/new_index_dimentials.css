@@ -16,6 +16,7 @@
     --second-bg-color: #131313;
     --text-color: white;
     --main-color: #00ffee;
+    --secondary-color: #e54fad;
 }
 
 html {
@@ -78,13 +79,12 @@ footer ul li a:hover {
                                                    
 ------------------------------------------------------------*/
 
-#dimentials_index {
-    
-}
+#dimentials_index {}
 
 #dimentials_index .dimentials-navbar-justify {
     justify-content: space-between;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -139,6 +139,7 @@ html {
 }
 
 #dimentials_index .home-content {
+    order: 2;
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -158,24 +159,26 @@ html {
 #dimentials_index .home-content h3 {
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 3.5rem;
+    font-size: 8vw;
 }
 
 #dimentials_index .home-content h1 {
-    font-size: 7rem;
+    font-size: 12vw;
     font-weight: 700;
     margin-top: 1, 5rem;
     line-height: 1;
 }
 
 #dimentials_index .home-img {
+    order: 1;
     border-radius: 50%;
 }
 
 #dimentials_index .home-img img {
+    display: block;
+    margin: auto;
     position: relative;
-    top: 3rem;
-    width: 32vw;
+    width: 60vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -187,7 +190,7 @@ html {
 }
 
 #dimentials_index .home-content p {
-    font-size: 1.5rem;
+    font-size: 5vw;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
@@ -201,11 +204,12 @@ html {
     height: 4.5rem;
     background: transparent;
     border: 2px solid var(--main-color);
-    font-size: 2.5rem;
+    font-size: 10vw;
     border-radius: 50%;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 3vh auto 3vh auto;
     transition: 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 #dimentials_index .social-icons a:hover {
@@ -215,7 +219,8 @@ html {
     background-color: var(--main-color);
 }
 
-#dimentials_index .btn-group.dim-btn-index-home { /* Si pongo dos clases pegadas es como si fuera un AND */
+#dimentials_index .btn-group.dim-btn-index-home {
+    /* Si pongo dos clases pegadas es como si fuera un AND */
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -236,11 +241,11 @@ html {
 
 #dimentials_index .dim-btn-index-home .btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 2vh 0;
     background: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 4rem;
-    font-size: 1.6rem;
+    font-size: 4vw;
     color: black;
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
@@ -257,7 +262,7 @@ html {
 
 
 #dimentials_index .text-animation {
-    font-size: 34px;
+    font-size: 8vw;
     font-weight: 600;
     min-width: 280px;
 }
@@ -276,12 +281,14 @@ html {
     content: "";
     color: var(--bg-color);
     position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
+    width: calc(100% + 1vw);
+    height: calc(100% + 1vh);
     border-left: 3px solid var(--bg-color);
     right: -8px;
     background-color: var(--bg-color);
+    top: -.3vh;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    padding-top: 5px;
 }
 
 @keyframes cursor {
@@ -291,22 +298,27 @@ html {
 }
 
 @keyframes words {
+
     0%,
     20% {
         content: "INVEROSÍMIL";
     }
+
     21%,
     40% {
         content: "LEGENDARIA";
     }
+
     41%,
     60% {
         content: "FANTÁSTICA";
     }
+
     61%,
     80% {
         content: "TERRORÍFICA";
     }
+
     81%,
     100% {
         content: "DIMENSIONAL";
@@ -314,6 +326,7 @@ html {
 }
 
 @keyframes typing {
+
     10%,
     15%,
     30%,
@@ -327,6 +340,7 @@ html {
     95% {
         width: 0;
     }
+
     5%,
     20%,
     25%,
@@ -350,31 +364,30 @@ html {
 
 #dimentials_index #featured_title {
     padding: 0;
-    font-size: 7rem;
+    font-size: 10vw;
     font-weight: 700;
-    margin-bottom: 8rem;
+    margin-bottom: 3vh;
     line-height: 1;
 }
+
 #dimentials_index #featured_title h3 {
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 3.5rem;
+    font-size: 7vw;
     text-align: center;
 }
 
 #dimentials_index #featured_title h2 {
-    font-size: 7rem;
+    font-size: 10vw;
     font-weight: 700;
-    margin-top: 1, 5rem;
     line-height: 1;
     text-align: center;
-    color: #ff8c11;
+    color: var(--secondary-color);
 }
 
 #dimentials_index .card-container {
     perspective: 1000px;
     flex: 1;
-    margin: 20px;
 }
 
 #dimentials_index .card-section {
@@ -431,8 +444,6 @@ html {
 
 #dimentials_index .card-info {
     flex: 1;
-    margin: 20px;
-    padding: 20px;
     background-color: transparent;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -441,24 +452,24 @@ html {
 
 #dimentials_index .card-info h3 {
     margin-top: 0;
-    font-size: 6rem;
+    font-size: 5vw;
 }
 
 #dimentials_index .card-info h4 {
     margin-top: 0;
-    font-size: 4rem;
+    font-size: 4vw;
 }
 
 
 
 #dimentials_index .card-info button {
-    background-color: #ff8c11;
+    background-color: var(--secondary-color);
     color: #fff;
     border: none;
     width: 300px;
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 1vw 2vw;
+    font-size: 3vw;
     cursor: pointer;
     margin: auto;
 }
@@ -467,3 +478,41 @@ html {
     background-color: #3e8e41;
 }
 
+/* Media Queries Index */
+
+/* Col-sm */
+@media (min-width: 576px) {}
+
+/* Col-md */
+
+@media (min-width: 768px) {}
+
+/* Col-lg */
+@media (min-width: 992px) {
+    #dimentials_index .home-img img {
+        top: 3vw;
+        width: 32vw;
+    }
+
+    #dimentials_index .home-content h1 {
+        font-size: 7vw;
+    }
+
+    #dimentials_index .home-content h3 {
+        font-size: 4vw;
+    }
+
+    #dimentials_index .home-content p {
+        font-size: 2vw;
+    }
+}
+
+/* Col-xl */
+@media (min-width: 1200px) {
+    #dimentials_index .home-content h1 {
+        font-size: 12vw;
+    }
+}
+
+/* Col-xxl */
+@media (min-width: 1400px) {}
