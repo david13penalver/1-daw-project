@@ -2,8 +2,8 @@ package com.dimentials.shop.domain.entity;
 
 import java.util.Objects;
 
-public class Client {
-    private Integer clientId;
+public class User {
+    private Integer userId;
     private String firstName;
     private String lastName1;
     private String lastName2;
@@ -16,9 +16,9 @@ public class Client {
     private String floor;
     private String door;
 
-    public Client(Integer clientId, String firstName, String lastName1, String lastName2, String email,
-            Boolean isAdmin) {
-        this.clientId = clientId;
+    public User(Integer clientId, String firstName, String lastName1, String lastName2, String email,
+                Boolean isAdmin) {
+        this.userId = clientId;
         this.firstName = firstName;
         this.lastName1 = lastName1;
         this.lastName2 = lastName2;
@@ -26,9 +26,9 @@ public class Client {
         this.isAdmin = isAdmin;
     }
 
-    public Client(Integer clientId, String firstName, String lastName1, String lastName2, String email, Boolean isAdmin,
-            String country, String city, String street, String buildingNumber, String floor, String door) {
-        this.clientId = clientId;
+    public User(Integer clientId, String firstName, String lastName1, String lastName2, String email, Boolean isAdmin,
+                String country, String city, String street, String buildingNumber, String floor, String door) {
+        this.userId = clientId;
         this.firstName = firstName;
         this.lastName1 = lastName1;
         this.lastName2 = lastName2;
@@ -42,16 +42,16 @@ public class Client {
         this.door = door;
     }
 
-    public Client() {
+    public User() {
 
     }
 
-    public Integer getClientId() {
-        return clientId;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setClientId(Integer clientId) {
-        this.clientId = clientId;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {
@@ -144,8 +144,8 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "clientId=" + clientId +
+        return "User{" +
+                "clientId=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName1='" + lastName1 + '\'' +
                 ", lastName2='" + lastName2 + '\'' +
@@ -166,8 +166,8 @@ public class Client {
             return true;
         if (o == null || getClass() != o.getClass())
             return false;
-        Client client = (Client) o;
-        return Objects.equals(clientId, client.clientId) && Objects.equals(firstName, client.firstName)
+        User client = (User) o;
+        return Objects.equals(userId, client.userId) && Objects.equals(firstName, client.firstName)
                 && Objects.equals(lastName1, client.lastName1) && Objects.equals(lastName2, client.lastName2)
                 && Objects.equals(email, client.email) && Objects.equals(isAdmin, client.isAdmin)
                 && Objects.equals(country, client.country) && Objects.equals(city, client.city)
@@ -177,7 +177,7 @@ public class Client {
 
     @Override
     public int hashCode() {
-        return Objects.hash(clientId, firstName, lastName1, lastName2, email, isAdmin, country, city, street,
+        return Objects.hash(userId, firstName, lastName1, lastName2, email, isAdmin, country, city, street,
                 buildingNumber, floor, door);
     }
 }

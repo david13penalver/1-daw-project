@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Order {
 
     private Integer id;
-    private Client client;
+    private User client;
     private List<OrderDetail> orderDetailList;
     private BigDecimal total = BigDecimal.ZERO;
 
@@ -36,11 +36,11 @@ public class Order {
         this.id = id;
     }
 
-    public Client getClient() {
+    public User getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
+    public void setClient(User client) {
         this.client = client;
     }
 
@@ -60,7 +60,7 @@ public class Order {
         this.total = total;
     }
 
-    public Order(Integer id, Client client, List<OrderDetail> orderDetailList, BigDecimal total) {
+    public Order(Integer id, User client, List<OrderDetail> orderDetailList, BigDecimal total) {
         this.id = id;
         this.client = client;
         this.orderDetailList = orderDetailList;

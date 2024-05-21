@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class Cart {
     private Integer id;
-    private Client client;
+    private User client;
     private List<CartDetail> cartDetailList;
     private BigDecimal total;
 
@@ -34,7 +34,7 @@ public class Cart {
         return cartDetailList;
     }
 
-    public Cart(Integer id, Client client, List<CartDetail> cartDetailList, BigDecimal total) {
+    public Cart(Integer id, User client, List<CartDetail> cartDetailList, BigDecimal total) {
         this.id = id;
         this.client = client;
         this.cartDetailList = cartDetailList;
@@ -49,11 +49,11 @@ public class Cart {
         this.id = id;
     }
 
-    public Client getClient() {
+    public User getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
+    public void setClient(User client) {
         this.client = client;
     }
 
