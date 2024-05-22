@@ -2,6 +2,7 @@ package com.dimentials.shop.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
@@ -58,6 +59,11 @@ public class MainController {
     @GetMapping("/detail_cards")
     public String detailCards() {
         return "cardList";
+    }
+
+    @GetMapping("/shop")
+    public String shop() {
+        return "tienda";
     }
 
 }
