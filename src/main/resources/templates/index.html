@@ -20,67 +20,7 @@
 
   <!--------------------------- Navbar  ----------------------------->
 
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">DIMENTIALS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse dimentials-navbar-justify" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Cartas
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" th:href="@{/gallery_cards}">D.I Gula Insaciable de Embergante</a></li>
-              <li><a class="dropdown-item" th:href="@{/cards}">Detalles Cartas</a></li>
-              <li><a class="dropdown-item" href="#">D.I Justicia Divina de Lofair</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              F.A.Q
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" th:href="@{/about}">Sobre nosotros</a></li>
-              <li><a class="dropdown-item" th:href="@{/faq}">Sobre el juego Dimentials TCG</a></li>
-              <li><a class="dropdown-item" th:href="@{/contact}">Contacto</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Recursos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Creador de cartas</a></li>
-              <li><a class="dropdown-item" th:href="@{/basic_concepts}">Conceptos básicos</a></li>
-              <li>
-                <a class="dropdown-item" th:href="@{/basic_strategy}">Estrategias básicas</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Juego Digital
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Demo en Itch.io</a></li>
-              <li><a class="dropdown-item" href="#">Wishlit en Steam</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" th:href="@{/shop}"><i class="fa-solid fa-cart-shopping"></i> Tienda</a>
-          </li>
-        </ul>
-        <div>
-          <button class="btn btn-warning">Sign In</button>
-          <button class="btn btn-primary">Log In</button>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <header th:replace="~{layouts/base :: headerplusnav2}"></header>
 
   <!--------------------------- HERO RESPONSIVE  ----------------------------->
   <section class="home container" id="home">
@@ -138,32 +78,9 @@
   </section>
 
   <!-- footer -->
+  <footer th:replace="~{layouts/base :: footer}"></footer>
 
-  <footer class="bg-dark" data-bs-theme="dark">
-    <div class="container">
-      <div class="row">
-        <img class="grid-logo col-lg-5 col-md-6 col-12" th:src="@{${'/images/Dimentials_Logo_Texto.png'}}">
-        <h4 class="grid-title col-lg-3 col-md-6 col-12 text-center">The Dimentials Company</h4>
-        <ul class="grid-redes col-lg-2 col-md-6 col-12">
-          <h4>Redes sociales</h4>
-          <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
-          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-twitch"></i> </a></li>
-          <li><a href="#"><i class="fa-brands fa-x"></i></a></li>
-        </ul>
-        <ul class="grid-legal col-lg-2 col-md-6 col-12">
-          <h4>Aspecto legal</h4>
-          <li><a th:href="@{/cookies}">Política de cookies</a></li>
-          <li><a th:href="@{/privacy}">Aviso de privacidad</a></li>
-          <li><a th:href="@{/terms}">Condiciones de uso</a></li>
-        </ul>
-      </div>
-      <div class="row">
-        <p class="grid-copyright col-md-12">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Scripts -->
 
   <script src="js/index_page.js"></script>
   <script src="js/vanilla_tilt.js"></script>
