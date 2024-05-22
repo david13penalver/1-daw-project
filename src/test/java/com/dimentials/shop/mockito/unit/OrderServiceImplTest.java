@@ -1,5 +1,6 @@
 package com.dimentials.shop.mockito.unit;
 
+import com.dimentials.shop.common.exception.ResourceNotFoundException;
 import com.dimentials.shop.domain.entity.Order;
 import com.dimentials.shop.domain.service.OrderService;
 import com.dimentials.shop.domain.service.impl.OrderServiceImpl;
@@ -15,8 +16,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -54,7 +54,7 @@ public class OrderServiceImplTest {
         }
 
         @Test
-        @DisplayName("Given user that doesn't existe, should return null")
+        @DisplayName("Given user that doesn't exists, should return null")
         void givingUserId3_ShouldReturnNull() {
             when(orderRepositoryMock.findByUserId(3)).thenReturn(null);
 
@@ -67,6 +67,33 @@ public class OrderServiceImplTest {
 
     @Nested
     class FindById {
+        @Test
+        @DisplayName("Given id1, should return order1")
+        void givingId1_ShouldReturnOrder1() {
+            when(orderRepositoryMock.findById(1)).thenReturn(order1);
+
+            Order resultOrder = orderService.findById(1);
+
+            assertEquals(order1, resultOrder);
+        }
+
+        @Test
+        @DisplayName("Given id2, should return order2")
+        void givingId2_ShouldReturnOrder2() {
+            when(orderRepositoryMock.findById(2)).thenReturn(order2);
+
+            Order resultOrder = orderService.findById(2);
+
+            assertEquals(order2, resultOrder);
+        }
+
+        @Test
+        @DisplayName("Given id that doesn't exists, should return null")
+        void givingId3_ShouldReturnNull() {
+            when(orderRepositoryMock.findById(3)).thenReturn(null);
+            
+            assertThrows(ResourceNotFoundException.class, () -> orderService.findById(3));
+        }
 
     }
 }
