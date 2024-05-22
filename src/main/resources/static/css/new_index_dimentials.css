@@ -41,6 +41,10 @@ footer {
     padding-top: 3vh;
 }
 
+footer h1, footer h2, footer h3, footer h4, footer p {
+    color: var(--text-color);
+}
+
 footer img {
     height: 10vh;
     margin-top: 5vh;
@@ -58,12 +62,12 @@ footer ul li {
 
 footer ul li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 footer ul li a:hover {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 /*--------------------------------------------------------------
@@ -399,9 +403,10 @@ html {
 #dimentials_index .card {
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 415px;
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    background-color: var(--bg-color);
 }
 
 #dimentials_index .card-front,
