@@ -158,6 +158,7 @@ html {
 
 #dimentials_index .logo span {
     color: var(--main-color);
+    font-size: 8vw;
 }
 
 #dimentials_index .home-content h3 {
@@ -392,6 +393,10 @@ html {
 #dimentials_index .card-container {
     perspective: 1000px;
     flex: 1;
+    border-top: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 4vh 0;
+    border-bottom: 1px solid #ddd;
 }
 
 #dimentials_index .card-section {
@@ -406,7 +411,12 @@ html {
     height: 415px;
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
     background-color: var(--bg-color);
+    box-shadow: 0 0 15px 2px rgb(255 253 253);
+    padding: 2vh 0;
 }
 
 #dimentials_index .card-front,
@@ -448,21 +458,22 @@ html {
 }
 
 #dimentials_index .card-info {
+    margin-top: 5vh;
+    border-top: 1px solid #ddd;
+    padding-top: 2vh;
     flex: 1;
     background-color: transparent;
-    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #dimentials_index .card-info h3 {
     margin-top: 0;
-    font-size: 5vw;
+    font-size: 12vw;
 }
 
 #dimentials_index .card-info h4 {
     margin-top: 0;
-    font-size: 4vw;
+    font-size: 7vw;
 }
 
 
@@ -473,10 +484,11 @@ html {
     border: none;
     width: 300px;
     margin-top: 20px;
-    padding: 1vw 2vw;
-    font-size: 3vw;
+    padding: 4vw 2vw;
+    font-size: 5vw;
     cursor: pointer;
-    margin: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 #dimentials_index .card-info button:hover {
