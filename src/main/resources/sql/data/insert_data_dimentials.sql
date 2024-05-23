@@ -2,6 +2,30 @@ CREATE DATABASE IF NOT EXISTS dimentials;
 
 USE dimentials;
 
+CREATE ROLE IF NOT EXISTS 'dimentials_admin';
+GRANT ALL PRIVILEGES ON dimentials.* TO 'dimentials_admin';
+CREATE USER 'dpenalver'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
+CREATE USER 'asuarez'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
+CREATE USER 'brubio'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
+GRANT 'dimentials_admin' TO 'dpenalver'@'localhost';
+GRANT 'dimentials_admin' TO 'asuarez'@'localhost';
+GRANT 'dimentials_admin' TO 'brubio'@'localhost';
+
+CREATE USER 'viewer'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT ON dimentials.card TO 'viewer'@'localhost';
+GRANT SELECT ON dimentials.monster TO 'viewer'@'localhost';
+GRANT SELECT ON dimentials.spell TO 'viewer'@'localhost';
+
+CREATE ROLE 'client';
+GRANT SELECT, INSERT, UPDATE, DELETE ON dimentials.card TO 'client';
+GRANT SELECT, INSERT, UPDATE, DELETE ON dimentials.monster TO 'client';
+GRANT SELECT, INSERT, UPDATE, DELETE ON dimentials.spell TO 'client';
+GRANT SELECT, INSERT, UPDATE, DELETE ON dimentials.order_detail TO 'client';
+
+GRANT UPDATE ON dimentials.user TO 'client';
+CREATE USER 'client1'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
+GRANT 'client' TO 'client1'@'localhost';
+
 
 insert INTO card VALUES (1, 'Lavacus', 'Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.' ,'Shield (1): Generates 1 armor at the end of each of your turns. The armor is added to life and is consumed when your dimensional legion is attacked. The armor of this ability is cumulative and that which is not consumed remains even when the legion evolves.', 10.00, '/images/CardDetail/card1.png');
 insert INTO monster VALUES (1,1, 1, 'Roca',  'Rock', 'Fuego', 'Fire');
