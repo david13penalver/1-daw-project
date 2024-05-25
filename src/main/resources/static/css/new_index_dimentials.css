@@ -70,6 +70,15 @@ footer ul li a:hover {
     color: var(--text-color);
 }
 
+footer .dimentials-logo {
+    position:relative;
+    top: -16px;
+}
+
+
+
+
+
 /*--------------------------------------------------------------
                                                    
 ▀████▀███▄   ▀███▀███▀▀▀██▄ ▀███▀▀▀███▀███▀   ▀██▀ 
@@ -498,11 +507,49 @@ html {
 /* Media Queries Index */
 
 /* Col-sm */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+    #dimentials_index .social-icons a {
+        font-size: 60px;
+    }
+
+}
 
 /* Col-md */
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    #dimentials_index .card-container {
+        border-radius: 10px 0 0 10px;
+    }
+
+    #dimentials_index .card-info {
+        margin-top: 0; 
+        border-bottom: 1px solid #ddd;
+        border-radius: 0 10px 10px 0;
+    }
+
+    #dimentials_index .card-info h3 {
+        font-size: 80px;
+    }
+
+    #dimentials_index .card-info h4 {
+        margin-top: 0;
+        font-size: 53px;
+    }
+
+    #dimentials_index .card-info button {
+        padding: 20px 50px;
+        font-size: 26px;
+        margin: 42px auto 0;
+    }
+
+    #dimentials_index #featured_cards {
+        margin-bottom: 70px;
+    }
+
+    #dimentials_index #featured_title h2 {
+        font-size: 77px;
+    }
+}
 
 /* Col-lg */
 @media (min-width: 992px) {
@@ -512,7 +559,7 @@ html {
     }
 
     #dimentials_index .home-content h1 {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     #dimentials_index .home-content h3 {
@@ -522,14 +569,25 @@ html {
     #dimentials_index .home-content p {
         font-size: 2vw;
     }
+
+    #dimentials_index .dim-btn-index-home .btn {
+        font-size: 30px;
+    }
+
+    #dimentials_index .card-info h3 {
+        margin-top: 0;
+        font-size: 100px;
+    }
 }
 
 /* Col-xl */
 @media (min-width: 1200px) {
-    #dimentials_index .home-content h1 {
-        font-size: 12vw;
-    }
 }
 
 /* Col-xxl */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+    body {
+        max-width: 1600px;
+        margin:auto;
+    }
+}

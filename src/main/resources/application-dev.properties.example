@@ -3,3 +3,4 @@ dimentials.datasource.url = jdbc:mysql://localhost:3306/dimentials
 dimentials.datasource.username = user
 dimentials.datasource.password = password
 dimentials.autocommit = true
+spring.cache.type=none
