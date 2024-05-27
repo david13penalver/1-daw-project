@@ -1,118 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
-        <link rel="stylesheet" th:href="@{/css/styles.css}">
-        <link rel="stylesheet" th:href="@{/css/mobile.css}">
-        <link rel="stylesheet" th:href="@{/css/tablet.css}">
-        <link rel="stylesheet" th:href="@{/css/desktop.css}">
-        <link rel="stylesheet" th:href="@{/css/aminations.css}">
-        <link rel="stylesheet" th:href="@{/css/cardGallery.css}">
-        <link rel="stylesheet" th:href="@{/css/menu.css}">
-        <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}" />
+        <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}" />
         <title>Galeria de cartas</title>
-        <link rel="stylesheet" th:href="@{css/modulo_cartas_gallery.css}" />
     </head>
-    <body>
-        <header th:replace="~{layouts/base :: headerplusnav2}"></header>
-        <main>
-            <section id="gallery_cards">
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card1.png'}}" alt="card_Lavacus" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card2.png'}}" alt="card_Pyromagmus" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card3.png'}}" alt="card_Aurelius_Ignis" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card4.png'}}" alt="card_Nebulca" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card5.png'}}" alt="card_Nebulcoal" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card6.png'}}" alt="card_Nebulsmokar" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card7.png'}}" alt="card_Lizzar" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card8.png'}}" alt="card_Iguanitxeco" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card9.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card10.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card11.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card12.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card13.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card15.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card15.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card16.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card17.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card18.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card19.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card20.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card21.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card22.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card23.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card24.png'}}" alt="card_Citalflama" />
-                </div>
-                <div class="tiltcard" data-tilt data-tilt-glare>
-                    <img th:src="@{${'/images/cardDetail/card25.png'}}" alt="card_Citalflama" />
-                </div>
-            </section>
+    <body id="dim-card-gallery">
+        <!--------------------------- Navbar  ----------------------------->
 
-            <section id="main-card-container">
+        <header th:replace="~{layouts/base :: headerplusnav2}"></header>
+
+        <!--------------------------- Gallery  ----------------------------->
+
+        <section class="dim-gallery container" id="dim-gallery">
+            <div class="row" id="gallery_cards">
+                <div
+                    class="tiltcard col-6 col-md-4 col-lg-3"
+                    th:each="i : ${#numbers.sequence(1, 25)}"
+                    th:value="${i}"
+                    data-tilt
+                    data-tilt-glare>
+                    <img
+                        th:src="@{${'/images/cardDetail/card'+ i + '.png'}}"
+                        alt="Embergante card deck" />
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------- Gallery  ----------------------------->
+
+        <section id="main-card-container">
+            <div id="relative-card-container">
                 <div id="zoom-card-container">
                     <div class="tiltcard" data-tilt data-tilt-glare>
                         <img id="img-active" src="#" alt="card_zoom" />
                     </div>
                 </div>
-                <button id="button__close" type="button">X</button>
-                <button id="button__go-back" type="button">&lt;</button>
-                <button id="button__keep-it-up" type="button">&gt;</button>
-                <button id="button__view-more" type="button">Ver más</button>
-            </section>
-        </main>
+                <button class="dim-gallery-btn" id="button__close" type="button">X</button>
+                <button class="dim-gallery-btn" id="button__go-back" type="button">&lt;</button>
+                <button class="dim-gallery-btn" id="button__keep-it-up" type="button">&gt;</button>
+                <button class="btn btn-secondary" id="button__view-more" type="button">
+                    Ver más
+                </button>
+                <button class="btn btn-warning" id="button__shop" type="button">Tienda</button>
+            </div>
+        </section>
+
+        <!--------------------------- Footer  ----------------------------->
+
         <footer th:replace="~{layouts/base :: footer}"></footer>
-        <!--<script src="js/cards_gallery_mode_app.js"></script>
-        <script src="js/vanilla_tilt.js"></script>-->
         <script th:src="@{${'../js/cards_gallery_mode_app.js'}}"></script>
+
+        <!--------------------------- Footer  ----------------------------->
+
         <script th:src="@{${'../js/vanilla_tilt.js'}}"></script>
     </body>
 </html>
