@@ -6,6 +6,7 @@ import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.repository.CardRepository;
 import com.dimentials.shop.persistence.repository.impl.CardRepositoryImpl;
 import com.dimentials.shop.persistence.repository.mapper.CardMapper;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -31,6 +32,7 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
     class FindCardByIdTests {
         // Test cases for findCardById
         @Test
+        @DisplayName("FindById: returns the card with the id 1")
         void givenExistingCardId1_shouldReturnCard1() {
             // Arrange
             when(cardDaoMock.findById(1)).thenReturn(card1);
@@ -40,6 +42,7 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
             assertEquals(CardMapper.toCard(card1), cardResult);
         }
         @Test
+        @DisplayName("FindById: returns the card with the id 2")
         void givenExistingCardId2_shouldReturnCard2() {
             // Arrange
             when(cardDaoMock.findById(2)).thenReturn(card2);
@@ -49,6 +52,7 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
             assertEquals(CardMapper.toCard(card2), cardResult);
         }
         @Test
+        @DisplayName("FindById: returns null when the card with the id 3 does not exist")
         void givenNonExistingCardId_shouldReturnNull() {
             // Arrange
             when(cardDaoMock.findById(3)).thenReturn(null);
@@ -60,6 +64,25 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
     }
     @Nested
     class FindAllCardsTests {
-        // Test cases for findCardByCategoryId
+        @Test
+        @DisplayName("FindAll: returns all cards")
+        void givenExistingCards_shouldReturnAllCards() {
+            // Arrange
+            when(cardDaoMock.findAll()).thenReturn(cardList);
+            // Act
+            List<Card> cardResult = cardRepository.findAll();
+            // Assert
+            assertEquals(CardMapper.toCardList(cardList), cardResult);
+        }
+        @Test
+        @DisplayName("FindAll: returns empty list when no cards exist")
+        void givenNoCards_shouldReturnEmptyList() {
+            // Arrange
+            when(cardDaoMock.findAll()).thenReturn(List.of());
+            // Act
+            List<Card> cardResult = cardRepository.findAll();
+            // Assert
+            assertEquals(CardMapper.toCardList(List.of()), cardResult);
+        }
     }
 }
