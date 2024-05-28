@@ -16,6 +16,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -59,7 +60,7 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
             // Act
             Card cardResult = cardRepository.findById(3);
             // Assert
-            assertEquals(CardMapper.toCard(null), cardResult);
+            assertNull(cardResult);
         }
     }
     @Nested
