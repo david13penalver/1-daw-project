@@ -61,20 +61,20 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Juego Digital
+                    th:text="#{digital.titulo}"
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Demo en Itch.io</a></li>
-                  <li><a class="dropdown-item" href="#">Wishlit en Steam</a></li>
+                  <li><a class="dropdown-item" href="#">th:text="#{digital.itch}"</a></li>
+                  <li><a class="dropdown-item" href="#">th:text="#{digital.steam}"</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" th:href="@{/shop}"><i class="fa-solid fa-cart-shopping"></i> Tienda</a>
+                <a class="nav-link" th:href="@{/shop}"><i class="fa-solid fa-cart-shopping"></i> th:text="#{shop.titulo}"</a>
               </li>
             </ul>
             <div>
-              <a class="btn btn-warning" th:href="@{/signup}">Sign up</a>
-              <a class="btn btn-primary" th:href="@{/login}">Log In</a>
+              <a class="btn btn-warning" th:href="@{/signup}">th:text="#{session.signup}"</a>
+              <a class="btn btn-primary" th:href="@{/login}">th:text="#{session.login}"</a>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
         <div class="container">
           <div class="row">
             <img class="dimentials-logo grid-logo col-lg-5 col-md-6 col-12" th:src="@{${'/images/Dimentials_Logo_Texto.png'}}">
-            <h4 class="grid-title col-lg-4 col-md-6 col-12 text-center">The Dimentials Company</h4>
+            <h4 class="grid-title col-lg-4 col-md-6 col-12 text-center">th:text="#{footer.redes}"</h4>
             <ul class="grid-redes col-lg-3 col-md-6 col-12">
               <h4>Redes sociales</h4>
               <li><a href="https://www.instagram.com/dimentials" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
@@ -105,13 +105,13 @@
             </ul>
             <ul class="grid-legal col-lg-12 col-md-6 col-12">
               <h4>Aspecto legal</h4>
-              <li><a th:href="@{/cookies}">Política de cookies</a></li>
-              <li><a th:href="@{/privacy}">Aviso de privacidad</a></li>
-              <li><a th:href="@{/terms}">Condiciones de uso</a></li>
+              <li><a th:href="@{/cookies}">th:text="#{footer.redes}"</a></li>
+              <li><a th:href="@{/privacy}">th:text="#{footer.privacidad}"</a></li>
+              <li><a th:href="@{/terms}">th:text="#{footer.uso}"</a></li>
             </ul>
           </div>
           <div class="row">
-            <p class="grid-copyright col-md-12 text-center">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
+            <p class="grid-copyright col-md-12 text-center">Dimentials&#169; 2024 th:text="#{footer.copy}" RómpelHielo&#169;</p>
           </div>
         </div>
       </footer>
