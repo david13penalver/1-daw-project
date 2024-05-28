@@ -1,87 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}" />
+        <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}" />
+        <title>Inicio - Dimentials</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}">
-  <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}">
-  <title>Inicio - Dimentials&#169;</title>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+    <body id="dimentials_index">
+        <!--------------------------- Navbar  ----------------------------->
 
-<body id="dimentials_index">
+        <header th:replace="~{layouts/base :: headerplusnav2}"></header>
 
-  <!--------------------------- Navbar  ----------------------------->
+        <!--------------------------- HERO RESPONSIVE  ----------------------------->
+        <section class="home container" id="home">
+            <div class="row">
+                <div class="home-content order-lg-1 order-md-2 col-lg-6 col-md-12 col-sm-12">
+                    <!-- xs <576px sm > 576px md >768px lg> 992px xl>1200px xxl>1400px -->
+                    <h1>Bienvenidos a <span>Dimentials</span></h1>
+                    <h3 class="text-animation">Vive una aventura <span></span></h3>
+                    <p>
+                        Números portales han comenzado a aparecer a lo largo y ancho de la Tierra.
+                        Equípate y descubre nuevas dimensiones llenas de posibilidades... y
+                        CRIATURAS.
+                    </p>
+                    <div class="social-icons d-flex justify-content-between w-100">
+                        <a href="#"><i class="bx bxl-steam"></i></a>
+                        <a
+                            href="https://www.instagram.com/dimentials"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><i class="bx bxl-instagram"></i
+                        ></a>
+                        <a
+                            href="https://www.youtube.com/@Dimentials"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><i class="bx bxl-youtube"></i
+                        ></a>
+                        <a
+                            href="https://suno.com/song/cd8cad09-5f26-4efe-82b0-7dafdfd8a58f"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><i class="bx bxl-twitter"></i
+                        ></a>
+                    </div>
 
-  <header th:replace="~{layouts/base :: headerplusnav2}"></header>
+                    <div class="btn-group dim-btn-index-home w-100">
+                        <a href="#" class="btn">Galeria</a>
+                        <a href="#contact" class="btn">Contacto</a>
+                    </div>
+                </div>
+                <div class="home-img order-lg-2 order-md-1 col-lg-6 col-md-12 col-sm-12">
+                    <img th:src="@{${'/images/1_Bicho_de_agua_normal.png'}}" alt="" />
+                </div>
+            </div>
+        </section>
 
-  <!--------------------------- HERO RESPONSIVE  ----------------------------->
-  <section class="home container" id="home">
-    <div class="row">
-      <div class="home-content order-lg-1 order-md-2 col-lg-6 col-md-12 col-sm-12">
-        <!-- xs <576px sm > 576px md >768px lg> 992px xl>1200px xxl>1400px -->
-        <h1>Bienvenidos a <span>Dimentials</span></h1>
-        <h3 class="text-animation">Vive una aventura <span></span></h3>
-        <p>
-          Números portales han comenzado a aparecer a lo largo y ancho de la Tierra.
-          Equípate y descubre nuevas dimensiones llenas de posibilidades... y CRIATURAS.
-        </p>
-        <div class="social-icons d-flex justify-content-between w-100">
-          <a href="#"><i class="bx bxl-steam"></i></a>
-          <a href="https://www.instagram.com/dimentials" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.youtube.com/@Dimentials" target="_blank" rel="noopener noreferrer"><i class="bx bxl-youtube"></i></a>
-          <a href="https://suno.com/song/cd8cad09-5f26-4efe-82b0-7dafdfd8a58f" target="_blank" rel="noopener noreferrer"><i class="bx bxl-twitter"></i></a>
-        </div>
+        <!--------------------------- Tienda Promo  ----------------------------->
+        <section class="container" id="featured_cards">
+            <div id="featured_title">
+                <h3>Visita nuestra</h3>
+                <h2>Tienda de Cartas DIMENTIALS</h2>
+            </div>
+            <div class="card-section row">
+                <div class="card-container col-12-sm col-6-md d-flex justify-content-center">
+                    <div class="card card-anim" id="card-1">
+                        <div class="card-front">
+                            <img src="images/cardDetail/card1.png" alt="" />
+                        </div>
+                        <div class="card-back">
+                            <img src="images/cardDetail/card0.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info col-12-sm col-6md">
+                    <h3>Más de</h3>
+                    <h4><span>25 cartas </span> te están esperando</h4>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </section>
 
-        <div class="btn-group dim-btn-index-home w-100">
-          <a href="#" class="btn">Galeria</a>
-          <a href="#contact" class="btn">Contacto</a>
-        </div>
-      </div>
-      <div class="home-img order-lg-2 order-md-1 col-lg-6 col-md-12 col-sm-12">
-        <img th:src="@{${'/images/1_Bicho_de_agua_normal.png'}}" alt="" />
-      </div>
-    </div>
-  </section>
+        <!-- footer -->
+        <footer th:replace="~{layouts/base :: footer}"></footer>
 
-
-  <!--------------------------- Tienda Promo  ----------------------------->
-  <section class="container" id="featured_cards">
-    <div id="featured_title">
-      <h3>Visita nuestra</h3>
-      <h2>Tienda de Cartas DIMENTIALS</h2>
-    </div>
-    <div class="card-section row">
-      <div class="card-container col-12-sm col-6-md d-flex justify-content-center">
-        <div class="card card-anim" id="card-1">
-          <div class="card-front">
-            <img src="images/cardDetail/card1.png" alt="" />
-          </div>
-          <div class="card-back">
-            <img src="images/cardDetail/card0.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="card-info col-12-sm col-6md">
-        <h3>Más de</h3>
-        <h4><span>25 cartas </span> te están esperando</h4>
-        <button>Learn More</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- footer -->
-  <footer th:replace="~{layouts/base :: footer}"></footer>
-
-  <!-- Scripts -->
-  <script src="js/vanilla_tilt.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-</body>
-
-
-
+        <!-- Scripts -->
+        <script src="js/vanilla_tilt.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    </body>
 </html>
