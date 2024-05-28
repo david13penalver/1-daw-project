@@ -29,33 +29,33 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Cartas
+                    th:text="#{menu.cartas}"
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" th:href="@{/gallery_cards}">D.I Gula Insaciable de Embergante</a></li>
-                  <li><a class="dropdown-item" th:href="@{/cards}">Detalles Cartas</a></li>
-                  <li><a class="dropdown-item" href="#">D.I Justicia Divina de Lofair</a></li>
+                  <li><a class="dropdown-item" th:href="@{/gallery_cards}">th:text="#{drop.gula}"</a></li>
+                  <li><a class="dropdown-item" th:href="@{/cards}">th:text="#{drop.detalles}"</a></li>
+                  <li><a class="dropdown-item" href="#">th:text="#{drop.divine}"</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  F.A.Q
+                  F.A.Q.
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" th:href="@{/about}">Sobre nosotros</a></li>
-                  <li><a class="dropdown-item" th:href="@{/faq}">Sobre el juego Dimentials TCG</a></li>
-                  <li><a class="dropdown-item" th:href="@{/contact}">Contacto</a></li>
+                  <li><a class="dropdown-item" th:href="@{/about}">th:text="#{sobre.nosotros}"</a></li>
+                  <li><a class="dropdown-item" th:href="@{/faq}">th:text="#{sobre.contacto}"</a></li>
+                  <li><a class="dropdown-item" th:href="@{/contact}">th:text="#{sobre.contacto}"</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Recursos
+                    th:text="#{guia.recursos}"
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Creador de cartas</a></li>
-                  <li><a class="dropdown-item" th:href="@{/basic_concepts}">Conceptos básicos</a></li>
+                  <li><a class="dropdown-item" href="#">th:text="#{guia.creador}"</a></li>
+                  <li><a class="dropdown-item" th:href="@{/basic_concepts}">th:text="#{guia.conceptos}"</a></li>
                   <li>
-                    <a class="dropdown-item" th:href="@{/basic_strategy}">Estrategias básicas</a>
+                    <a class="dropdown-item" th:href="@{/basic_strategy}">th:text="#{guia.estrategias}</a>
                   </li>
                 </ul>
               </li>
@@ -78,7 +78,16 @@
             </div>
           </div>
         </div>
-      </nav>
+            <div class="navbar-nav">
+                <a class="nav-link" href="?lang=es">
+                    <img th:src="@{${'/images/spain.png'}}" alt="Español" class="flag-icon rounded-circle flag-icon-small">
+                </a>
+                <a class="nav-link" href="?lang=en">
+                    <img th:src="@{${'/images/england.png'}}" alt="Español" class="flag-icon rounded-circle flag-icon-small">
+                </a>
+            </div>
+
+        </nav>
     </header>
 
     <footer th:fragment="footer" class="bg-dark" data-bs-theme="dark">
