@@ -2,6 +2,7 @@ package com.dimentials.shop.mockito.integration;
 
 import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.persistence.dao.CardDao;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
@@ -104,11 +105,23 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
         @Test
         @DisplayName("AddMonster: adds a new monster to the list of cards")
         void theMethodAddMonsterAddsANewMonsterToTheList() {
+            // Arrange
             Monster monster = new Monster();
-            List<MonsterEntity> monsterEntityList = new ArrayList<>();
-            monsterEntityList.add(CardMapper.toMonsterEntity(monster));
+            // Act
+            cardRepository.addMonster(monster);
+            // Assert
+            verify(cardDaoMock, times(1)).addMonster(any());
+        }
 
-            //verify()
+        @Test
+        @DisplayName("AddMonster: adds a new monster to the list of cards")
+        void theMethodAddSpellAddsANewSpellToTheList() {
+            // Arrange
+            Spell spell = new Spell();
+            // Act
+            cardRepository.addSpell(spell);
+            // Assert
+            verify(cardDaoMock, times(1)).addSpell(any());
         }
     }
 }
