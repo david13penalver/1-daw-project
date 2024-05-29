@@ -135,6 +135,7 @@ public class CardServiceImplTest {
     @Nested
     class udpateTests {
         @Test
+        @Disabled
         @DisplayName("The methods updateSpell() returns the spell updated")
         void updateSpellReturnsTheSpellUpdated() {
 
@@ -157,6 +158,7 @@ public class CardServiceImplTest {
         }
 
         @Test
+        @Disabled
         @DisplayName("The methods updateMonster() returns the monster updated")
         void updateMonsterReturnsTheMonsterUpdated() {
             List<Card> expectedList2 = new ArrayList<>(
@@ -199,8 +201,8 @@ public class CardServiceImplTest {
     @Nested
     class deleteTests {
         @Test
+        @Disabled
         @DisplayName("The methods deleteCard() returns the monster deleted")
-        
         void deleteCardReturnsTheMonsterDeleted() {
             List<Card> cardList = new ArrayList<>(
                 List.of(

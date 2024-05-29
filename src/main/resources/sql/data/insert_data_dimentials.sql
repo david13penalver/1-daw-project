@@ -8,6 +8,8 @@ USE dimentials;
 
 CREATE ROLE IF NOT EXISTS 'dimentials_admin';
 GRANT ALL PRIVILEGES ON dimentials.* TO 'dimentials_admin';
+CREATE USER 'generaladmin'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
+
 CREATE USER 'dpenalver'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
 CREATE USER 'asuarez'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
 CREATE USER 'brubio'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE;
