@@ -56,7 +56,7 @@ public class CardDaoMock implements CardDao {
                             "Fuego", "Agua"),
                     new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
                     new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
-                    new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+                    new SpellEntity(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9)
             )
     );
     public static List<CardEntity> getCardEntityListMonsterAltered() {
@@ -129,7 +129,7 @@ public class CardDaoMock implements CardDao {
 
     @Override
     public void updateSpell(SpellEntity spellEntity) {
-
+        boolean updated = false;
         for (CardEntity card : cardEntityListSpellAltered) {
             if (Objects.equals(card.getId(), spellEntity.getId())) {
                 card.setName(spellEntity.getName());
@@ -139,13 +139,18 @@ public class CardDaoMock implements CardDao {
                 if (card instanceof SpellEntity) {
                     ((SpellEntity) card).setMana(spellEntity.getMana());
                 }
+                updated = true;
+                break;
             }
         }
-        throw new IllegalArgumentException("The spell does not exist");
+        if (!updated) {
+            throw new IllegalArgumentException("The spell does not exist");
+        }
     }
 
     @Override
     public void updateMonster(MonsterEntity monsterEntity) {
+        boolean updated = false;
         for (CardEntity card : cardEntityListMonsterAltered) {
             if (Objects.equals(card.getId(), monsterEntity.getId())) {
                 card.setName(monsterEntity.getName());
@@ -158,8 +163,11 @@ public class CardDaoMock implements CardDao {
                     ((MonsterEntity) card).setMainType(monsterEntity.getMainType());
                     ((MonsterEntity) card).setSecondaryType(monsterEntity.getSecondaryType());
                 }
+                updated = true;
+                break;
             }
         }
-        throw new IllegalArgumentException("The spell does not exist");
-    }
+        if (!updated) {
+            throw new IllegalArgumentException("The monster does not exist");
+        }    }
 }

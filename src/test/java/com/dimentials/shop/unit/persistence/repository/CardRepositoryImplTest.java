@@ -160,7 +160,6 @@ public class CardRepositoryImplTest {
     @DisplayName("UpdateTests")
     class UpdateTests {
         @Test
-        @Disabled
         @DisplayName("The methods updateSpell() returns the spell updated")
         void updateSpellReturnsTheSpellUpdated() {
             Spell spell = new Spell(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
@@ -184,7 +183,6 @@ public class CardRepositoryImplTest {
         }
 
         @Test
-        @Disabled
         @DisplayName("The methods updateMonster() returns the monster updated")
         void updateMonsterReturnsTheMonsterUpdated() {
             Monster monster = new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
