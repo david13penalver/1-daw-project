@@ -23,65 +23,65 @@
 
         <div class="contenedor">
             <main class="container">
-                <h1>Política de Privacidad</h1>
+                <h1 th:text="|#{privacidad.titulo}|">Política de Privacidad</h1>
 
-                <h2>Bienvenido al universo de Dimentials</h2>
+                <h2 th:text="|#{privacidad.bienvenido}|">Bienvenido al universo de Dimentials</h2>
 
-                <p>
-                    Dimentials es un emocionante juego de cartas de Grupo3. En Grupo3, valoramos y
+                <p th:text="|#{privacidad.descripcion}|">
+                    Dimentials es un juego de cartas de Grupo3. En Grupo3, valoramos y
                     respetamos profundamente tu privacidad y nos comprometemos a proteger la
                     información que compartes con nosotros. Esta política de privacidad explica cómo
                     recopilamos, utilizamos y protegemos tus datos personales mientras disfrutas de
                     la experiencia de Dimentials.
                 </p>
 
-                <h3>Recopilación de información personal</h3>
+                <h3 th:text="|#{privacidad.informacion}|">Recopilación de información personal</h3>
 
-                <p>
+                <p th:text="|#{privacidad.solicitamos}|">
                     Cuando te registras en Dimentials, solicitamos cierta información personal,
                     como:
                 </p>
 
                 <ul class="list-group">
-                    <li class="list-group-item">Nombre</li>
-                    <li class="list-group-item">Dirección de correo electrónico</li>
-                    <li class="list-group-item">Fecha de nacimiento</li>
+                    <li class="list-group-item" th:text="|#{privacidad.nombre}|">Nombre</li>
+                    <li class="list-group-item" th:text="|#{privacidad.correo}|">Dirección de correo electrónico</li>
+                    <li class="list-group-item" th:text="|#{privacidad.fecha}|">Fecha de nacimiento</li>
                 </ul>
 
-                <p>
+                <p th:text="|#{privacidad.ayuda}|">
                     Esta información nos ayuda a identificarte y garantizar una experiencia de juego
                     personalizada para ti.
                 </p>
 
-                <h3>Uso de la información personal</h3>
+                <h3 th:text="|#{privacidad.uso}|">Uso de la información personal</h3>
 
-                <p>La información personal que recopilamos se utiliza para:</p>
+                <p th:text="|#{privacidad.utilizamos}|">La información personal que recopilamos se utiliza para:</p>
 
                 <ul class="list-group">
-                    <li class="list-group-item">Proporcionarte acceso al juego Dimentials</li>
-                    <li class="list-group-item">Gestionar tu cuenta</li>
-                    <li class="list-group-item">Brindarte soporte técnico</li>
-                    <li class="list-group-item">Enviarte actualizaciones sobre el juego</li>
-                    <li class="list-group-item">Comunicarte noticias importantes</li>
-                    <li class="list-group-item">Ofrecerte promociones exclusivas de Grupo3</li>
+                    <li class="list-group-item" th:text="|#{privacidad.acceso}|">Proporcionarte acceso al juego Dimentials</li>
+                    <li class="list-group-item" th:text="|#{privacidad.cuenta}|">Gestionar tu cuenta</li>
+                    <li class="list-group-item" th:text="|#{privacidad.soporte}|">Brindarte soporte técnico</li>
+                    <li class="list-group-item" th:text="|#{privacidad.actualizaciones}|">Enviarte actualizaciones sobre el juego</li>
+                    <li class="list-group-item" th:text="|#{privacidad.noticias}|">Comunicarte noticias importantes</li>
+                    <li class="list-group-item" th:text="|#{privacidad.promociones}|">Ofrecerte promociones exclusivas de Grupo3</li>
                 </ul>
 
-                <h3>Protección de la información personal</h3>
+                <h3 th:text="|#{privacidad.proteccion}|">Protección de la información personal</h3>
 
-                <p>
+                <p th:text="|#{privacidad.seguridad}|">
                     En Grupo3, implementamos medidas de seguridad robustas para proteger tus datos
                     personales contra:
                 </p>
 
                 <ul class="list-group">
-                    <li class="list-group-item">Acceso no autorizado</li>
-                    <li class="list-group-item">Divulgación</li>
-                    <li class="list-group-item">Alteración</li>
+                    <li class="list-group-item" th:text="|#{privacidad.noautorizado}|">Acceso no autorizado</li>
+                    <li class="list-group-item" th:text="|#{privacidad.divulgacion}|">Divulgación</li>
+                    <li class="list-group-item" th:text="|#{privacidad.alteracion}|">Alteración</li>
                 </ul>
 
                 <br />
 
-                <p>
+                <p th:text="|#{privacidad.cifrado}|">
                     Utilizamos tecnologías avanzadas de cifrado y seguimos las mejores prácticas de
                     seguridad de la industria para garantizar la confidencialidad y la integridad de
                     tus datos.
