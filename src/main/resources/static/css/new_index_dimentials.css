@@ -181,9 +181,6 @@ html {
     margin-top: 3rem;
 }
 
-#dimentials_index .card-info span {
-    color: var(--main-color);
-}
 
 #dimentials_index .logo span {
     color: var(--main-color);
@@ -505,7 +502,10 @@ html {
     font-size: 7vw;
 }
 
-
+#dimentials_index .card-info .card-info-blue {
+    color: var(--main-color);
+    margin-right: 1rem;
+}
 
 #dimentials_index .card-info button {
     background-color: var(--secondary-color);
