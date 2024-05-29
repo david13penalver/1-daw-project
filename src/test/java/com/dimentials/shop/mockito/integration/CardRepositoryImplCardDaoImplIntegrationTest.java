@@ -114,7 +114,7 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
         }
 
         @Test
-        @DisplayName("AddMonster: adds a new monster to the list of cards")
+        @DisplayName("AddSpell: adds a new spell to the list of cards")
         void theMethodAddSpellAddsANewSpellToTheList() {
             // Arrange
             Spell spell = new Spell();
@@ -122,6 +122,45 @@ public class CardRepositoryImplCardDaoImplIntegrationTest {
             cardRepository.addSpell(spell);
             // Assert
             verify(cardDaoMock, times(1)).addSpell(any());
+        }
+    }
+
+    @Nested
+    class Updatingtests {
+        @Test
+        @DisplayName("UpdateMonster: updates the monster in the list of cards")
+        void theMethodUpdateMonsterUpdatesTheMonsterInTheList() {
+            // Arrange
+            Monster monster = new Monster();
+            // Act
+            cardRepository.updateMonster(monster);
+            // Assert
+            verify(cardDaoMock, times(1)).updateMonster(any());
+        }
+
+        @Test
+        @DisplayName("UpdateSpell: updates the spell in the list of cards")
+        void theMethodUpdateSpellUpdatesTheSpellInTheList() {
+            // Arrange
+            Spell spell = new Spell();
+            // Act
+            cardRepository.updateSpell(spell);
+            // Assert
+            verify(cardDaoMock, times(1)).updateSpell(any());
+        }
+
+    }
+    @Nested
+    class DeletingTests {
+        @Test
+        @DisplayName("DeleteCard: deletes the card of the same id")
+        void theMethodDeleteCardDeletesTheCardInTheList() {
+            // Arrange
+            Integer id = 1;
+            // Act
+            cardRepository.deleteCard(id);
+            // Assert
+            verify(cardDaoMock, times(1)).deleteCard(any());
         }
     }
 }
