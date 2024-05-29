@@ -29,16 +29,13 @@
             </div>
             <div class="profile__data-container">
                 <div class="profile__description">
-                    <h1>Dimentials, welcome to Protosauria</h1>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi ullam
-                        ratione magnam. Quam, in sequi consequuntur atque quaerat vitae modi
-                        pariatur optio inventore corporis iste veritatis n esse minima
-                        provident.
+                    <h1 th:text="#{carddetail.title}">Dimentials, welcome to Protosauria</h1>
+                    <p >
+                        <span th:text="#{carddetail.description}">Protosauria is a powerful creature that can be found in the depths of the ocean. It is said that it has the ability to control the water and the creatures that inhabit it. It is a very rare creature and it is said that it is the guardian of the ocean.</span>
                     </p>
                 </div> 
                     <div class="profile__skills-container">
-                        <h2>Skills</h2>
+                        <h2 th:text="#{carddetail.skills}">Skills</h2>
                         <h3 th:text="|${cardDetail.id} - ${cardDetail.name} - ${cardDetail.description}|">Texto por defecto</h3>
                         
                     </div>
