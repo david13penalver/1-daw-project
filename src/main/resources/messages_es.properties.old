@@ -36,7 +36,7 @@ index.dimentials = Dimentials
 index.descripcion = Numerosos portales han comenzado a aparecer a lo largo y ancho de la Tierra. Equípate y descubre nuevas dimensiones llenas de posibilidades... y CRIATURAS.
 index.galeria = Galería
 index.contacto = Contacto
-index.visita = Visita nuestra
+index.v isita = Visita nuestra
 index.tienda = Tienda de Cartas DIMENTIALS
 index.masde = Más de
 index.cartas25 = 25 cartas
@@ -48,6 +48,18 @@ carddetail.description = Protosauria es una criatura poderosa que se puede encon
 carddetail.skills = Tácticas
 
 cardlist.nuestras = Nuestras cartas
+
+cardform.invalid = Por favor, introduce un
+cardform.nombre = Nombre
+cardform.descripcion = Descripción
+cardform.precio = Precio
+cardform.ruta = Ruta de la imagen
+cardform.ataque = Ataque
+cardform.vida = Vida
+cardform.tipoprincipal = Tipo principal
+cardform.tiposecundario = Tipo secundario
+cardform.insertar = Insertar
+
 
 
 

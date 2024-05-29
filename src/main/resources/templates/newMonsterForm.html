@@ -13,7 +13,7 @@
     <link rel="stylesheet" th:href="@{/css/menu.css}">
     <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
     <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
-    <title>Nuestras cartas</title>
+    <title th:text="#{cardlist.nuestras}">Nuestras cartas</title>
     <style> body {color: red;}</style>
 </head>
 
@@ -26,73 +26,73 @@
     <form th:action="@{/cards/new-monster}" th:method="post" class="needs-validation" novalidate>
         <!-- Campos para el nombre y descripción -->
         <div class="form-group">
-            <label for="name">Nombre:</label>
+            <label for="name" th:text="|#{cardform.nombre}:|">Nombre:</label>
             <input type="text" class="form-control" id="name" name="name" th:field="*{monster.name}" required /><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.nombre}|">
                 Please provide a name.
             </div>
         </div>
 
         <div class="form-group">
-            <label for="description">Descripción:</label>
+            <label for="description" th:text="|#{cardform.descripcion}:|">Descripción:</label>
             <textarea class="form-control" id="description" name="description" th:field="*{monster.description}" required></textarea><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                 Please provide a description.
             </div>
         </div>
 
         <!-- Campos para el precio y ruta de la imagen -->
         <div class="form-group">
-            <label for="price">Precio:</label>
+            <label for="price" th:text="|#{cardform.precio}:|">Precio:</label>
             <input type="number" step="0.01" class="form-control" id="price" name="price" th:field="*{monster.price}" required /><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.precio}|">
                 Please provide a price.
             </div>
         </div>
 
         <div class="form-group">
-            <label for="imgPath">Ruta de la imagen:</label>
+            <label for="imgPath" th:text="|#{cardform.ruta}:|">Ruta de la imagen:</label>
             <input type="text" class="form-control" id="imgPath" name="imgPath" th:field="*{monster.imgPath}" required /><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.ruta}|">
                 Please provide an image path.
             </div>
         </div>
 
         <!-- Campos para ataque y vida -->
         <div class="form-group">
-            <label for="attack">Ataque:</label>
+            <label for="attack" th:text="|#{cardform.ataque}:|">Ataque:</label>
             <input type="number" class="form-control" id="attack" name="attack" th:field="*{monster.attack}" required /><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.ataque}|">
                 Please provide an attack value.
             </div>
         </div>
 
         <div class="form-group">
-            <label for="life">Vida:</label>
+            <label for="life" th:text="|#{cardform.vida}:|">Vida:</label>
             <input type="number" class="form-control" id="life" name="life" th:field="*{monster.life}" required /><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.vida}|">
                 Please provide a life value.
             </div>
         </div>
 
         <!-- Campos para tipo principal y secundario -->
         <div class="form-group">
-            <label for="mainType">Tipo Principal:</label>
+            <label for="mainType" th:text="|#{cardform.tipoprincipal}:|">Tipo Principal:</label>
             <input type="text" class="form-control" id="mainType" name="mainType" th:field="*{monster.mainType}" required /><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tipoprincipal}|">
                 Please provide a main type.
             </div>
         </div>
 
         <div class="form-group">
-            <label for="secondaryType">Tipo Secundario:</label>
+            <label for="secondaryType" th:text="|#{cardform.tiposecundario}:|">Tipo Secundario:</label>
             <input type="text" class="form-control" id="secondaryType" name="secondaryType" th:field="*{monster.secondaryType}" required /><br>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tiposecundario}|">
                 Please provide a secondary type.
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Insertar</button>
+        <button type="submit" class="btn btn-primary" th:text="|#{cardform.insertar}|">Insertar</button>
     </form>
 </div>
     <footer th:replace="~{layouts/base :: footer}"></footer>
