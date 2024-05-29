@@ -117,20 +117,24 @@ public class CardRepositoryMock implements CardRepository {
 
     @Override
     public void deleteCard(Integer id) {
-        Card card1 = null;
-        for (Card card : cardListCardDeleted) {
+        Card cardToDelete = null;
+        for (Card card : cardList) {
             if (card.getId().equals(id)) {
-                card1 = card;
+                cardToDelete = card;
+                break;
             }
         }
-        if (card1 != null) {
-            cardListCardDeleted.remove(card1);
+        if (cardToDelete != null) {
+            cardListCardDeleted.remove(cardToDelete);
+        } else {
+            throw new IllegalArgumentException("The card does not exist");
         }
-        throw new IllegalArgumentException("The card does not exist");
     }
+
 
     @Override
     public void updateSpell(Spell spell) {
+        boolean updated = false;
         for (Card card : cardListSpellAltered) {
             if (Objects.equals(card.getId(), spell.getId())) {
                 card.setName(spell.getName());
@@ -140,27 +144,38 @@ public class CardRepositoryMock implements CardRepository {
                 if (card instanceof Spell) {
                     ((Spell) card).setMana(spell.getMana());
                 }
+                updated = true;
+                break;
             }
         }
+        if (!updated) {
             throw new IllegalArgumentException("The spell does not exist");
+        }
     }
 
-        @Override
-        public void updateMonster(Monster monster) {
-            for (Card card : cardListMonsterAltered) {
-                if (Objects.equals(card.getId(), monster.getId())) {
-                    card.setName(monster.getName());
-                    card.setDescription(monster.getDescription());
-                    card.setPrice(monster.getPrice());
-                    card.setImgPath(monster.getImgPath());
-                    if (card instanceof Monster) {
-                        ((Monster) card).setAttack(monster.getAttack());
-                        ((Monster) card).setLife(monster.getLife());
-                        ((Monster) card).setMainType(monster.getMainType());
-                        ((Monster) card).setSecondaryType(monster.getSecondaryType());
-                    }
+
+    @Override
+    public void updateMonster(Monster monster) {
+        boolean updated = false;
+        for (Card card : cardListMonsterAltered) {
+            if (Objects.equals(card.getId(), monster.getId())) {
+                card.setName(monster.getName());
+                card.setDescription(monster.getDescription());
+                card.setPrice(monster.getPrice());
+                card.setImgPath(monster.getImgPath());
+                if (card instanceof Monster) {
+                    ((Monster) card).setAttack(monster.getAttack());
+                    ((Monster) card).setLife(monster.getLife());
+                    ((Monster) card).setMainType(monster.getMainType());
+                    ((Monster) card).setSecondaryType(monster.getSecondaryType());
                 }
+                updated = true;
+                break;
             }
-            throw new IllegalArgumentException("The spell does not exist");
+        }
+        if (!updated) {
+            throw new IllegalArgumentException("The monster does not exist");
         }
     }
+
+}

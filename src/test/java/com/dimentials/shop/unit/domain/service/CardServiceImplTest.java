@@ -135,7 +135,6 @@ public class CardServiceImplTest {
     @Nested
     class udpateTests {
         @Test
-        @Disabled
         @DisplayName("The methods updateSpell() returns the spell updated")
         void updateSpellReturnsTheSpellUpdated() {
 
@@ -143,8 +142,8 @@ public class CardServiceImplTest {
                     List.of(
                             new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
                                     "Fuego", "Agua"),
-                            new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-                            new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
+                            new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                            new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
                             new Spell(4, "dario", "muchalocura", new BigDecimal(20), "dario.jpg", 20)
                     )
             );
@@ -158,15 +157,14 @@ public class CardServiceImplTest {
         }
 
         @Test
-        @Disabled
         @DisplayName("The methods updateMonster() returns the monster updated")
         void updateMonsterReturnsTheMonsterUpdated() {
             List<Card> expectedList2 = new ArrayList<>(
                     List.of(
                             new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
                                     "Fuego", "Agua"),
-                            new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-                            new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
+                            new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                            new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
                             new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
                     )
             );
@@ -176,7 +174,9 @@ public class CardServiceImplTest {
 
             cardRepository.updateMonster(monster);
 
-            assertEquals(expectedList2, cardRepository.findAll());
+            List<Card> resultList = CardRepositoryMock.getCardListMonsterAltered();
+
+            assertEquals(expectedList2, resultList);
         }
 
         @Test
@@ -201,7 +201,6 @@ public class CardServiceImplTest {
     @Nested
     class deleteTests {
         @Test
-        @Disabled
         @DisplayName("The methods deleteCard() returns the monster deleted")
         void deleteCardReturnsTheMonsterDeleted() {
             List<Card> cardList = new ArrayList<>(
