@@ -30,30 +30,30 @@ public class CardRepositoryImpl implements CardRepository {
     }
 
     @Override
-    public Monster addMonster(Monster monster) {
+    public void addMonster(Monster monster) {
 
-        return CardMapper.toMonster(cardDao.addMonster(CardMapper.toMonsterEntity(monster)));
+        cardDao.addMonster(CardMapper.toMonsterEntity(monster));
     }
 
     @Override
-    public Spell addSpell(Spell spell) {
-        return CardMapper.toSpell(cardDao.addSpell(CardMapper.toSpellEntity(spell)));
+    public void addSpell(Spell spell) {
+        cardDao.addSpell(CardMapper.toSpellEntity(spell));
 
     }
 
     @Override
-    public Card deleteCard(Integer id) {
-        return CardMapper.toCard(cardDao.deleteCard(id));
+    public void deleteCard(Integer id) {
+        cardDao.deleteCard(id);
     }
 
     @Override
-    public Spell updateSpell(Spell spell) {
-        return CardMapper.toSpell(cardDao.updateSpell(CardMapper.toSpellEntity(spell)));
+    public void updateSpell(Spell spell) {
+        cardDao.updateSpell(CardMapper.toSpellEntity(spell));
     }
 
     @Override
-    public Monster updateMonster(Monster monster) {
-        return CardMapper.toMonster(cardDao.updateMonster(CardMapper.toMonsterEntity(monster)));
+    public void updateMonster(Monster monster) {
+        cardDao.updateMonster(CardMapper.toMonsterEntity(monster));
     }
 
 }

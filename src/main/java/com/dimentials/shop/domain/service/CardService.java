@@ -11,13 +11,13 @@ public interface CardService {
 
     Card findById(Integer id);
 
-    Monster addMonster(Monster monster);
+    void addMonster(Monster monster);
 
-    Spell addSpell(Spell spell);
+    void addSpell(Spell spell);
 
-    Card deleteCard(Integer id);
+    void deleteCard(Integer id);
 
-    Spell updateSpell(Spell spell);
+    void updateSpell(Spell spell);
 
-    Monster updateMonster(Monster monster);
+    void updateMonster(Monster monster);
 }

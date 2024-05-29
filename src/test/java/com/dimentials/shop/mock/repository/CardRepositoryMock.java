@@ -9,6 +9,8 @@ import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.domain.entity.Monster;
 import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
+import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
+import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 import com.dimentials.shop.persistence.repository.CardRepository;
 
 public class CardRepositoryMock implements CardRepository {
@@ -22,6 +24,67 @@ public class CardRepositoryMock implements CardRepository {
                     new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
             )
     );
+    public static List<Card> cardListMonsterAdded = new ArrayList<>(
+            List.of(
+                    new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+
+    public static List<Card> getCardListMonsterAdded() {
+        return cardListMonsterAdded;
+    }
+    public static List<Card> cardListSpellAdded = new ArrayList<>(
+            List.of(
+                    new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+
+    public static List<Card> getCardListSpellAdded() {
+        return cardListSpellAdded;
+    }
+    public static List<Card> cardListMonsterAltered = new ArrayList<>(
+            List.of(
+                    new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+    public static List<Card> getCardListMonsterAltered() {
+        return cardListMonsterAltered;
+    }
+    public static List<Card> cardListSpellAltered = new ArrayList<>(
+            List.of(
+                    new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+    public static List<Card> getCardListSpellAltered() {
+        return cardListSpellAltered;
+    }
+    public static List<Card> cardListCardDeleted = new ArrayList<>(
+            List.of(
+                    new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg")
+            )
+    );
+    public static List<Card> getCardListCardDeleted() {
+        return cardListCardDeleted;
+    }
 
     @Override
     public List<Card> findAll() {
@@ -43,35 +106,32 @@ public class CardRepositoryMock implements CardRepository {
     }
 
     @Override
-    public Monster addMonster(Monster monster) {
-        cardList.add(monster);
-        return monster;
+    public void addMonster(Monster monster) {
+        cardListMonsterAdded.add(monster);
     }
 
     @Override
-    public Spell addSpell(Spell spell) {
-        cardList.add(spell);
-        return spell;
+    public void addSpell(Spell spell) {
+        cardListSpellAdded.add(spell);
     }
 
     @Override
-    public Card deleteCard(Integer id) {
+    public void deleteCard(Integer id) {
         Card card1 = null;
-        for (Card card : cardList) {
-            if (card.getId() == id) {
+        for (Card card : cardListCardDeleted) {
+            if (card.getId().equals(id)) {
                 card1 = card;
             }
         }
         if (card1 != null) {
-            cardList.remove(card1);
-            return card1;
+            cardListCardDeleted.remove(card1);
         }
         throw new IllegalArgumentException("The card does not exist");
     }
 
     @Override
-    public Spell updateSpell(Spell spell) {
-        for (Card card : cardList) {
+    public void updateSpell(Spell spell) {
+        for (Card card : cardListSpellAltered) {
             if (Objects.equals(card.getId(), spell.getId())) {
                 card.setName(spell.getName());
                 card.setDescription(spell.getDescription());
@@ -80,15 +140,14 @@ public class CardRepositoryMock implements CardRepository {
                 if (card instanceof Spell) {
                     ((Spell) card).setMana(spell.getMana());
                 }
-                return spell;
             }
         }
             throw new IllegalArgumentException("The spell does not exist");
     }
 
         @Override
-        public Monster updateMonster(Monster monster) {
-            for (Card card : cardList) {
+        public void updateMonster(Monster monster) {
+            for (Card card : cardListMonsterAltered) {
                 if (Objects.equals(card.getId(), monster.getId())) {
                     card.setName(monster.getName());
                     card.setDescription(monster.getDescription());
@@ -100,7 +159,6 @@ public class CardRepositoryMock implements CardRepository {
                         ((Monster) card).setMainType(monster.getMainType());
                         ((Monster) card).setSecondaryType(monster.getSecondaryType());
                     }
-                    return monster;
                 }
             }
             throw new IllegalArgumentException("The spell does not exist");

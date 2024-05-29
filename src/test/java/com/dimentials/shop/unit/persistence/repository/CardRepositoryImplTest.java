@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
+import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 import org.junit.jupiter.api.*;
 
@@ -109,22 +110,48 @@ public class CardRepositoryImplTest {
             @Test
             @DisplayName("The methods addMonster() returns the monster inserted")
             void addMonsterReturnsTheMonsterInserted() {
-                Monster monster = new Monster(4, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                Monster monster = new Monster(5, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
                         "Fuego", "Agua");
 
-                Monster monsterInserted = CardMapper.toMonster(cardDao.addMonster(CardMapper.toMonsterEntity(monster)));
+                cardDao.addMonster(CardMapper.toMonsterEntity(monster));
+                List<CardEntity> expectedList1 = new ArrayList<>(
+                        List.of(
+                                new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                        "Fuego", "Agua"),
+                                new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                                new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                                new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10),
+                                new MonsterEntity(5, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                        "Fuego", "Agua")
+                        )
+                );
 
-                assertEquals(monster, monsterInserted);
+                List<CardEntity> resultList = CardDaoMock.getCardEntityListMonsterAdded();
+
+                assertEquals(expectedList1, resultList);
             }
 
             @Test
             @DisplayName("The methods addSpell() returns the spell inserted")
             void addSpellReturnsTheSpellInserted() {
-                Spell spell = new Spell(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
+                Spell spell = new Spell(5, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
 
-                Spell spellInserted = CardMapper.toSpell(cardDao.addSpell(CardMapper.toSpellEntity(spell)));
+                List<CardEntity> expectedList1 = new ArrayList<>(
+                        List.of(
+                                new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                        "Fuego", "Agua"),
+                                new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                                new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                                new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10),
+                                new SpellEntity(5, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9)
+                        )
+                );
 
-                assertEquals(spell, spellInserted);
+                cardDao.addSpell(CardMapper.toSpellEntity(spell));
+
+                List<CardEntity> resultList = CardDaoMock.getCardEntityListSpellAdded();
+
+                assertEquals(expectedList1, resultList);
             }
         }
 
@@ -137,9 +164,22 @@ public class CardRepositoryImplTest {
         void updateSpellReturnsTheSpellUpdated() {
             Spell spell = new Spell(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9);
 
-            Spell spellUpdated =CardMapper.toSpell(cardDao.updateSpell(CardMapper.toSpellEntity(spell)));
+            List<CardEntity> expectedList1 = new ArrayList<>(
+                    List.of(
+                            new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                    "Fuego", "Agua"),
+                            new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                            new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                            new SpellEntity(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9)
 
-            assertEquals(spell, spellUpdated);
+                    )
+            );
+
+            cardDao.updateSpell(CardMapper.toSpellEntity(spell));
+
+            List<CardEntity> resultList = CardDaoMock.getCardEntityListSpellAltered();
+
+            assertEquals(expectedList1, resultList);
         }
 
         @Test
@@ -148,9 +188,22 @@ public class CardRepositoryImplTest {
             Monster monster = new Monster(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
                         "Fuego", "Agua");
 
-            Monster monsterUpdated = CardMapper.toMonster(cardDao.updateMonster(CardMapper.toMonsterEntity(monster)));
+            List<CardEntity> expectedList1 = new ArrayList<>(
+                    List.of(
+                            new MonsterEntity(1, "cuerk", "Monstruo despiadado", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                    "Fuego", "Agua"),
+                            new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                            new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                            new SpellEntity(4, "dario", "mala locura", new BigDecimal(13), "Dario.jpg", 9)
 
-            assertEquals(monster, monsterUpdated);
+                    )
+            );
+
+            cardDao.updateMonster(CardMapper.toMonsterEntity(monster));
+
+            List<CardEntity> resultList = CardDaoMock.getCardEntityListMonsterAltered();
+
+            assertEquals(expectedList1, resultList);
         }
 
         @Test
@@ -185,25 +238,21 @@ public class CardRepositoryImplTest {
                 List<CardEntity> cardEntityListExpected = new ArrayList<>(
                         List.of(
                                 new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
-                                new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
-                                new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+                                new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg")
+
                         )
                 );
 
-                CardMapper.toCard(cardDao.deleteCard(1));
+                cardDao.deleteCard(1);
 
-                List<CardEntity> cardGot = cardDao.findAll();
+                List<CardEntity> cardResult = CardDaoMock.getCardEntityListCardDeleted();
 
-                assertEquals(cardEntityListExpected, cardGot);
+                assertEquals(cardEntityListExpected, cardResult);
             }
 
             @Test
             @DisplayName("The methods deleteCard() but with ID not found")
             void deleteCardButWithIdNotFound() {
-                //Card card = new Card(10, "Nebulsmokar", "Monstruo", new BigDecimal(1), "Nebulsmokar.jpg");
-
-                //Card cardDeleted = CardMapper.toCard(cardDao.deleteCard(10));
-
                 assertThrows(IllegalArgumentException.class, () -> cardDao.deleteCard(10));
             }
         }

@@ -65,7 +65,7 @@ public class CardDaoJdbc implements CardDao {
 //        return null;
 //    }
 
-    public MonsterEntity addMonster(MonsterEntity monsterEntity) {
+    public void addMonster(MonsterEntity monsterEntity) {
         try {
             RawSql.insert(
                     "INSERT into card (name_card, description_es, description_en, price, image) VALUES (?, ?, ?, ?, ?)",
@@ -79,11 +79,11 @@ public class CardDaoJdbc implements CardDao {
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-        return null;
+
     }
 
     @Override
-    public SpellEntity addSpell(SpellEntity spellEntity) {
+    public void addSpell(SpellEntity spellEntity) {
         try {
             RawSql.insert(
                     "INSERT into card (name_card, description, price, image) VALUES (?, ?, ?, ?); INSERT into spell (mana) VALUES (SELECT LAST_INSERT_ID(), ?)",
@@ -92,26 +92,24 @@ public class CardDaoJdbc implements CardDao {
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-        return null;
 
     }
 
     
 
     @Override
-    public CardEntity deleteCard(Integer id) {
+    public void deleteCard(Integer id) {
         // saca los datos de la base de datos y usa rawsql
         try {
             RawSql.delete("DELETE FROM card WHERE id_card = ?", List.of(id));
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-        return null;
 
     }
 
     @Override
-    public SpellEntity updateSpell(SpellEntity spellEntity) {
+    public void updateSpell(SpellEntity spellEntity) {
         // update card
         try {
             RawSql.update(
@@ -125,11 +123,10 @@ public class CardDaoJdbc implements CardDao {
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-        return null;
     }
 
     @Override
-    public MonsterEntity updateMonster(MonsterEntity monsterEntity) {
+    public void updateMonster(MonsterEntity monsterEntity) {
         // saca los datos de la base de datos y usa rawsql
         try {
             RawSql.update(
@@ -147,6 +144,5 @@ public class CardDaoJdbc implements CardDao {
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-        return null;
     }
 }

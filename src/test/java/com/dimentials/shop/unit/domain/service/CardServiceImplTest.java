@@ -6,6 +6,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.dimentials.shop.mock.repository.CardDaoMock;
+import com.dimentials.shop.persistence.dao.entity.CardEntity;
+import com.dimentials.shop.persistence.repository.mapper.CardMapper;
 import org.junit.jupiter.api.*;
 
 import com.dimentials.shop.domain.entity.Card;
@@ -86,20 +89,46 @@ public class CardServiceImplTest {
             Monster card = new Monster(5, "Nebulsmokar2", "Monstruo bla bla", new BigDecimal(10), "Nebulsmokar.jpg", 10,
                     10, "Fuego", "Agua");
 
-            Monster cardAdded = cardRepository.addMonster(card);
+            cardRepository.addMonster(card);
+            List<Card> expectedList1 = new ArrayList<>(
+                    List.of(
+                            new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                    "Fuego", "Agua"),
+                            new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                            new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                            new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10),
+                            new Monster(5, "Nebulsmokar2", "Monstruo bla bla", new BigDecimal(10), "Nebulsmokar.jpg", 10,
+                                    10, "Fuego", "Agua")
+                    )
+            );
 
-            assertEquals(card, cardAdded);
+            List<Card> resultList = CardRepositoryMock.getCardListMonsterAdded();
+
+            assertEquals(expectedList1, resultList);
         }
 
         @Test
         @DisplayName("The methods addSpell() returns the spell inserted")
 
         void addSpellReturnsTheSpellInserted() {
-            Spell spell = new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10);
+            Spell spell = new Spell(5, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10);
 
-            Spell spellAdded = cardRepository.addSpell(spell);
+            cardRepository.addSpell(spell);
 
-            assertEquals(spell, spellAdded);
+            List<Card> expectedList1 = new ArrayList<>(
+                    List.of(
+                            new Monster(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                                    "Fuego", "Agua"),
+                            new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                            new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                            new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10),
+                            new Spell(5, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+                    )
+            );
+
+            List<Card> resultList = CardRepositoryMock.getCardListSpellAdded();
+
+            assertEquals(expectedList1, resultList);
         }
     }
 
@@ -122,7 +151,9 @@ public class CardServiceImplTest {
 
             cardRepository.updateSpell(spell);
 
-            assertEquals(expectedList2, cardRepository.findAll());
+            List<Card> resultList = CardRepositoryMock.getCardListSpellAltered();
+
+            assertEquals(expectedList2, resultList);
         }
 
         @Test
@@ -173,15 +204,16 @@ public class CardServiceImplTest {
         void deleteCardReturnsTheMonsterDeleted() {
             List<Card> cardList = new ArrayList<>(
                 List.of(
-                    new Card(2, "Lizzar", "Monstruito", "Lizzar.jpg"),
-                        new Card(3, "Frogan", "Monstruitillo", "Frogan.jpg"),
-                        new Spell(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)));
+                        new Card(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                        new Card(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg")
+                )
+            );
 
-            Card card = new Card(1, "Nebulsmokar", "Monstruo", "Nebulsmokar.jpg");
-            cardRepository.deleteCard(card.getId());
-            List<Card> cardGot = cardRepository.findAll();
+            cardRepository.deleteCard(1);
 
-            assertEquals(cardList, cardGot);
+            List<Card> resultList = CardRepositoryMock.getCardListCardDeleted();
+
+            assertEquals(cardList, resultList);
         }
 
         @Test

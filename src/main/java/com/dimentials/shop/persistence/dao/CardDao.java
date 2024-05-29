@@ -12,13 +12,13 @@ public interface CardDao {
 
     CardEntity findById(Integer id);
 
-    MonsterEntity addMonster(MonsterEntity monsterEntity);
+    void addMonster(MonsterEntity monsterEntity);
 
-    SpellEntity addSpell(SpellEntity spellEntity);
+    void addSpell(SpellEntity spellEntity);
 
-    CardEntity deleteCard(Integer id);
+    void deleteCard(Integer id);
 
-    SpellEntity updateSpell(SpellEntity spellEntity);
+    void updateSpell(SpellEntity spellEntity);
 
-    MonsterEntity updateMonster(MonsterEntity monsterEntity);
+    void updateMonster(MonsterEntity monsterEntity);
 }

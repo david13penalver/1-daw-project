@@ -44,7 +44,7 @@ public class CardController {
             @RequestParam String mainType, @RequestParam(required = false) String secondaryType, Model model) {
         Monster monster = new Monster(null, name, description, new BigDecimal(price), imgPath, Integer.parseInt(attack),
                 Integer.parseInt(life), mainType, secondaryType);
-        model.addAttribute("monster", cardService.addMonster(monster));
+        cardService.addMonster(monster);
         return "redirect:/cards";
     }
 
@@ -58,7 +58,7 @@ public class CardController {
     public String addSpell(@RequestParam String name, @RequestParam String description, @RequestParam String price,
             @RequestParam String imgPath, @RequestParam String mana, Model model) {
         Spell spell = new Spell(null, name, description, new BigDecimal(price), imgPath, Integer.parseInt(mana));
-        model.addAttribute("spell", cardService.addSpell(spell));
+        cardService.addSpell(spell);
         return "redirect:/cards";
     }
 
@@ -70,7 +70,7 @@ public class CardController {
 
     @DeleteMapping("/card-deletion")
     public String deleteCard(@RequestParam int id, Model model) {
-        model.addAttribute("card", cardService.deleteCard(id));
+        cardService.deleteCard(id);
         return "redirect:/cards";
     }
 
@@ -84,7 +84,7 @@ public class CardController {
     @PutMapping("/update-spell")
     public String updateSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer mana, Model model) {
         Spell spell = new Spell(id,name,description,price,imgPath,mana);
-        model.addAttribute("card", cardService.updateSpell(spell));
+        cardService.updateSpell(spell);
         return "redirect:/cards";
     }
 
@@ -98,7 +98,7 @@ public class CardController {
     @PutMapping("/update-monster")
     public String updateMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description, @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer attack, @RequestParam Integer life, @RequestParam String mainType, @RequestParam String secondaryType, Model model) {
         Monster monster = new Monster(id,name,description,price,imgPath,attack,life,mainType,secondaryType);
-        model.addAttribute("monster", cardService.updateMonster(monster));
+        cardService.updateMonster(monster);
         return "redirect:/cards";
     }
 }

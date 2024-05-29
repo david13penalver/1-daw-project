@@ -37,19 +37,18 @@ public class CardDaoImpl implements CardDao {
     }
 
     @Override
-    public MonsterEntity addMonster(MonsterEntity monsterEntity) {
+    public void addMonster(MonsterEntity monsterEntity) {
         cardEntityList.add(monsterEntity);
-        return monsterEntity;
+
     }
 
     @Override
-    public SpellEntity addSpell(SpellEntity spellEntity) {
+    public void addSpell(SpellEntity spellEntity) {
         cardEntityList.add(spellEntity);
-        return spellEntity;
     }
 
     @Override
-    public CardEntity deleteCard(Integer id) {
+    public void deleteCard(Integer id) {
         CardEntity cardToRemove = null;
         for (CardEntity cardEntity : cardEntityList) {
             if (cardEntity.getId() == id) {
@@ -60,35 +59,30 @@ public class CardDaoImpl implements CardDao {
         if (cardToRemove != null) {
             cardEntityList.remove(cardToRemove);
         }
-        return cardToRemove;
     }
 
     @Override
-    public SpellEntity updateSpell(SpellEntity spellEntity) {
+    public void updateSpell(SpellEntity spellEntity) {
         for (CardEntity card : cardEntityList) {
             if (card.getId() == spellEntity.getId()) {
                 card.setName(spellEntity.getName());
                 card.setDescription(spellEntity.getDescription());
                 card.setPrice(spellEntity.getPrice());
                 card.setImgPath(spellEntity.getImgPath());
-                return spellEntity;
             }
         }
-        return null;
     }
 
     @Override
-    public MonsterEntity updateMonster(MonsterEntity monsterEntity) {
+    public void updateMonster(MonsterEntity monsterEntity) {
         for (CardEntity card : cardEntityList) {
             if (card.getId() == monsterEntity.getId()) {
                 card.setName(monsterEntity.getName());
                 card.setDescription(monsterEntity.getDescription());
                 card.setPrice(monsterEntity.getPrice());
                 card.setImgPath(monsterEntity.getImgPath());
-                return monsterEntity;
             }
         }
-        return null;
     }
 
 }

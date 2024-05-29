@@ -27,27 +27,27 @@ public class CardServiceImpl implements CardService {
     }
 
     @Override
-    public Monster addMonster(Monster monster) {
-        return cardRepository.addMonster(monster);
+    public void addMonster(Monster monster) {
+        cardRepository.addMonster(monster);
     }
 
     @Override
-    public Spell addSpell(Spell spell) {
-        return cardRepository.addSpell(spell);
+    public void addSpell(Spell spell) {
+         cardRepository.addSpell(spell);
     }
 
     @Override
-    public Card deleteCard(Integer id) {
-        return cardRepository.deleteCard(id);
+    public void deleteCard(Integer id) {
+         cardRepository.deleteCard(id);
     }
 
     @Override
-    public Spell updateSpell(Spell spell) {
-        return cardRepository.updateSpell(spell);
+    public void updateSpell(Spell spell) {
+         cardRepository.updateSpell(spell);
     }
 
     @Override
-    public Monster updateMonster(Monster monster) {
-        return cardRepository.updateMonster(monster);
+    public void updateMonster(Monster monster) {
+         cardRepository.updateMonster(monster);
     }
 }

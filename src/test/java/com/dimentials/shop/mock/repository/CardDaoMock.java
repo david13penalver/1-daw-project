@@ -24,7 +24,67 @@ public class CardDaoMock implements CardDao {
                     new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
             )
     );
-    private Integer id;
+    public static List<CardEntity> cardEntityListMonsterAdded = new ArrayList<>(
+            List.of(
+                    new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+
+    public static List<CardEntity> getCardEntityListMonsterAdded() {
+        return cardEntityListMonsterAdded;
+    }
+    public static List<CardEntity> cardEntityListSpellAdded = new ArrayList<>(
+            List.of(
+                    new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+
+    public static List<CardEntity> getCardEntityListSpellAdded() {
+        return cardEntityListSpellAdded;
+    }
+    public static List<CardEntity> cardEntityListMonsterAltered = new ArrayList<>(
+            List.of(
+                    new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+    public static List<CardEntity> getCardEntityListMonsterAltered() {
+        return cardEntityListMonsterAltered;
+    }
+    public static List<CardEntity> cardEntityListSpellAltered = new ArrayList<>(
+            List.of(
+                    new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg"),
+                    new SpellEntity(4, "borj", "locura", new BigDecimal(10), "Borja.jpg", 10)
+            )
+    );
+    public static List<CardEntity> getCardEntityListSpellAltered() {
+        return cardEntityListSpellAltered;
+    }
+    public static List<CardEntity> cardEntityListCardDeleted = new ArrayList<>(
+            List.of(
+                    new MonsterEntity(1, "Nebulsmokar", "Monstruo", new BigDecimal(7), "binchilling.jpg", 6, 7,
+                            "Fuego", "Agua"),
+                    new CardEntity(2, "Lizzar", "Monstruito", new BigDecimal(7), "Lizzar.jpg"),
+                    new CardEntity(3, "Frogan", "Monstruitillo", new BigDecimal(7), "Frogan.jpg")
+            )
+    );
+    public static List<CardEntity> getCardEntityListCardDeleted() {
+        return cardEntityListCardDeleted;
+    }
 
     @Override
     public List<CardEntity> findAll() {
@@ -42,38 +102,35 @@ public class CardDaoMock implements CardDao {
     }
 
     @Override
-    public MonsterEntity addMonster(MonsterEntity monsterEntity) {
+    public void addMonster(MonsterEntity monsterEntity) {
 
-        cardEntityList.add(monsterEntity);
-        return monsterEntity;
+        cardEntityListMonsterAdded.add(monsterEntity);
     }
 
     @Override
-    public SpellEntity addSpell(SpellEntity spellEntity) {
-        cardEntityList.add(spellEntity);
-        return spellEntity;
+    public void addSpell(SpellEntity spellEntity) {
+        cardEntityListSpellAdded.add(spellEntity);
     }
 
     @Override
-    public CardEntity deleteCard(Integer id) {
+    public void deleteCard(Integer id) {
         CardEntity card1 = null;
-        for (CardEntity card : cardEntityList) {
+        for (CardEntity card : cardEntityListCardDeleted) {
             if (card.getId().equals(id)) {
                 card1 = card;
             }
         }
         if (card1 != null) {
-            cardEntityList.remove(card1);
+            cardEntityListCardDeleted.remove(card1);
         } else {
             throw new IllegalArgumentException("The card does not exist");
         }
-        return card1;
     }
 
     @Override
-    public SpellEntity updateSpell(SpellEntity spellEntity) {
+    public void updateSpell(SpellEntity spellEntity) {
 
-        for (CardEntity card : cardEntityList) {
+        for (CardEntity card : cardEntityListSpellAltered) {
             if (Objects.equals(card.getId(), spellEntity.getId())) {
                 card.setName(spellEntity.getName());
                 card.setDescription(spellEntity.getDescription());
@@ -82,15 +139,14 @@ public class CardDaoMock implements CardDao {
                 if (card instanceof SpellEntity) {
                     ((SpellEntity) card).setMana(spellEntity.getMana());
                 }
-                return spellEntity;
             }
         }
         throw new IllegalArgumentException("The spell does not exist");
     }
 
     @Override
-    public MonsterEntity updateMonster(MonsterEntity monsterEntity) {
-        for (CardEntity card : cardEntityList) {
+    public void updateMonster(MonsterEntity monsterEntity) {
+        for (CardEntity card : cardEntityListMonsterAltered) {
             if (Objects.equals(card.getId(), monsterEntity.getId())) {
                 card.setName(monsterEntity.getName());
                 card.setDescription(monsterEntity.getDescription());
@@ -102,7 +158,6 @@ public class CardDaoMock implements CardDao {
                     ((MonsterEntity) card).setMainType(monsterEntity.getMainType());
                     ((MonsterEntity) card).setSecondaryType(monsterEntity.getSecondaryType());
                 }
-                return monsterEntity;
             }
         }
         throw new IllegalArgumentException("The spell does not exist");
