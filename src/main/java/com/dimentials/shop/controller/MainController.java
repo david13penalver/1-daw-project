@@ -71,9 +71,9 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/signup")
-    public String signup() {
-        return "signup";
+    @GetMapping("/proximamente")
+    public String proximamente() {
+        return "proximamente";
     }
 
 }

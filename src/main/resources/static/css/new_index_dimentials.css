@@ -11,6 +11,7 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 :root {
     --bg-color: #080808;
     --second-bg-color: #131313;
@@ -19,10 +20,12 @@
     --secondary-color: #e54fad;
 }
 
+
 html {
     font-size: 100%;
     overflow-x: hidden;
 }
+
 
 /* -----------------------------------------------------------
                                                                 
@@ -117,29 +120,6 @@ footer .dimentials-logo {
 
 #dimentials_index .dimentials-navbar-justify {
     justify-content: space-between;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
-}
-
-:root {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: white;
-    --main-color: #00ffee;
-}
-
-html {
-    font-size: 100%;
-    overflow-x: hidden;
 }
 
 .dimentials-navbar-justify {
@@ -251,7 +231,6 @@ html {
 }
 
 #dimentials_index .btn-group.dim-btn-index-home {
-    /* Si pongo dos clases pegadas es como si fuera un AND */
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -537,16 +516,30 @@ html {
                                                    ██▀        
 ------------------------------------------------------------*/
 
+#dim-card-gallery {
+    
+}
+
+
+#dim-card-gallery .hero-gallery img{
+    filter: drop-shadow(30px 10px 4px #964B00);
+}
+
 
 #dim-card-gallery #gallery_cards{
     margin: 5vh;
 }
 
-#dim-card-gallery #gallery_cards img {
+#dim-card-gallery .tiltcard{
+    margin-bottom: 2vh;
+}
+
+#dim-card-gallery #gallery_cards .tiltcard img{
     width: 100%;
     height: auto;
     border-radius: 5px;
     cursor: pointer;
+    filter: drop-shadow(9px 9px 8px #2613007f);
 }
 
 #dim-card-gallery #img-active {
@@ -576,13 +569,14 @@ html {
 }
 
 #dim-card-gallery #zoom-card-container {
-        width: 80vw;
-        padding: 2px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        border-radius: 5px;
-        margin: 15vh auto 0;
+    width: fit-content;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+    margin: 10vh auto 0;
+    height: 70%;
 }
 
 #dim-card-gallery #zoom-card-container .tiltcard img {
@@ -623,25 +617,26 @@ html {
 
 #dim-card-gallery #button__view-more {
     position: absolute;
-    bottom: 10%;
-    left: 10%;
+    bottom: -10%;
+    left: 0;
 }
 
 #dim-card-gallery #button__shop {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
+    bottom: -10%;
+    right: 0;
 }
 
 /*--------------------------------------------------------------
                                                    
-▀████▀███▄   ▀███▀███▀▀▀██▄ ▀███▀▀▀███▀███▀   ▀██▀ 
-  ██   ███▄    █   ██    ▀██▄ ██    ▀█  ███▄  ▄█   
-  ██   █ ███   █   ██     ▀██ ██   █     ▀██▄█▀    
-  ██   █  ▀██▄ █   ██      ██ ██████       ███     Es el about
-  ██   █   ▀██▄█   ██     ▄██ ██   █  ▄  ▄█▀▀██▄   
-  ██   █     ███   ██    ▄██▀ ██     ▄█ ▄█   ▀██▄  
-▄████▄███▄    ██ ▄████████▀ ▄████████████▄▄  ▄▄███▄
+               ▄▄                                  
+      ██      ▄██                             ██   
+     ▄██▄      ██                             ██   
+    ▄█▀██▄     ██▄████▄   ▄██▀██▄▀███  ▀███ ██████ 
+   ▄█  ▀██     ██    ▀██ ██▀   ▀██ ██    ██   ██   
+   ████████    ██     ██ ██     ██ ██    ██   ██   
+  █▀      ██   ██▄   ▄██ ██▄   ▄██ ██    ██   ██   
+▄███▄   ▄████▄ █▀█████▀   ▀█████▀  ▀████▀███▄ ▀████
                                                    
                                                    
 ------------------------------------------------------------*/
@@ -671,16 +666,17 @@ html {
 
 
 /*--------------------------------------------------------------
-                                                   
-▀████▀███▄   ▀███▀███▀▀▀██▄ ▀███▀▀▀███▀███▀   ▀██▀ 
-  ██   ███▄    █   ██    ▀██▄ ██    ▀█  ███▄  ▄█   
-  ██   █ ███   █   ██     ▀██ ██   █     ▀██▄█▀    
-  ██   █  ▀██▄ █   ██      ██ ██████       ███      Es la tienda
-  ██   █   ▀██▄█   ██     ▄██ ██   █  ▄  ▄█▀▀██▄   
-  ██   █     ███   ██    ▄██▀ ██     ▄█ ▄█   ▀██▄  
-▄████▄███▄    ██ ▄████████▀ ▄████████████▄▄  ▄▄███▄
-                                                   
-                                                   
+
+             ▄▄                              ▄▄          
+███▀▀██▀▀███ ██                            ▀███          
+█▀   ██   ▀█                                 ██          
+     ██    ▀███   ▄▄█▀██  ▀████████▄    ▄█▀▀███  ▄█▀██▄  
+     ██      ██  ▄█▀   ██   ██    ██  ▄██    ██ ██   ██  
+     ██      ██  ██▀▀▀▀▀▀   ██    ██  ███    ██  ▄█████  
+     ██      ██  ██▄    ▄   ██    ██  ▀██    ██ ██   ██  
+   ▄████▄  ▄████▄ ▀█████▀ ▄████  ████▄ ▀████▀███▄████▀██▄
+                                                           
+                                                           
 ------------------------------------------------------------*/
 
 
@@ -850,30 +846,17 @@ html {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*--------------------------------------------------------------
                                                    
-▀████▀███▄   ▀███▀███▀▀▀██▄ ▀███▀▀▀███▀███▀   ▀██▀ 
-  ██   ███▄    █   ██    ▀██▄ ██    ▀█  ███▄  ▄█   
-  ██   █ ███   █   ██     ▀██ ██   █     ▀██▄█▀    
-  ██   █  ▀██▄ █   ██      ██ ██████       ███     
-  ██   █   ▀██▄█   ██     ▄██ ██   █  ▄  ▄█▀▀██▄   
-  ██   █     ███   ██    ▄██▀ ██     ▄█ ▄█   ▀██▄  
-▄████▄███▄    ██ ▄████████▀ ▄████████████▄▄  ▄▄███▄
-                                                   
+                                       ▄▄                                                    
+▀███▀▀▀██▄                             ██                                       ██           
+  ██   ▀██▄                                                                     ██           
+  ██   ▄██▀███▄███  ▄██▀██▄▀██▀   ▀██▀███ ▀████████▄█████▄  ▄█▀██▄ ▀████████▄ ██████  ▄▄█▀██ 
+  ███████   ██▀ ▀▀ ██▀   ▀██ ▀██ ▄█▀   ██   ██    ██    ██ ██   ██   ██    ██   ██   ▄█▀   ██
+  ██        ██     ██     ██   ███     ██   ██    ██    ██  ▄█████   ██    ██   ██   ██▀▀▀▀▀▀
+  ██        ██     ██▄   ▄██ ▄█▀ ██▄   ██   ██    ██    ██ ██   ██   ██    ██   ██   ██▄    ▄
+▄████▄    ▄████▄    ▀█████▀▄██▄   ▄██▄████▄████  ████  ████▄████▀██▄████  ████▄ ▀████ ▀█████▀
+
                                                    
 ------------------------------------------------------------*/
 
@@ -886,6 +869,9 @@ html {
     #dimentials_index .social-icons a {
         font-size: 60px;
     }
+
+    /*----------------------------- Card Gallery --------------------- */
+
 
 }
 
@@ -927,9 +913,6 @@ html {
 
 /*----------------------------- Card Gallery --------------------- */
 
-    #dim-card-gallery #zoom-card-container {
-        width: 35vw;
-    }
 }
 
 /* Col-lg */
@@ -959,10 +942,20 @@ html {
         margin-top: 0;
         font-size: 100px;
     }
+
+   /*----------------------------- Card Gallery --------------------- */
+
+
 }
+    
+
 
 /* Col-xl */
 @media (min-width: 1200px) {
+
+
+    /*----------------------------- Card Gallery --------------------- */
+
 }
 
 /* Col-xxl */
@@ -974,5 +967,9 @@ html {
     #dimentials_index .home-content h1 {
         font-size: 98px;
     }
+
+     /*----------------------------- Card Gallery --------------------- */
+
+
 }
 
