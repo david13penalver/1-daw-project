@@ -29,9 +29,9 @@ public class DatabaseConnection {
     private final Connection connection;
 
     DatabaseConnection() {
-        dbUrl = AppPropertiesReader.getProperty("app.datasource.url");
-        dbUser = AppPropertiesReader.getProperty("app.datasource.username");
-        dbPassword = AppPropertiesReader.getProperty("app.datasource.password");
+        dbUrl = AppPropertiesReader.getProperty("dimentials.datasource.url");
+        dbUser = AppPropertiesReader.getProperty("dimentials.datasource.username");
+        dbPassword = AppPropertiesReader.getProperty("dimentials.datasource.password");
 
         log.info("Establint la connexió amb la base de dades...");
         try {
