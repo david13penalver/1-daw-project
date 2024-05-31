@@ -19,6 +19,12 @@ public class CardEntity {
         this.imgPath = imgPath;
     }
 
+    public CardEntity(Integer id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+
     public CardEntity() {
 
     }

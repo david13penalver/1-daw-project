@@ -2,9 +2,9 @@ CREATE TABLE card (
                       id_card INT PRIMARY KEY AUTO_INCREMENT,
                       name_card VARCHAR(50) not null,
                       description_es VARCHAR(500) not null,
-                      description_en VARCHAR(500) not null,
-                      price DECIMAL(10, 2) not null,
-                      image VARCHAR(200) not null
+                        price VARCHAR(500) not null,
+                        image VARCHAR(500) not null
+
 );
 
 -- Monsters table

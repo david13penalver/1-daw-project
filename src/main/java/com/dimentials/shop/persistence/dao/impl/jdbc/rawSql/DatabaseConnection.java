@@ -28,7 +28,7 @@ public class DatabaseConnection {
     @Getter
     private final Connection connection;
 
-    private DatabaseConnection () {
+    DatabaseConnection() {
         dbUrl = AppPropertiesReader.getProperty("app.datasource.url");
         dbUser = AppPropertiesReader.getProperty("app.datasource.username");
         dbPassword = AppPropertiesReader.getProperty("app.datasource.password");
