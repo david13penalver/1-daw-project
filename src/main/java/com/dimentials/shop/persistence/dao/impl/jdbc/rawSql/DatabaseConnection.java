@@ -63,14 +63,14 @@ public class DatabaseConnection {
 
     public void executeScript(String scriptPath) {
         try {
-            ScriptRunner scriptRunner = new ScriptRunner(connection, false, false);
+            ScriptRunner scriptRunner = new ScriptRunner(connection);
 
             InputStream scriptStream = getClass().getClassLoader().getResourceAsStream(scriptPath);
             if (scriptStream == null)
                 throw new RuntimeException("Script not found: " + scriptPath);
 
             scriptRunner.runScript(new InputStreamReader(scriptStream));
-        } catch (IOException | SQLException e) {
+        } catch (RuntimeException e) {
             log.error(String.format("Error executing script %s:\n    %s\n", scriptPath, e.getMessage()));
             throw new RuntimeException(e);
         }
