@@ -127,4 +127,18 @@ public class CardMapper {
             return new SpellEntity(id, name, description, price, imgPath, mana);
         }
     }
+    public static SpellEntity toSpellEntityLanguages(Spell spell) {
+        if (spell == null)
+            return null;
+        else {
+            Integer id = spell.getId();
+            String name = spell.getName();
+            String description_es = spell.getDescription_es();
+            String description_en = spell.getDescription_en();
+            String imgPath = spell.getImgPath();
+            BigDecimal price = spell.getPrice();
+            Integer mana = spell.getMana();
+            return new SpellEntity(id, name, description_es, description_en, price, imgPath, mana);
+        }
+    }
 }

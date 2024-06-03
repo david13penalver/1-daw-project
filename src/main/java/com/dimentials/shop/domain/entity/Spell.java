@@ -12,6 +12,11 @@ public class Spell extends Card {
         this.mana = mana;
     }
 
+    public Spell(Integer id, String name, String description_es, String getDescription_en, BigDecimal price, String imgPath, Integer mana) {
+        super(id, name, description_es, getDescription_en, price, imgPath);
+        this.mana = mana;
+    }
+
     public Spell(Integer mana) {
         this.mana = mana;
     }

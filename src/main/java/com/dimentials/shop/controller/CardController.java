@@ -55,9 +55,9 @@ public class CardController {
     }
 
     @PostMapping("/new-spell")
-    public String addSpell(@RequestParam String name, @RequestParam String description, @RequestParam String price,
+    public String addSpell(@RequestParam String name, @RequestParam String description_es, @RequestParam String description_en, @RequestParam String price,
             @RequestParam String imgPath, @RequestParam String mana, Model model) {
-        Spell spell = new Spell(null, name, description, new BigDecimal(price), imgPath, Integer.parseInt(mana));
+        Spell spell = new Spell(null, name, description_es, description_en, new BigDecimal(price), imgPath, Integer.parseInt(mana));
         cardService.addSpell(spell);
         return "redirect:/cards";
     }

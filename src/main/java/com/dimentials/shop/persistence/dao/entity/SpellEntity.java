@@ -19,4 +19,18 @@ public class SpellEntity extends CardEntity{
         super(id, name, description, price, imgPath);
         this.mana = mana;
     }
+
+    public SpellEntity(Integer id, String name, String description_es, String getDescription_en, BigDecimal price, String imgPath, Integer mana) {
+        super(id, name, description_es, getDescription_en, imgPath, price);
+        this.mana = mana;
+    }
+
+    public SpellEntity(Integer id, String name, String description, Integer mana) {
+        super(id, name, description);
+        this.mana = mana;
+    }
+
+    public SpellEntity(Integer mana) {
+        this.mana = mana;
+    }
 }

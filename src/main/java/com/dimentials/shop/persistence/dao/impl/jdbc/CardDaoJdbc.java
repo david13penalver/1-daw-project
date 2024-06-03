@@ -81,10 +81,13 @@ public class CardDaoJdbc implements CardDao {
     @Override
     public void addSpell(SpellEntity spellEntity) {
         try {
+            Object id = RawSql.insert(
+                    "INSERT into card (name_card, description_es, description_en, price, image) VALUES (?, ?, ?, ?, ?);",
+                    List.of(spellEntity.getName(), spellEntity.getDescription_es(), spellEntity.getDescription_en(), spellEntity.getPrice(),
+                            spellEntity.getImgPath()));
             RawSql.insert(
-                    "INSERT into card (name_card, description, price, image) VALUES (?, ?, ?, ?); INSERT into spell (mana) VALUES (SELECT LAST_INSERT_ID(), ?)",
-                    List.of(spellEntity.getName(), spellEntity.getDescription(), spellEntity.getPrice(),
-                            spellEntity.getImgPath(), spellEntity.getId(), spellEntity.getMana()));
+                    "INSERT into spell (id_card, mana) VALUES (?, ?);",
+                    List.of(id, spellEntity.getMana()));
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
