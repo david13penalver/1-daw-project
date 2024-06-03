@@ -1,4 +1,6 @@
 /* Reglas Generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 * {
     margin: 0;
@@ -629,6 +631,124 @@ footer .dimentials-logo {
 
 /*--------------------------------------------------------------
                                                    
+                                  ▄▄                                    ▄▄    ▄▄  
+  ▄▄█▀▀▀█▄█                     ▀███ ▀███▀▀▀██▄           ██            ██  ▀███  
+▄██▀     ▀█                       ██   ██    ▀██▄         ██                  ██  
+██▀       ▀▄█▀██▄ ▀███▄███   ▄█▀▀███   ██     ▀██ ▄▄█▀████████ ▄█▀██▄ ▀███    ██  
+██        ██   ██   ██▀ ▀▀ ▄██    ██   ██      ██▄█▀   ██ ██  ██   ██   ██    ██  
+██▄        ▄█████   ██     ███    ██   ██     ▄████▀▀▀▀▀▀ ██   ▄█████   ██    ██  
+▀██▄     ▄▀█   ██   ██     ▀██    ██   ██    ▄██▀██▄    ▄ ██  ██   ██   ██    ██  
+  ▀▀█████▀▀████▀██▄████▄    ▀████▀███▄████████▀   ▀█████▀ ▀████████▀██▄████▄▄████▄
+                                                                                  
+                                                                                                                                
+------------------------------------------------------------*/
+
+#dimentials_card_detail {
+    font-family: sans-serif;
+    background-color: #92aced;
+    color: #101632dd;
+}
+
+#dimentials_card_detail .profile {
+    container-name: profile;
+    container-type: inline-size;
+}
+
+#dimentials_card_detail .profile__wrapper {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+#dimentials_card_detail .profile__data-container {
+    max-width: 600px;
+    padding: 12px;
+}
+
+#dimentials_card_detail .profile__img-container {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#dimentials_card_detail .profile__img-expanded {
+    max-width: 100%;
+    width: 100vw;
+    height: 50vw;
+}
+
+#dimentials_card_detail .profile__img-normal {
+    display: none;
+    max-width: 100%;
+    width: 100vw;
+    height: 50vw;
+}
+
+#dimentials_card_detail h1 {
+    color: #48e;
+}
+
+#dimentials_card_detail .profile__skills-container h2 {
+    color: #48e;
+}
+
+#dimentials_card_detail .profile__skill {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    max-width: 600px;
+    margin-left: 0;
+    align-items: center;
+}
+
+
+/* --------------------- PROFILE QUERIES --------------------- */
+
+@container profile (min-width: 720px) {
+    #dimentials_card_detail .profile__wrapper {
+        flex-direction: row;
+        padding: 10px;
+        background-color: transparent;
+        height: 90vh;
+        margin: auto;
+    }
+
+    #dimentials_card_detail h1 {
+        margin-top: 0;
+        font-size: 4rem;
+        text-wrap: balance;
+    }
+
+    #dimentials_card_detail .profile__data-container {
+        max-width: 620px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0px 25px 25px 0;
+        box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.566);
+    }
+
+    #dimentials_card_detail .profile__img-expanded {
+        display: none;
+    }
+
+    #dimentials_card_detail .profile__img-container {
+        max-height: initial;
+    }
+
+    #dimentials_card_detail .profile__img-normal {
+        display: flex;
+        height: 100%;
+        width: 620px;
+        object-fit: cover;
+        border-radius: 25px 0 0 25px;
+    }
+}
+
+
+
+
+/*--------------------------------------------------------------
+                                                   
                ▄▄                                  
       ██      ▄██                             ██   
      ▄██▄      ██                             ██   
@@ -664,6 +784,48 @@ footer .dimentials-logo {
 
 }
 
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.carousel {
+    margin-bottom: 4rem;
+  }
+  
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .carousel-item {
+    height: 32rem;
+  }
+  
+  
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+  
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+    margin: 5rem 0; 
+  }
+  
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+  
+
 
 /*--------------------------------------------------------------
 
@@ -679,12 +841,316 @@ footer .dimentials-logo {
                                                            
 ------------------------------------------------------------*/
 
+#dimentials_body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#dimentials_body table {
+    width:100%;
+}
+
+#dimentials_body th, #dimentials_body td {
+    color: #FFFFFF;
+}
 
 
 
+#dimentials_body .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 50px 200px;
+}
+
+#dimentials_body.hero-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+#dimentials_body .hero-img img {
+    width: 100%;
+    margin-right: 50px;
+    padding: 0 30px 0 0;
+}
+
+#dimentials_body .hero-txt h1 {
+    font-size: 90px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111111;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+#dimentials_body .btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    background-color: #111111;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+#dimentials_body .ofert {
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dimentials_body .ofert-1 {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(33.3% - 15px);
+    background-color: #f5f5f5;
+    padding: 35px;
+}
+
+#dimentials_body .ofert.img {
+    flex-basis: 50%;
+    margin-right: 15px;
+}
+
+#dimentials_body .ofert-img {
+    flex-basis: 50%;
+    margin-right: 15px;
+}
+
+#dimentials_body .ofert-img img {
+    width: 250px;
+}
+
+#dimentials_body .ofert-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+#dimentials_body .ofert-txt h3 {
+    color:#111111;
+    font-family: poppins, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#dimentials_body .btn-2 {
+    display: inline-block;
+    padding: 7px 10px;
+
+}
+
+#dimentials_body .products {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#dimentials_body .products h2 {
+    color: #111111;
+    font-family: poppins, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+#dimentials_body .product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:50px;
+}
+
+#dimentials_body .product {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#dimentials_body .product img {
+    width: 250px;
+    height:370px;
+    margin-bottom: 20px;
+}
+
+#dimentials_body .product h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
 
 
+#dimentials_body .product p, #dimentials_body .precio {
+    font-size:16px;
+    color: #111111;
+    margin-bottom: 15px;
+}
 
+#dimentials_body .precio {
+    font-weight: 800;
+}
+
+#dimentials_body .icons {
+    padding: 50px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dimentials_body .icon-1 {
+    flex-basis: calc(33.3% - 15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #f5f5f5;
+}
+
+#dimentials_body .icon-txt h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
+}
+
+#dimentials_body .icon-txt p {
+    font-size: 16px;
+    color: #111111;
+}
+
+#dimentials_body .blog {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+#dimentials_body .blog-1 {
+    flex-basis: calc(33.3% - 15px);
+}
+
+#dimentials_body .blog-1 img {
+    margin-bottom: 20px;
+}
+
+#dimentials_body .blog-1 h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#dimentials_body .blog-1 p {
+    font-size: 16px;
+    color: #111111;
+}
+
+
+#dimentials_body .link h3 {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#dimentials_body .link a {
+    font-size: 16px;
+    color: #dcdcdc;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/*--------------------------------------------------------------
+                                                   
+                                                          
+  ▄▄█▀▀▀█▄█                     ██                   ██   
+▄██▀     ▀█                     ██                   ██   
+██▀       ▀ ▄██▀██▄▀████████▄ ██████ ▄█▀██▄  ▄██▀████████ 
+██         ██▀   ▀██ ██    ██   ██  ██   ██ ██▀  ██  ██   
+██▄        ██     ██ ██    ██   ██   ▄█████ ██       ██   
+▀██▄     ▄▀██▄   ▄██ ██    ██   ██  ██   ██ ██▄    ▄ ██   
+  ▀▀█████▀  ▀█████▀▄████  ████▄ ▀████████▀██▄█████▀  ▀████
+                                                          
+                                                   
+------------------------------------------------------------*/
+
+#dimentials_contact h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+
+}
+#dimentials_contact body {
+    margin:0;
+    font-family: sans-serif;
+    color:#eee;
+    background: linear-gradient(to bottom,#333, #000);
+}
+
+#dimentials_contact form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.361);
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+#dimentials_contact .form_input {
+    padding: 6px 20px;
+}
+
+#dimentials_contact input, #dimentials_contact textarea, #dimentials_contact select {
+    width: 100%;
+    padding: 6px 8px; /* 6 arriba y abajo, 12 a la izq y derecha */
+    box-sizing: border-box;
+    border: 1px solid #666; 
+    background-color: transparent;
+    border-left: 2px solid #107d8e;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
+    color: #ddd;
+    border-radius: 4px;
+    margin: 6px 0;
+}
+
+#dimentials_contact option{
+    background-color: #222;
+    /* no se puede añadir margin ni padding, se necesitaria usar una libreria aposta de Javascript para eso*/
+}
+#dimentials_contact textarea {
+    min-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    font-family: sans-serif;;
+}
+
+#dimentials_contact label {
+    font-size:0,88em;
+}
+
+#dimentials_contact .checkbox {
+    width: auto;
+    height: 15px;
+}
+
+#dimentials_contact fieldset {
+    margin:20px 0;
+    border:1px solid #666;
+    border-radius: 5px;
+    padding: 8px 8px 10px 10px;
+    margin: 20px
+
+}
+
+#dimentials_contact legend {
+    padding: 0 6px;
+    color: #777;
+}
 
 
 
@@ -703,14 +1169,196 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 
+#dimentials_login {
+
+}
 
 
+#dimentials_login .box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
+#dimentials_login .box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
 
+#dimentials_login .box::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
 
+#dimentials_login .borderline {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
 
+#dimentials_login .borderLine::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
 
+#dimentials_login .borderLine::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
 
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#dimentials_login .box form {
+    position: absolute;
+    inset: 4px;
+    background-color: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#dimentials_login .box form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+#dimentials_login .box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+#dimentials_login .box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+#dimentials_login .box form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+#dimentials_login .box form .inputBox input:valid ~ span,
+#dimentials_login .box form .inputBox input:focus ~ span {
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+#dimentials_login .box form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+#dimentials_login .box form .inputBox input:valid ~ i,
+#dimentials_login .box form .inputBox input:focus ~ i {
+    height: 44px;
+}
+
+#dimentials_login .box form .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dimentials_login .box form .links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+#dimentials_login .box form .links a:hover,
+#dimentials_login .box form .links a:nth-child(2) {
+    color: #fff;
+}
+
+#dimentials_login .box form input [type="submit"] {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
+
+#dimentials_login .box form input [type="submit"]:active {
+    opacity: 0.8;
+}
 
 
 
@@ -862,6 +1510,75 @@ footer .dimentials-logo {
 
 
 
+
+
+
+
+/*--------------------------------------------------------------
+                                                   
+                             ▄▄    ▄▄                                   ▄▄  
+ ▄█▀▀▀█▄█                  ▀███  ▀███   ▄▄█▀▀▀█▄█                     ▀███  
+▄██    ▀█                    ██    ██ ▄██▀     ▀█                       ██  
+▀███▄   ▀████████▄  ▄▄█▀██   ██    ██ ██▀       ▀▄█▀██▄ ▀███▄███   ▄█▀▀███  
+  ▀█████▄ ██   ▀██ ▄█▀   ██  ██    ██ ██        ██   ██   ██▀ ▀▀ ▄██    ██  
+▄     ▀██ ██    ██ ██▀▀▀▀▀▀  ██    ██ ██▄        ▄█████   ██     ███    ██  
+██     ██ ██   ▄██ ██▄    ▄  ██    ██ ▀██▄     ▄▀█   ██   ██     ▀██    ██  
+█▀█████▀  ██████▀   ▀█████▀▄████▄▄████▄ ▀▀█████▀▀████▀██▄████▄    ▀████▀███▄
+          ██                                                                
+        ▄████▄                                                              
+
+                                                   
+------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+                                                   
+                                                                            ▄▄  
+▀████▄     ▄███▀                            ▄▄█▀▀▀█▄█                     ▀███  
+  ████    ████                            ▄██▀     ▀█                       ██  
+  █ ██   ▄█ ██   ▄██▀██▄▀████████▄  ▄██▀████▀       ▀▄█▀██▄ ▀███▄███   ▄█▀▀███  
+  █  ██  █▀ ██  ██▀   ▀██ ██    ██  ██   ▀▀█        ██   ██   ██▀ ▀▀ ▄██    ██  
+  █  ██▄█▀  ██  ██     ██ ██    ██  ▀█████▄█▄        ▄█████   ██     ███    ██  
+  █  ▀██▀   ██  ██▄   ▄██ ██    ██  █▄   ████▄     ▄▀█   ██   ██     ▀██    ██  
+▄███▄ ▀▀  ▄████▄ ▀█████▀▄████  ████▄██████▀ ▀▀█████▀▀████▀██▄████▄    ▀████▀███▄
+                                                                                
+                                                                                
+                                                   
+------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+                                                   
+                      ▄▄                                                         ▄▄  
+▀███▀▀▀██▄          ▀███           ██            ▄▄█▀▀▀█▄█                     ▀███  
+  ██    ▀██▄          ██           ██          ▄██▀     ▀█                       ██  
+  ██     ▀██ ▄▄█▀██   ██   ▄▄█▀████████  ▄▄█▀████▀       ▀▄█▀██▄ ▀███▄███   ▄█▀▀███  
+  ██      ██▄█▀   ██  ██  ▄█▀   ██ ██   ▄█▀   ███        ██   ██   ██▀ ▀▀ ▄██    ██  
+  ██     ▄████▀▀▀▀▀▀  ██  ██▀▀▀▀▀▀ ██   ██▀▀▀▀▀▀█▄        ▄█████   ██     ███    ██  
+  ██    ▄██▀██▄    ▄  ██  ██▄    ▄ ██   ██▄    ▄██▄     ▄▀█   ██   ██     ▀██    ██  
+▄████████▀   ▀█████▀▄████▄ ▀█████▀ ▀████ ▀█████▀ ▀▀█████▀▀████▀██▄████▄    ▀████▀███▄
+                                                                                     
+                                                                                                                                                                                                             
+------------------------------------------------------------*/
+
+
+
 /* Media Queries */
 
 /* Col-sm */
@@ -911,7 +1628,17 @@ footer .dimentials-logo {
         font-size: 77px;
     }
 
-/*----------------------------- Card Gallery --------------------- */
+/*----------------------------- About --------------------- */
+
+.carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
 
 }
 
@@ -943,8 +1670,98 @@ footer .dimentials-logo {
         font-size: 100px;
     }
 
-   /*----------------------------- Card Gallery --------------------- */
+   /*----------------------------- Tienda --------------------- */
+#dimentials_shop .menu {
+    padding: 20px;
+}
+#dimentials_shop .menu label {
+    display: initial;
+}
+#dimentials_shop .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #181818;
+    display: none;
+}
+#dimentials_shop .menu .navbar ul li {
+    width:100%;
+}
+#dimentials_shop .menu ul li a {
+    color: #FFFFFF;
+}
+#dimentials_shop #menu:checked ~ .navbar {
+    display: initial;
+}
 
+#dimentials_shop .logo {
+    display: none;
+}
+
+#dimentials_shop .submenu:hover #carrito {
+    min-width:100%,
+}
+
+#dimentials_shop .submenu:hover #carrito {
+    min-width:100%;
+}
+#dimentials_shop .hero-content {
+    padding: 50px 0;
+    flex-direction: column;
+}
+#dimentials_shop .hero-img {
+    display: none;
+}
+#dimentials_shop .hero-txt {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+#dimentials_shop .hero-txt h1 {
+    font-size: 70px;
+}
+
+#dimentials_shop .ofert {
+    padding: 30px 30px 0 30px;
+    flex-direction: column;
+}
+
+#dimentials_shop .ofert-1 {
+    margin-bottom: 30px;
+}
+
+#dimentials_shop .products {
+    padding: 0 30px 30px 30px;
+}
+
+#dimentials_shop .products h2 {
+    margin-bottom: 30px;
+}
+
+#dimentials_shop .product-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+#dimentials_shop .product img {
+    width: 200px;
+    height: 200px;
+}
+
+#dimentials_shop .icons {
+    padding: 30px;
+    flex-direction: column;
+}
+
+#dimentials_shop .icons-1 {
+    margin-bottom: 30px;
+}
+
+ /*----------------------------- About --------------------- */
+#dimentials_about .featurette-heading {
+    margin-top: 7rem;
+  }
 
 }
     
