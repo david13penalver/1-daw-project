@@ -8,6 +8,8 @@ public class CardEntity {
     private Integer id;
     private String name;
     private String description;
+    private String description_es;
+    private String description_en;
     private String imgPath;
     private BigDecimal price;
 
@@ -17,6 +19,15 @@ public class CardEntity {
         this.description = description;
         this.price = price;
         this.imgPath = imgPath;
+    }
+
+    public CardEntity(Integer id, String name, String description_es, String getDescription_en, String imgPath, BigDecimal price) {
+        this.id = id;
+        this.name = name;
+        this.description_es = description_es;
+        this.description_en = getDescription_en;
+        this.imgPath = imgPath;
+        this.price = price;
     }
 
     public CardEntity(Integer id, String name, String description) {
@@ -67,6 +78,22 @@ public class CardEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescription_es() {
+        return description_es;
+    }
+
+    public void setDescription_es(String description_es) {
+        this.description_es = description_es;
+    }
+
+    public String getDescription_en() {
+        return description_en;
+    }
+
+    public void setDescription_en(String getDescription_en) {
+        this.description_en = getDescription_en;
     }
 
     @Override

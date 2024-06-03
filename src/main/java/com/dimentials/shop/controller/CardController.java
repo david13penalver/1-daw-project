@@ -39,11 +39,11 @@ public class CardController {
     }
 
     @PostMapping("/new-monster")
-    public String addMonster(@RequestParam String name, @RequestParam String description, @RequestParam String price,
+    public String addMonster(@RequestParam String name, @RequestParam String description_es, @RequestParam String description_en, @RequestParam String price,
             @RequestParam String imgPath, @RequestParam String attack, @RequestParam String life,
-            @RequestParam String mainType, @RequestParam(required = false) String secondaryType, Model model) {
-        Monster monster = new Monster(null, name, description, new BigDecimal(price), imgPath, Integer.parseInt(attack),
-                Integer.parseInt(life), mainType, secondaryType);
+            @RequestParam String mainType_es, @RequestParam String mainType_en, @RequestParam(required = false) String secondaryType_es, @RequestParam(required = false) String secondaryType_en, Model model) {
+        Monster monster = new Monster(null, name, description_es, description_en, new BigDecimal(price), imgPath, Integer.parseInt(attack),
+                Integer.parseInt(life), mainType_es, mainType_en, secondaryType_es, secondaryType_en);
         cardService.addMonster(monster);
         return "redirect:/cards";
     }

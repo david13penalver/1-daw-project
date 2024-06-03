@@ -63,7 +63,7 @@ public class CardDaoJdbc implements CardDao {
         try {
             Object id = RawSql.insert(
                     "INSERT into card (name_card, description_es, description_en, price, image) VALUES (?, ?, ?, ?, ?)",
-                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getDescription(), monsterEntity.getPrice(),
+                    List.of(monsterEntity.getName(), monsterEntity.getDescription_es(), monsterEntity.getDescription_en(), monsterEntity.getPrice(),
                             monsterEntity.getImgPath()));
             //ResultSet resultSet = RawSql.select("SELECT LAST_INSERT_ID()", List.of());
             //if (resultSet.next()) {
@@ -71,7 +71,7 @@ public class CardDaoJdbc implements CardDao {
                 RawSql.insert(
                         "INSERT into monster (id_card, attack, life, main_type_es, main_type_en, secondary_type_es, secondary_type_en) VALUES (?, ?, ?, ?, ?, ?, ?)",
                         List.of(id, monsterEntity.getAttack(), monsterEntity.getLife(),
-                                monsterEntity.getMainType(), monsterEntity.getMainType(), monsterEntity.getSecondaryType(), monsterEntity.getSecondaryType()));
+                                monsterEntity.getMainType_es(), monsterEntity.getMainType_en(), monsterEntity.getSecondaryType_es(), monsterEntity.getSecondaryType_en()));
             //}
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());

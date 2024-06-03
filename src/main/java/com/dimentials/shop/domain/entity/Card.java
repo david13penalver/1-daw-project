@@ -8,6 +8,8 @@ public class Card {
     private Integer id;
     private String name;
     private String description;
+    private String description_es;
+    private String description_en;
     private BigDecimal price;
     private String imgPath;
 
@@ -15,6 +17,15 @@ public class Card {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.price = price;
+        this.imgPath = imgPath;
+    }
+
+    public Card(Integer id, String name, String description_es, String getDescription_en, BigDecimal price, String imgPath) {
+        this.id = id;
+        this.name = name;
+        this.description_es = description_es;
+        this.description_en = getDescription_en;
         this.price = price;
         this.imgPath = imgPath;
     }
@@ -67,6 +78,22 @@ public class Card {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public String getDescription_es() {
+        return description_es;
+    }
+
+    public void setDescription_es(String description_es) {
+        this.description_es = description_es;
+    }
+
+    public String getDescription_en() {
+        return description_en;
+    }
+
+    public void setDescription_en(String getDescription_en) {
+        this.description_en = getDescription_en;
     }
 
     @Override

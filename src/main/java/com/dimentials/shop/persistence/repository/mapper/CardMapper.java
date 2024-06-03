@@ -61,6 +61,8 @@ public class CardMapper {
 
         }
     }
+
+
     public static Spell toSpell(SpellEntity spellEntity) {
         if (spellEntity == null)
             return null;
@@ -89,6 +91,26 @@ public class CardMapper {
             String mainType = monster.getMainType();
             String secondaryType = monster.getSecondaryType();
             return new MonsterEntity(id, name, description, price, imgPath, attack, life, mainType, secondaryType);
+        }
+    }
+
+    public static MonsterEntity toMonsterEntityLanguages(Monster monster) {
+        if (monster == null)
+            return null;
+        else {
+            Integer id = monster.getId();
+            String name = monster.getName();
+            String description_es = monster.getDescription_es();
+            String description_en = monster.getDescription_en();
+            String imgPath = monster.getImgPath();
+            BigDecimal price = monster.getPrice();
+            Integer attack = monster.getAttack();
+            Integer life = monster.getLife();
+            String mainType_es = monster.getMainType_es();
+            String mainType_en = monster.getMainType_en();
+            String secondaryType_es = monster.getSecondaryType_es();
+            String secondaryType_en = monster.getSecondaryType_en();
+            return new MonsterEntity(id, name, description_es, description_en, price, imgPath, attack, life, mainType_es, mainType_en, secondaryType_es, secondaryType_en);
         }
     }
 

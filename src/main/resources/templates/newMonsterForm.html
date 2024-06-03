@@ -32,8 +32,16 @@
         </div>
 
         <div class="form-group">
-            <label for="description" th:text="|#{cardform.descripcion}:|">Descripción:</label>
-            <textarea class="form-control" id="description" name="description" th:field="*{monster.description}" required></textarea><br>
+            <label for="description_es" th:text="|#{cardform.descripcion}:|">Descripción:</label>
+            <textarea class="form-control" id="description_es" name="description_es" th:field="*{monster.description_es}" required></textarea><br>
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
+                Please provide a description.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description_en" th:text="|#{cardform.descripcion}:|">Descripción:</label>
+            <textarea class="form-control" id="description_en" name="description_en" th:field="*{monster.description_en}" required></textarea><br>
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                 Please provide a description.
             </div>
@@ -75,16 +83,32 @@
 
         <!-- Campos para tipo principal y secundario -->
         <div class="form-group">
-            <label for="mainType" th:text="|#{cardform.tipoprincipal}:|">Tipo Principal:</label>
-            <input type="text" class="form-control" id="mainType" name="mainType" th:field="*{monster.mainType}" required /><br>
+            <label for="mainType_es" th:text="|#{cardform.tipoprincipal}:|">Tipo Principal:</label>
+            <input type="text" class="form-control" id="mainType_es" name="mainType_es" th:field="*{monster.mainType_es}" required /><br>
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tipoprincipal}|">
                 Please provide a main type.
             </div>
         </div>
 
         <div class="form-group">
-            <label for="secondaryType" th:text="|#{cardform.tiposecundario}:|">Tipo Secundario:</label>
-            <input type="text" class="form-control" id="secondaryType" name="secondaryType" th:field="*{monster.secondaryType}" required /><br>
+            <label for="mainType_en" th:text="|#{cardform.tipoprincipal}:|">Tipo Principal:</label>
+            <input type="text" class="form-control" id="mainType_en" name="mainType_en" th:field="*{monster.mainType_en}" required /><br>
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tipoprincipal}|">
+                Please provide a main type.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="secondaryType_es" th:text="|#{cardform.tiposecundario}:|">Tipo Secundario:</label>
+            <input type="text" class="form-control" id="secondaryType_es" name="secondaryType_es" th:field="*{monster.secondaryType_es}" required /><br>
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tiposecundario}|">
+                Please provide a secondary type.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="secondaryType_en" th:text="|#{cardform.tiposecundario}:|">Tipo Secundario:</label>
+            <input type="text" class="form-control" id="secondaryType_en" name="secondaryType_en" th:field="*{monster.secondaryType_en}" required /><br>
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tiposecundario}|">
                 Please provide a secondary type.
             </div>

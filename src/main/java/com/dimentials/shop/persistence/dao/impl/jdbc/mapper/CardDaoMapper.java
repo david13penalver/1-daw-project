@@ -21,21 +21,6 @@ public class CardDaoMapper {
 
     public static CardEntity toCardEntity(ResultSet resultSet) throws SQLException {
 
-
-//        CardEntity cardEntity = new CardEntity();
-//        try {
-//            if (resultSet.next()) {
-//                cardEntity.setId(resultSet.getInt("id_card"));
-//                cardEntity.setName(resultSet.getString("name_card"));
-//                cardEntity.setDescription(resultSet.getString("description_es"));
-//                cardEntity.setPrice(resultSet.getBigDecimal("price"));
-//                cardEntity.setImgPath(resultSet.getString("image"));
-//            }
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return cardEntity;
         Integer id = resultSet.getInt("id_card");
         String name = resultSet.getString("name_card");
         String description = resultSet.getString("description_es");
@@ -60,6 +45,24 @@ public class CardDaoMapper {
                 Integer.valueOf(resultSet.getInt("life")),
                 resultSet.getString("mainType"),
                 resultSet.getString("secondaryType"));
+    }
+    public static MonsterEntity toMonsterEntityLanguages(ResultSet resultSet) throws SQLException {
+        if (resultSet == null) {
+            return null;
+        }
+        return new MonsterEntity(
+                Integer.valueOf(resultSet.getInt("id")),
+                resultSet.getString("name"),
+                resultSet.getString("description_es"),
+                resultSet.getString("description_en"),
+                resultSet.getBigDecimal("price"),
+                resultSet.getString("imgPath"),
+                Integer.valueOf(resultSet.getInt("attack")),
+                Integer.valueOf(resultSet.getInt("life")),
+                resultSet.getString("mainType_es"),
+                resultSet.getString("mainType_en"),
+                resultSet.getString("secondaryType_es"),
+                resultSet.getString("secondaryType_en"));
     }
 
     public static SpellEntity toSpellEntity(ResultSet resultSet)throws SQLException{
