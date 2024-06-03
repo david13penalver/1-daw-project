@@ -41,7 +41,7 @@
         </div>
 
         <div class="form-group">
-            <label for="description_es" th:text="|#{cardform.descripcion}:|">Descripción:</label>
+            <label for="description_es" th:text="|#{cardform.descripcion_en}:|">Descripción:</label>
             <textarea class="form-control" id="description_es" name="description_es" th:field="*{spell.description_es}" required></textarea>
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                 Please provide a description.
@@ -49,7 +49,7 @@
         </div>
 
         <div class="form-group">
-            <label for="description_en" th:text="|#{cardform.descripcion}:|">Descripción:</label>
+            <label for="description_en" th:text="|#{cardform.descripcion_en}:|">Descripción:</label>
             <textarea class="form-control" id="description_en" name="description_en" th:field="*{spell.description_en}" required></textarea>
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                 Please provide a description.
