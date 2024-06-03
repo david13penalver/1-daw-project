@@ -53,7 +53,7 @@ public class CardRepositoryImpl implements CardRepository {
 
     @Override
     public void updateMonster(Monster monster) {
-        cardDao.updateMonster(CardMapper.toMonsterEntity(monster));
+        cardDao.updateMonster(CardMapper.toMonsterEntityLanguages(monster));
     }
 
 }

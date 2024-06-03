@@ -129,15 +129,15 @@ public class CardDaoJdbc implements CardDao {
         // saca los datos de la base de datos y usa rawsql
         try {
             RawSql.update(
-                    "UPDATE card SET name_card = ?, description_es = ?, price = ?, image = ? WHERE id_card = ?",
-                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getPrice(),
+                    "UPDATE card SET name_card = ?, description_es = ?, description_en = ?, price = ?, image = ? WHERE id_card = ?",
+                    List.of(monsterEntity.getName(), monsterEntity.getDescription_es(), monsterEntity.getDescription_en(), monsterEntity.getPrice(),
                             monsterEntity.getImgPath(), monsterEntity.getId()
                     )
             );
             RawSql.update(
-                    "UPDATE monster SET attack = ?, life = ?, main_type_es = ?, secondary_type_es = ? WHERE id_card = ?",
-                    List.of(monsterEntity.getAttack(), monsterEntity.getLife(), monsterEntity.getMainType(),
-                            monsterEntity.getSecondaryType(), monsterEntity.getId()
+                    "UPDATE monster SET attack = ?, life = ?, main_type_es = ?, main_type_en = ?, secondary_type_es = ?, secondary_type_en = ? WHERE id_card = ?",
+                    List.of(monsterEntity.getAttack(), monsterEntity.getLife(), monsterEntity.getMainType_es(), monsterEntity.getMainType_en(),
+                            monsterEntity.getSecondaryType_es(), monsterEntity.getSecondaryType_en(), monsterEntity.getId()
                     )
             );
         } catch (Exception e) {

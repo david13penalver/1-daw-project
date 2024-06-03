@@ -96,8 +96,8 @@ public class CardController {
     }
 
     @PutMapping("/update-monster")
-    public String updateMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description, @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer attack, @RequestParam Integer life, @RequestParam String mainType, @RequestParam String secondaryType, Model model) {
-        Monster monster = new Monster(id,name,description,price,imgPath,attack,life,mainType,secondaryType);
+    public String updateMonster(@RequestParam Integer id, @RequestParam String name, @RequestParam String description_es, @RequestParam String description_en, @RequestParam BigDecimal price, @RequestParam String imgPath, @RequestParam Integer attack, @RequestParam Integer life, @RequestParam String mainType_es, @RequestParam String mainType_en, @RequestParam String secondaryType_es, @RequestParam String secondaryType_en, Model model) {
+        Monster monster = new Monster(id,name,description_es, description_en,price,imgPath,attack,life,mainType_es,mainType_en,secondaryType_es,secondaryType_en);
         cardService.updateMonster(monster);
         return "redirect:/cards";
     }
