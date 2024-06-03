@@ -19,7 +19,7 @@
         <img class="grid-logo" src="../static/images/Logo_Version3.png">
         <h4 class="grid-title">The Dimentials Company</h4>
         <ul class="grid-redes">
-            <h4>Redes sociales</h4>
+            <h4 th:text="|#{footer.redes}|">Redes sociales</h4>
             <li><a href="#"><i class="fa-brands fa-instagram"></i> </a></li>
             <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
@@ -28,11 +28,11 @@
         </ul>
         <ul class="grid-legal">
             <h4>Aspecto legal</h4>
-            <li><a href="./cookies.html">Política de cookies</a></li>
-            <li><a href="./privacy.html">Aviso de privacidad</a></li>
-            <li><a href="./terms.html">Condiciones de uso</a></li>
+            <li><a href="./cookies.html" th:text="|#{footer.cookies}|">Política de cookies</a></li>
+            <li><a href="./privacy.html" th:text="|#{footer.privacidad}|">Aviso de privacidad</a></li>
+            <li><a href="./terms.html" th:text="|#{footer.uso}|">Condiciones de uso</a></li>
         </ul>
-        <p class="grid-copyright">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
+        <p class="grid-copyright" th:text="|#{footer.copy}|">Dimentials&#169; 2024 es una marca registrada por RómpelHielo&#169;</p>
     </footer>
 </body>
 
