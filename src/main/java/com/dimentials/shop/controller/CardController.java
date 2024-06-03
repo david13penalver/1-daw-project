@@ -82,8 +82,8 @@ public class CardController {
 
 
     @PutMapping("/update-spell")
-    public String updateSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer mana, Model model) {
-        Spell spell = new Spell(id,name,description,price,imgPath,mana);
+    public String updateSpell(@RequestParam Integer id,@RequestParam String name,@RequestParam String description_es, @RequestParam String description_en,@RequestParam BigDecimal price,@RequestParam String imgPath,@RequestParam Integer mana, Model model) {
+        Spell spell = new Spell(id,name,description_es, description_en,price,imgPath,mana);
         cardService.updateSpell(spell);
         return "redirect:/cards";
     }

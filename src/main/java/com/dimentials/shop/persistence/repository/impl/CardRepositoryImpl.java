@@ -33,12 +33,10 @@ public class CardRepositoryImpl implements CardRepository {
     public void addMonster(Monster monster) {
 
         cardDao.addMonster(CardMapper.toMonsterEntityLanguages(monster));
-        //cardDao.addMonster(CardMapper.toMonsterEntity(monster));
     }
 
     @Override
     public void addSpell(Spell spell) {
-        //cardDao.addSpell(CardMapper.toSpellEntity(spell));
         cardDao.addSpell(CardMapper.toSpellEntityLanguages(spell));
 
     }
@@ -50,7 +48,7 @@ public class CardRepositoryImpl implements CardRepository {
 
     @Override
     public void updateSpell(Spell spell) {
-        cardDao.updateSpell(CardMapper.toSpellEntity(spell));
+        cardDao.updateSpell(CardMapper.toSpellEntityLanguages(spell));
     }
 
     @Override
