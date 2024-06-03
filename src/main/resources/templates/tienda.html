@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <title>Document</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}">
+    <link rel="stylesheet" th:href="@{/css/tienda.css}">  
     <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -15,14 +16,14 @@
     
     <header th:replace="~{layouts/base :: headerplusnav2}"></header>
 
-    <div class="hero-content container">
-        <div class="hero-img">
+    <div class="header-content container">
+        <div class="header-img">
             <img src="img/z3_Aurelius_Ignis.png" alt="#">
         </div>
-        <div class="hero-txt">
-            <h1>Ofertas especiales</h1>
-            <p> Consigue por tiempo limitado las cartas faltantes en tu colección</p>
-            <a href="#" class="btn-1">informacion</a>
+        <div class="header-txt">
+            <h1 th:text="|#{tienda.ofertas_especiales}|">Ofertas especiales</h1>
+            <p th:text="|#{tienda.tiempo_limitado}|"> Consigue por tiempo limitado las cartas faltantes en tu colección</p>
+            <a href="#" class="btn-1" th:text="|#{tienda.informacion}|">informacion</a>
         </div>
     </div>
 
@@ -34,8 +35,8 @@
                 <img src="images/cardDetail/card1.png" alt ="#">
             </div>
             <div class="ofert-txt">
-                <h3> Producto 1</h3>
-                <a href="#" class="btn-2"> Informacion 1</a>
+                <h3 th:text="|#{tienda.producto1}|"> Producto 1</h3>
+                <a href="#" class="btn-2" th:text="|#{tienda.informacion2}|"> Informacion 1</a>
             </div>
         </div>
         <div class="ofert-1">
@@ -43,8 +44,8 @@
                 <img src="images/cardDetail/card2.png" alt ="#">
             </div>
             <div class="ofert-txt">
-                <h3> Producto 2</h3>
-                <a href="#" class="btn-2"> Informacion 2</a>
+                <h3 th:text="|#{tienda.producto2}|"> Producto 2</h3>
+                <a href="#" class="btn-2" th:text="|#{tienda.informacion2}|"> Informacion 2</a>
             </div>
         </div>
         <div class="ofert-1">
@@ -52,8 +53,8 @@
                 <img src="images/cardDetail/card3.png" alt ="#">
             </div>
             <div class="ofert-txt">
-                <h3> Producto 3</h3>
-                <a href="#" class="btn-2"> Informacion 3</a>
+                <h3 th:text="|#{tienda.producto3}|"> Producto 3</h3>
+                <a href="#" class="btn-2" th:text="|#{tienda.informacion3}|"> Informacion 3</a>
             </div>
         </div>
     </section>
@@ -65,64 +66,64 @@
         <h2> Productos </h2>
 
         <div class="product-content">
-            
+
             <div class="product">
                 <img src="img/cardDetail/14_card_Frogan.png" alt="#">
                 <div class="product-txt">
-                    <h3> Producto 1</h3>
-                    <p> calidad premium</p>
+                    <h3 th:text="|#{tienda.producto1}|"> Producto 1</h3>
+                    <p th:text="|#{tienda.calidad_premium}|"> calidad premium</p>
                     <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar carrito</a>
+                    <a href="#" class="agregar-carrito btn-2" data-id="1" th:text="|#{tienda.agregar_carrito}|">Agregar carrito</a>
                 </div>
             </div>
 
             <div class="product">
                 <img src="img/cardDetail/15_card_Bullraga.png" alt="#">
                 <div class="product-txt">
-                    <h3> Producto 2</h3>
-                    <p> calidad premium</p>
-                    <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar carrito</a>
+                    <h3 th:text="|#{tienda.producto2}|"> Producto 2</h3>
+                    <p th:text="|#{tienda.calidad_premium}|"> calidad premium</p>
+                    <p class="precio" th:text="|#{tienda.precio}|">$200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="2" th:text="|#{tienda.agregar_carrito}|">Agregar carrito</a>
                 </div>
             </div>
 
             <div class="product">
                 <img src="img/cardDetail/16_card_Tarvoronaus.png" alt="#">
                 <div class="product-txt">
-                    <h3> Producto 3</h3>
-                    <p> calidad premium</p>
+                    <h3 th:text="|#{tienda.producto3}|"> Producto 3</h3>
+                    <p th:text="|#{tienda.calidad_premium}|"> calidad premium</p>
                     <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar carrito</a>
+                    <a href="#" class="agregar-carrito btn-2" data-id="3" th:text="|#{tienda.agregar_carrito}|">Agregar carrito</a>
                 </div>
             </div>
 
             <div class="product">
                 <img src="img/cardDetail/7_card_Lizzar.png" alt="#">
                 <div class="product-txt">
-                    <h3> Producto 4</h3>
-                    <p> calidad premium</p>
+                    <h3 th:text="|#{tienda.producto4}|"> Producto 4</h3>
+                    <p th:text="|#{tienda.calidad_premium}|"> calidad premium</p>
                     <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar carrito</a>
+                    <a href="#" class="agregar-carrito btn-2" data-id="4" th:text="|#{tienda.agregar_carrito}|">Agregar carrito</a>
                 </div>
             </div>
 
             <div class="product">
                 <img src="img/cardDetail/8_card_Iguanitxeco.png" alt="#">
                 <div class="product-txt">
-                    <h3> Producto 5</h3>
-                    <p> calidad premium</p>
+                    <h3 th:text="|#{tienda.producto5}|"> Producto 5</h3>
+                    <p th:text="|#{tienda.calidad_premium}|"> calidad premium</p>
                     <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar carrito</a>
+                    <a href="#" class="agregar-carrito btn-2" data-id="5" th:text="|#{tienda.agregar_carrito}|">Agregar carrito</a>
                 </div>
             </div>
 
             <div class="product">
                 <img src="img/cardDetail/9_card_Citalflama.png" alt="#">
                 <div class="product-txt">
-                    <h3> Producto 6</h3>
-                    <p> calidad premium</p>
+                    <h3 th:text="|#{tienda.producto6}|"> Producto 6</h3>
+                    <p th:text="|#{tienda.calidad_premium}|"> calidad premium</p>
                     <p class="precio">$200</p>
-                    <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar carrito</a>
+                    <a href="#" class="agregar-carrito btn-2" data-id="6" th:text="|#{tienda.agregar_carrito}|">Agregar carrito</a>
                 </div>
             </div>
         </div>
