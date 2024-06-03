@@ -40,46 +40,42 @@ public class CardDaoJdbc implements CardDao {
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-        // try {
-        // ResultSet resultSet = DB
-        // .table("card")
-        // .select("id_card", "name_card", "description_" + language, "price", "image")
-        // .find(id);
-        // return CardDaoMapper.toCardEntity(resultSet);
-        // } catch (Exception e) {
-        // throw new QueryBuilderSQLException(e.getMessage());
-        // }
     }
 
-//    @Override
-//    public MonsterEntity addMonster(MonsterEntity monsterEntity) {
+//    public void addMonster(MonsterEntity monsterEntity) {
 //        try {
 //            RawSql.insert(
-//                    "INSERT into card (name_card, description, price, image) VALUES (?, ?, ?, ?); INSERT into monster (attack, life, primary_type, secondary_type) VALUES (SELECT LAST_INSERT_ID(), ?, ?, ?, ?)",
-//                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getPrice(),
-//                            monsterEntity.getImgPath(), monsterEntity.getAttack(), monsterEntity.getLife(),
-//                            monsterEntity.getMainType(), monsterEntity.getSecondaryType()));
+//                    "INSERT into card (name_card, description_es, description_en, price, image) VALUES (?, ?, ?, ?, ?)",
+//                    List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getDescription(), monsterEntity.getPrice(),
+//                            monsterEntity.getImgPath()));
+//            int lastId = RawSql.select("SELECT LAST_INSERT_ID()", List.of()).getInt(1);
+//            RawSql.insert(
+//                    "INSERT into monster (id_card, attack, life, main_type_es, main_type_en, secondary_type_es, secondary_type_en) VALUES (?, ?, ?, ?, ?, ?, ?)",
+//                    List.of(lastId, monsterEntity.getAttack(), monsterEntity.getLife(),
+//                            monsterEntity.getMainType(), monsterEntity.getMainType(), monsterEntity.getSecondaryType(), monsterEntity.getSecondaryType()));
 //        } catch (Exception e) {
 //            throw new QueryBuilderSQLException(e.getMessage());
 //        }
-//        return null;
+//
 //    }
 
     public void addMonster(MonsterEntity monsterEntity) {
         try {
-            RawSql.insert(
+            Object id = RawSql.insert(
                     "INSERT into card (name_card, description_es, description_en, price, image) VALUES (?, ?, ?, ?, ?)",
                     List.of(monsterEntity.getName(), monsterEntity.getDescription(), monsterEntity.getDescription(), monsterEntity.getPrice(),
                             monsterEntity.getImgPath()));
-            int lastId = RawSql.select("SELECT LAST_INSERT_ID()", List.of()).getInt(1);
-            RawSql.insert(
-                    "INSERT into monster (id_card, attack, life, main_type_es, main_type_en, secondary_type_es, secondary_type_en) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                    List.of(lastId, monsterEntity.getAttack(), monsterEntity.getLife(),
-                            monsterEntity.getMainType(), monsterEntity.getMainType(), monsterEntity.getSecondaryType(), monsterEntity.getSecondaryType()));
+            //ResultSet resultSet = RawSql.select("SELECT LAST_INSERT_ID()", List.of());
+            //if (resultSet.next()) {
+                //int lastId = resultSet.getInt(1);
+                RawSql.insert(
+                        "INSERT into monster (id_card, attack, life, main_type_es, main_type_en, secondary_type_es, secondary_type_en) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                        List.of(id, monsterEntity.getAttack(), monsterEntity.getLife(),
+                                monsterEntity.getMainType(), monsterEntity.getMainType(), monsterEntity.getSecondaryType(), monsterEntity.getSecondaryType()));
+            //}
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-
     }
 
     @Override
