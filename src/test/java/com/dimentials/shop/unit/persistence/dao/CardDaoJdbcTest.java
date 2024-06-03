@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -79,6 +80,7 @@ public class CardDaoJdbcTest {
         void updateMonster_shouldUpdateMonster() {
             MonsterEntity monster = new MonsterEntity(1, "Name", "Description_es.", "Description_en", new BigDecimal(7), "image", 1, 1, "mainType_es", "mainType_en", "secondaryType_es", "secondaryType_en");
             cardDao.updateMonster(monster);
+            expectedLlibreList.add(monster);
             CardEntity result = cardDao.findById(1);
             assertEquals(monster, result);
         }
@@ -86,7 +88,7 @@ public class CardDaoJdbcTest {
         @Test
         @Disabled
         void updateSpell_shouldUpdateSpell() {
-            SpellEntity spell = new SpellEntity(1, "Lavacus", "Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.", new BigDecimal(7), "image", 1);
+            SpellEntity spell = new SpellEntity(null, "Lavacus", "Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.", new BigDecimal(7), "image", 1);
             cardDao.updateSpell(spell);
             CardEntity result = cardDao.findById(1);
             assertEquals(spell, result);
