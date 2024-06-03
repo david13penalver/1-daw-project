@@ -81,7 +81,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{digital.titulo}"> Juego Digital </a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{digital.title}"> Juego Digital </a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item" th:href="@{/proximamente}" th:text="#{digital.itch}">Demo en Itch.io</a>
@@ -92,7 +92,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" th:href="@{/shop}"><i class="fa-solid fa-cart-shopping"></i><span class="dim-nav-item" th:text="#{shop.titulo}"></span></a>
+                                <a class="nav-link" th:href="@{/shop}"><i class="fa-solid fa-cart-shopping"></i><span class="dim-nav-item" th:text="#{digital.shop}"></span></a>
                             </li>
                         </ul>
 
@@ -145,7 +145,7 @@
                         </li>
                     </ul>
                     <ul class="grid-redes col-lg-3 col-md-6 col-12">
-                        <h4 th:text="#{footer.redes}"></h4>
+                        <h4 th:text="#{footer.socialmedia}"></h4>
                         <li>
                             <a href="https://www.instagram.com/dimentials" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
                         </li>
@@ -168,10 +168,10 @@
                             <a th:href="@{/cookies}" th:text="#{footer.cookies}">Política de cookies</a>
                         </li>
                         <li>
-                            <a th:href="@{/privacy}" th:text="#{footer.privacidad}">Aviso de privacidad</a>
+                            <a th:href="@{/privacy}" th:text="#{footer.privacy}">Aviso de privacidad</a>
                         </li>
                         <li>
-                            <a th:href="@{/terms}" th:text="#{footer.uso}">Condiciones de uso</a>
+                            <a th:href="@{/terms}" th:text="#{footer.use}">Condiciones de uso</a>
                         </li>
                     </ul>
                 </div>
