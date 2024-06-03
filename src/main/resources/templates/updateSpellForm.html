@@ -32,15 +32,15 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="name" th:text="|#{cardform.nombre}:|">Nombre:</label>
+            <label for="name" th:text="|#{cardform.name}:|">Nombre:</label>
             <input type="text" class="form-control" id="name" name="name" th:field="*{spell.name}" required />
-            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.nombre}|">
+            <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.name}|">
                 Please provide a name.
             </div>
         </div>
 
         <div class="form-group">
-            <label for="description_es" th:text="|#{cardform.descripcion_en}:|">Descripción:</label>
+            <label for="description_es" th:text="|#{cardform.description_en}:|">Descripción:</label>
             <textarea class="form-control" id="description_es" name="description_es" th:field="*{spell.description_es}" required></textarea>
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                 Please provide a description.
@@ -48,7 +48,7 @@
         </div>
 
         <div class="form-group">
-            <label for="description_en" th:text="|#{cardform.descripcion_en}:|">Descripción:</label>
+            <label for="description_en" th:text="|#{cardform.description_en}:|">Descripción:</label>
             <textarea class="form-control" id="description_en" name="description_en" th:field="*{spell.description_en}" required></textarea>
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                 Please provide a description.
@@ -57,7 +57,7 @@
 
         <!-- Campos para el precio y ruta de la imagen -->
         <div class="form-group">
-            <label for="price" th:text="|#{cardform.precio}:|">Precio:</label>
+            <label for="price" th:text="|#{cardform.price}:|">Precio:</label>
             <input type="number" step="0.01" class="form-control" id="price" name="price" th:field="*{spell.price}" required />
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.invalid}|">
                 Please provide a price.
@@ -65,7 +65,7 @@
         </div>
 
         <div class="form-group">
-            <label for="imgPath" th:text="|#{cardform.ruta}:|">Ruta de la imagen:</label>
+            <label for="imgPath" th:text="|#{cardform.path}:|">Ruta de la imagen:</label>
             <input type="text" class="form-control" id="imgPath" name="imgPath" th:field="*{spell.imgPath}" required />
             <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.path}|">
                 Please provide an image path.

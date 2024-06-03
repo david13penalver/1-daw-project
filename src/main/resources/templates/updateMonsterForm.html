@@ -35,15 +35,15 @@
 
 
             <div class="form-group">
-                <label for="name" th:text="|#{cardform.nombre}:|">Nombre:</label>
+                <label for="name" th:text="|#{cardform.name}:|">Nombre:</label>
                 <input type="text" class="form-control" id="name" name="name" th:field="*{monster.name}" required /><br>
-                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.nombre}|">
+                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.name}|">
                     Please provide a name.
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="description_es" th:text="|#{cardform.descripcion_es}:|">Descripción:</label>
+                <label for="description_es" th:text="|#{cardform.description_es}:|">Descripción:</label>
                 <textarea class="form-control" id="description_es" name="description_es" th:field="*{monster.description_es}" required></textarea><br>
                 <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                     Please provide a description.
@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-group">
-                <label for="description_en" th:text="|#{cardform.descripcion_en}:|">Descripción:</label>
+                <label for="description_en" th:text="|#{cardform.description_en}:|">Descripción:</label>
                 <textarea class="form-control" id="description_en" name="description_en" th:field="*{monster.description_en}" required></textarea><br>
                 <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.descripcion}|">
                     Please provide a description.
@@ -60,15 +60,15 @@
 
             <!-- Campos para el precio y ruta de la imagen -->
             <div class="form-group">
-                <label for="price" th:text="|#{cardform.precio}:|">Precio:</label>
+                <label for="price" th:text="|#{cardform.price}:|">Precio:</label>
                 <input type="number" step="0.01" class="form-control" id="price" name="price" th:field="*{monster.price}" required /><br>
-                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.precio}|">
+                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.price}|">
                     Please provide a price.
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="imgPath" th:text="|#{cardform.ruta}:|">Ruta de la imagen:</label>
+                <label for="imgPath" th:text="|#{cardform.path}:|">Ruta de la imagen:</label>
                 <input type="text" class="form-control" id="imgPath" name="imgPath" th:field="*{monster.imgPath}" required /><br>
                 <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.path}|">
                     Please provide an image path.
@@ -77,24 +77,24 @@
 
             <!-- Campos para ataque y vida -->
             <div class="form-group">
-                <label for="attack" th:text="|#{cardform.ataque}:|">Ataque:</label>
+                <label for="attack" th:text="|#{cardform.attack}:|">Ataque:</label>
                 <input type="number" class="form-control" id="attack" name="attack" th:field="*{monster.attack}" required /><br>
-                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.ataque}|">
+                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.attack}|">
                     Please provide an attack value.
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="life" th:text="|#{cardform.vida}:|">Vida:</label>
+                <label for="life" th:text="|#{cardform.life}:|">Vida:</label>
                 <input type="number" class="form-control" id="life" name="life" th:field="*{monster.life}" required /><br>
-                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.vida}|">
+                <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.life}|">
                     Please provide a life value.
                 </div>
             </div>
 
             <!-- Campos para tipo principal y secundario -->
             <div class="form-group">
-                <label for="mainType_es" th:text="|#{cardform.tipoprincipal_es}:|">Tipo Principal:</label>
+                <label for="mainType_es" th:text="|#{cardform.maintype_es}:|">Tipo Principal:</label>
                 <input type="text" class="form-control" id="mainType_es" name="mainType_es" th:field="*{monster.mainType_es}" required /><br>
                 <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tipoprincipal}|">
                     Please provide a main type.
@@ -102,7 +102,7 @@
             </div>
 
             <div class="form-group">
-                <label for="mainType_en" th:text="|#{cardform.tipoprincipal_en}:|">Tipo Principal:</label>
+                <label for="mainType_en" th:text="|#{cardform.maintype_en}:|">Tipo Principal:</label>
                 <input type="text" class="form-control" id="mainType_en" name="mainType_en" th:field="*{monster.mainType_en}" required /><br>
                 <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tipoprincipal}|">
                     Please provide a main type.
@@ -110,7 +110,7 @@
             </div>
 
             <div class="form-group">
-                <label for="secondaryType_es" th:text="|#{cardform.tiposecundario_es}:|">Tipo Secundario:</label>
+                <label for="secondaryType_es" th:text="|#{cardform.secondarytype_es}:|">Tipo Secundario:</label>
                 <input type="text" class="form-control" id="secondaryType_es" name="secondaryType_es" th:field="*{monster.secondaryType_es}" required /><br>
                 <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tiposecundario}|">
                     Please provide a secondary type.
@@ -118,14 +118,14 @@
             </div>
 
             <div class="form-group">
-                <label for="secondaryType_en" th:text="|#{cardform.tiposecundario_en}:|">Tipo Secundario:</label>
+                <label for="secondaryType_en" th:text="|#{cardform.secondarytype_en}:|">Tipo Secundario:</label>
                 <input type="text" class="form-control" id="secondaryType_en" name="secondaryType_en" th:field="*{monster.secondaryType_en}" required /><br>
                 <div class="invalid-feedback" th:text="|#{cardform.invalid} #{cardform.tiposecundario}|">
                     Please provide a secondary type.
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary" th:text="|#{cardform.insertar}|">Insertar</button>
+            <button type="submit" class="btn btn-primary" th:text="|#{cardform.insert}|">Insertar</button>
         </form>
     </div>
 
