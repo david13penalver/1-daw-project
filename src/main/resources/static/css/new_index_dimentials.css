@@ -549,8 +549,7 @@ footer .dimentials-logo {
 }
 
 #dim-card-gallery #img-active {
-    width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 /* Contenedor Principal del Lightbox */
@@ -648,45 +647,27 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dimentials_card_detail {
-    font-family: sans-serif;
-    background-color: #92aced;
+    background-color: var(--bg-color);
     color: #101632dd;
 }
 
-#dimentials_card_detail .profile {
-    container-name: profile;
-    container-type: inline-size;
-}
-
 #dimentials_card_detail .profile__wrapper {
-    max-width: 1400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #fff;
-}
-
-#dimentials_card_detail .profile__data-container {
-    max-width: 600px;
-    padding: 12px;
+    background: white;
+    margin: 2vh auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #3be4f1;
 }
 
 #dimentials_card_detail .profile__img-container {
-    max-height: 500px;
-    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
 }
 
-#dimentials_card_detail .profile__img-expanded {
-    max-width: 100%;
-    width: 100vw;
-    height: 50vw;
-}
-
-#dimentials_card_detail .profile__img-normal {
-    display: none;
-    max-width: 100%;
-    width: 100vw;
-    height: 50vw;
+#dimentials_card_detail .profile__img-container img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    
 }
 
 #dimentials_card_detail h1 {
@@ -699,54 +680,19 @@ footer .dimentials-logo {
 
 #dimentials_card_detail .profile__skill {
     list-style: none;
-    display: flex;
-    margin: 10px;
-    max-width: 600px;
-    margin-left: 0;
     align-items: center;
 }
 
-
-/* --------------------- PROFILE QUERIES --------------------- */
-
-@container profile (min-width: 720px) {
-    #dimentials_card_detail .profile__wrapper {
-        flex-direction: row;
-        padding: 10px;
-        background-color: transparent;
-        height: 90vh;
-        margin: auto;
-    }
-
-    #dimentials_card_detail h1 {
+#dimentials_card_detail h1 {
         margin-top: 0;
-        font-size: 4rem;
+        font-size: 7vw;
         text-wrap: balance;
-    }
-
-    #dimentials_card_detail .profile__data-container {
-        max-width: 620px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 0px 25px 25px 0;
-        box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.566);
-    }
-
-    #dimentials_card_detail .profile__img-expanded {
-        display: none;
-    }
-
-    #dimentials_card_detail .profile__img-container {
-        max-height: initial;
-    }
-
-    #dimentials_card_detail .profile__img-normal {
-        display: flex;
-        height: 100%;
-        width: 620px;
-        object-fit: cover;
-        border-radius: 25px 0 0 25px;
-    }
 }
+
+#dimentials_card_detail .profile__img-normal {
+        object-fit: cover;  
+}
+
 
 
 
@@ -1644,6 +1590,8 @@ footer .dimentials-logo {
     font-size: 50px;
   }
 
+
+
 }
 
 /* Col-lg */
@@ -1766,6 +1714,15 @@ footer .dimentials-logo {
 #dimentials_about .featurette-heading {
     margin-top: 7rem;
   }
+
+  /*----------------------------- Card Detail --------------------- */
+
+  #dimentials_card_detail .profile__img-container img {
+    border-radius: 20px 0 0 20px;
+}
+    #dimentials_card_detail h1 {
+        font-size: 3rem;
+}
 
 }
     
