@@ -723,55 +723,41 @@ footer .dimentials-logo {
     display: inline;
     margin: auto auto auto 10px;
     position: relative;
-    width: 8vw;
-    height: 8vw;
+    width: 100%;
     border-radius: 50%;
     box-shadow: 0 0 15px #131313;
 }
 
 #dimentials_about .dimentials-history img {
-    width:30vw;
-
+    width: 80%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-.carousel {
+#dimentials_about .carousel {
     margin-bottom: 4rem;
   }
   
-  .carousel-caption {
+#dimentials_about .carousel-caption {
     bottom: 3rem;
     z-index: 10;
   }
   
-  .carousel-item {
-    height: 32rem;
+#dimentials_about .carousel-item {
+    height: 60vh;
   }
-  
-  
-  /* MARKETING CONTENT
-  -------------------------------------------------- */
-  
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  
+
   /* Featurettes
   ------------------------- */
   
-  .featurette-divider {
+#dimentials_about .featurette-divider {
     margin: 5rem 0; 
   }
   
-  .featurette-heading {
+#dimentials_about .featurette-heading {
     letter-spacing: -.05rem;
   }
   
