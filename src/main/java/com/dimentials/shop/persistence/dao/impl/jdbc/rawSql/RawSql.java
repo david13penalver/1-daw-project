@@ -25,7 +25,8 @@ public class RawSql {
             if (resultSet.next()) {
                 return resultSet.getObject(1);
             } else {
-                throw new RawSqlException("Unable to retrieve the last generated ID");
+                //throw new RawSqlException("Unable to retrieve the last generated ID");
+                return 0;
             }
         } catch (SQLException e) {
             throw new RawSqlException("Error executing SQL query:" + sql);
