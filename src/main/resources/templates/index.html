@@ -35,8 +35,8 @@
                     </div>
 
                     <div class="btn-group dim-btn-index-home w-100">
-                        <a href="#" class="btn" th:text="#{index.gallery}">Galeria</a>
-                        <a href="#contact" class="btn" th:text="#{index.contact}">Contacto</a>
+                        <a th:href="@{/gallery_cards}" class="btn" th:text="#{index.gallery}">Galeria</a>
+                        <a th:href="@{/contact}" class="btn" th:text="#{index.contact}">Contacto</a>
                     </div>
                 </div>
                 <div class="home-img order-lg-2 order-md-1 col-lg-6 col-md-12 col-sm-12">
@@ -65,7 +65,7 @@
                 <div class="card-info col-12-sm col-6md">
                     <h3 th:text="#{index.morethan}">Más de</h3>
                     <h4><span class="card-info-blue" th:text="#{index.cards}">25 cartas </span><span th:text="#{index.waiting}"> te están esperando</span></h4>
-                    <button th:text="#{index.learnmore}">Learn More</button>
+                    <button alt="" th:text="#{index.learnmore}"><a th:href="@{/faq}">Learn More</a></button>
                 </div>
             </div>
         </section>
