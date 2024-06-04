@@ -105,6 +105,10 @@ footer .dimentials-logo {
     height: 25px;
 }
 
+.grid-redes li a:hover, .grid-legal li a:hover {
+    color: var(--secondary-color);
+}
+
 /*--------------------------------------------------------------
                                                    
 ▀████▀███▄   ▀███▀███▀▀▀██▄ ▀███▀▀▀███▀███▀   ▀██▀ 
