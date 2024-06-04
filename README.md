@@ -9,6 +9,7 @@
 - [Frontend](#front)
 - [Backend](#back)
 - [Database](#db)
+- [UML](#uml)
 - [Deployment](#deployment)
 - [Organization](#org)
 
@@ -48,7 +49,7 @@ We have two clear inspirations for this project. On one hand, we have tried to a
 
 The Dimentials logo features a unique and custom typeface, still unnamed. The idea is that seeing it strikes you and gives you a sense of energy.
 
-The rest of the website uses the "Ubuntu" font, as we found it simple, friendly, and professional. Additionally, the "Ubuntu" operating system aligns with many of our values as programmers, such as integrity and transparency, so we decided it was the ideal choice.
+The rest of the website uses the "Poppins" font, as we found it simple, friendly, and professional.
 
 #  3. Frontend <a name="front"></a>
 ## Technologies used
@@ -66,7 +67,7 @@ Thymeleaf is a modern server-side Java template engine for web and standalone en
 - Javascript <br>
 JavaScript is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. We have used it to create our web pages.
 
-We have used mark up languages too: HTML and CSS.
+We have used mark up languages too: HTML, CSS and SCSS (SASS, specifically).
 
 
 # 4. Backend <a name="back"></a>
@@ -81,12 +82,17 @@ Thanks to our student account, we have had the opportunity to use the profession
 - MySQL Workbench <br>
 We have also used this software in order to create our database. 
 
+- MySQL 8.0 Command Line Client <br>
+At the deployment, we had to create the database, the tables and insert the different lines of code (insertios, users, roles...) with the console. 
+
 ## Programming languages
 
 - Java <br>
 Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.
+
 - Spring <br>
 Spring Boot is an open-source Java-based framework used to create a micro Service. It is developed by Pivotal Team and is used to build stand-alone and production-ready Spring applications. This is a Spring module that provides the RAD (Rapid Application Development) feature to the Spring framework.
+
 - SQL <br>
 SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system. We have used it with MySQL.
 
@@ -104,12 +110,29 @@ The design of the database contains the six entites we can see at the picture be
 The entity User contains the information related to the different users of the database: admins and buyers. Order_global is where we store the information related to the orders made by the users. Oder_detail is where we store the information related to the cards that are in the orders.
 The entity Card contains the information related to the cards that are in the database. Here we have an inheritance with Monster and Spell. It is a partial inheritance, as in the future it is possible that they appear more types of cards. It is also a disjoint inheritance, as a card can only be a monster or a spell.
 
-# 6. Deployment <a name="deployment"></a>
+# 6. UML <a name="uml"></a>
+
+UML (Unified Modeling Language) is a standardized visual modeling language used in software engineering to design, visualize, and document software systems. It provides a set of graphical notations for representing the structure, behavior, and interactions of the system components. UML diagrams, such as class diagrams, use case diagrams, and sequence diagrams, are widely used to communicate and analyze the system's architecture and design.
+
+Our case diagram is the following:
+
+![Use Case Diagram](/documentacion/diagrama_clases_uml/diagrama_casos_usos.png)
+
+
+# 7. Deployment <a name="deployment"></a>
 
 ## Amazon Web Server
 Amazon Web Server is a cloud service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. We have used it to deploy our website.
 
-# 7. Organisation <a name="org"></a>
+In order to deploy our website, we have followed the following steps:
+1. We have used the Maven function "verify" to create the .jar file.
+2. We have created an account in AWS and we have created an EC2 instance.
+3. We have uploaded the .jar file to the instance.
+4. We have created the database at the RDS instance.
+5. We have connected the database with the .jar file.
+6. We have created the security groups to allow the traffic to the website.
+
+# 8. Organisation <a name="org"></a>
 
 ## Task management
 
