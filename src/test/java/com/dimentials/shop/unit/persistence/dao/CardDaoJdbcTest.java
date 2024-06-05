@@ -98,24 +98,43 @@ public class CardDaoJdbcTest {
     }
 
     @Nested
-    class AlterationTests {
+    class UpdateTests {
         @Test
         @Disabled
         void updateMonster_shouldUpdateMonster() {
-            MonsterEntity monster = new MonsterEntity(1, "Name", "Description_es.", "Description_en", new BigDecimal(7), "image", 1, 1, "mainType_es", "mainType_en", "secondaryType_es", "secondaryType_en");
+            MonsterEntity monster = new MonsterEntity(1, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1, 1, "mainType_es", "mainType_en", "secondaryType_es", "secondaryType_en");
             cardDao.updateMonster(monster);
-            expectedLlibreList.add(monster);
+
+            Locale currentLocale = LocaleContextHolder.getLocale();
+            String language = currentLocale.getLanguage();
+            monster.setDescription("Description_" + language);
+
             CardEntity result = cardDao.findById(1);
-            assertEquals(monster, result);
+            assertAll(
+                    () -> assertEquals(monster.getName(), result.getName()),
+                    () -> assertEquals(monster.getDescription(), result.getDescription()),
+                    () -> assertEquals(monster.getPrice(), result.getPrice()),
+                    () -> assertEquals(monster.getImgPath(), result.getImgPath())
+            );
         }
 
         @Test
         @Disabled
         void updateSpell_shouldUpdateSpell() {
-            SpellEntity spell = new SpellEntity(null, "Lavacus", "Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.", new BigDecimal(7), "image", 1);
+            SpellEntity spell = new SpellEntity(1, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1);
             cardDao.updateSpell(spell);
+
+            Locale currentLocale = LocaleContextHolder.getLocale();
+            String language = currentLocale.getLanguage();
+            spell.setDescription("Description_" + language);
+
             CardEntity result = cardDao.findById(1);
-            assertEquals(spell, result);
+            assertAll(
+                    () -> assertEquals(spell.getName(), result.getName()),
+                    () -> assertEquals(spell.getDescription(), result.getDescription()),
+                    () -> assertEquals(spell.getPrice(), result.getPrice()),
+                    () -> assertEquals(spell.getImgPath(), result.getImgPath())
+            );
         }
     }
     @Nested
