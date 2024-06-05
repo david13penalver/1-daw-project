@@ -3,12 +3,14 @@ package com.dimentials.shop.persistence.dao.impl.jdbc.mapper;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
 import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
+import org.springframework.context.i18n.LocaleContextHolder;
 
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class CardDaoMapper {
     public static List<CardEntity> toCardList(ResultSet resultSetList) throws SQLException {
@@ -20,10 +22,12 @@ public class CardDaoMapper {
     }
 
     public static CardEntity toCardEntity(ResultSet resultSet) throws SQLException {
+        Locale currentLocale = LocaleContextHolder.getLocale();
+        String language = currentLocale.getLanguage();
 
         Integer id = resultSet.getInt("id_card");
         String name = resultSet.getString("name_card");
-        String description = resultSet.getString("description_es");
+        String description = resultSet.getString("description_" + language);
         BigDecimal price = resultSet.getBigDecimal("price");
         String imgPath = resultSet.getString("image");
         return new CardEntity(id, name, description, price, imgPath);

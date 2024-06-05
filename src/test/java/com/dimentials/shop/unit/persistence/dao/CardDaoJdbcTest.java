@@ -23,8 +23,8 @@ public class CardDaoJdbcTest {
     private final CardDao cardDao = new CardDaoJdbc();
     private static final DatabaseConnection connection = DatabaseConnection.getInstance();
     public final List<CardEntity> expectedLlibreList = List.of(
-            new CardEntity(1, "Lavacus", "Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.", new BigDecimal(7), "image"),
-            new CardEntity(2, "Pyromagmus", "Armadura (6): Al entrar en combate, se suma 6 de armadura hasta el principio de su siguiente turno. La armadura se suma a la vida y se consume primero cuando la legión dimential es atacada.", new BigDecimal(7), "image")
+            new CardEntity(1, "Lavacus", "Description", new BigDecimal(7), "image"),
+            new CardEntity(2, "Pyromagmus", "Description", new BigDecimal(7), "image")
     );
     @BeforeAll
     static void setup() throws SQLException {

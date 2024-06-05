@@ -40,6 +40,15 @@ public class CardEntity {
 
     }
 
+    public CardEntity(int id, String name, String description_es, String description_en, BigDecimal price, String image) {
+        this.id = id;
+        this.name = name;
+        this.description_es = description_es;
+        this.description_en = description_en;
+        this.price = price;
+        this.imgPath = image;
+    }
+
     public String getImgPath() {
         return imgPath;
     }

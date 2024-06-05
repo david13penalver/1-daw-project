@@ -1,3 +1,3 @@
-insert INTO card VALUES (1, 'Lavacus', 'Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.', 7, 'image');
+insert INTO card VALUES (1, 'Lavacus', 'Description', 'Description', 7, 'image');
 
-insert INTO card VALUES (2, 'Pyromagmus', 'Armadura (6): Al entrar en combate, se suma 6 de armadura hasta el principio de su siguiente turno. La armadura se suma a la vida y se consume primero cuando la legión dimential es atacada.', 7, 'image');
+insert INTO card VALUES (2, 'Pyromagmus', 'Description', 'Description', 7, 'image');
