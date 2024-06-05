@@ -1,5 +1,6 @@
 package com.dimentials.shop.unit.persistence.dao;
 
+import com.dimentials.shop.common.exception.QueryBuilderSQLException;
 import com.dimentials.shop.domain.entity.Card;
 import com.dimentials.shop.persistence.dao.CardDao;
 import com.dimentials.shop.persistence.dao.entity.CardEntity;
@@ -17,8 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CardDaoJdbcTest {
     private final CardDao cardDao = new CardDaoJdbc();
@@ -44,22 +44,35 @@ public class CardDaoJdbcTest {
     @Nested
     class FindTests {
         @Test
+        @DisplayName("findAll should return all cards")
         void findAll_shouldReturnAllCards() {
             List<CardEntity> result = cardDao.findAll();
             assertEquals(expectedLlibreList, result);
         }
 
         @Test
+        @DisplayName("findById(1) should return card(1)")
         void findById_shouldReturnCard() {
             CardEntity result = cardDao.findById(1);
             assertEquals(expectedLlibreList.get(0), result);
+        }
+        @Test
+        @DisplayName("findById(2) should return card(2)")
+        void findById_shouldReturnCard2() {
+            CardEntity result = cardDao.findById(2);
+            assertEquals(expectedLlibreList.get(1), result);
+        }
+        @Test
+        @DisplayName("findById(3) should return null")
+        void findById_shouldReturnCard3() {
+            assertNull(cardDao.findById(999));
         }
     }
 
     @Nested
     class InsertionTests {
         @Test
-        @Disabled
+        @DisplayName("addMonster should insert a monster")
         void addMonster_shouldInsertMonster() {
             MonsterEntity monster = new MonsterEntity(null, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1, 1, "mainType_es", "mainType_en", "secondaryType_es", "secondaryType_en");
             cardDao.addMonster(monster);
@@ -76,9 +89,15 @@ public class CardDaoJdbcTest {
                     () -> assertEquals(monster.getImgPath(), result.getImgPath())
             );
         }
+        @Test
+        @DisplayName("addMonster should throw an exception")
+        void addMonster_shouldThrowException() {
+            MonsterEntity monster = new MonsterEntity(null, "Name", "Description_es", new BigDecimal(7), "image", 1, 1, "mainType_es", "secondaryType_es");
+            assertThrows(QueryBuilderSQLException.class, () -> cardDao.addMonster(monster));
+        }
 
         @Test
-        @Disabled
+        @DisplayName("addSpell should insert a spell")
         void addSpell_shouldInsertSpell() {
             SpellEntity spell = new SpellEntity(null, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1);
             cardDao.addSpell(spell);
@@ -95,12 +114,18 @@ public class CardDaoJdbcTest {
                     () -> assertEquals(spell.getImgPath(), result.getImgPath())
             );
         }
+        @Test
+        @DisplayName("addSpell should throw an exception")
+        void addSpell_shouldThrowException() {
+            SpellEntity spell = new SpellEntity();
+            assertThrows(QueryBuilderSQLException.class, () -> cardDao.addSpell(spell));
+        }
     }
 
     @Nested
     class UpdateTests {
         @Test
-        @Disabled
+        @DisplayName("updateMonster should update a monster")
         void updateMonster_shouldUpdateMonster() {
             MonsterEntity monster = new MonsterEntity(1, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1, 1, "mainType_es", "mainType_en", "secondaryType_es", "secondaryType_en");
             cardDao.updateMonster(monster);
@@ -119,7 +144,7 @@ public class CardDaoJdbcTest {
         }
 
         @Test
-        @Disabled
+        @DisplayName("updateSpell should update a spell")
         void updateSpell_shouldUpdateSpell() {
             SpellEntity spell = new SpellEntity(1, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1);
             cardDao.updateSpell(spell);
@@ -140,7 +165,7 @@ public class CardDaoJdbcTest {
     @Nested
     class DeletionTests {
         @Test
-        @Disabled
+        @DisplayName("deleteCard should delete a card")
         void deleteCard_shouldDeleteCard() {
             cardDao.deleteCard(1);
             List<CardEntity> result = cardDao.findAll();

@@ -7,6 +7,10 @@ import java.util.Objects;
 public class SpellEntity extends CardEntity{
     private Integer mana;
 
+    public SpellEntity() {
+
+    }
+
     public Integer getMana() {
         return mana;
     }
