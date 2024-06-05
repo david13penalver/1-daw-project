@@ -6,7 +6,7 @@ import com.dimentials.shop.common.exception.RawSqlException;
 
 public class RawSql {
 
-    private static final DatabaseConnection dbConnection = new DatabaseConnection();
+    private static final DatabaseConnection dbConnection = DatabaseConnection.getInstance();
 
     public static ResultSet select(String sql, List<Object> params) {
         try {

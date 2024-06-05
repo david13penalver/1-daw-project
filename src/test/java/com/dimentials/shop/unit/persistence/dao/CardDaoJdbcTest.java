@@ -8,10 +8,12 @@ import com.dimentials.shop.persistence.dao.entity.MonsterEntity;
 import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 import com.dimentials.shop.persistence.dao.impl.jdbc.CardDaoJdbc;
 import com.dimentials.shop.persistence.dao.impl.jdbc.rawSql.DatabaseConnection;
+import com.dimentials.shop.persistence.dao.impl.jdbc.rawSql.RawSql;
 import org.junit.jupiter.api.*;
 import org.springframework.context.i18n.LocaleContextHolder;
 
 import java.math.BigDecimal;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -23,6 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CardDaoJdbcTest {
     private final CardDao cardDao = new CardDaoJdbc();
     private static final DatabaseConnection connection = DatabaseConnection.getInstance();
+    private static boolean initialized = false;
     public final List<CardEntity> expectedLlibreList = new ArrayList<>(
             List.of(
                     new CardEntity(1, "Lavacus", "Description", new BigDecimal(7), "image"),
@@ -31,14 +34,20 @@ public class CardDaoJdbcTest {
     );
     @BeforeAll
     static void setup() throws SQLException {
-        connection.executeScript("schema.sql");
-        connection.executeScript("data.sql");
-        connection.getConnection().setAutoCommit(false);
+        if (!initialized) {
+            connection.executeScript("schema.sql");
+            connection.executeScript("data.sql");
+            //connection.getConnection().setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+            connection.getConnection().setAutoCommit(false);
+            initialized = true;
+        }
+        // connection.prepareStatement("START TRANSACTION;").execute();
     }
 
     @AfterEach
     void tearDown() throws SQLException {
-        connection.getConnection().rollback();
+        System.out.println("Rolling back");
+        RawSql.rollback();
     }
 
     @Nested
@@ -106,7 +115,7 @@ public class CardDaoJdbcTest {
             String language = currentLocale.getLanguage();
             spell.setDescription("Description_" + language);
 
-            CardEntity result = cardDao.findById(3);
+            CardEntity result = cardDao.findById(4);
             assertAll(
                     () -> assertEquals(spell.getName(), result.getName()),
                     () -> assertEquals(spell.getDescription(), result.getDescription()),
