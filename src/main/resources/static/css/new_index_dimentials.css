@@ -1010,6 +1010,13 @@ footer .dimentials-logo {
                                                    
 ------------------------------------------------------------*/
 
+#dimentials_contact {
+    margin:0;
+    font-family: sans-serif;
+    color:#eee;
+    background: linear-gradient(to bottom,#333, #000);
+}
+
 #dimentials_contact h2 {
     text-align: center;
     margin: 0;
@@ -1017,12 +1024,6 @@ footer .dimentials-logo {
     text-transform: uppercase;
     font-size: 22px;
 
-}
-#dimentials_contact body {
-    margin:0;
-    font-family: sans-serif;
-    color:#eee;
-    background: linear-gradient(to bottom,#333, #000);
 }
 
 #dimentials_contact form {
@@ -1042,7 +1043,7 @@ footer .dimentials-logo {
 
 #dimentials_contact input, #dimentials_contact textarea, #dimentials_contact select {
     width: 100%;
-    padding: 6px 8px; /* 6 arriba y abajo, 12 a la izq y derecha */
+    padding: 6px 8px; 
     box-sizing: border-box;
     border: 1px solid #666; 
     background-color: transparent;
@@ -1055,8 +1056,8 @@ footer .dimentials-logo {
 
 #dimentials_contact option{
     background-color: #222;
-    /* no se puede añadir margin ni padding, se necesitaria usar una libreria aposta de Javascript para eso*/
 }
+
 #dimentials_contact textarea {
     min-width: 100%;
     resize: vertical;
@@ -1088,6 +1089,387 @@ footer .dimentials-logo {
     color: #777;
 }
 
+
+
+/*--------------------------------------------------------------                                               
+                                                                                                          
+▀███▄   ▀███▀                            ▀████▄     ▄███▀                            ██                   
+  ███▄    █                                ████    ████                              ██                   
+  █ ███   █   ▄▄█▀██▀██▀    ▄█    ▀██▀     █ ██   ▄█ ██   ▄██▀██▄▀████████▄  ▄██▀████████  ▄▄█▀██▀███▄███ 
+  █  ▀██▄ █  ▄█▀   ██ ██   ▄███   ▄█       █  ██  █▀ ██  ██▀   ▀██ ██    ██  ██   ▀▀ ██   ▄█▀   ██ ██▀ ▀▀ 
+  █   ▀██▄█  ██▀▀▀▀▀▀  ██ ▄█  ██ ▄█        █  ██▄█▀  ██  ██     ██ ██    ██  ▀█████▄ ██   ██▀▀▀▀▀▀ ██     
+  █     ███  ██▄    ▄   ███    ███         █  ▀██▀   ██  ██▄   ▄██ ██    ██  █▄   ██ ██   ██▄    ▄ ██     
+▄███▄    ██   ▀█████▀    █      █        ▄███▄ ▀▀  ▄████▄ ▀█████▀▄████  ████▄██████▀ ▀████ ▀█████▀████▄   
+                                                                                                          
+                                                                                                                                                                                                
+------------------------------------------------------------*/
+
+#dimentials_new-monster {
+    margin:0;
+    font-family: sans-serif;
+    color:#eee;
+    background: linear-gradient(to bottom,#333, #000);
+}
+
+#dimentials_new-monster h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+
+}
+
+#dimentials_new-monster form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.361);
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+#dimentials_new-monster .form_input {
+    padding: 6px 20px;
+}
+
+#dimentials_new-monster input, #dimentials_new-monster textarea, #dimentials_new-monster select {
+    width: 100%;
+    padding: 6px 8px; 
+    box-sizing: border-box;
+    border: 1px solid #666; 
+    background-color: transparent;
+    border-left: 2px solid #107d8e;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
+    color: #ddd;
+    border-radius: 4px;
+    margin: 6px 0;
+}
+
+#dimentials_new-monster option{
+    background-color: #222;
+}
+
+#dimentials_new-monster textarea {
+    min-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    font-family: sans-serif;;
+}
+
+#dimentials_new-monster label {
+    font-size:0,88em;
+}
+
+#dimentials_new-monster .checkbox {
+    width: auto;
+    height: 15px;
+}
+
+#dimentials_new-monster fieldset {
+    margin:20px 0;
+    border:1px solid #666;
+    border-radius: 5px;
+    padding: 8px 8px 10px 10px;
+    margin: 20px
+
+}
+
+#dimentials_new-monster legend {
+    padding: 0 6px;
+    color: #777;
+}
+
+
+/*--------------------------------------------------------------                                               
+                                                                                                          
+                              ▄▄                                                                                            
+▀███▀   ▀███▀               ▀███           ██              ▀████▄     ▄███▀                            ██                   
+ ██       █                   ██           ██                ████    ████                              ██                   
+ ██       █ ▀████████▄   ▄█▀▀███  ▄█▀██▄ ██████  ▄▄█▀██      █ ██   ▄█ ██   ▄██▀██▄▀████████▄  ▄██▀████████  ▄▄█▀██▀███▄███ 
+ ██       █   ██   ▀██ ▄██    ██ ██   ██   ██   ▄█▀   ██     █  ██  █▀ ██  ██▀   ▀██ ██    ██  ██   ▀▀ ██   ▄█▀   ██ ██▀ ▀▀ 
+ ██       █   ██    ██ ███    ██  ▄█████   ██   ██▀▀▀▀▀▀     █  ██▄█▀  ██  ██     ██ ██    ██  ▀█████▄ ██   ██▀▀▀▀▀▀ ██     
+ ██▄     ▄█   ██   ▄██ ▀██    ██ ██   ██   ██   ██▄    ▄     █  ▀██▀   ██  ██▄   ▄██ ██    ██  █▄   ██ ██   ██▄    ▄ ██     
+  ▀██████▀▀   ██████▀   ▀████▀███▄████▀██▄ ▀████ ▀█████▀   ▄███▄ ▀▀  ▄████▄ ▀█████▀▄████  ████▄██████▀ ▀████ ▀█████▀████▄   
+              ██                                                                                                            
+            ▄████▄                                                                                                                                                                                                                    
+                                                                                                                                                                                                
+------------------------------------------------------------*/
+
+#dimentials_update-monster {
+    margin:0;
+    font-family: sans-serif;
+    color:#eee;
+    background: linear-gradient(to bottom,#333, #000);
+}
+
+#dimentials_update-monster h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+
+}
+
+#dimentials_update-monster form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.361);
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+#dimentials_update-monster .form_input {
+    padding: 6px 20px;
+}
+
+#dimentials_update-monster input, #dimentials_update-monster textarea, #dimentials_update-monster select {
+    width: 100%;
+    padding: 6px 8px; 
+    box-sizing: border-box;
+    border: 1px solid #666; 
+    background-color: transparent;
+    border-left: 2px solid #107d8e;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
+    color: #ddd;
+    border-radius: 4px;
+    margin: 6px 0;
+}
+
+#dimentials_update-monster option{
+    background-color: #222;
+}
+
+#dimentials_update-monster textarea {
+    min-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    font-family: sans-serif;;
+}
+
+#dimentials_update-monster label {
+    font-size:0,88em;
+}
+
+#dimentials_update-monster .checkbox {
+    width: auto;
+    height: 15px;
+}
+
+#dimentials_update-monster fieldset {
+    margin:20px 0;
+    border:1px solid #666;
+    border-radius: 5px;
+    padding: 8px 8px 10px 10px;
+    margin: 20px
+
+}
+
+#dimentials_update-monster legend {
+    padding: 0 6px;
+    color: #777;
+}
+
+
+
+/*--------------------------------------------------------------                                               
+                                                                                                                                                                               ▄▄    ▄▄  
+▀███▄   ▀███▀                             ▄█▀▀▀█▄█                  ▀███  ▀███  
+  ███▄    █                              ▄██    ▀█                    ██    ██  
+  █ ███   █   ▄▄█▀██▀██▀    ▄█    ▀██▀   ▀███▄   ▀████████▄  ▄▄█▀██   ██    ██  
+  █  ▀██▄ █  ▄█▀   ██ ██   ▄███   ▄█       ▀█████▄ ██   ▀██ ▄█▀   ██  ██    ██  
+  █   ▀██▄█  ██▀▀▀▀▀▀  ██ ▄█  ██ ▄█      ▄     ▀██ ██    ██ ██▀▀▀▀▀▀  ██    ██  
+  █     ███  ██▄    ▄   ███    ███       ██     ██ ██   ▄██ ██▄    ▄  ██    ██  
+▄███▄    ██   ▀█████▀    █      █        █▀█████▀  ██████▀   ▀█████▀▄████▄▄████▄
+                                                   ██                           
+                                                 ▄████▄                                                                                                                                                                                                                
+------------------------------------------------------------*/
+
+#dimentials_new-spell {
+    margin:0;
+    font-family: sans-serif;
+    color:#eee;
+    background: linear-gradient(to bottom,#333, #000);
+}
+
+#dimentials_new-spell h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+
+}
+
+#dimentials_new-spell form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.361);
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+#dimentials_new-spell .form_input {
+    padding: 6px 20px;
+}
+
+#dimentials_new-spell input, #dimentials_new-spell textarea, #dimentials_new-spell select {
+    width: 100%;
+    padding: 6px 8px; 
+    box-sizing: border-box;
+    border: 1px solid #666; 
+    background-color: transparent;
+    border-left: 2px solid #107d8e;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
+    color: #ddd;
+    border-radius: 4px;
+    margin: 6px 0;
+}
+
+#dimentials_new-spell option{
+    background-color: #222;
+}
+
+#dimentials_new-spell textarea {
+    min-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    font-family: sans-serif;;
+}
+
+#dimentials_new-spell label {
+    font-size:0,88em;
+}
+
+#dimentials_new-spell .checkbox {
+    width: auto;
+    height: 15px;
+}
+
+#dimentials_new-spell fieldset {
+    margin:20px 0;
+    border:1px solid #666;
+    border-radius: 5px;
+    padding: 8px 8px 10px 10px;
+    margin: 20px
+
+}
+
+#dimentials_new-spell legend {
+    padding: 0 6px;
+    color: #777;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------                                               
+                                                                                                          
+                              ▄▄                                                        ▄▄    ▄▄  
+▀███▀   ▀███▀               ▀███           ██               ▄█▀▀▀█▄█                  ▀███  ▀███  
+ ██       █                   ██           ██              ▄██    ▀█                    ██    ██  
+ ██       █ ▀████████▄   ▄█▀▀███  ▄█▀██▄ ██████  ▄▄█▀██    ▀███▄   ▀████████▄  ▄▄█▀██   ██    ██  
+ ██       █   ██   ▀██ ▄██    ██ ██   ██   ██   ▄█▀   ██     ▀█████▄ ██   ▀██ ▄█▀   ██  ██    ██  
+ ██       █   ██    ██ ███    ██  ▄█████   ██   ██▀▀▀▀▀▀   ▄     ▀██ ██    ██ ██▀▀▀▀▀▀  ██    ██  
+ ██▄     ▄█   ██   ▄██ ▀██    ██ ██   ██   ██   ██▄    ▄   ██     ██ ██   ▄██ ██▄    ▄  ██    ██  
+  ▀██████▀▀   ██████▀   ▀████▀███▄████▀██▄ ▀████ ▀█████▀   █▀█████▀  ██████▀   ▀█████▀▄████▄▄████▄
+              ██                                                     ██                           
+            ▄████▄                                                 ▄████▄                         
+                                                                                                                                                                                                
+------------------------------------------------------------*/
+
+#dimentials_update-spell {
+    margin:0;
+    font-family: sans-serif;
+    color:#eee;
+    background: linear-gradient(to bottom,#333, #000);
+}
+
+#dimentials_update-spell h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+
+}
+
+#dimentials_update-spell form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.361);
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+#dimentials_update-spell .form_input {
+    padding: 6px 20px;
+}
+
+#dimentials_update-spell input, #dimentials_update-spell textarea, #dimentials_update-spell select {
+    width: 100%;
+    padding: 6px 8px; 
+    box-sizing: border-box;
+    border: 1px solid #666; 
+    background-color: transparent;
+    border-left: 2px solid #107d8e;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
+    color: #ddd;
+    border-radius: 4px;
+    margin: 6px 0;
+}
+
+#dimentials_update-spell option{
+    background-color: #222;
+}
+
+#dimentials_update-spell textarea {
+    min-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    font-family: sans-serif;;
+}
+
+#dimentials_update-spell label {
+    font-size:0,88em;
+}
+
+#dimentials_update-spell .checkbox {
+    width: auto;
+    height: 15px;
+}
+
+#dimentials_update-spell fieldset {
+    margin:20px 0;
+    border:1px solid #666;
+    border-radius: 5px;
+    padding: 8px 8px 10px 10px;
+    margin: 20px
+
+}
+
+#dimentials_update-spell legend {
+    padding: 0 6px;
+    color: #777;
+}
 
 
 
