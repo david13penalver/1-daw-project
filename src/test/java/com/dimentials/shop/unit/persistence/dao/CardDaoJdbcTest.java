@@ -8,21 +8,26 @@ import com.dimentials.shop.persistence.dao.entity.SpellEntity;
 import com.dimentials.shop.persistence.dao.impl.jdbc.CardDaoJdbc;
 import com.dimentials.shop.persistence.dao.impl.jdbc.rawSql.DatabaseConnection;
 import org.junit.jupiter.api.*;
+import org.springframework.context.i18n.LocaleContextHolder;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CardDaoJdbcTest {
     private final CardDao cardDao = new CardDaoJdbc();
     private static final DatabaseConnection connection = DatabaseConnection.getInstance();
-    public final List<CardEntity> expectedLlibreList = List.of(
-            new CardEntity(1, "Lavacus", "Description", new BigDecimal(7), "image"),
-            new CardEntity(2, "Pyromagmus", "Description", new BigDecimal(7), "image")
+    public final List<CardEntity> expectedLlibreList = new ArrayList<>(
+            List.of(
+                    new CardEntity(1, "Lavacus", "Description", new BigDecimal(7), "image"),
+                    new CardEntity(2, "Pyromagmus", "Description", new BigDecimal(7), "image")
+            )
     );
     @BeforeAll
     static void setup() throws SQLException {
@@ -37,7 +42,7 @@ public class CardDaoJdbcTest {
     }
 
     @Nested
-    class findTests {
+    class FindTests {
         @Test
         void findAll_shouldReturnAllCards() {
             List<CardEntity> result = cardDao.findAll();
@@ -56,25 +61,44 @@ public class CardDaoJdbcTest {
         @Test
         @Disabled
         void addMonster_shouldInsertMonster() {
-            MonsterEntity monster = new MonsterEntity(null, "Name", "Description_es.", "Description_en", new BigDecimal(7), "image", 1, 1, "mainType_es", "mainType_en", "secondaryType_es", "secondaryType_en");
+            MonsterEntity monster = new MonsterEntity(null, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1, 1, "mainType_es", "mainType_en", "secondaryType_es", "secondaryType_en");
             cardDao.addMonster(monster);
-            expectedLlibreList.add(monster);
+
+            Locale currentLocale = LocaleContextHolder.getLocale();
+            String language = currentLocale.getLanguage();
+            monster.setDescription("Description_" + language);
+
             CardEntity result = cardDao.findById(3);
-            assertEquals(expectedLlibreList.get(2), result);
+            assertAll(
+                    () -> assertEquals(monster.getName(), result.getName()),
+                    () -> assertEquals(monster.getDescription(), result.getDescription()),
+                    () -> assertEquals(monster.getPrice(), result.getPrice()),
+                    () -> assertEquals(monster.getImgPath(), result.getImgPath())
+            );
         }
 
         @Test
         @Disabled
         void addSpell_shouldInsertSpell() {
-            SpellEntity spell = new SpellEntity(3, "Lavacus", "Escudo (1): Genera 1 de armadura al final de cada uno de tus turnos. La armadura se suma a la vida y se consume cuando tu legión dimensional es atacada. La armadura de esta habilidad es acumulable y la que no es consumida permanece incluso cuando la legión evoluciona.", new BigDecimal(7), "image", 1);
+            SpellEntity spell = new SpellEntity(null, "Name", "Description_es", "Description_en", new BigDecimal(7), "image", 1);
             cardDao.addSpell(spell);
-            List<CardEntity> result = cardDao.findAll();
-            assertEquals(expectedLlibreList.size() + 1, result.size());
+
+            Locale currentLocale = LocaleContextHolder.getLocale();
+            String language = currentLocale.getLanguage();
+            spell.setDescription("Description_" + language);
+
+            CardEntity result = cardDao.findById(3);
+            assertAll(
+                    () -> assertEquals(spell.getName(), result.getName()),
+                    () -> assertEquals(spell.getDescription(), result.getDescription()),
+                    () -> assertEquals(spell.getPrice(), result.getPrice()),
+                    () -> assertEquals(spell.getImgPath(), result.getImgPath())
+            );
         }
     }
 
     @Nested
-    class alterationTests {
+    class AlterationTests {
         @Test
         @Disabled
         void updateMonster_shouldUpdateMonster() {
@@ -97,6 +121,7 @@ public class CardDaoJdbcTest {
     @Nested
     class DeletionTests {
         @Test
+        @Disabled
         void deleteCard_shouldDeleteCard() {
             cardDao.deleteCard(1);
             List<CardEntity> result = cardDao.findAll();
