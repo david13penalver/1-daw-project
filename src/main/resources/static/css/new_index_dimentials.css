@@ -1,6 +1,5 @@
 /* Reglas Generales */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
     margin: 0;
@@ -13,7 +12,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-
 :root {
     --bg-color: #080808;
     --second-bg-color: #131313;
@@ -22,12 +20,10 @@
     --secondary-color: #e54fad;
 }
 
-
 html {
     font-size: 100%;
     overflow-x: hidden;
 }
-
 
 /* -----------------------------------------------------------
                                                                 
@@ -44,7 +40,6 @@ html {
 
                                                                 
 ----------------------------------------------------------- */
-
 
 .dim-nav-item {
     margin-left: 5px;
@@ -67,7 +62,11 @@ footer {
     padding-top: 3vh;
 }
 
-footer h1, footer h2, footer h3, footer h4, footer p {
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer p {
     color: var(--text-color);
 }
 
@@ -96,7 +95,7 @@ footer ul li a:hover {
 }
 
 footer .dimentials-logo {
-    position:relative;
+    position: relative;
     top: -16px;
 }
 
@@ -105,7 +104,8 @@ footer .dimentials-logo {
     height: 25px;
 }
 
-.grid-redes li a:hover, .grid-legal li a:hover {
+.grid-redes li a:hover,
+.grid-legal li a:hover {
     color: var(--secondary-color);
 }
 
@@ -122,7 +122,8 @@ footer .dimentials-logo {
                                                    
 ------------------------------------------------------------*/
 
-#dimentials_index {}
+#dimentials_index {
+}
 
 #dimentials_index .dimentials-navbar-justify {
     justify-content: space-between;
@@ -165,8 +166,8 @@ footer .dimentials-logo {
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
+    padding: 0 3rem;
 }
-
 
 #dimentials_index .logo span {
     color: var(--main-color);
@@ -275,8 +276,6 @@ footer .dimentials-logo {
     box-shadow: 0 0 50px var(--main-color);
 }
 
-
-
 #dimentials_index .text-animation {
     font-size: 8vw;
     font-weight: 600;
@@ -302,7 +301,7 @@ footer .dimentials-logo {
     border-left: 3px solid var(--bg-color);
     right: -8px;
     background-color: var(--bg-color);
-    top: -.3vh;
+    top: -0.3vh;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
     padding-top: 5px;
 }
@@ -314,7 +313,6 @@ footer .dimentials-logo {
 }
 
 @keyframes words {
-
     0%,
     20% {
         content: "INVEROSÍMIL";
@@ -342,7 +340,6 @@ footer .dimentials-logo {
 }
 
 @keyframes typing {
-
     10%,
     15%,
     30%,
@@ -523,24 +520,21 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dim-card-gallery {
-    
 }
 
-
-#dim-card-gallery .hero-gallery img{
-    filter: drop-shadow(30px 10px 4px #964B00);
+#dim-card-gallery .hero-gallery img {
+    filter: drop-shadow(30px 10px 4px #964b00);
 }
 
-
-#dim-card-gallery #gallery_cards{
+#dim-card-gallery #gallery_cards {
     margin: 5vh;
 }
 
-#dim-card-gallery .tiltcard{
+#dim-card-gallery .tiltcard {
     margin-bottom: 2vh;
 }
 
-#dim-card-gallery #gallery_cards .tiltcard img{
+#dim-card-gallery #gallery_cards .tiltcard img {
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -564,7 +558,7 @@ footer .dimentials-logo {
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 #relative-card-container {
@@ -609,8 +603,7 @@ footer .dimentials-logo {
     position: absolute;
     top: 50%;
     left: 0;
-    font-size:2rem
-
+    font-size: 2rem;
 }
 
 #dim-card-gallery #button__keep-it-up {
@@ -661,13 +654,11 @@ footer .dimentials-logo {
 #dimentials_card_detail .profile__img-container {
     padding-left: 0;
     padding-right: 0;
-
 }
 
 #dimentials_card_detail .profile__img-container img {
     width: 100%;
     border-radius: 20px 20px 0 0;
-    
 }
 
 #dimentials_card_detail h1 {
@@ -684,18 +675,14 @@ footer .dimentials-logo {
 }
 
 #dimentials_card_detail h1 {
-        margin-top: 0;
-        font-size: 7vw;
-        text-wrap: balance;
+    margin-top: 0;
+    font-size: 7vw;
+    text-wrap: balance;
 }
 
 #dimentials_card_detail .profile__img-normal {
-        object-fit: cover;  
+    object-fit: cover;
 }
-
-
-
-
 
 /*--------------------------------------------------------------
                                                    
@@ -712,7 +699,6 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dimentials_about {
-
 }
 
 #dimentials_about #myCarousel img {
@@ -739,29 +725,27 @@ footer .dimentials-logo {
 
 #dimentials_about .carousel {
     margin-bottom: 4rem;
-  }
-  
+}
+
 #dimentials_about .carousel-caption {
     bottom: 3rem;
     z-index: 10;
-  }
-  
+}
+
 #dimentials_about .carousel-item {
     height: 60vh;
-  }
+}
 
-  /* Featurettes
+/* Featurettes
   ------------------------- */
-  
-#dimentials_about .featurette-divider {
-    margin: 5rem 0; 
-  }
-  
-#dimentials_about .featurette-heading {
-    letter-spacing: -.05rem;
-  }
-  
 
+#dimentials_about .featurette-divider {
+    margin: 5rem 0;
+}
+
+#dimentials_about .featurette-heading {
+    letter-spacing: -0.05rem;
+}
 
 /*--------------------------------------------------------------
 
@@ -777,20 +761,18 @@ footer .dimentials-logo {
                                                            
 ------------------------------------------------------------*/
 
-#dimentials_shop{
-    font-family: 'Poppins', sans-serif;
+#dimentials_shop {
+    font-family: "Poppins", sans-serif;
 }
-
 
 #dimentials_shop table {
-    width:100%;
+    width: 100%;
 }
 
-#dimentials_shop th, #dimentials_shop td {
-    color: #FFFFFF;
+#dimentials_shop th,
+#dimentials_shop td {
+    color: #ffffff;
 }
-
-
 
 #dimentials_shop .hero-content {
     display: flex;
@@ -816,7 +798,7 @@ footer .dimentials-logo {
     text-transform: uppercase;
     line-height: 1;
     color: #111111;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 20px;
 }
 
@@ -824,7 +806,7 @@ footer .dimentials-logo {
     display: inline-block;
     padding: 11px 25px;
     background-color: #111111;
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 5px;
 }
 
@@ -862,7 +844,7 @@ footer .dimentials-logo {
 }
 
 #dimentials_shop .ofert-txt h3 {
-    color:#111111;
+    color: #111111;
     font-family: poppins, sans-serif;
     font-size: 25px;
     text-transform: uppercase;
@@ -872,7 +854,6 @@ footer .dimentials-logo {
 #dimentials_shop .btn-2 {
     display: inline-block;
     padding: 7px 10px;
-
 }
 
 #dimentials_shop .products {
@@ -891,7 +872,7 @@ footer .dimentials-logo {
 #dimentials_shop .product-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:50px;
+    gap: 50px;
 }
 
 #dimentials_shop .product {
@@ -902,7 +883,7 @@ footer .dimentials-logo {
 
 #dimentials_shop .product img {
     width: 250px;
-    height:370px;
+    height: 370px;
     margin-bottom: 20px;
 }
 
@@ -914,9 +895,9 @@ footer .dimentials-logo {
     margin-bottom: 15px;
 }
 
-
-#dimentials_shop .product p, #dimentials_body .precio {
-    font-size:16px;
+#dimentials_shop .product p,
+#dimentials_body .precio {
+    font-size: 16px;
     color: #111111;
     margin-bottom: 15px;
 }
@@ -979,7 +960,6 @@ footer .dimentials-logo {
     color: #111111;
 }
 
-
 #dimentials_shop .link h3 {
     font-size: 18px;
     color: #ffffff;
@@ -994,7 +974,6 @@ footer .dimentials-logo {
     display: block;
     margin-bottom: 10px;
 }
-
 
 /*--------------------------------------------------------------
                                                    
@@ -1011,10 +990,10 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dimentials_contact {
-    margin:0;
+    margin: 0;
     font-family: sans-serif;
-    color:#eee;
-    background: linear-gradient(to bottom,#333, #000);
+    color: #eee;
+    background: linear-gradient(to bottom, #333, #000);
 }
 
 #dimentials_contact h2 {
@@ -1023,7 +1002,6 @@ footer .dimentials-logo {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 22px;
-
 }
 
 #dimentials_contact form {
@@ -1041,11 +1019,13 @@ footer .dimentials-logo {
     padding: 6px 20px;
 }
 
-#dimentials_contact input, #dimentials_contact textarea, #dimentials_contact select {
+#dimentials_contact input,
+#dimentials_contact textarea,
+#dimentials_contact select {
     width: 100%;
-    padding: 6px 8px; 
+    padding: 6px 8px;
     box-sizing: border-box;
-    border: 1px solid #666; 
+    border: 1px solid #666;
     background-color: transparent;
     border-left: 2px solid #107d8e;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
@@ -1054,7 +1034,7 @@ footer .dimentials-logo {
     margin: 6px 0;
 }
 
-#dimentials_contact option{
+#dimentials_contact option {
     background-color: #222;
 }
 
@@ -1063,11 +1043,11 @@ footer .dimentials-logo {
     resize: vertical;
     max-height: 200px;
     min-height: 200px;
-    font-family: sans-serif;;
+    font-family: sans-serif;
 }
 
 #dimentials_contact label {
-    font-size:0,88em;
+    font-size: 0, 88em;
 }
 
 #dimentials_contact .checkbox {
@@ -1076,20 +1056,17 @@ footer .dimentials-logo {
 }
 
 #dimentials_contact fieldset {
-    margin:20px 0;
-    border:1px solid #666;
+    margin: 20px 0;
+    border: 1px solid #666;
     border-radius: 5px;
     padding: 8px 8px 10px 10px;
-    margin: 20px
-
+    margin: 20px;
 }
 
 #dimentials_contact legend {
     padding: 0 6px;
     color: #777;
 }
-
-
 
 /*--------------------------------------------------------------                                               
                                                                                                           
@@ -1105,10 +1082,10 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dimentials_new-monster {
-    margin:0;
+    margin: 0;
     font-family: sans-serif;
-    color:#eee;
-    background: linear-gradient(to bottom,#333, #000);
+    color: #eee;
+    background: linear-gradient(to bottom, #333, #000);
 }
 
 #dimentials_new-monster h2 {
@@ -1117,7 +1094,6 @@ footer .dimentials-logo {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 22px;
-
 }
 
 #dimentials_new-monster form {
@@ -1135,11 +1111,13 @@ footer .dimentials-logo {
     padding: 6px 20px;
 }
 
-#dimentials_new-monster input, #dimentials_new-monster textarea, #dimentials_new-monster select {
+#dimentials_new-monster input,
+#dimentials_new-monster textarea,
+#dimentials_new-monster select {
     width: 100%;
-    padding: 6px 8px; 
+    padding: 6px 8px;
     box-sizing: border-box;
-    border: 1px solid #666; 
+    border: 1px solid #666;
     background-color: transparent;
     border-left: 2px solid #107d8e;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
@@ -1148,7 +1126,7 @@ footer .dimentials-logo {
     margin: 6px 0;
 }
 
-#dimentials_new-monster option{
+#dimentials_new-monster option {
     background-color: #222;
 }
 
@@ -1157,11 +1135,11 @@ footer .dimentials-logo {
     resize: vertical;
     max-height: 200px;
     min-height: 200px;
-    font-family: sans-serif;;
+    font-family: sans-serif;
 }
 
 #dimentials_new-monster label {
-    font-size:0,88em;
+    font-size: 0, 88em;
 }
 
 #dimentials_new-monster .checkbox {
@@ -1170,19 +1148,17 @@ footer .dimentials-logo {
 }
 
 #dimentials_new-monster fieldset {
-    margin:20px 0;
-    border:1px solid #666;
+    margin: 20px 0;
+    border: 1px solid #666;
     border-radius: 5px;
     padding: 8px 8px 10px 10px;
-    margin: 20px
-
+    margin: 20px;
 }
 
 #dimentials_new-monster legend {
     padding: 0 6px;
     color: #777;
 }
-
 
 /*--------------------------------------------------------------                                               
                                                                                                           
@@ -1200,10 +1176,10 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dimentials_update-monster {
-    margin:0;
+    margin: 0;
     font-family: sans-serif;
-    color:#eee;
-    background: linear-gradient(to bottom,#333, #000);
+    color: #eee;
+    background: linear-gradient(to bottom, #333, #000);
 }
 
 #dimentials_update-monster h2 {
@@ -1212,7 +1188,6 @@ footer .dimentials-logo {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 22px;
-
 }
 
 #dimentials_update-monster form {
@@ -1230,11 +1205,13 @@ footer .dimentials-logo {
     padding: 6px 20px;
 }
 
-#dimentials_update-monster input, #dimentials_update-monster textarea, #dimentials_update-monster select {
+#dimentials_update-monster input,
+#dimentials_update-monster textarea,
+#dimentials_update-monster select {
     width: 100%;
-    padding: 6px 8px; 
+    padding: 6px 8px;
     box-sizing: border-box;
-    border: 1px solid #666; 
+    border: 1px solid #666;
     background-color: transparent;
     border-left: 2px solid #107d8e;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
@@ -1243,7 +1220,7 @@ footer .dimentials-logo {
     margin: 6px 0;
 }
 
-#dimentials_update-monster option{
+#dimentials_update-monster option {
     background-color: #222;
 }
 
@@ -1252,11 +1229,11 @@ footer .dimentials-logo {
     resize: vertical;
     max-height: 200px;
     min-height: 200px;
-    font-family: sans-serif;;
+    font-family: sans-serif;
 }
 
 #dimentials_update-monster label {
-    font-size:0,88em;
+    font-size: 0, 88em;
 }
 
 #dimentials_update-monster .checkbox {
@@ -1265,20 +1242,17 @@ footer .dimentials-logo {
 }
 
 #dimentials_update-monster fieldset {
-    margin:20px 0;
-    border:1px solid #666;
+    margin: 20px 0;
+    border: 1px solid #666;
     border-radius: 5px;
     padding: 8px 8px 10px 10px;
-    margin: 20px
-
+    margin: 20px;
 }
 
 #dimentials_update-monster legend {
     padding: 0 6px;
     color: #777;
 }
-
-
 
 /*--------------------------------------------------------------                                               
                                                                                                                                                                                ▄▄    ▄▄  
@@ -1294,10 +1268,10 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dimentials_new-spell {
-    margin:0;
+    margin: 0;
     font-family: sans-serif;
-    color:#eee;
-    background: linear-gradient(to bottom,#333, #000);
+    color: #eee;
+    background: linear-gradient(to bottom, #333, #000);
 }
 
 #dimentials_new-spell h2 {
@@ -1306,7 +1280,6 @@ footer .dimentials-logo {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 22px;
-
 }
 
 #dimentials_new-spell form {
@@ -1324,11 +1297,13 @@ footer .dimentials-logo {
     padding: 6px 20px;
 }
 
-#dimentials_new-spell input, #dimentials_new-spell textarea, #dimentials_new-spell select {
+#dimentials_new-spell input,
+#dimentials_new-spell textarea,
+#dimentials_new-spell select {
     width: 100%;
-    padding: 6px 8px; 
+    padding: 6px 8px;
     box-sizing: border-box;
-    border: 1px solid #666; 
+    border: 1px solid #666;
     background-color: transparent;
     border-left: 2px solid #107d8e;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
@@ -1337,7 +1312,7 @@ footer .dimentials-logo {
     margin: 6px 0;
 }
 
-#dimentials_new-spell option{
+#dimentials_new-spell option {
     background-color: #222;
 }
 
@@ -1346,11 +1321,11 @@ footer .dimentials-logo {
     resize: vertical;
     max-height: 200px;
     min-height: 200px;
-    font-family: sans-serif;;
+    font-family: sans-serif;
 }
 
 #dimentials_new-spell label {
-    font-size:0,88em;
+    font-size: 0, 88em;
 }
 
 #dimentials_new-spell .checkbox {
@@ -1359,23 +1334,17 @@ footer .dimentials-logo {
 }
 
 #dimentials_new-spell fieldset {
-    margin:20px 0;
-    border:1px solid #666;
+    margin: 20px 0;
+    border: 1px solid #666;
     border-radius: 5px;
     padding: 8px 8px 10px 10px;
-    margin: 20px
-
+    margin: 20px;
 }
 
 #dimentials_new-spell legend {
     padding: 0 6px;
     color: #777;
 }
-
-
-
-
-
 
 /*--------------------------------------------------------------                                               
                                                                                                           
@@ -1393,10 +1362,10 @@ footer .dimentials-logo {
 ------------------------------------------------------------*/
 
 #dimentials_update-spell {
-    margin:0;
+    margin: 0;
     font-family: sans-serif;
-    color:#eee;
-    background: linear-gradient(to bottom,#333, #000);
+    color: #eee;
+    background: linear-gradient(to bottom, #333, #000);
 }
 
 #dimentials_update-spell h2 {
@@ -1405,7 +1374,6 @@ footer .dimentials-logo {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 22px;
-
 }
 
 #dimentials_update-spell form {
@@ -1423,11 +1391,13 @@ footer .dimentials-logo {
     padding: 6px 20px;
 }
 
-#dimentials_update-spell input, #dimentials_update-spell textarea, #dimentials_update-spell select {
+#dimentials_update-spell input,
+#dimentials_update-spell textarea,
+#dimentials_update-spell select {
     width: 100%;
-    padding: 6px 8px; 
+    padding: 6px 8px;
     box-sizing: border-box;
-    border: 1px solid #666; 
+    border: 1px solid #666;
     background-color: transparent;
     border-left: 2px solid #107d8e;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
@@ -1436,7 +1406,7 @@ footer .dimentials-logo {
     margin: 6px 0;
 }
 
-#dimentials_update-spell option{
+#dimentials_update-spell option {
     background-color: #222;
 }
 
@@ -1445,11 +1415,11 @@ footer .dimentials-logo {
     resize: vertical;
     max-height: 200px;
     min-height: 200px;
-    font-family: sans-serif;;
+    font-family: sans-serif;
 }
 
 #dimentials_update-spell label {
-    font-size:0,88em;
+    font-size: 0, 88em;
 }
 
 #dimentials_update-spell .checkbox {
@@ -1458,12 +1428,11 @@ footer .dimentials-logo {
 }
 
 #dimentials_update-spell fieldset {
-    margin:20px 0;
-    border:1px solid #666;
+    margin: 20px 0;
+    border: 1px solid #666;
     border-radius: 5px;
     padding: 8px 8px 10px 10px;
-    margin: 20px
-
+    margin: 20px;
 }
 
 #dimentials_update-spell legend {
@@ -1471,7 +1440,98 @@ footer .dimentials-logo {
     color: #777;
 }
 
+/*--------------------------------------------------------------                                               
+                                                                                                          
+                      ▄▄                        
+▀███▀▀▀██▄          ▀███           ██           
+  ██    ▀██▄          ██           ██           
+  ██     ▀██ ▄▄█▀██   ██   ▄▄█▀████████  ▄▄█▀██ 
+  ██      ██▄█▀   ██  ██  ▄█▀   ██ ██   ▄█▀   ██
+  ██     ▄████▀▀▀▀▀▀  ██  ██▀▀▀▀▀▀ ██   ██▀▀▀▀▀▀
+  ██    ▄██▀██▄    ▄  ██  ██▄    ▄ ██   ██▄    ▄
+▄████████▀   ▀█████▀▄████▄ ▀█████▀ ▀████ ▀█████▀
+                                                
+                                                                                                                                                                                                
+------------------------------------------------------------*/
 
+#dimentials_delete-card {
+    margin: 0;
+    font-family: sans-serif;
+    color: #eee;
+    background: linear-gradient(to bottom, #333, #000);
+}
+
+#dimentials_delete-card h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#dimentials_delete-card form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.361);
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+#dimentials_delete-card .form_input {
+    padding: 6px 20px;
+}
+
+#dimentials_delete-card input,
+#dimentials_delete-card textarea,
+#dimentials_delete-card select {
+    width: 100%;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    background-color: transparent;
+    border-left: 2px solid #107d8e;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.645);
+    color: #ddd;
+    border-radius: 4px;
+    margin: 6px 0;
+}
+
+#dimentials_delete-card option {
+    background-color: #222;
+}
+
+#dimentials_delete-card textarea {
+    min-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 200px;
+    font-family: sans-serif;
+}
+
+#dimentials_delete-card label {
+    font-size: 0, 88em;
+}
+
+#dimentials_delete-card .checkbox {
+    width: auto;
+    height: 15px;
+}
+
+#dimentials_delete-card fieldset {
+    margin: 20px 0;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 8px 8px 10px 10px;
+    margin: 20px;
+}
+
+#dimentials_delete-card legend {
+    padding: 0 6px;
+    color: #777;
+}
 
 /*--------------------------------------------------------------                                               
                             ▄▄             
@@ -1486,15 +1546,12 @@ footer .dimentials-logo {
                   ██████▀                                                                    
 ------------------------------------------------------------*/
 
-
 #dimentials_login {
-
+    background-color: var(--bg-color);
 }
-
 
 #dimentials_login .box {
     position: relative;
-    width: 380px;
     height: 420px;
     background: #1c1c1c;
     border-radius: 8px;
@@ -1590,7 +1647,7 @@ footer .dimentials-logo {
 
 #dimentials_login .box form .inputBox {
     position: relative;
-    width: 300px;
+    width: 90%;
     margin-top: 35px;
 }
 
@@ -1678,10 +1735,6 @@ footer .dimentials-logo {
     opacity: 0.8;
 }
 
-
-
-
-
 /*--------------------------------------------------------------
                                                    
                                                     
@@ -1712,11 +1765,9 @@ footer .dimentials-logo {
     margin: 3.1vh 5vw;
 }
 
-
 #dimentials_terms .contenedor {
     width: 99.2vw;
 }
-
 
 /*--------------------------------------------------------------
                                                    
@@ -1749,11 +1800,9 @@ footer .dimentials-logo {
     margin: 3.1vh 5vw;
 }
 
-
 #dimentials_privacy .contenedor {
     width: 99.2vw;
 }
-
 
 /*--------------------------------------------------------------
                                                    
@@ -1785,11 +1834,9 @@ footer .dimentials-logo {
     margin: 3.1vh 5vw;
 }
 
-
 #dimentials_legal .contenedor {
     width: 99.2vw;
 }
-
 
 /*--------------------------------------------------------------
                                                    
@@ -1806,12 +1853,6 @@ footer .dimentials-logo {
                                                    
 ------------------------------------------------------------*/
 
-
-
-
-
-
-
 /*--------------------------------------------------------------
                                                    
                                        ▄▄                                                    
@@ -1825,12 +1866,6 @@ footer .dimentials-logo {
 
                                                    
 ------------------------------------------------------------*/
-
-
-
-
-
-
 
 /*--------------------------------------------------------------
                                                    
@@ -1848,16 +1883,6 @@ footer .dimentials-logo {
                                                    
 ------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
 /*--------------------------------------------------------------
                                                    
                                                                             ▄▄  
@@ -1873,14 +1898,6 @@ footer .dimentials-logo {
                                                    
 ------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
 /*--------------------------------------------------------------
                                                    
                       ▄▄                                                         ▄▄  
@@ -1895,8 +1912,6 @@ footer .dimentials-logo {
                                                                                                                                                                                                              
 ------------------------------------------------------------*/
 
-
-
 /* Media Queries */
 
 /* Col-sm */
@@ -1906,8 +1921,6 @@ footer .dimentials-logo {
     }
 
     /*----------------------------- Card Gallery --------------------- */
-
-
 }
 
 /* Col-md */
@@ -1918,7 +1931,7 @@ footer .dimentials-logo {
     }
 
     #dimentials_index .card-info {
-        margin-top: 0; 
+        margin-top: 0;
         border-bottom: 1px solid #ddd;
         border-radius: 0 10px 10px 0;
     }
@@ -1946,20 +1959,17 @@ footer .dimentials-logo {
         font-size: 77px;
     }
 
-/*----------------------------- About --------------------- */
+    /*----------------------------- About --------------------- */
 
-.carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
-
-
-
+    .featurette-heading {
+        font-size: 50px;
+    }
 }
 
 /* Col-lg */
@@ -1990,7 +2000,8 @@ footer .dimentials-logo {
         font-size: 100px;
     }
 
-   /*----------------------------- Tienda --------------------- */
+    /*----------------------------- Tienda --------------------- */
+    /*
 #dimentials_shop .menu {
     padding: 20px;
 }
@@ -2077,31 +2088,26 @@ footer .dimentials-logo {
 #dimentials_shop .icons-1 {
     margin-bottom: 30px;
 }
+*/
 
- /*----------------------------- About --------------------- */
-#dimentials_about .featurette-heading {
-    margin-top: 7rem;
-  }
+    /*----------------------------- About --------------------- */
+    #dimentials_about .featurette-heading {
+        margin-top: 7rem;
+    }
 
-  /*----------------------------- Card Detail --------------------- */
+    /*----------------------------- Card Detail --------------------- */
 
-  #dimentials_card_detail .profile__img-container img {
-    border-radius: 20px 0 0 20px;
-}
+    #dimentials_card_detail .profile__img-container img {
+        border-radius: 20px 0 0 20px;
+    }
     #dimentials_card_detail h1 {
         font-size: 3rem;
+    }
 }
-
-}
-    
-
 
 /* Col-xl */
 @media (min-width: 1200px) {
-
-
     /*----------------------------- Card Gallery --------------------- */
-
 }
 
 /* Col-xxl */
@@ -2114,8 +2120,5 @@ footer .dimentials-logo {
         font-size: 98px;
     }
 
-     /*----------------------------- Card Gallery --------------------- */
-
-
+    /*----------------------------- Card Gallery --------------------- */
 }
-

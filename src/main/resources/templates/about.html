@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet" />
         <title>Sobre nosotros</title>
         <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}" />
         <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}" />
@@ -21,9 +23,23 @@
 
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -31,8 +47,14 @@
                     <div class="container">
                         <div class="carousel-caption text-start">
                             <h1>Activos desde 2024</h1>
-                            <p class="opacity-75">Dimentials empezó como un pequeño proyecto de chapas con criaturas</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            <p class="opacity-75">
+                                Dimentials empezó como un pequeño proyecto de chapas con criaturas
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="#first-image-featurette"
+                                    >Sign up today</a
+                                >
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +64,10 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
+                            <p>
+                                Some representative placeholder content for the second slide of the
+                                carousel.
+                            </p>
                             <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
                         </div>
                     </div>
@@ -53,17 +78,28 @@
                     <div class="container">
                         <div class="carousel-caption text-end">
                             <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
+                            <p>
+                                Some representative placeholder content for the third slide of this
+                                carousel.
+                            </p>
                             <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#myCarousel"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#myCarousel"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -72,39 +108,54 @@
         <!---------------------------  Implicados en el proyecto    ----------------------------------->
 
         <div class="container faces">
-            <div class="row">
+            <div class="row justify-content-evenly">
                 <div class="col-lg-4 row">
                     <div class="col-lg-12 col-sm-4">
-                        <img src="images/liveGame/borjover.jpg" alt="C.E.O Proyecto" />
+                        <img
+                            class="img-fluid"
+                            src="images/liveGame/borjover.jpg"
+                            alt="C.E.O Proyecto" />
                     </div>
-                    <div class="col-lg-12 col-sm-8">
+                    <div class="col-lg-12 col-sm-8 mt-lg-3">
                         <h2 class="fw-normal">Borjover</h2>
                         <p th:text="|#{about.borjatitle}|">C.E.O del proyecto</p>
-                        <p th:text="|#{about.borjadescription}|">El juego es un reflejo de como de loco le ha dejado 1ºDAW</p>
+                        <p th:text="|#{about.borjadescription}|">
+                            El juego es un reflejo de como de loco le ha dejado 1ºDAW
+                        </p>
                         <p><a class="btn btn-danger" href="#">Instagram &raquo;</a></p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 row">
                     <div class="col-lg-12 col-sm-4">
-                        <img src="images/liveGame/david.jpg" alt="Tester de camas" />
+                        <img
+                            class="img-fluid"
+                            src="images/liveGame/david.jpg"
+                            alt="Tester de camas" />
                     </div>
-                    <div class="col-lg-12 col-sm-8">
+                    <div class="col-lg-12 col-sm-8 mt-lg-3">
                         <h2 class="fw-normal">David</h2>
                         <p th:text="|#{about.davidtitle}|">Tester de camas</p>
-                        <p th:text="|#{about.daviddescription}|">Él se volvió loco durante los 3 meses que duró el proyecto</p>
+                        <p th:text="|#{about.daviddescription}|">
+                            Él se volvió loco durante los 3 meses que duró el proyecto
+                        </p>
                         <p><a class="btn btn-danger" href="#">Instagram &raquo;</a></p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 row">
                     <div class="col-lg-12 col-sm-4">
-                        <img src="images/liveGame/toni.jpg" alt="Viceconde de Urgel" />
+                        <img
+                            class="img-fluid"
+                            src="images/liveGame/toni.jpg"
+                            alt="Viceconde de Urgel" />
                     </div>
-                    <div class="col-lg-12 col-sm-8">
+                    <div class="col-lg-12 col-sm-8 mt-lg-3">
                         <h2 class="fw-normal">Toni</h2>
                         <p th:text="|#{about.tonititle}|">Viceconde de Urgel</p>
-                        <p th:text="|#{about.tonidescription}|">Él ya estaba loco cuando todo empezó</p>
+                        <p th:text="|#{about.tonidescription}|">
+                            Él ya estaba loco cuando todo empezó
+                        </p>
                         <p><a class="btn btn-danger" href="#">Instagram &raquo;</a></p>
                     </div>
                 </div>
@@ -113,15 +164,22 @@
 
         <!------------------ Imagenes sobre el juego -------------------->
 
-        <section class="container-fluid dimentials-history">
+        <section class="container-fluid dimentials-history" id="first-image-featurette">
             <hr class="featurette-divider" />
 
             <div class="row featurette">
                 <div class="col-lg-7 col-md-12">
                     <h2 class="featurette-heading fw-normal lh-1" th:text="|#{about.community}|">
-                        Juego creado para generar comunidad<span class="text-body-secondary" th:text="|#{about.started}|">¡Todo empezó en Rómpel Hielo!</span>
+                        Juego creado para generar comunidad<span
+                            class="text-body-secondary"
+                            th:text="|#{about.started}|"
+                            >¡Todo empezó en Rómpel Hielo!</span
+                        >
                     </h2>
-                    <p class="lead" th:text="|#{about.promote}|">Dimentials TCG se creó como forma de dar a conocer el club social juvenil Rómpel Hielo... ¡Y fue un éxito!</p>
+                    <p class="lead" th:text="|#{about.promote}|">
+                        Dimentials TCG se creó como forma de dar a conocer el club social juvenil
+                        Rómpel Hielo... ¡Y fue un éxito!
+                    </p>
                 </div>
                 <div class="col-lg-5 col-md-12">
                     <img src="images/liveGame/Juego4.jpg" alt="Rómpel Hielo Comunidad" />
@@ -132,10 +190,17 @@
 
             <div class="row featurette">
                 <div class="col-lg-7 order-lg-2 col-md-12">
-                    <h2 class="featurette-heading fw-normal lh-1" th:text="|#{about.gameaftergame}|">
-                        Partida a partida fuimos definiendo el juego<span class="text-body-secondary">Open Beta Edition</span>
+                    <h2
+                        class="featurette-heading fw-normal lh-1"
+                        th:text="|#{about.gameaftergame}|">
+                        Partida a partida fuimos definiendo el juego<span
+                            class="text-body-secondary"
+                            >Open Beta Edition</span
+                        >
                     </h2>
-                    <p class="lead" th:text="|#{about.insummer}|">En verano del 2024 lanzamos nuestras primeras barajas profesionales</p>
+                    <p class="lead" th:text="|#{about.insummer}|">
+                        En verano del 2024 lanzamos nuestras primeras barajas profesionales
+                    </p>
                 </div>
                 <div class="col-lg-5 order-lg-1 col-md-12">
                     <img src="images/liveGame/Juego2.jpg" alt="Jugando a Dimentials" />
@@ -147,9 +212,16 @@
             <div class="row featurette">
                 <div class="col-lg-7 col-md-12">
                     <h2 class="featurette-heading fw-normal lh-1" th:text="|#{about.doing}|">
-                        Empezamos haciendolo todo nosotros.<span th:text="|#{about.printer}|" class="text-body-secondary">Una impresora, una guillotina y cientos de intentos</span>
+                        Empezamos haciendolo todo nosotros.<span
+                            th:text="|#{about.printer}|"
+                            class="text-body-secondary"
+                            >Una impresora, una guillotina y cientos de intentos</span
+                        >
                     </h2>
-                    <p class="lead" th:text="|#{about.firstcards}|">Las primeras cartas salieron usando papel de fotografia, eran mucho más finas que las actuales</p>
+                    <p class="lead" th:text="|#{about.firstcards}|">
+                        Las primeras cartas salieron usando papel de fotografia, eran mucho más
+                        finas que las actuales
+                    </p>
                 </div>
                 <div class="col-lg-5 col-md-12">
                     <img src="images/liveGame/juego3.jpg" />
