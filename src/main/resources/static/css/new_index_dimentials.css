@@ -732,9 +732,7 @@ footer .dimentials-logo {
     z-index: 10;
 }
 
-#dimentials_about .carousel-item {
-    height: 60vh;
-}
+
 
 /* Featurettes
   ------------------------- */
@@ -775,26 +773,20 @@ footer .dimentials-logo {
 }
 
 #dimentials_shop .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    padding: 50px 200px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 
 #dimentials_shop .hero-img {
-    flex-basis: 50%;
     text-align: center;
 }
 
 #dimentials_shop .hero-img img {
     width: 100%;
-    margin-right: 50px;
-    padding: 0 30px 0 0;
 }
 
 #dimentials_shop .hero-txt h1 {
-    font-size: 90px;
+    font-size: 16vw;
     text-transform: uppercase;
     line-height: 1;
     color: #111111;
@@ -811,30 +803,24 @@ footer .dimentials-logo {
 }
 
 #dimentials_shop .ofert {
-    padding: 20px 0 0 0;
-    display: flex;
-    justify-content: space-between;
+    padding-top: 20px;
 }
 
 #dimentials_shop .ofert-1 {
     display: flex;
     align-items: center;
-    flex-basis: calc(33.3% - 15px);
-    background-color: #f5f5f5;
-    padding: 35px;
-}
-
-#dimentials_shop .ofert.img {
-    flex-basis: 50%;
-    margin-right: 15px;
+    background-color: #ededed;
+    padding: 2vh 2vw;
 }
 
 #dimentials_shop .ofert-img img {
-    width: 250px;
+    width: 95%;
+    margin-bottom: 13px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--bg-color);
 }
 
 #dimentials_shop .ofert-txt {
-    flex-basis: 50%;
     text-align: center;
 }
 
@@ -852,7 +838,8 @@ footer .dimentials-logo {
 }
 
 #dimentials_shop .products {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -864,12 +851,6 @@ footer .dimentials-logo {
     margin-bottom: 50px;
 }
 
-#dimentials_shop .product-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-
 #dimentials_shop .product {
     text-align: center;
     padding: 30px;
@@ -877,13 +858,12 @@ footer .dimentials-logo {
 }
 
 #dimentials_shop .product img {
-    width: 250px;
-    height: 370px;
+    width: 100%;
     margin-bottom: 20px;
 }
 
 #dimentials_shop .product h3 {
-    font-size: 20px;
+    font-size: 5vw;
     color: #111111;
     font-family: poppins, sans-serif;
     text-transform: uppercase;
@@ -892,7 +872,7 @@ footer .dimentials-logo {
 
 #dimentials_shop .product p,
 #dimentials_body .precio {
-    font-size: 16px;
+    font-size: 3vw;
     color: #111111;
     margin-bottom: 15px;
 }
@@ -902,72 +882,33 @@ footer .dimentials-logo {
 }
 
 #dimentials_shop .icons {
-    padding: 50px 0 100px 0;
-    display: flex;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
     justify-content: space-between;
 }
 
 #dimentials_shop .icon-1 {
-    flex-basis: calc(33.3% - 15px);
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
+    padding: 1vw;
     background-color: #f5f5f5;
 }
 
 #dimentials_shop .icon-txt h3 {
-    font-size: 20px;
+    font-size: 5vw;
     color: #111111;
     font-family: poppins, sans-serif;
     text-transform: uppercase;
 }
 
 #dimentials_shop .icon-txt p {
-    font-size: 16px;
+    font-size: 3vw;
     color: #111111;
 }
 
-#dimentials_shop .blog {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 100px;
-}
 
-#dimentials_shop .blog-1 {
-    flex-basis: calc(33.3% - 15px);
-}
-
-#dimentials_shop .blog-1 img {
-    margin-bottom: 20px;
-}
-
-#dimentials_shop .blog-1 h3 {
-    font-size: 20px;
-    color: #111111;
-    font-family: poppins, sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-#dimentials_shop .blog-1 p {
-    font-size: 16px;
-    color: #111111;
-}
-
-#dimentials_shop .link h3 {
-    font-size: 18px;
-    color: #ffffff;
-    font-family: poppins, sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-#dimentials_shop .link a {
-    font-size: 16px;
-    color: #dcdcdc;
-    display: block;
-    margin-bottom: 10px;
+#dimentials_shop .icons .fa-solid, #dimentials_shop .icons .fa-regular {
+    font-size: 6vh;
 }
 
 /*--------------------------------------------------------------
@@ -1965,6 +1906,11 @@ footer .dimentials-logo {
     .featurette-heading {
         font-size: 50px;
     }
+
+    /*----------------------------- Tienda --------------------- */
+    #dimentials_shop .hero-txt h1 {
+        font-size: 70px;
+    }
 }
 
 /* Col-lg */
@@ -1996,100 +1942,37 @@ footer .dimentials-logo {
     }
 
     /*----------------------------- Tienda --------------------- */
-    /*
-#dimentials_shop .menu {
-    padding: 20px;
-}
-#dimentials_shop .menu label {
-    display: initial;
-}
-#dimentials_shop .menu .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #181818;
-    display: none;
-}
-#dimentials_shop .menu .navbar ul li {
-    width:100%;
-}
-#dimentials_shop .menu ul li a {
-    color: #FFFFFF;
-}
-#dimentials_shop #menu:checked ~ .navbar {
-    display: initial;
-}
-
-#dimentials_shop .logo {
-    display: none;
-}
-
-#dimentials_shop .submenu:hover #carrito {
-    min-width:100%,
-}
-
-#dimentials_shop .submenu:hover #carrito {
-    min-width:100%;
-}
-#dimentials_shop .hero-content {
-    padding: 50px 0;
-    flex-direction: column;
-}
-#dimentials_shop .hero-img {
-    display: none;
-}
-#dimentials_shop .hero-txt {
-    flex-basis: 100%;
-    text-align: center;
-}
-
-#dimentials_shop .hero-txt h1 {
-    font-size: 70px;
-}
-
-#dimentials_shop .ofert {
-    padding: 30px 30px 0 30px;
-    flex-direction: column;
-}
-
-#dimentials_shop .ofert-1 {
-    margin-bottom: 30px;
-}
-
-#dimentials_shop .products {
-    padding: 0 30px 30px 30px;
-}
-
-#dimentials_shop .products h2 {
-    margin-bottom: 30px;
-}
-
-#dimentials_shop .product-content {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-}
-
-#dimentials_shop .product img {
-    width: 200px;
-    height: 200px;
-}
-
-#dimentials_shop .icons {
-    padding: 30px;
-    flex-direction: column;
-}
-
-#dimentials_shop .icons-1 {
-    margin-bottom: 30px;
-}
-*/
 
     /*----------------------------- About --------------------- */
     #dimentials_about .featurette-heading {
         margin-top: 7rem;
     }
 
+    #dimentials_shop .icon-txt h3 {
+        font-size: 23px;
+    }
+    
+    #dimentials_shop .icon-txt p {
+        font-size: 15px;
+    }
+    
+    #dimentials_shop .product h3 {
+        font-size: 36px;
+    }
+    
+    #dimentials_shop .icons .fa-solid, #dimentials_shop .icons .fa-regular {
+        font-size: 63px;
+    }
+
+    #dimentials_shop .product p,
+    #dimentials_body .precio {
+        font-size: 30px;
+    }
+
+    #dimentials_about .carousel-item {
+        height: 60vh;
+    }
+    
     /*----------------------------- Card Detail --------------------- */
 
     #dimentials_card_detail .profile__img-container img {

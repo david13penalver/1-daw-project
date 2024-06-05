@@ -5,9 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://kit.fontawesome.com/2508d31af3.js" crossorigin="anonymous"></script>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
         <title>Document</title>
         <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}" />
         <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}" />
@@ -18,14 +16,12 @@
 
         <div class="hero-content container">
             <div class="row">
-                <div class="hero-img col-12 col-md-4">
-                    <img class="img-fluid" src="img/z3_Aurelius_Ignis.png" alt="#" />
+                <div class="hero-img col-12 col-md-5">
+                    <img class="img-fluid" src="images/3_Aurelius_Ignis.png" alt="Aurelius Ignis" />
                 </div>
-                <div class="hero-txt col-12 col-md-8">
+                <div class="hero-txt col-12 col-md-7">
                     <h1 th:text="|#{shop.special_offers}|">Ofertas especiales</h1>
-                    <p th:text="|#{shop.limited_time}|">
-                        Consigue por tiempo limitado las cartas faltantes en tu colección
-                    </p>
+                    <p th:text="|#{shop.limited_time}|">Consigue por tiempo limitado las cartas faltantes en tu colección</p>
                     <a href="#" class="btn-1" th:text="|#{shop.info}|">informacion</a>
                 </div>
             </div>
@@ -34,14 +30,11 @@
         <!--  --------------------------------  Sección ofertas -------------------------->
 
         <section class="ofert container">
-            <div class="row row-cols-lg-3">
-                <div class="ofert-1 col">
+            <div class="row">
+                <div class="ofert-1 col-12 col-lg-4">
                     <div class="row">
                         <div class="ofert-img col-12">
-                            <img
-                                class="img-fluid"
-                                src="images/cardDetail/card1.png"
-                                alt="oferta 1" />
+                            <img class="img-fluid" src="images/cardDetail/card1.png" alt="oferta 1" />
                         </div>
                         <div class="ofert-txt col-12">
                             <h3 th:text="|#{shop.product1}|">Producto 1</h3>
@@ -49,22 +42,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="ofert-1 col">
-                    <div class="ofert-img">
-                        <img src="images/cardDetail/card2.png" alt="#" />
-                    </div>
-                    <div class="ofert-txt">
-                        <h3 th:text="|#{shop.product2}|">Producto 2</h3>
-                        <a href="#" class="btn-2" th:text="|#{shop.info2}|"> Informacion 2</a>
+                <div class="ofert-1 col-12 col-lg-4">
+                    <div class="row">
+                        <div class="ofert-img col-12">
+                            <img src="images/cardDetail/card2.png" alt="#" />
+                        </div>
+                        <div class="ofert-txt col-12">
+                            <h3 th:text="|#{shop.product2}|">Producto 2</h3>
+                            <a href="#" class="btn-2" th:text="|#{shop.info2}|"> Informacion 2</a>
+                        </div>
                     </div>
                 </div>
-                <div class="ofert-1 col">
-                    <div class="ofert-img">
-                        <img src="images/cardDetail/card3.png" alt="#" />
-                    </div>
-                    <div class="ofert-txt">
-                        <h3 th:text="|#{shop.product3}|">Producto 3</h3>
-                        <a href="#" class="btn-2" th:text="|#{shop.info3}|"> Informacion 3</a>
+                <div class="ofert-1 col-12 col-lg-4">
+                    <div class="row">
+                        <div class="ofert-img col-12">
+                            <img src="images/cardDetail/card3.png" alt="#" />
+                        </div>
+                        <div class="ofert-txt col-12">
+                            <h3 th:text="|#{shop.product3}|">Producto 3</h3>
+                            <a href="#" class="btn-2" th:text="|#{shop.info3}|"> Informacion 3</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,100 +72,64 @@
         <main class="products container" id="lista-1">
             <h2>Productos</h2>
 
-            <div class="product-content">
-                <div class="product">
-                    <img src="img/cardDetail/14_card_Frogan.png" alt="#" />
+            <div class="product-content row">
+                <div class="product col-6 col-lg-4">
+                    <img src="images/cardDetail/card14.png" alt="ProductCard" />
                     <div class="product-txt">
                         <h3 th:text="|#{shop.product1}|">Producto 1</h3>
                         <p th:text="|#{shop.quality_premium}|">calidad premium</p>
                         <p class="precio">$200</p>
-                        <a
-                            href="#"
-                            class="agregar-carrito btn-2"
-                            data-id="1"
-                            th:text="|#{shop.add_cart}|"
-                            >Agregar carrito</a
-                        >
+                        <a href="#" class="agregar-carrito btn-2" data-id="1" th:text="|#{shop.add_cart}|">Agregar carrito</a>
                     </div>
                 </div>
 
-                <div class="product">
-                    <img src="img/cardDetail/15_card_Bullraga.png" alt="#" />
+                <div class="product col-6 col-lg-4">
+                    <img src="images/cardDetail/card15.png" alt="ProductCard" />
                     <div class="product-txt">
                         <h3 th:text="|#{shop.product2}|">Producto 2</h3>
                         <p th:text="|#{shop.quality_premium}|">calidad premium</p>
                         <p class="precio" th:text="|#{shop.price}|">$200</p>
-                        <a
-                            href="#"
-                            class="agregar-carrito btn-2"
-                            data-id="2"
-                            th:text="|#{shop.add_cart}|"
-                            >Agregar carrito</a
-                        >
+                        <a href="#" class="agregar-carrito btn-2" data-id="2" th:text="|#{shop.add_cart}|">Agregar carrito</a>
                     </div>
                 </div>
 
-                <div class="product">
-                    <img src="img/cardDetail/16_card_Tarvoronaus.png" alt="#" />
+                <div class="product col-6 col-lg-4">
+                    <img src="images/cardDetail/card16.png" alt="ProductCard" />
                     <div class="product-txt">
                         <h3 th:text="|#{shop.product3}|">Producto 3</h3>
                         <p th:text="|#{shop.quality_premium}|">calidad premium</p>
                         <p class="precio">$200</p>
-                        <a
-                            href="#"
-                            class="agregar-carrito btn-2"
-                            data-id="3"
-                            th:text="|#{shop.add_cart}|"
-                            >Agregar carrito</a
-                        >
+                        <a href="#" class="agregar-carrito btn-2" data-id="3" th:text="|#{shop.add_cart}|">Agregar carrito</a>
                     </div>
                 </div>
 
-                <div class="product">
-                    <img src="img/cardDetail/7_card_Lizzar.png" alt="#" />
+                <div class="product col-6 col-lg-4">
+                    <img src="images/cardDetail/card7.png" alt="ProductCard" />
                     <div class="product-txt">
                         <h3 th:text="|#{shop.product4}|">Producto 4</h3>
                         <p th:text="|#{shop.quality_premium}|">calidad premium</p>
                         <p class="precio">$200</p>
-                        <a
-                            href="#"
-                            class="agregar-carrito btn-2"
-                            data-id="4"
-                            th:text="|#{shop.add_cart}|"
-                            >Agregar carrito</a
-                        >
+                        <a href="#" class="agregar-carrito btn-2" data-id="4" th:text="|#{shop.add_cart}|">Agregar carrito</a>
                     </div>
                 </div>
 
-                <div class="product">
-                    <img src="img/cardDetail/8_card_Iguanitxeco.png" alt="#" />
+                <div class="product col-6 col-lg-4">
+                    <img src="images/cardDetail/card8.png" alt="ProductCard" />
                     <div class="product-txt">
                         <h3 th:text="|#{shop.product5}|">Producto 5</h3>
                         <p th:text="|#{shop.quality_premium}|">calidad premium</p>
                         <p class="precio">$200</p>
-                        <a
-                            href="#"
-                            class="agregar-carrito btn-2"
-                            data-id="5"
-                            th:text="|#{shop.add_cart}|"
-                            >Agregar carrito</a
-                        >
+                        <a href="#" class="agregar-carrito btn-2" data-id="5" th:text="|#{shop.add_cart}|">Agregar carrito</a>
                     </div>
                 </div>
 
-                <div class="product">
-                    <img src="img/cardDetail/9_card_Citalflama.png" alt="#" />
+                <div class="product col-6 col-lg-4">
+                    <img src="images/cardDetail/card9.png" alt="ProductCard" />
                     <div class="product-txt">
                         <h3 th:text="|#{shop.product6}|">Producto 6</h3>
                         <p th:text="|#{shop.quality_premium}|">calidad premium</p>
                         <p class="precio">$200</p>
-                        <a
-                            href="#"
-                            class="agregar-carrito btn-2"
-                            data-id="6"
-                            th:text="|#{shop.add_cart}|"
-                            >Agregar carrito</a
-                        >
+                        <a href="#" class="agregar-carrito btn-2" data-id="6" th:text="|#{shop.add_cart}|">Agregar carrito</a>
                     </div>
                 </div>
             </div>
@@ -177,71 +138,42 @@
         <!---------------------------------- Icons Part -------------------------->
 
         <section class="icons container">
-            <div class="icon-1">
-                <div class="icon-img">
-                    <img src="img/i1.svg" alt="#" />
+            <div class="row">
+                <div class="icon-1 col-12 col-lg-4">
+                    <div class="row">
+                        <div class="icon-img col-4">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                        <div class="icon-txt col-8">
+                            <h3>Envios gratis a partir de 50€</h3>
+                            <p>A toda la península e islas baleares</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="icon-txt">
-                    <h3>Lorem ipsum, dolor sit amet consectetur adipis</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipis</p>
+
+                <div class="icon-1 col-12 col-lg-4">
+                    <div class="row">
+                        <div class="icon-img col-4">
+                            <i class="fa-solid fa-gifts"></i>
+                        </div>
+                        <div class="icon-txt col-8">
+                            <h3>1 Paquete de Cromos dimentials gratis</h3>
+                            <p>por cada 15 euros de compra</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="icon-1">
-                <div class="icon-img">
-                    <img src="img/i2.svg" alt="#" />
+                <div class="icon-1 col-12 col-lg-4">
+                    <div class="row">
+                        <div class="icon-img col-4">
+                            <i class="fa-regular fa-face-laugh-wink"></i>
+                        </div>
+                        <div class="icon-txt col-8">
+                            <h3>Garantía de Satisfacción</h3>
+                            <p>Nos comprometemos a devolver el dinero si el producto no llega en buenas condiciones</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="icon-txt">
-                    <h3>Lorem ipsum, dolor sit amet consectetur adipis</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipis</p>
-                </div>
-            </div>
-
-            <div class="icon-1">
-                <div class="icon-img">
-                    <img src="img/i3.svg" alt="#" />
-                </div>
-                <div class="icon-txt">
-                    <h3>Lorem ipsum, dolor sit amet consectetur adipis</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipis</p>
-                </div>
-            </div>
-        </section>
-
-        <!---------------------------------- Blog parte -------------------------->
-
-        <section class="blog container">
-            <div class="blog-1">
-                <img src="img/b1.jpg" alt="#" />
-                <h3>Blog 1</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi facere
-                    quasi consequatur quaerat libero, distinctio aliquid tempore! Exercitationem est
-                    aperiam saepe a. Maiores tempora dignissimos molestiae, libero numquam
-                    voluptatem.
-                </p>
-            </div>
-
-            <div class="blog-1">
-                <img src="img/b2.jpg" alt="#" />
-                <h3>Blog 1</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi facere
-                    quasi consequatur quaerat libero, distinctio aliquid tempore! Exercitationem est
-                    aperiam saepe a. Maiores tempora dignissimos molestiae, libero numquam
-                    voluptatem.
-                </p>
-            </div>
-
-            <div class="blog-1">
-                <img src="img/b3.jpg" alt="#" />
-                <h3>Blog 1</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi facere
-                    quasi consequatur quaerat libero, distinctio aliquid tempore! Exercitationem est
-                    aperiam saepe a. Maiores tempora dignissimos molestiae, libero numquam
-                    voluptatem.
-                </p>
             </div>
         </section>
 
