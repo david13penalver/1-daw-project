@@ -10,7 +10,6 @@
             rel="stylesheet" />
         <title>Document</title>
         <link rel="stylesheet" th:href="@{/css/bootstrap_dimentials.css}" />
-        <link rel="stylesheet" th:href="@{/css/tienda.css}" />
         <link rel="stylesheet" th:href="@{/css/new_index_dimentials.css}" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
@@ -35,31 +34,38 @@
         <!--  --------------------------------  Sección ofertas -------------------------->
 
         <section class="ofert container">
-            <div class="ofert-1">
-                <div class="ofert-img">
-                    <img src="images/cardDetail/card1.png" alt="#" />
+            <div class="row row-cols-lg-3">
+                <div class="ofert-1 col">
+                    <div class="row">
+                        <div class="ofert-img col-12">
+                            <img
+                                class="img-fluid"
+                                src="images/cardDetail/card1.png"
+                                alt="oferta 1" />
+                        </div>
+                        <div class="ofert-txt col-12">
+                            <h3 th:text="|#{shop.product1}|">Producto 1</h3>
+                            <a href="#" class="btn-2" th:text="|#{shop.info2}|"> Informacion 1</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="ofert-txt">
-                    <h3 th:text="|#{shop.product1}|">Producto 1</h3>
-                    <a href="#" class="btn-2" th:text="|#{shop.info2}|"> Informacion 1</a>
+                <div class="ofert-1 col">
+                    <div class="ofert-img">
+                        <img src="images/cardDetail/card2.png" alt="#" />
+                    </div>
+                    <div class="ofert-txt">
+                        <h3 th:text="|#{shop.product2}|">Producto 2</h3>
+                        <a href="#" class="btn-2" th:text="|#{shop.info2}|"> Informacion 2</a>
+                    </div>
                 </div>
-            </div>
-            <div class="ofert-1">
-                <div class="ofert-img">
-                    <img src="images/cardDetail/card2.png" alt="#" />
-                </div>
-                <div class="ofert-txt">
-                    <h3 th:text="|#{shop.product2}|">Producto 2</h3>
-                    <a href="#" class="btn-2" th:text="|#{shop.info2}|"> Informacion 2</a>
-                </div>
-            </div>
-            <div class="ofert-1">
-                <div class="ofert-img">
-                    <img src="images/cardDetail/card3.png" alt="#" />
-                </div>
-                <div class="ofert-txt">
-                    <h3 th:text="|#{shop.product3}|">Producto 3</h3>
-                    <a href="#" class="btn-2" th:text="|#{shop.info3}|"> Informacion 3</a>
+                <div class="ofert-1 col">
+                    <div class="ofert-img">
+                        <img src="images/cardDetail/card3.png" alt="#" />
+                    </div>
+                    <div class="ofert-txt">
+                        <h3 th:text="|#{shop.product3}|">Producto 3</h3>
+                        <a href="#" class="btn-2" th:text="|#{shop.info3}|"> Informacion 3</a>
+                    </div>
                 </div>
             </div>
         </section>
