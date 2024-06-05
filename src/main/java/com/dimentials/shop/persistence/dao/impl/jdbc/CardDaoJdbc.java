@@ -94,17 +94,19 @@ public class CardDaoJdbc implements CardDao {
 
     }
 
-    
+
 
     @Override
     public void deleteCard(Integer id) {
-        // saca los datos de la base de datos y usa rawsql
         try {
+            ResultSet resultSet = RawSql.select("SELECT id_card FROM card WHERE id_card = ?", List.of(id));
+            if (!resultSet.next()) {
+                throw new QueryBuilderSQLException("Card with id " + id + " not found");
+            }
             RawSql.delete("DELETE FROM card WHERE id_card = ?", List.of(id));
         } catch (Exception e) {
             throw new QueryBuilderSQLException(e.getMessage());
         }
-
     }
 
     @Override

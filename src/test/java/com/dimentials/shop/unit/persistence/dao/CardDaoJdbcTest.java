@@ -142,6 +142,12 @@ public class CardDaoJdbcTest {
                     () -> assertEquals(monster.getImgPath(), result.getImgPath())
             );
         }
+        @Test
+        @DisplayName("updateMonster should throw an exception")
+        void updateMonster_shouldThrowException() {
+            MonsterEntity monster = new MonsterEntity(10, "Name", "Description_es", new BigDecimal(7), "image", 1, 1, "mainType_es", "secondaryType_es");
+            assertThrows(QueryBuilderSQLException.class, () -> cardDao.updateMonster(monster));
+        }
 
         @Test
         @DisplayName("updateSpell should update a spell")
@@ -161,6 +167,12 @@ public class CardDaoJdbcTest {
                     () -> assertEquals(spell.getImgPath(), result.getImgPath())
             );
         }
+        @Test
+        @DisplayName("updateSpell should throw an exception")
+        void updateSpell_shouldThrowException() {
+            SpellEntity spell = new SpellEntity(10, "Name", "Description_es", new BigDecimal(7), "image", 1);
+            assertThrows(QueryBuilderSQLException.class, () -> cardDao.updateSpell(spell));
+        }
     }
     @Nested
     class DeletionTests {
@@ -170,6 +182,11 @@ public class CardDaoJdbcTest {
             cardDao.deleteCard(1);
             List<CardEntity> result = cardDao.findAll();
             assertEquals(expectedLlibreList.size() - 1, result.size());
+        }
+        @Test
+        @DisplayName("deleteCard should throw an exception")
+        void deleteCard_shouldThrowException() {
+            assertThrows(QueryBuilderSQLException.class, () -> cardDao.deleteCard(10));
         }
     }
 
