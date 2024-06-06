@@ -23,7 +23,8 @@
 
     <ul>
         <a th:each="card : ${cardList}" th:href="@{${'/cards/' + card.id}}">
-            <li th:text="|${card.id} - ${card.name}|">Texto por defecto</li>
+            <img th:src="${card.imgPath}" alt="Card Image" />
+            <li th:text="|${card.imgPath} - ${card.name}|">Texto por defecto</li>
         </a>
     </ul>
 

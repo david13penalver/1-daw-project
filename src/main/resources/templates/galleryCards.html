@@ -40,6 +40,19 @@
 
         <section class="dim-gallery container" id="dim-gallery">
             <div class="row" id="gallery_cards">
+                
+                <div class="tiltcard col-6 col-md-4 col-lg-3" th:each="card : ${cardList}" data-tilt data-tilt-glare>
+                    <img th:src="${card.imgPath}" alt="Card Image" />
+                    <p><a class="btn btn-warning card-separator" id="button__shop" th:href="@{${'/cards/' + card.id}}" th:text="|${card.name}|"></a></p>
+                </div>
+                <br>
+                
+                
+            </div>
+        </section>
+
+        <section class="dim-gallery container" id="dim-gallery">
+            <div class="row" id="gallery_cards">
                 <div class="tiltcard col-6 col-md-4 col-lg-3" th:each="i : ${#numbers.sequence(1, 25)}" th:value="${i}" data-tilt data-tilt-glare>
                     <img th:src="@{${'/images/cardDetail/card'+ i + '.png'}}" alt="Embergante card deck" />
                 </div>
@@ -55,7 +68,7 @@
                         <img id="img-active" src="#" alt="card_zoom" />
                     </div>
                     <button class="btn btn-secondary" id="button__view-more" type="button">Ver más</button>
-                    <button class="btn btn-warning" id="button__shop" type="button">Tienda</button>
+                    <button class="btn btn-warning" id="button__shop" type="button"></button>
                 </div>
                 <button class="dim-gallery-btn" id="button__close" type="button">X</button>
                 <button class="dim-gallery-btn" id="button__go-back" type="button">&lt;</button>

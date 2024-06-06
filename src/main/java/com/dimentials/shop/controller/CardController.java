@@ -23,7 +23,7 @@ public class CardController {
     @GetMapping
     public String findAll(Model model) {
         model.addAttribute("cardList", cardService.findAll());
-        return "cardList";
+        return "galleryCards";
     }
 
     @GetMapping("/{id}")
