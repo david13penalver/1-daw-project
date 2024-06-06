@@ -503,7 +503,7 @@ footer .dimentials-logo {
 }
 
 #dimentials_index .card-info button:hover {
-    background-color: #3e8e41;
+    background-color: var(--main-color);
 }
 
 /*--------------------------------------------------------------
@@ -702,7 +702,9 @@ footer .dimentials-logo {
                                                    
 ------------------------------------------------------------*/
 
-#dimentials_about {
+#dimentials_about .carousel-caption h1,
+#dimentials_about .carousel-caption h6 {
+    text-shadow: 0 0 6px black;
 }
 
 #dimentials_about #myCarousel img {
