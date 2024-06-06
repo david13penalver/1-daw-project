@@ -36,10 +36,7 @@
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{menu.cards}"> Cartas </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" th:href="@{/gallery_cards}" th:text="#{drop.glottony}">Gula Insaciable de Embergante</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" th:href="@{/cards}" th:text="#{drop.details}">Detalles Cartas</a>
+                                        <a class="dropdown-item" th:href="@{/cards}" th:text="#{drop.glottony}">Gula Insaciable de Embergante</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" th:href="@{/proximamente}" th:text="#{drop.divine}">Justicia Divina de Lofair</a>
@@ -159,13 +156,13 @@
                             <a href="https://www.youtube.com/@Dimentials" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
                         </li>
                         <li>
-                            <a href="@{/proximamente}"><i class="fa-brands fa-discord"></i></a>
+                            <a th:href="@{/proximamente}"><i class="fa-brands fa-discord"></i></a>
                         </li>
                         <li>
-                            <a href="@{/proximamente}"><i class="fa-brands fa-twitch"></i> </a>
+                            <a th:href="@{/proximamente}"><i class="fa-brands fa-twitch"></i> </a>
                         </li>
                         <li>
-                            <a href="@{/proximamente}"><i class="fa-brands fa-x"></i></a>
+                            <a th:href="@{/proximamente}"><i class="fa-brands fa-x"></i></a>
                         </li>
                     </ul>
                     <ul class="grid-legal col-lg-12 col-md-6 col-12">
