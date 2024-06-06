@@ -24,7 +24,7 @@
     <div class="container-fluid">
 
     <form th:action="@{/cards/new-monster}" th:method="post" class="needs-validation" novalidate>
-        <h2> Formulario de Adición de cartas </h2>
+        <h2 th:text="#{cardform.title_insert_monster}"> Formulario de Adición de cartas </h2>
         <div class="form-group">
             <label for="name" th:text="|#{cardform.name}:|">Nombre:</label>
             <input type="text" class="form-control" id="name" name="name" th:field="*{monster.name}" required /><br>

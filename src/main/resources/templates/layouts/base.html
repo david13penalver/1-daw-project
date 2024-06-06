@@ -61,19 +61,19 @@
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{guide.resources}"> Recursos </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" th:href="@{/cards/new-monster}">Añadir cartas Monstruo</a>
+                                        <a class="dropdown-item" th:href="@{/cards/new-monster}" th:text="#{guide.add_monster}">Añadir cartas Monstruo</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" th:href="@{/cards/new-spell}">Añadir cartas hechizo</a>
+                                        <a class="dropdown-item" th:href="@{/cards/new-spell}" th:text="#{guide.add_spell}">Añadir cartas Hechizo</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" th:href="@{/cards/update-monster}">Actualizar cartas Monstruo</a>
+                                        <a class="dropdown-item" th:href="@{/cards/update-monster}" th:text="#{guide.update_monster}">Actualizar cartas Monstruo</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" th:href="@{/cards/update-spell}">Actualizar cartas hechizo</a>
+                                        <a class="dropdown-item" th:href="@{/cards/update-spell}" th:text="#{guide.update_spell}">Actualizar cartas Hechizo</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" th:href="@{/cards/card-deletion}">Borrar cartas</a>
+                                        <a class="dropdown-item" th:href="@{/cards/card-deletion}" th:text="#{guide.delete_card}">Borrar cartas</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" th:href="@{/basic_concepts}" th:text="#{guide.concepts}">Conceptos básicos</a>

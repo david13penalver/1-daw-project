@@ -24,7 +24,7 @@
     <div class="container-fluid">
 
     <form th:action="@{/cards/update-spell}" th:method="put" class="needs-validation" novalidate>
-        <h2> Formulario de Actualización de cartas de hechizo </h2>
+        <h2 th:text="#{cardform.title_update_spell}"> Formulario de Actualización de cartas de hechizo </h2>
 
         <!-- Campos para el nombre y descripción -->
         

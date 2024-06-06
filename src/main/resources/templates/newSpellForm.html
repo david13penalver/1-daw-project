@@ -21,7 +21,7 @@
    
     <div class="container-fluid">
     <form th:action="@{/cards/new-spell}" th:method="post" class="needs-validation" novalidate>
-        <h2> Formulario de Adición de Hechizos </h2>
+        <h2 th:text="#{cardform.title_insert_spell}"> Formulario de Adición de Hechizos </h2>
         <!-- Campos para el nombre y descripción -->
         <div class="form-group">
             <label for="name" th:text="|#{cardform.name}:|">Nombre:</label>

@@ -24,7 +24,7 @@
     <div class="container-fluid">
 
         <form th:action="@{/cards/update-monster}" th:method="put" class="needs-validation" novalidate>
-            <h2> Formulario de Actualización de cartas de monstruo</h2>
+            <h2 th:text="#{cardform.title_update_monster}"> Formulario de Actualización de cartas de monstruo</h2>
             <!-- Campos para el nombre y descripción -->
             <div class="form-group">
                 <label for="id" th:text="|#{cardform.id}:|">ID:</label>
