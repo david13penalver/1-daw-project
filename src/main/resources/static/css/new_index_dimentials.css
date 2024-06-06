@@ -2004,3 +2004,7 @@ footer .dimentials-logo {
 
     /*----------------------------- Card Gallery --------------------- */
 }
+
+main {
+    min-height: 61vh;
+}

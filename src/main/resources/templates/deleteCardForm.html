@@ -19,7 +19,7 @@
 <body id="dimentials_delete-card">
     
     <header th:replace="~{layouts/base :: headerplusnav2}"></header>
-    
+<main>
     <div class="container-fluid">
 
     <form th:action="@{/cards/card-deletion}" th:method="delete" class="needs-validation" novalidate>
@@ -35,6 +35,7 @@
         <button type="submit" class="btn btn-primary">Insertar</button>
     </form>
     </div>
+</main>
 
    <!-- footer -->
    <footer th:replace="~{layouts/base :: footer}"></footer>
