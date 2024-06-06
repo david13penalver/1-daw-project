@@ -1,4 +1,3 @@
-DROP DATABASE dimentials;
 CREATE DATABASE IF NOT EXISTS dimentials;
 
 USE dimentials;
