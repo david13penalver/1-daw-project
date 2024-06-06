@@ -22,7 +22,7 @@
         <main class="profile container">
             <div class="profile__wrapper row">
                 <div class="profile__img-container col-lg-6 col-md-12">
-                    <img alt="Card Image" th:src="@{${'/images/cardDetail/card' + cardDetail.id + '.png'}}" class="profile__img-normal" />
+                    <img alt="Card Image" th:src="@{${cardDetail.imgPath}}" class="profile__img-normal" />
                 </div>
                 <div class="profile__data-container col-lg-6 col-md-12">
                     <div class="profile__description">
