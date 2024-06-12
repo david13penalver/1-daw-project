@@ -1,6 +1,8 @@
 package com.dimentials.shop.mockito.integration;
 
 import com.dimentials.shop.domain.entity.Card;
+import com.dimentials.shop.domain.entity.Monster;
+import com.dimentials.shop.domain.entity.Spell;
 import com.dimentials.shop.domain.service.CardService;
 import com.dimentials.shop.domain.service.impl.CardServiceImpl;
 import com.dimentials.shop.persistence.dao.CardDao;
@@ -19,8 +21,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
 
 @ExtendWith(MockitoExtension.class)
 public class CardServiceImplCardDaoImplIntegrationTest {
@@ -86,6 +89,70 @@ public class CardServiceImplCardDaoImplIntegrationTest {
             List<Card> cardResult = cardService.findAll();
             // Assert
             assertEquals(CardMapper.toCardList(List.of()), cardResult);
+        }
+    }
+
+    @Nested
+    class AddingCards {
+        @Test
+        @DisplayName("AddMonster: adds a new monster to the list of cards")
+        void theMethodAddMonsterAddsANewMonsterToTheList() {
+            // Arrange
+            Monster monster = new Monster();
+            // Act
+            cardRepository.addMonster(monster);
+            // Assert
+            verify(cardDaoMock, times(1)).addMonster(any());
+        }
+
+        @Test
+        @DisplayName("AddSpell: adds a new spell to the list of cards")
+        void theMethodAddSpellAddsANewSpellToTheList() {
+            // Arrange
+            Spell spell = new Spell();
+            // Act
+            cardRepository.addSpell(spell);
+            // Assert
+            verify(cardDaoMock, times(1)).addSpell(any());
+        }
+    }
+
+    @Nested
+    class Updatingtests {
+        @Test
+        @DisplayName("UpdateMonster: updates the monster in the list of cards")
+        void theMethodUpdateMonsterUpdatesTheMonsterInTheList() {
+            // Arrange
+            Monster monster = new Monster();
+            // Act
+            cardService.updateMonster(monster);
+            // Assert
+            verify(cardDaoMock, times(1)).updateMonster(any());
+        }
+
+        @Test
+        @DisplayName("UpdateSpell: updates the spell in the list of cards")
+        void theMethodUpdateSpellUpdatesTheSpellInTheList() {
+            // Arrange
+            Spell spell = new Spell();
+            // Act
+            cardService.updateSpell(spell);
+            // Assert
+            verify(cardDaoMock, times(1)).updateSpell(any());
+        }
+
+    }
+    @Nested
+    class DeletingTests {
+        @Test
+        @DisplayName("DeleteCard: deletes the card of the same id")
+        void theMethodDeleteCardDeletesTheCardInTheList() {
+            // Arrange
+            Integer id = 1;
+            // Act
+            cardService.deleteCard(id);
+            // Assert
+            verify(cardDaoMock, times(1)).deleteCard(any());
         }
     }
 }
