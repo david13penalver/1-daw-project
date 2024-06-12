@@ -26,7 +26,7 @@ import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.times;
 
 @ExtendWith(MockitoExtension.class)
-public class CardServiceImplCardDaoImplIntegrationTest {
+public class CardServiceImplCardRepositoryImplIntegrationTest {
     private final CardDao cardDaoMock = mock(CardDao.class);
     private final CardRepository cardRepository = new CardRepositoryImpl(cardDaoMock);
     private final CardService cardService = new CardServiceImpl(cardRepository);
